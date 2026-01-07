@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <title>EG Empório Digital | Tecnologia e Inovação</title>
+    <meta name="description" content="Sistemas SaaS, Landing Pages e Soluções Digitais.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link rel="shortcut icon" href="favicon.png?v=2" type="image/png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Ícones -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'eg-dark': '#020617',       
+                        'brand-blue': '#00e1ff',    
+                        'brand-dark-blue': '#004e92', 
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'], 
+                    },
+                    animation: {
+                        'scroll': 'scroll 40s linear infinite',
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #020617;
+            background-image: radial-gradient(circle at 50% 10%, #0a2540 0%, #020617 70%);
+            background-attachment: fixed;
+        }
+        
+        .flyer-title {
+            background: linear-gradient(to bottom, #ffffff, #00e1ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 20px rgba(0, 225, 255, 0.3));
+        }
+
+        .gpu-accelerated { transform: translateZ(0); will-change: transform; }
+
+        .glass-tech {
+            background: rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(0, 225, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        .glass-tech:hover {
+            border-color: rgba(0, 225, 255, 0.4);
+            box-shadow: 0 0 30px rgba(0, 225, 255, 0.1);
+        }
+
+        #mobile-menu {
+            background: rgba(2, 6, 23, 0.98);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
+
+    <!-- BACKGROUND FIXO -->
+    <div class="fixed inset-0 w-full h-full flex items-center justify-center pointer-events-none -z-50 overflow-hidden">
+        <img src="assets/images/logo.png" alt="" class="w-[600px] md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            
+            <div class="flex items-center gap-3 cursor-pointer">
+                <img src="assets/images/logo.png" alt="Logo EG" class="h-10 w-auto object-contain">
+                <div class="font-tech text-lg md:text-xl font-bold tracking-widest text-white uppercase hidden sm:block">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
+                <a href="#vitrine" class="hover:text-brand-blue transition-colors">Vitrine</a>
+                <a href="#solucoes" class="hover:text-brand-blue transition-colors">O que fazemos</a>
+            </nav>
+
+            <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+                Fale com a gente
+            </a>
+
+            <button id="menu-btn" class="md:hidden text-brand-blue text-3xl focus:outline-none" onclick="toggleMenu()">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
+            <a href="#vitrine" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Vitrine</a>
+            <a href="#solucoes" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">O que fazemos</a>
+            <a href="https://wa.me/5511916053292?text=Olá, vim pelo site mobile." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
+                Fale com a gente
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
+        
+        <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-6 flyer-title tracking-wide leading-tight z-10">
+            EG EMPÓRIO DIGITAL
+        </h1>
+
+        <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-6 z-10"></div>
+
+        <h2 class="font-tech text-brand-blue text-xs md:text-sm lg:text-base tracking-[0.1em] md:tracking-[0.2em] mb-8 uppercase text-shadow-glow z-10">
+            SISTEMAS • PÁGINAS DE VENDAS • LANDING PAGES • SITES • AUTOMAÇÕES
+        </h2>
+
+        <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
+            Criamos sistemas para o seu negócio, páginas de vendas, <br class="hidden md:block">
+            landing pages e soluções digitais para o seu dia a dia.
+        </p>
+
+        <a href="#solucoes" class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] z-10 backdrop-blur-sm">
+            Conhecer Soluções
+        </a>
+
+    </section>
+
+    <!-- VITRINE INFINITA (Links para Subdomínio e Hotmart) -->
+    <section id="vitrine" class="py-10 relative border-t border-white/5 bg-black/40 backdrop-blur-sm">
+        <div class="text-center mb-10">
+            <h2 class="font-tech text-xl text-white uppercase tracking-widest opacity-80">Portfólio & Produtos</h2>
+        </div>
+
+        <div class="w-full relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-eg-dark to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-eg-dark to-transparent z-10 pointer-events-none"></div>
+
+            <div class="flex animate-scroll hover:[animation-play-state:paused] w-max items-center gpu-accelerated">
+                
+                <!-- GRUPO 1 -->
+                
+                <!-- Kairós -> Apontando para o subdomínio -->
+                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
+                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
+                </a>
+                
+                <!-- Ebooks Hotmart -->
+                <a href="https://go.hotmart.com/X102588332N" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook1.jpg" alt="Ebook 1" class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+                <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook2.jpg" alt="Ebook 2" class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+                
+                <!-- Finance IA -->
+                <div class="mx-6 w-[450px] aspect-video glass-tech rounded-xl flex items-center justify-center relative overflow-hidden">
+                    <img src="assets/images/finance.jpg" alt="Finance" class="w-2/3 object-contain opacity-60">
+                    <div class="absolute top-3 right-3 px-3 py-1 bg-white/5 rounded border border-white/10">
+                        <span class="text-[10px] font-tech text-white uppercase tracking-widest">Em Breve</span>
+                    </div>
+                </div>
+                
+                <!-- Ebook 3 -->
+                <a href="https://go.hotmart.com/C103670666I" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook3.jpg" alt="Ebook 3" class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+                
+                <!-- Kairós -->
+                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
+                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
+                </a>
+                
+                <!-- Ebook 4 -->
+                <a href="https://go.hotmart.com/K102552822J" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook4.jpg" alt="Ebook 4" class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+
+                <!-- GRUPO 2 (LOOP) -->
+                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
+                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
+                </a>
+                <a href="https://go.hotmart.com/X102588332N" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook1.jpg" alt="Ebook 1" class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+                <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook2.jpg" alt="Ebook 2" class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+                <div class="mx-6 w-[450px] aspect-video glass-tech rounded-xl flex items-center justify-center relative overflow-hidden">
+                    <img src="assets/images/finance.jpg" alt="Finance" class="w-2/3 object-contain opacity-60">
+                    <div class="absolute top-3 right-3 px-3 py-1 bg-white/5 rounded border border-white/10">
+                        <span class="text-[10px] font-tech text-white uppercase tracking-widest">Em Breve</span>
+                    </div>
+                </div>
+                 <a href="https://go.hotmart.com/C103670666I" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook3.jpg" alt="Ebook 3" class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
+                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
+                </a>
+                 <a href="https://go.hotmart.com/K102552822J" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook4.jpg" alt="Ebook 4" class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUÇÕES -->
+    <section id="solucoes" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase">Nossas Soluções</h2>
+            <p class="text-slate-500 text-sm">Clique no card para orçar seu projeto</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="https://wa.me/5511916053292?text=Olá, tenho interesse em desenvolver um Sistema SaaS." target="_blank" class="glass-tech p-8 rounded-2xl transition-all duration-300 group cursor-pointer text-left block hover:-translate-y-2">
+                <i class="ph ph-cpu text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
+                <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Sistemas SaaS</h3>
+                <p class="text-slate-400 text-sm mb-4">
+                    Desenvolvimento de softwares complexos e plataformas de gestão sob medida.
+                </p>
+                <div class="flex items-center gap-2 text-brand-blue text-xs font-bold uppercase tracking-widest">
+                    Orçar Sistema <i class="ph ph-whatsapp-logo text-lg"></i>
+                </div>
+            </a>
+
+            <a href="https://wa.me/5511916053292?text=Olá, quero uma Landing Page de alta conversão." target="_blank" class="glass-tech p-8 rounded-2xl transition-all duration-300 group cursor-pointer text-left block border-brand-blue/30 hover:-translate-y-2">
+                <i class="ph ph-lightning text-4xl text-white mb-6 group-hover:scale-110 transition-transform block"></i>
+                <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Landing Pages</h3>
+                <p class="text-slate-400 text-sm mb-4">
+                    Páginas focadas em vendas e alta conversão para seus produtos ou serviços.
+                </p>
+                <div class="flex items-center gap-2 text-white text-xs font-bold uppercase tracking-widest">
+                    Orçar LP <i class="ph ph-whatsapp-logo text-lg"></i>
+                </div>
+            </a>
+
+            <a href="https://wa.me/5511916053292?text=Olá, gostaria de criar um Site Institucional." target="_blank" class="glass-tech p-8 rounded-2xl transition-all duration-300 group cursor-pointer text-left block hover:-translate-y-2">
+                <i class="ph ph-globe-hemisphere-west text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
+                <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Sites Institucionais</h3>
+                <p class="text-slate-400 text-sm mb-4">
+                    Sites profissionais para elevar a autoridade da sua marca no mercado digital.
+                </p>
+                <div class="flex items-center gap-2 text-brand-blue text-xs font-bold uppercase tracking-widest">
+                    Orçar Site <i class="ph ph-whatsapp-logo text-lg"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contato" class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
+        <div class="flex flex-col items-center gap-6">
+            <div class="flex flex-col items-center">
+                <img src="assets/images/logo.png" alt="" class="h-8 opacity-50 mb-2">
+                <div class="font-tech text-xl font-bold text-white uppercase">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </div>
+
+            <div class="flex gap-8">
+                <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="flex flex-col items-center gap-1 group">
+                    <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                        <i class="ph ph-instagram-logo text-xl text-slate-300 group-hover:text-brand-blue"></i>
+                    </div>
+                    <span class="text-[10px] text-slate-500 uppercase tracking-widest group-hover:text-brand-blue">Instagram</span>
+                </a>
+
+                <a href="mailto:eg.emporiodigital@outlook.com" class="flex flex-col items-center gap-1 group">
+                    <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                        <i class="ph ph-envelope-simple text-xl text-slate-300 group-hover:text-brand-blue"></i>
+                    </div>
+                    <span class="text-[10px] text-slate-500 uppercase tracking-widest group-hover:text-brand-blue">E-mail</span>
+                </a>
+            </div>
+
+            <p class="text-xs text-slate-600 uppercase tracking-widest mt-4">© 2025 EG Empório Digital.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        }
+    </script>
+</body>
+</html>
