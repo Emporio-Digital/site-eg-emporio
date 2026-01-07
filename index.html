@@ -2,7 +2,7 @@
 <html lang="pt-br" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- SEO -->
     <title>EG Empório Digital | Tecnologia e Inovação</title>
@@ -35,7 +35,7 @@
                         tech: ['Orbitron', 'sans-serif'], 
                     },
                     animation: {
-                        'scroll': 'scroll 25s linear infinite', /* Acelerado para 25s */
+                        'scroll': 'scroll 25s linear infinite',
                         'fade-in': 'fadeIn 0.3s ease-out',
                         'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
@@ -57,6 +57,7 @@
     <style>
         body {
             background-color: #020617;
+            /* Fundo gradiente fixo */
             background-image: radial-gradient(circle at 50% 10%, #0a2540 0%, #020617 70%);
             background-attachment: fixed;
         }
@@ -85,19 +86,32 @@
             backdrop-filter: blur(20px);
         }
 
-        /* Fix para o Background Mobile não pular */
-        .fixed-bg-mobile {
-            height: 100vh; /* Fallback */
-            height: 100dvh; /* Dynamic Viewport Height para mobile moderno */
+        /* Fix Absoluto para Mobile */
+        .bg-fixed-mobile {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -50;
+            overflow: hidden;
         }
     </style>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
 
-    <!-- BACKGROUND FIXO (Ajustado para Mobile) -->
-    <div class="fixed inset-0 w-full fixed-bg-mobile flex items-center justify-center pointer-events-none -z-50 overflow-hidden">
-        <!-- Logo Gigante: w-[180%] no mobile para dar zoom, w-[900px] no PC -->
-        <img src="assets/images/logo.png" alt="" class="w-[180%] md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
+    <!-- ========================================================= -->
+    <!-- BACKGROUND FIXO TRAVADO (ZOOM NO MOBILE) -->
+    <!-- ========================================================= -->
+    <div class="bg-fixed-mobile flex items-center justify-center">
+        <!-- 
+             MOBILE: w-[300%] (Zoom Gigante) + max-w-none (Permite estourar a tela)
+             PC: md:w-[900px] (Tamanho normal controlado)
+        -->
+        <img src="assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
+        
+        <!-- Luz de fundo -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40"></div>
     </div>
 
@@ -105,10 +119,9 @@
     <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
             
-            <!-- Logo + Texto (Agora visível no Mobile também) -->
+            <!-- Logo + Texto (Ajustado Mobile) -->
             <div class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
-                <!-- Removi o 'hidden' e ajustei o tamanho da fonte para mobile (text-sm) e pc (text-xl) -->
                 <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
@@ -131,7 +144,7 @@
         <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
             <a href="#vitrine" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Vitrine</a>
             <a href="#solucoes" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">O que fazemos</a>
-            <!-- Link Mobile Corrigido -->
+            <!-- Link Mobile Padronizado -->
             <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
                 Fale com a gente
             </a>
@@ -162,7 +175,7 @@
 
     </section>
 
-    <!-- VITRINE INFINITA (INTERCALADA E RÁPIDA) -->
+    <!-- VITRINE INFINITA (Intercalada e Rápida) -->
     <section id="vitrine" class="py-10 relative border-t border-white/5 bg-black/40 backdrop-blur-sm">
         <div class="text-center mb-10">
             <h2 class="font-tech text-xl text-white uppercase tracking-widest opacity-80">Portfólio & Produtos</h2>
@@ -175,62 +188,41 @@
             <div class="flex animate-scroll hover:[animation-play-state:paused] w-max items-center gpu-accelerated">
                 
                 <!-- === GRUPO 1 === -->
-                
-                <!-- 1. Kairós -->
                 <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
                     <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
                 </a>
-                
-                <!-- 2. Ebook 1 -->
                 <a href="https://go.hotmart.com/X102588332N" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
                     <img src="assets/images/ebook1.jpg" alt="Ebook 1" class="w-full h-full object-cover rounded border border-white/10">
                 </a>
-
-                <!-- 3. Kairós -->
                 <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
                     <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
                 </a>
-                
-                <!-- 4. Ebook 2 -->
                 <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
                     <img src="assets/images/ebook2.jpg" alt="Ebook 2" class="w-full h-full object-cover rounded border border-white/10">
                 </a>
-
-                <!-- 5. Kairós -->
                 <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
                     <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
                 </a>
-                
-                <!-- 6. Finance IA -->
                 <div class="mx-6 w-[450px] aspect-video glass-tech rounded-xl flex items-center justify-center relative overflow-hidden">
                     <img src="assets/images/finance.jpg" alt="Finance" class="w-2/3 object-contain opacity-60">
                     <div class="absolute top-3 right-3 px-3 py-1 bg-white/5 rounded border border-white/10">
                         <span class="text-[10px] font-tech text-white uppercase tracking-widest">Em Breve</span>
                     </div>
                 </div>
-
-                <!-- 7. Kairós -->
                 <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
                     <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
                 </a>
-                
-                <!-- 8. Ebook 3 -->
                 <a href="https://go.hotmart.com/C103670666I" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
                     <img src="assets/images/ebook3.jpg" alt="Ebook 3" class="w-full h-full object-cover rounded border border-white/10">
                 </a>
-                
-                <!-- 9. Kairós -->
                 <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
                     <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
                 </a>
-                
-                <!-- 10. Ebook 4 -->
                 <a href="https://go.hotmart.com/K102552822J" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
                     <img src="assets/images/ebook4.jpg" alt="Ebook 4" class="w-full h-full object-cover rounded border border-white/10">
                 </a>
 
-
-                <!-- === GRUPO 2 (REPETIÇÃO EXATA) === -->
+                <!-- === GRUPO 2 (LOOP) === -->
                 <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
                     <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
                 </a>
