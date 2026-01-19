@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/lp",
+      "destination": "https://emporio-digital.github.io/lp/"
+    },
+    {
+      "source": "/lp/:path*",
+      "destination": "https://emporio-digital.github.io/lp/:path*"
+    }
+  ]
+}
