@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO ESPECÍFICO DE SOBRE NÓS -->
+    <title>Sobre Nós | EG Empório Digital - Agência de Tecnologia</title>
+    <meta name="description" content="Conheça a EG Empório Digital. Nossa missão é transformar negócios através de tecnologia, sistemas SaaS e estratégias digitais de alta performance.">
+    <link rel="canonical" href="https://egemporiodigital.com.br/sobre.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link rel="shortcut icon" href="favicon.png?v=2" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fontes e Ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'eg-dark': '#020617', 'brand-blue': '#00e1ff', 'brand-dark-blue': '#004e92' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], tech: ['Orbitron', 'sans-serif'] },
+                    animation: { 'fade-in': 'fadeIn 0.3s ease-out', 'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite' },
+                    keyframes: { fadeIn: { '0%': { opacity: '0', transform: 'translateY(-10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } } }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #020617;
+            background-image: radial-gradient(circle at 50% 10%, #0a2540 0%, #020617 70%);
+            background-attachment: fixed;
+        }
+        .gpu-accelerated { transform: translateZ(0); will-change: transform; }
+        .glass-tech {
+            background: rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(0, 225, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        .glass-tech:hover {
+            border-color: rgba(0, 225, 255, 0.4);
+            box-shadow: 0 0 30px rgba(0, 225, 255, 0.1);
+        }
+        #mobile-menu { background: rgba(2, 6, 23, 0.98); backdrop-filter: blur(20px); }
+        .bg-fixed-mobile {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none; z-index: -50; overflow: hidden;
+        }
+    </style>
+</head>
+<body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
+
+    <!-- BACKGROUND FIXO -->
+    <div class="bg-fixed-mobile flex items-center justify-center">
+        <img src="assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                <img src="assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
+                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
+                <a href="index.html" class="hover:text-brand-blue transition-colors">Início</a>
+                <a href="servicos.html" class="hover:text-brand-blue transition-colors">Serviços</a>
+                <a href="sobre.html" class="text-brand-blue transition-colors">Sobre Nós</a>
+            </nav>
+            <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+                Fale com a gente
+            </a>
+            <button id="menu-btn" class="md:hidden text-brand-blue text-3xl focus:outline-none" onclick="toggleMenu()">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
+            <a href="index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Início</a>
+            <a href="servicos.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Serviços</a>
+            <a href="sobre.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Sobre Nós</a>
+            <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg">Fale com a gente</a>
+        </div>
+    </header>
+
+    <!-- HEADER DA PÁGINA -->
+    <section class="pt-40 pb-12 text-center px-4">
+        <h1 class="font-tech text-3xl md:text-5xl text-white uppercase tracking-widest mb-4">
+            Quem é a <span class="text-brand-blue">EG?</span>
+        </h1>
+        <div class="w-24 h-[1px] bg-brand-blue mx-auto opacity-50"></div>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <section class="pb-24 px-6 max-w-4xl mx-auto space-y-12">
+
+        <!-- BLOCO 1: A ORIGEM -->
+        <div class="glass-tech p-8 md:p-12 rounded-2xl border border-brand-blue/20">
+            <h2 class="font-tech text-2xl text-white mb-6 uppercase">Tecnologia & Inovação</h2>
+            <p class="text-lg text-slate-300 leading-relaxed mb-6">
+                A <strong>EG Empório Digital</strong> nasceu com um propósito claro: democratizar o acesso a sistemas de alta performance para empreendedores e empresas que desejam escalar.
+            </p>
+            <p class="text-lg text-slate-300 leading-relaxed">
+                Não somos apenas uma agência de sites. Somos parceiros de tecnologia. Do desenvolvimento de Landing Pages focadas em conversão até a criação de ecossistemas completos como o <strong>Sistema Kairós</strong>, nossa meta é colocar sua empresa à frente da concorrência.
+            </p>
+        </div>
+
+        <!-- BLOCO 2: PILARES -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-tech p-6 rounded-xl text-center hover:-translate-y-1 transition-transform">
+                <i class="ph ph-rocket-launch text-4xl text-brand-blue mb-4"></i>
+                <h3 class="font-tech text-lg text-white mb-2">Missão</h3>
+                <p class="text-sm text-slate-400">Entregar soluções digitais que geram lucro real e otimização de tempo para nossos clientes.</p>
+            </div>
+            <div class="glass-tech p-6 rounded-xl text-center hover:-translate-y-1 transition-transform">
+                <i class="ph ph-eye text-4xl text-brand-blue mb-4"></i>
+                <h3 class="font-tech text-lg text-white mb-2">Visão</h3>
+                <p class="text-sm text-slate-400">Ser referência nacional em desenvolvimento de sistemas SaaS e automação digital.</p>
+            </div>
+            <div class="glass-tech p-6 rounded-xl text-center hover:-translate-y-1 transition-transform">
+                <i class="ph ph-diamond text-4xl text-brand-blue mb-4"></i>
+                <h3 class="font-tech text-lg text-white mb-2">Valores</h3>
+                <p class="text-sm text-slate-400">Transparência no código, agilidade na entrega e foco obsessivo no resultado.</p>
+            </div>
+        </div>
+
+        <!-- CTA FINAL -->
+        <div class="text-center pt-10">
+            <h2 class="font-tech text-2xl text-white mb-6 uppercase">Vamos construir algo juntos?</h2>
+            <a href="https://wa.me/5511916053292?text=Olá, li sobre a EG e gostaria de agendar uma conversa." target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
+                Falar com Especialista <i class="ph ph-whatsapp-logo text-xl"></i>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- FOOTER (LIMPO) -->
+    <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
+        <div class="flex flex-col items-center gap-8">
+            
+            <div class="flex flex-col items-center">
+                <img src="assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
+                <div class="font-tech text-xl font-bold text-white uppercase">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </div>
+
+            <div class="flex gap-8">
+                <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    </div>
+                </a>
+
+                <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center">
+                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
+                <p class="text-[10px] text-slate-700 mt-1">Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) { menu.classList.remove('hidden'); menu.classList.add('flex'); }
+            else { menu.classList.add('hidden'); menu.classList.remove('flex'); }
+        }
+    </script>
+</body>
+</html>

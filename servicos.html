@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO ESPECÍFICO DE SERVIÇOS -->
+    <title>Serviços | EG Empório Digital - Desenvolvimento Web e SaaS</title>
+    <meta name="description" content="Detalhes dos nossos serviços: Desenvolvimento de Sistemas SaaS, Criação de Landing Pages de alta conversão e Sites Institucionais otimizados para SEO.">
+    <link rel="canonical" href="https://egemporiodigital.com.br/servicos.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link rel="shortcut icon" href="favicon.png?v=2" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fontes e Ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'eg-dark': '#020617', 'brand-blue': '#00e1ff', 'brand-dark-blue': '#004e92' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], tech: ['Orbitron', 'sans-serif'] },
+                    animation: { 'fade-in': 'fadeIn 0.3s ease-out', 'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite' },
+                    keyframes: { fadeIn: { '0%': { opacity: '0', transform: 'translateY(-10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } } }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #020617;
+            background-image: radial-gradient(circle at 50% 10%, #0a2540 0%, #020617 70%);
+            background-attachment: fixed;
+        }
+        .gpu-accelerated { transform: translateZ(0); will-change: transform; }
+        .glass-tech {
+            background: rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(0, 225, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        .glass-tech:hover {
+            border-color: rgba(0, 225, 255, 0.4);
+            box-shadow: 0 0 30px rgba(0, 225, 255, 0.1);
+        }
+        #mobile-menu { background: rgba(2, 6, 23, 0.98); backdrop-filter: blur(20px); }
+        .bg-fixed-mobile {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none; z-index: -50; overflow: hidden;
+        }
+        details > summary { list-style: none; cursor: pointer; outline: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: fadeIn 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
+
+    <!-- BACKGROUND FIXO -->
+    <div class="bg-fixed-mobile flex items-center justify-center">
+        <img src="assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                <img src="assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
+                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
+                <a href="index.html" class="hover:text-brand-blue transition-colors">Início</a>
+                <a href="servicos.html" class="text-brand-blue transition-colors">Serviços</a>
+                <a href="sobre.html" class="hover:text-brand-blue transition-colors">Sobre Nós</a>
+            </nav>
+            <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+                Fale com a gente
+            </a>
+            <button id="menu-btn" class="md:hidden text-brand-blue text-3xl focus:outline-none" onclick="toggleMenu()">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
+            <a href="index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Início</a>
+            <a href="servicos.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Serviços</a>
+            <a href="sobre.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Sobre Nós</a>
+            <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg">Fale com a gente</a>
+        </div>
+    </header>
+
+    <!-- HEADER DA PÁGINA -->
+    <section class="pt-40 pb-12 text-center px-4">
+        <h1 class="font-tech text-3xl md:text-5xl text-white uppercase tracking-widest mb-4">
+            Especialidades <span class="text-brand-blue">Técnicas</span>
+        </h1>
+        <p class="text-slate-400 max-w-2xl mx-auto">
+            Não usamos apenas templates prontos. Desenvolvemos soluções focadas em performance, SEO e escala para o seu negócio.
+        </p>
+    </section>
+
+    <!-- LISTA DE SERVIÇOS -->
+    <section class="pb-24 px-6 max-w-5xl mx-auto space-y-8">
+
+        <!-- SERVIÇO 1: SAAS -->
+        <article class="glass-tech p-1 rounded-2xl border border-brand-blue/20">
+            <details class="group">
+                <summary class="flex flex-col md:flex-row items-start md:items-center justify-between p-8 cursor-pointer bg-white/5 hover:bg-white/10 rounded-xl transition-all">
+                    <div class="flex items-center gap-6">
+                        <i class="ph ph-cpu text-4xl text-brand-blue"></i>
+                        <div>
+                            <h2 class="font-tech text-xl text-white uppercase tracking-wide">Desenvolvimento de SaaS</h2>
+                            <p class="text-xs text-brand-blue uppercase tracking-widest mt-1">Sistemas como o Kairós</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 md:mt-0 flex items-center gap-2 text-sm text-slate-400 group-hover:text-white transition">
+                        Ver detalhes técnicos <i class="ph ph-caret-down group-open:rotate-180 transition-transform"></i>
+                    </div>
+                </summary>
+                <div class="p-8 text-slate-300 space-y-4 border-t border-white/5">
+                    <p>
+                        Transformamos processos complexos em softwares simples e intuitivos. Nossa metodologia envolve desde a arquitetura do banco de dados até a interface final do usuário (UI/UX).
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Painéis Administrativos (Dashboards)</li>
+                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Gestão de Usuários e Permissões</li>
+                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Integração com APIs de Pagamento</li>
+                        </ul>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Automação de WhatsApp</li>
+                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Hospedagem em Nuvem Segura</li>
+                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Escalonamento Horizontal</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4">
+                        <a href="https://wa.me/5511916053292?text=Quero orçar um projeto SaaS." target="_blank" class="inline-block px-6 py-2 bg-brand-blue/10 border border-brand-blue text-brand-blue text-xs font-bold uppercase tracking-widest rounded hover:bg-brand-blue hover:text-eg-dark transition">
+                            Orçar Projeto SaaS
+                        </a>
+                    </div>
+                </div>
+            </details>
+        </article>
+
+        <!-- SERVIÇO 2: LANDING PAGES -->
+        <article class="glass-tech p-1 rounded-2xl border border-brand-blue/20">
+            <details class="group">
+                <summary class="flex flex-col md:flex-row items-start md:items-center justify-between p-8 cursor-pointer bg-white/5 hover:bg-white/10 rounded-xl transition-all">
+                    <div class="flex items-center gap-6">
+                        <i class="ph ph-lightning text-4xl text-white"></i>
+                        <div>
+                            <h2 class="font-tech text-xl text-white uppercase tracking-wide">Landing Pages de Alta Conversão</h2>
+                            <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Foco em Vendas e Leads</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 md:mt-0 flex items-center gap-2 text-sm text-slate-400 group-hover:text-white transition">
+                        Ver detalhes técnicos <i class="ph ph-caret-down group-open:rotate-180 transition-transform"></i>
+                    </div>
+                </summary>
+                <div class="p-8 text-slate-300 space-y-4 border-t border-white/5">
+                    <p>
+                        Páginas projetadas com um único objetivo: <strong>converter visitantes em clientes</strong>. Utilizamos técnicas de copywriting e design persuasivo alinhadas à velocidade extrema de carregamento.
+                    </p>
+                    <p class="text-sm text-slate-400">Ideal para lançamentos de infoprodutos, venda de serviços e captura de leads.</p>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] uppercase border border-white/10">Pixel Facebook Configurado</span>
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] uppercase border border-white/10">Google Analytics 4</span>
+                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] uppercase border border-white/10">Mobile First</span>
+                    </div>
+                    <div class="pt-4">
+                        <a href="https://wa.me/5511916053292?text=Quero orçar uma Landing Page." target="_blank" class="inline-block px-6 py-2 bg-white/10 border border-white/30 text-white text-xs font-bold uppercase tracking-widest rounded hover:bg-white hover:text-eg-dark transition">
+                            Orçar Landing Page
+                        </a>
+                    </div>
+                </div>
+            </details>
+        </article>
+
+        <!-- SERVIÇO 3: SITES INSTITUCIONAIS -->
+        <article class="glass-tech p-1 rounded-2xl border border-brand-blue/20">
+            <details class="group">
+                <summary class="flex flex-col md:flex-row items-start md:items-center justify-between p-8 cursor-pointer bg-white/5 hover:bg-white/10 rounded-xl transition-all">
+                    <div class="flex items-center gap-6">
+                        <i class="ph ph-globe-hemisphere-west text-4xl text-brand-blue"></i>
+                        <div>
+                            <h2 class="font-tech text-xl text-white uppercase tracking-wide">Sites Institucionais</h2>
+                            <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Autoridade e Presença Digital</p>
+                        </div>
+                    </div>
+                    <div class="mt-4 md:mt-0 flex items-center gap-2 text-sm text-slate-400 group-hover:text-white transition">
+                        Ver detalhes técnicos <i class="ph ph-caret-down group-open:rotate-180 transition-transform"></i>
+                    </div>
+                </summary>
+                <div class="p-8 text-slate-300 space-y-4 border-t border-white/5">
+                    <p>
+                        Seu cartão de visita digital. Um site institucional passa credibilidade e centraliza as informações do seu negócio. Otimizado para aparecer nas buscas locais do Google.
+                    </p>
+                    <ul class="space-y-2 text-sm mt-4">
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Página "Sobre Nós", "Serviços" e "Contato"</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Botão flutuante de WhatsApp</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> SEO Básico incluso (Títulos e Descrições)</li>
+                    </ul>
+                    <div class="pt-4">
+                        <a href="https://wa.me/5511916053292?text=Quero orçar um Site Institucional." target="_blank" class="inline-block px-6 py-2 bg-brand-blue/10 border border-brand-blue text-brand-blue text-xs font-bold uppercase tracking-widest rounded hover:bg-brand-blue hover:text-eg-dark transition">
+                            Orçar Site
+                        </a>
+                    </div>
+                </div>
+            </details>
+        </article>
+
+    </section>
+
+    <!-- FAQ RÁPIDO -->
+    <section class="py-12 px-6 max-w-3xl mx-auto text-center">
+        <h3 class="font-tech text-xl text-white uppercase mb-8">Dúvidas Frequentes</h3>
+        <div class="space-y-4 text-left">
+            <div class="glass-tech p-6 rounded-xl">
+                <h4 class="font-bold text-white mb-2">Quanto tempo demora para ficar pronto?</h4>
+                <p class="text-sm text-slate-400">Landing Pages levam em média 3 a 5 dias úteis. Sistemas SaaS dependem da complexidade do projeto, variando de 30 a 90 dias.</p>
+            </div>
+            <div class="glass-tech p-6 rounded-xl">
+                <h4 class="font-bold text-white mb-2">Vocês dão suporte após a entrega?</h4>
+                <p class="text-sm text-slate-400">Sim! Todos os nossos projetos incluem um período de garantia e suporte técnico para eventuais correções.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (LIMPO) -->
+    <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
+        <div class="flex flex-col items-center gap-8">
+            
+            <div class="flex flex-col items-center">
+                <img src="assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
+                <div class="font-tech text-xl font-bold text-white uppercase">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </div>
+
+            <div class="flex gap-8">
+                <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    </div>
+                </a>
+
+                <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center">
+                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
+                <p class="text-[10px] text-slate-700 mt-1">Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) { menu.classList.remove('hidden'); menu.classList.add('flex'); }
+            else { menu.classList.add('hidden'); menu.classList.remove('flex'); }
+        }
+    </script>
+</body>
+</html>

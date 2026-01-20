@@ -4,34 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- SEO -->
+    <!-- SEO AVANÇADO -->
     <title>EG Empório Digital | Tecnologia e Inovação</title>
-    <meta name="description" content="Sistemas SaaS, Landing Pages e Soluções Digitais.">
+    <meta name="description" content="Especialistas em desenvolvimento de Sistemas SaaS (Kairós), Landing Pages de alta conversão e Sites Institucionais. Soluções digitais para escalar seu negócio.">
+    <link rel="canonical" href="https://egemporiodigital.com.br/">
     
-    <!-- Favicon (Windows/Desktop) -->
+    <!-- SCHEMA MARKUP -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "EG Empório Digital",
+      "url": "https://egemporiodigital.com.br",
+      "logo": "https://egemporiodigital.com.br/assets/images/logo.png",
+      "sameAs": [
+        "https://www.instagram.com/eg.emporio.digital/",
+        "https://kairos.egemporiodigital.com.br"
+      ],
+      "description": "Desenvolvimento de softwares complexos, sites institucionais e landing pages.",
+      "knowsAbout": ["SaaS", "Landing Pages", "Web Development", "Sistema Kairós"]
+    }
+    </script>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png?v=2">
     <link rel="shortcut icon" href="favicon.png?v=2" type="image/png">
-
-    <!-- ========================================================= -->
-    <!-- FIX PARA IPHONE E GOOGLE MOBILE (NOVO) -->
-    <!-- ========================================================= -->
-    <!-- Ícone exclusivo para Apple (iPhone/iPad) -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     
-    <!-- Imagem de Capa para Compartilhamento (WhatsApp/Google) -->
+    <!-- Open Graph -->
     <meta property="og:image" content="https://egemporiodigital.com.br/assets/images/logo.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <!-- ========================================================= -->
+    <meta property="og:type" content="website">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Fontes -->
+    <!-- Fontes e Ícones -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
-
-    <!-- Ícones -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <script>
@@ -70,7 +78,6 @@
     <style>
         body {
             background-color: #020617;
-            /* Fundo gradiente fixo */
             background-image: radial-gradient(circle at 50% 10%, #0a2540 0%, #020617 70%);
             background-attachment: fixed;
         }
@@ -99,7 +106,6 @@
             backdrop-filter: blur(20px);
         }
 
-        /* Fix Absoluto para Mobile */
         .bg-fixed-mobile {
             position: fixed;
             top: 0;
@@ -114,17 +120,9 @@
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
 
-    <!-- ========================================================= -->
-    <!-- BACKGROUND FIXO TRAVADO (ZOOM NO MOBILE) -->
-    <!-- ========================================================= -->
+    <!-- BACKGROUND FIXO -->
     <div class="bg-fixed-mobile flex items-center justify-center">
-        <!-- 
-             MOBILE: w-[300%] (Zoom Gigante) + max-w-none (Permite estourar a tela)
-             PC: md:w-[900px] (Tamanho normal controlado)
-        -->
         <img src="assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
-        
-        <!-- Luz de fundo -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40"></div>
     </div>
 
@@ -132,17 +130,18 @@
     <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
             
-            <!-- Logo + Texto (Ajustado Mobile) -->
-            <div class="flex items-center gap-2 md:gap-3 cursor-pointer">
+            <a href="index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
                 <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
-            </div>
+            </a>
 
+            <!-- NAV LINKS -->
             <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
-                <a href="#vitrine" class="hover:text-brand-blue transition-colors">Vitrine</a>
-                <a href="#solucoes" class="hover:text-brand-blue transition-colors">O que fazemos</a>
+                <a href="index.html" class="text-brand-blue transition-colors">Início</a>
+                <a href="servicos.html" class="hover:text-brand-blue transition-colors">Serviços</a>
+                <a href="sobre.html" class="hover:text-brand-blue transition-colors">Sobre Nós</a>
             </nav>
 
             <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
@@ -155,9 +154,9 @@
         </div>
 
         <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
-            <a href="#vitrine" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Vitrine</a>
-            <a href="#solucoes" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">O que fazemos</a>
-            <!-- Link Mobile Padronizado -->
+            <a href="index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Início</a>
+            <a href="servicos.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços</a>
+            <a href="sobre.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Sobre Nós</a>
             <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
                 Fale com a gente
             </a>
@@ -178,20 +177,70 @@
         </h2>
 
         <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
-            Criamos sistemas para o seu negócio, páginas de vendas, <br class="hidden md:block">
-            landing pages e soluções digitais para o seu dia a dia.
+            Criamos <strong class="text-white">sistemas SaaS</strong> para o seu negócio, páginas de vendas de alta conversão, <br class="hidden md:block">
+            e soluções digitais completas para escalar sua empresa.
         </p>
 
-        <a href="#solucoes" class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] z-10 backdrop-blur-sm">
-            Conhecer Soluções
-        </a>
+        <div class="flex flex-col md:flex-row gap-4 z-10">
+            <a href="servicos.html" class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+                Nossos Serviços
+            </a>
+            <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
+                Conheça o Kairós
+            </a>
+        </div>
 
     </section>
 
-    <!-- VITRINE INFINITA (Intercalada e Rápida) -->
+    <!-- SEÇÃO 1: DESTAQUE KAIRÓS (Texto Atualizado) -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20 relative overflow-hidden">
+            <!-- Efeito de luz sutil -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-blue/10 blur-[80px] -z-10"></div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <!-- Texto Comercial Kairós -->
+                <div class="flex-1 text-left">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="px-3 py-1 bg-brand-blue/10 border border-brand-blue/30 rounded text-brand-blue text-[10px] font-tech uppercase tracking-widest">Tecnologia Exclusiva</span>
+                    </div>
+                    <h2 class="font-tech text-2xl md:text-4xl text-white mb-4 uppercase leading-tight">
+                        Ecossistema <span class="text-brand-blue">Kairós</span>
+                    </h2>
+                    <p class="text-slate-300 text-base md:text-lg mb-6 leading-relaxed">
+                        Um sistema de agendamento inteligente que trabalha pelo seu negócio. O <strong>Kairós</strong> elimina a necessidade de secretária, permitindo que seu cliente agende sozinho, a qualquer hora do dia.
+                    </p>
+                    <ul class="space-y-2 mb-8 text-slate-400 text-sm">
+                        <li class="flex items-center gap-2">
+                            <i class="ph ph-check-circle text-brand-blue"></i> 
+                            Adapta-se a qualquer nicho
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="ph ph-check-circle text-brand-blue"></i> 
+                            Personalizável com sua Marca e Logo
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="ph ph-check-circle text-brand-blue"></i> 
+                            Agendamento em menos de 1 minuto (24h)
+                        </li>
+                    </ul>
+                    <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
+                        Acessar Kairós <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Imagem do Kairós -->
+                <div class="flex-1 w-full flex justify-center">
+                    <img src="assets/images/kairos.jpg" alt="Dashboard do Sistema Kairós desenvolvido pela EG Empório Digital" class="w-full md:w-4/5 rounded-lg border border-brand-blue/20 shadow-2xl hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: VITRINE INFINITA (Apenas Ebooks + Em Breve) -->
     <section id="vitrine" class="py-10 relative border-t border-white/5 bg-black/40 backdrop-blur-sm">
         <div class="text-center mb-10">
-            <h2 class="font-tech text-xl text-white uppercase tracking-widest opacity-80">Portfólio & Produtos</h2>
+            <h2 class="font-tech text-xl text-white uppercase tracking-widest opacity-80">Produtos Digitais & Ebooks</h2>
         </div>
 
         <div class="w-full relative overflow-hidden">
@@ -200,150 +249,137 @@
 
             <div class="flex animate-scroll hover:[animation-play-state:paused] w-max items-center gpu-accelerated">
                 
-                <!-- === GRUPO 1 === -->
-                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
-                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
-                </a>
+                <!-- LOOP 1 -->
                 <a href="https://go.hotmart.com/X102588332N" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook1.jpg" alt="Ebook 1" class="w-full h-full object-cover rounded border border-white/10">
+                    <img src="assets/images/ebook1.jpg" alt="Ebook Estratégias Digitais" class="w-full h-full object-cover rounded border border-white/10">
                 </a>
-                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
-                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
-                </a>
+                
                 <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook2.jpg" alt="Ebook 2" class="w-full h-full object-cover rounded border border-white/10">
+                    <img src="assets/images/ebook2.jpg" alt="Ebook Marketing e Vendas" class="w-full h-full object-cover rounded border border-white/10">
                 </a>
-                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
-                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
-                </a>
+                
+                <!-- Em Breve -->
                 <div class="mx-6 w-[450px] aspect-video glass-tech rounded-xl flex items-center justify-center relative overflow-hidden">
-                    <img src="assets/images/finance.jpg" alt="Finance" class="w-2/3 object-contain opacity-60">
+                    <img src="assets/images/finance.jpg" alt="Sistema Financeiro em Breve" class="w-2/3 object-contain opacity-60">
                     <div class="absolute top-3 right-3 px-3 py-1 bg-white/5 rounded border border-white/10">
                         <span class="text-[10px] font-tech text-white uppercase tracking-widest">Em Breve</span>
                     </div>
                 </div>
-                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
-                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
-                </a>
+
                 <a href="https://go.hotmart.com/C103670666I" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook3.jpg" alt="Ebook 3" class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
-                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
+                    <img src="assets/images/ebook3.jpg" alt="Ebook Negócios Digitais" class="w-full h-full object-cover rounded border border-white/10">
                 </a>
                 <a href="https://go.hotmart.com/K102552822J" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook4.jpg" alt="Ebook 4" class="w-full h-full object-cover rounded border border-white/10">
+                    <img src="assets/images/ebook4.jpg" alt="Ebook Crescimento Online" class="w-full h-full object-cover rounded border border-white/10">
                 </a>
 
-                <!-- === GRUPO 2 (LOOP) === -->
-                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
-                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
-                </a>
+                <!-- LOOP 2 (Repetição) -->
                 <a href="https://go.hotmart.com/X102588332N" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook1.jpg" alt="Ebook 1" class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
-                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
+                    <img src="assets/images/ebook1.jpg" alt="Ebook Estratégias Digitais" class="w-full h-full object-cover rounded border border-white/10">
                 </a>
                 <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook2.jpg" alt="Ebook 2" class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
-                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
+                    <img src="assets/images/ebook2.jpg" alt="Ebook Marketing e Vendas" class="w-full h-full object-cover rounded border border-white/10">
                 </a>
                 <div class="mx-6 w-[450px] aspect-video glass-tech rounded-xl flex items-center justify-center relative overflow-hidden">
-                    <img src="assets/images/finance.jpg" alt="Finance" class="w-2/3 object-contain opacity-60">
+                    <img src="assets/images/finance.jpg" alt="Sistema Financeiro em Breve" class="w-2/3 object-contain opacity-60">
                     <div class="absolute top-3 right-3 px-3 py-1 bg-white/5 rounded border border-white/10">
                         <span class="text-[10px] font-tech text-white uppercase tracking-widest">Em Breve</span>
                     </div>
                 </div>
-                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
-                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
-                </a>
-                <a href="https://go.hotmart.com/C103670666I" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook3.jpg" alt="Ebook 3" class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="mx-6 w-[450px] aspect-video hover:scale-105 transition duration-300">
-                    <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full h-full object-contain drop-shadow-lg">
-                </a>
-                <a href="https://go.hotmart.com/K102552822J" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook4.jpg" alt="Ebook 4" class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-
             </div>
         </div>
     </section>
 
     <!-- SOLUÇÕES -->
-    <section id="solucoes" class="py-24 px-6 max-w-7xl mx-auto">
+    <section id="solucoes" class="py-12 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase">Nossas Soluções</h2>
-            <p class="text-slate-500 text-sm">Clique no card para orçar seu projeto</p>
+            <p class="text-slate-500 text-sm">Do site institucional ao sistema complexo</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="https://wa.me/5511916053292?text=Olá, tenho interesse em desenvolver um Sistema SaaS." target="_blank" class="glass-tech p-8 rounded-2xl transition-all duration-300 group cursor-pointer text-left block hover:-translate-y-2">
+            <!-- Card 1 -->
+            <div class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2">
                 <i class="ph ph-cpu text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
                 <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Sistemas SaaS</h3>
                 <p class="text-slate-400 text-sm mb-4">
                     Desenvolvimento de softwares complexos e plataformas de gestão sob medida.
                 </p>
-                <div class="flex items-center gap-2 text-brand-blue text-xs font-bold uppercase tracking-widest">
-                    Orçar Sistema <i class="ph ph-whatsapp-logo text-lg"></i>
+                <div class="flex flex-col gap-3">
+                    <a href="https://wa.me/5511916053292?text=Olá, quero orçar um Sistema." target="_blank" class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
+                        Orçar no WhatsApp <i class="ph ph-whatsapp-logo"></i>
+                    </a>
+                    <a href="servicos.html" class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
+                        Ver detalhes técnicos +
+                    </a>
                 </div>
-            </a>
+            </div>
 
-            <a href="https://wa.me/5511916053292?text=Olá, quero uma Landing Page de alta conversão." target="_blank" class="glass-tech p-8 rounded-2xl transition-all duration-300 group cursor-pointer text-left block border-brand-blue/30 hover:-translate-y-2">
+            <!-- Card 2 -->
+            <div class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block border-brand-blue/30 hover:-translate-y-2">
                 <i class="ph ph-lightning text-4xl text-white mb-6 group-hover:scale-110 transition-transform block"></i>
                 <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Landing Pages</h3>
                 <p class="text-slate-400 text-sm mb-4">
                     Páginas focadas em vendas e alta conversão para seus produtos ou serviços.
                 </p>
-                <div class="flex items-center gap-2 text-white text-xs font-bold uppercase tracking-widest">
-                    Orçar LP <i class="ph ph-whatsapp-logo text-lg"></i>
+                <div class="flex flex-col gap-3">
+                    <a href="https://wa.me/5511916053292?text=Olá, quero orçar uma Landing Page." target="_blank" class="text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
+                        Orçar no WhatsApp <i class="ph ph-whatsapp-logo"></i>
+                    </a>
+                    <a href="servicos.html" class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
+                        Ver detalhes técnicos +
+                    </a>
                 </div>
-            </a>
+            </div>
 
-            <a href="https://wa.me/5511916053292?text=Olá, gostaria de criar um Site Institucional." target="_blank" class="glass-tech p-8 rounded-2xl transition-all duration-300 group cursor-pointer text-left block hover:-translate-y-2">
+            <!-- Card 3 -->
+            <div class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2">
                 <i class="ph ph-globe-hemisphere-west text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
                 <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Sites Institucionais</h3>
                 <p class="text-slate-400 text-sm mb-4">
                     Sites profissionais para elevar a autoridade da sua marca no mercado digital.
                 </p>
-                <div class="flex items-center gap-2 text-brand-blue text-xs font-bold uppercase tracking-widest">
-                    Orçar Site <i class="ph ph-whatsapp-logo text-lg"></i>
+                <div class="flex flex-col gap-3">
+                    <a href="https://wa.me/5511916053292?text=Olá, quero orçar um Site Institucional." target="_blank" class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
+                        Orçar no WhatsApp <i class="ph ph-whatsapp-logo"></i>
+                    </a>
+                    <a href="servicos.html" class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
+                        Ver detalhes técnicos +
+                    </a>
                 </div>
-            </a>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer id="contato" class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
-        <div class="flex flex-col items-center gap-6">
+    <!-- FOOTER (LIMPO) -->
+    <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
+        <div class="flex flex-col items-center gap-8">
+            
             <div class="flex flex-col items-center">
-                <img src="assets/images/logo.png" alt="" class="h-8 opacity-50 mb-2">
+                <img src="assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
                 <div class="font-tech text-xl font-bold text-white uppercase">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </div>
 
             <div class="flex gap-8">
-                <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="flex flex-col items-center gap-1 group">
-                    <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
-                        <i class="ph ph-instagram-logo text-xl text-slate-300 group-hover:text-brand-blue"></i>
+                <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
                     </div>
-                    <span class="text-[10px] text-slate-500 uppercase tracking-widest group-hover:text-brand-blue">Instagram</span>
                 </a>
 
-                <a href="mailto:eg.emporiodigital@outlook.com" class="flex flex-col items-center gap-1 group">
-                    <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
-                        <i class="ph ph-envelope-simple text-xl text-slate-300 group-hover:text-brand-blue"></i>
+                <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
                     </div>
-                    <span class="text-[10px] text-slate-500 uppercase tracking-widest group-hover:text-brand-blue">E-mail</span>
                 </a>
             </div>
 
-            <p class="text-xs text-slate-600 uppercase tracking-widest mt-4">© 2025 EG Empório Digital.</p>
+            <div class="text-center">
+                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
+                <p class="text-[10px] text-slate-700 mt-1">Todos os direitos reservados.</p>
+            </div>
         </div>
     </footer>
 
