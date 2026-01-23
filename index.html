@@ -26,10 +26,10 @@
     }
     </script>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png?v=2">
-    <link rel="shortcut icon" href="favicon.png?v=2" type="image/png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <!-- Favicon e Ícones (TUDO APONTANDO PARA O LOGO.PNG) -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
     
     <!-- Open Graph -->
     <meta property="og:image" content="https://egemporiodigital.com.br/assets/images/logo.png">
@@ -363,6 +363,156 @@
         </div>
     </section>
 
+    <!-- NOVA SEÇÃO: PROJETOS DISPONÍVEIS (VITRINE HÍBRIDA) -->
+    <!-- Integrada respeitando o Design System existente -->
+    <section id="projetos-disponiveis" class="py-20 px-6 max-w-7xl mx-auto border-t border-white/5 relative z-10">
+        
+        <!-- Cabeçalho da Seção -->
+        <div class="text-center mb-16">
+            <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase tracking-wide">
+                Projetos <span class="text-brand-blue">Disponíveis</span>
+            </h2>
+            <p class="text-slate-500 text-sm max-w-2xl mx-auto">
+                Projetos conceituais e experiências interativas. Todos os sites são customizáveis de acordo com a preferência do cliente. Clique nos cards para visualizar a demonstração em vídeo.
+            </p>
+        </div>
+
+        <!-- Grid de Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- CARD 1: AUTOMOTIVO -->
+            <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                
+                <!-- Imagem -->
+                <img src="assets/images/capa-automotivo.jpg" alt="Projeto Automotivo" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                
+                <!-- Overlay Escuro -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                
+                <!-- Ícone Play (Aparece no Hover) -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+
+                <!-- Textos -->
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
+                        Conceito
+                    </span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Automotivo Luxury</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos de alto padrão.</p>
+                </div>
+            </div>
+
+            <!-- CARD 2: ARQUITETURA -->
+            <div onclick="openProjectModal('y8MOpAC93MU', 'https://vitrine-projetos-two.vercel.app/arquitetura.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                
+                <img src="assets/images/capa-arquitetura.jpg" alt="Projeto Arquitetura" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
+                        Imobiliária
+                    </span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Arquitetura Minimal</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Design clean e sofisticado para escritórios de arquitetura.</p>
+                </div>
+            </div>
+
+            <!-- CARD 3: FINANCEIRO -->
+            <div onclick="openProjectModal('IrjsnvJxBzM', 'https://vitrine-projetos-two.vercel.app/financeiro.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                
+                <img src="assets/images/capa-financeiro.jpg" alt="Projeto Financeiro" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
+                        Fintech
+                    </span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Dashboard Financeira</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Interface de dados complexos com visualização intuitiva.</p>
+                </div>
+            </div>
+
+            <!-- CARD 4: E-COMMERCE -->
+            <div onclick="openProjectModal('WKpuUGV41iM', 'https://vitrine-projetos-two.vercel.app/loja.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                
+                <img src="assets/images/capa-loja.jpg" alt="Projeto Loja" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
+                        E-commerce
+                    </span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Loja Moderna</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Experiência de compra fluida com interações dinâmicas.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MODAL DE VÍDEO (Estrutura oculta controlada por JS) -->
+    <div id="project-modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeProjectModal()"></div>
+        
+        <!-- Modal Content -->
+        <div class="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-fade-in flex flex-col">
+            <!-- Header do Modal -->
+            <div class="flex justify-between items-center p-4 border-b border-white/10 bg-black/50">
+                <span class="text-sm font-tech text-white uppercase tracking-widest">Demonstração Interativa</span>
+                <button onclick="closeProjectModal()" class="text-slate-400 hover:text-white transition">
+                    <i class="ph ph-x text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Container do Vídeo (Aspect Ratio 16:9) -->
+            <div class="relative aspect-video bg-black">
+                <iframe id="modal-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Footer do Modal (Botão de Ação) -->
+            <div class="p-6 text-center bg-black/50 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-slate-500 hidden md:block">Para melhor experiência, visualize no Desktop.</p>
+                <a id="modal-link-btn" href="#" target="_blank" class="w-full md:w-auto px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                    Acessar Site <i class="ph ph-arrow-up-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- FOOTER (LIMPO) -->
     <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
         <div class="flex flex-col items-center gap-8">
@@ -406,6 +556,44 @@
                 menu.classList.remove('flex');
             }
         }
+
+        // --- LÓGICA DO MODAL DE PROJETOS ---
+        const modal = document.getElementById('project-modal');
+        const iframe = document.getElementById('modal-iframe');
+        const linkBtn = document.getElementById('modal-link-btn');
+
+        function openProjectModal(videoId, projectUrl) {
+            // Define o link do site real no botão
+            linkBtn.href = projectUrl;
+            
+            // Carrega o vídeo (autoplay ativado para melhor UX)
+            // Usa 'embed' padrão do YouTube
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0`;
+            
+            // Mostra o modal
+            modal.classList.remove('hidden');
+            
+            // Trava o scroll da página de fundo
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProjectModal() {
+            // Esconde o modal
+            modal.classList.add('hidden');
+            
+            // Para o vídeo limpando o src
+            iframe.src = '';
+            
+            // Destrava o scroll
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fechar com ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeProjectModal();
+            }
+        });
     </script>
 </body>
 </html>
