@@ -8,6 +8,14 @@
     {
       "source": "/lp/:path*",
       "destination": "https://emporio-digital.github.io/lp/:path*"
+    },
+    {
+      "source": "/bio",
+      "destination": "https://bio-eg.vercel.app/"
+    },
+    {
+      "source": "/bio/:path*",
+      "destination": "https://bio-eg.vercel.app/:path*"
     }
   ]
 }
