@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- META TAGS DINÂMICAS -->
+    <title>Blog | EG Empório Digital</title>
+    <meta name="description" content="Artigos técnicos e estratégicos.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'eg-dark': '#020617', 'brand-blue': '#00e1ff' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], tech: ['Orbitron', 'sans-serif'] },
+                    animation: { 'fade-in': 'fadeIn 0.5s ease-out' },
+                    keyframes: { fadeIn: { '0%': { opacity: '0', transform: 'translateY(10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } } }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { 
+            background-color: #020617; 
+            background-image: radial-gradient(circle at 50% 0%, #0a2540 0%, #020617 80%);
+            background-attachment: fixed;
+            color: #cbd5e1; 
+            overflow-x: hidden; /* Evita rolagem lateral */
+        }
+        
+        /* Tipografia Otimizada para Leitura */
+        .prose h2 { 
+            font-family: 'Orbitron', sans-serif; 
+            color: white; 
+            font-size: 1.5rem; 
+            margin-top: 3rem; 
+            margin-bottom: 1.5rem; 
+            text-transform: uppercase; 
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid rgba(0, 225, 255, 0.2);
+            padding-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .prose p { 
+            margin-bottom: 1.5rem; 
+            line-height: 1.8; 
+            font-size: 1.1rem;
+            font-weight: 300; 
+            color: #cbd5e1;
+            text-align: justify; /* Melhora visual em Desktop */
+        }
+
+        /* Ajuste para mobile */
+        @media (max-width: 768px) {
+            .prose p { text-align: left; font-size: 1rem; }
+            .prose h2 { font-size: 1.2rem; }
+        }
+
+        .prose strong { color: #00e1ff; font-weight: 600; }
+        
+        .prose ul { 
+            list-style: none; 
+            padding-left: 0; 
+            margin-bottom: 2rem; 
+        }
+        .prose li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: #94a3b8;
+        }
+        .prose li::before {
+            content: "➤";
+            color: #00e1ff;
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+            top: 4px;
+        }
+
+        .prose .intro { 
+            font-size: 1.2rem; 
+            border-left: 4px solid #00e1ff; 
+            padding-left: 1.5rem; 
+            color: white; 
+            font-style: italic;
+            background: rgba(0, 225, 255, 0.05);
+            padding: 2rem;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 3rem;
+        }
+        
+        /* Box de Chamada para Ação (CTA) */
+        .cta-box {
+            background: linear-gradient(145deg, rgba(2,6,23,1), rgba(0, 78, 146, 0.3));
+            border: 1px solid rgba(0, 225, 255, 0.3);
+            padding: 3rem;
+            border-radius: 1rem;
+            margin-top: 4rem;
+            text-align: center;
+            box-shadow: 0 0 50px rgba(0, 225, 255, 0.1);
+        }
+        .btn-cta {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 1rem 3rem;
+            background: transparent;
+            border: 1px solid #00e1ff;
+            color: #00e1ff;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s;
+            border-radius: 4px;
+        }
+        .btn-cta:hover { 
+            background: #00e1ff; 
+            color: #020617; 
+            box-shadow: 0 0 25px rgba(0, 225, 255, 0.5); 
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-blue selection:text-eg-dark">
+
+    <!-- HEADER (Igual ao Blog e Home) -->
+    <header class="fixed w-full top-0 z-50 bg-eg-dark/95 border-b border-white/5 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="assets/images/logo.png" alt="Logo EG" class="h-8 w-auto group-hover:drop-shadow-[0_0_10px_rgba(0,225,255,0.5)] transition">
+                <div class="font-tech text-sm font-bold text-white uppercase tracking-widest">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </a>
+            
+            <!-- Botão Voltar -->
+            <a href="blog.html" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors uppercase font-bold text-xs tracking-widest border border-transparent hover:border-brand-blue/30 px-4 py-2 rounded">
+                <i class="ph ph-arrow-left text-brand-blue text-lg"></i> 
+                <span class="hidden md:inline">Voltar ao Blog</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- CONTAINER PRINCIPAL (Corrigido para evitar quebras) -->
+    <main class="w-full min-h-screen pt-32 pb-20 px-4 md:px-6">
+        
+        <!-- Loading -->
+        <div id="loading" class="flex flex-col items-center justify-center py-20">
+            <div class="w-12 h-12 border-4 border-brand-blue/20 border-t-brand-blue rounded-full animate-spin mb-4"></div>
+            <p class="text-brand-blue font-tech text-sm animate-pulse uppercase tracking-widest">Carregando...</p>
+        </div>
+
+        <!-- Conteúdo do Artigo (Centralizado e Restrito a 800px) -->
+        <!-- IMPORTANTE: removi o "hidden" inicial para evitar flash, controlado via JS -->
+        <article id="article-content" class="hidden max-w-[800px] mx-auto animate-fade-in">
+            
+            <!-- Cabeçalho do Post -->
+            <header class="mb-12 text-center">
+                <span id="post-category" class="inline-block px-4 py-1 mb-6 text-[10px] font-tech font-bold text-brand-blue uppercase tracking-[0.2em] border border-brand-blue/20 bg-brand-blue/5 rounded-full">
+                    <!-- Categoria via JS -->
+                </span>
+                
+                <h1 id="post-title" class="font-tech text-2xl md:text-4xl lg:text-5xl text-white font-bold uppercase leading-tight mb-6 drop-shadow-lg">
+                    <!-- Título via JS -->
+                </h1>
+                
+                <div class="flex flex-wrap items-center justify-center gap-4 text-slate-500 text-xs font-bold tracking-widest uppercase border-t border-b border-white/5 py-4">
+                    <span class="flex items-center gap-2"><i class="ph ph-calendar text-brand-blue text-lg"></i> <span id="post-date"></span></span>
+                    <span class="hidden md:inline text-brand-blue">•</span>
+                    <span class="flex items-center gap-2"><i class="ph ph-user text-brand-blue text-lg"></i> EG Team</span>
+                </div>
+            </header>
+
+            <!-- Imagem Principal (Corrigida proporção e sombra) -->
+            <figure class="w-full aspect-video rounded-2xl overflow-hidden mb-12 shadow-[0_0_50px_rgba(0,225,255,0.1)] border border-white/10 relative">
+                <div class="absolute inset-0 bg-gradient-to-t from-eg-dark via-transparent to-transparent opacity-60"></div>
+                <img id="post-image" src="" alt="Capa do Artigo" class="w-full h-full object-cover">
+            </figure>
+
+            <!-- Corpo do Texto -->
+            <div id="post-body" class="prose prose-invert max-w-none">
+                <!-- Conteúdo HTML injetado via JS -->
+            </div>
+
+            <!-- "Leia Também" (Bloco Final) -->
+            <aside class="mt-24 pt-10 border-t border-white/10">
+                <p class="text-center text-slate-500 text-xs uppercase tracking-[0.2em] mb-8">Continue Evoluindo</p>
+                
+                <a id="next-post-link" href="#" class="block group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 hover:border-brand-blue/50 transition-all duration-300">
+                    <div class="p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div class="text-center md:text-left">
+                            <span class="text-brand-blue text-[10px] font-tech uppercase tracking-widest mb-2 block">Próxima Leitura</span>
+                            <h4 id="next-post-title" class="text-white font-tech text-xl md:text-2xl group-hover:text-brand-blue transition-colors">
+                                <!-- Titulo Proximo via JS -->
+                            </h4>
+                        </div>
+                        <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-eg-dark group-hover:border-brand-blue transition-all">
+                            <i class="ph ph-arrow-right text-xl"></i>
+                        </div>
+                    </div>
+                </a>
+            </aside>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center border-t border-white/5 bg-black/40 backdrop-blur-sm">
+        <p class="text-xs text-slate-600 uppercase tracking-widest">© 2026 EG Empório Digital.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/blog-db.js"></script>
+    <script>
+        // Lógica de Carregamento
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const postId = params.get('id');
+            
+            // Busca o post
+            const post = blogPosts.find(p => p.id === postId);
+
+            if (post) {
+                // SEO
+                document.title = `${post.title} | EG Blog`;
+                
+                // Preenche conteúdo
+                document.getElementById('post-category').innerText = post.category;
+                document.getElementById('post-title').innerText = post.title;
+                document.getElementById('post-date').innerText = post.date;
+                document.getElementById('post-image').src = post.image;
+                document.getElementById('post-body').innerHTML = post.content;
+
+                // Lógica do Próximo Post
+                const otherPosts = blogPosts.filter(p => p.id !== postId);
+                if (otherPosts.length > 0) {
+                    const randomPost = otherPosts[Math.floor(Math.random() * otherPosts.length)];
+                    document.getElementById('next-post-title').innerText = randomPost.title;
+                    document.getElementById('next-post-link').href = `artigo.html?id=${randomPost.id}`;
+                } else {
+                    document.querySelector('aside').style.display = 'none';
+                }
+
+                // Exibe
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('article-content').classList.remove('hidden');
+                
+            } else {
+                // Redireciona se der erro
+                window.location.href = 'blog.html';
+            }
+        });
+    </script>
+</body>
+</html>
