@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <!-- ESTRUTURA ORIGINAL (MANTIDA) -->
+   <!-- ESTRUTURA ORIGINAL -->
    <url>
       <loc>https://egemporiodigital.com.br/</loc>
-      <lastmod>2026-01-20</lastmod>
+      <lastmod>2026-02-09</lastmod>
       <priority>1.00</priority>
    </url>
    <url>
@@ -22,24 +22,24 @@
       <priority>0.80</priority>
    </url>
 
-   <!-- NOVO: BLOG E ARTIGOS (ADICIONADOS) -->
+   <!-- NOVO: BLOG E ARTIGOS (PADRONIZADO SEM .HTML PARA SEO MELHOR) -->
    <url>
-      <loc>https://egemporiodigital.com.br/blog.html</loc>
+      <loc>https://egemporiodigital.com.br/blog</loc>
       <lastmod>2026-02-09</lastmod>
       <priority>0.90</priority>
    </url>
    <url>
-      <loc>https://egemporiodigital.com.br/artigo.html?id=site-vs-saas</loc>
+      <loc>https://egemporiodigital.com.br/artigo?id=site-vs-saas</loc>
       <lastmod>2026-02-09</lastmod>
       <priority>0.85</priority>
    </url>
    <url>
-      <loc>https://egemporiodigital.com.br/artigo.html?id=como-criar-saas</loc>
+      <loc>https://egemporiodigital.com.br/artigo?id=como-criar-saas</loc>
       <lastmod>2026-02-09</lastmod>
       <priority>0.85</priority>
    </url>
    <url>
-      <loc>https://egemporiodigital.com.br/artigo.html?id=landing-page-vendas</loc>
+      <loc>https://egemporiodigital.com.br/artigo?id=landing-page-vendas</loc>
       <lastmod>2026-02-09</lastmod>
       <priority>0.85</priority>
    </url>
