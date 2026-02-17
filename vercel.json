@@ -19,11 +19,11 @@
     },
     {
       "source": "/seo",
-      "destination": "https://vitrine-projetos-two.vercel.app/seo"
+      "destination": "https://vitrine-projetos-two.vercel.app/seo-elite.html"
     },
     {
       "source": "/seo/:path*",
-      "destination": "https://vitrine-projetos-two.vercel.app/seo/:path*"
+      "destination": "https://vitrine-projetos-two.vercel.app/seo-elite.html/:path*"
     },
     {
       "source": "/pneus",
