@@ -24,6 +24,14 @@
     {
       "source": "/seo/:path*",
       "destination": "https://vitrine-projetos-two.vercel.app/seo/:path*"
+    },
+    {
+      "source": "/pneus",
+      "destination": "https://elite-pneus.vercel.app/"
+    },
+    {
+      "source": "/pneus/:path*",
+      "destination": "https://elite-pneus.vercel.app/:path*"
     }
   ]
 }
