@@ -16,6 +16,22 @@
     {
       "source": "/bio/:path*",
       "destination": "https://bio-eg.vercel.app/:path*"
+    },
+    {
+      "source": "/seo",
+      "destination": "https://vitrine-projetos-two.vercel.app/seo-elite.html"
+    },
+    {
+      "source": "/seo/:path*",
+      "destination": "https://vitrine-projetos-two.vercel.app/seo-elite.html/:path*"
+    },
+    {
+      "source": "/pneus",
+      "destination": "https://elite-pneus.vercel.app/"
+    },
+    {
+      "source": "/pneus/:path*",
+      "destination": "https://elite-pneus.vercel.app/:path*"
     }
   ]
 }
