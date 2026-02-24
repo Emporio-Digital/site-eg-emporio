@@ -3,21 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <!-- META TAGS DINÂMICAS -->
     <title>Blog | EG Empório Digital</title>
     <meta name="description" content="Artigos técnicos e estratégicos.">
-    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/logo.png">
-    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
     <script>
         tailwind.config = {
             theme: {
@@ -30,14 +25,13 @@
             }
         }
     </script>
-
     <style>
         body { 
             background-color: #020617; 
             background-image: radial-gradient(circle at 50% 0%, #0a2540 0%, #020617 80%);
             background-attachment: fixed;
             color: #cbd5e1; 
-            overflow-x: hidden; /* Evita rolagem lateral */
+            overflow-x: hidden;
         }
         
         /* Tipografia Otimizada para Leitura */
@@ -60,7 +54,7 @@
             font-size: 1.1rem;
             font-weight: 300; 
             color: #cbd5e1;
-            text-align: justify; /* Melhora visual em Desktop */
+            text-align: justify;
         }
 
         /* Ajuste para mobile */
@@ -137,10 +131,9 @@
 </head>
 <body class="antialiased selection:bg-brand-blue selection:text-eg-dark">
 
-    <!-- HEADER (Igual ao Blog e Home) -->
+    <!-- HEADER -->
     <header class="fixed w-full top-0 z-50 bg-eg-dark/95 border-b border-white/5 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
-            
             <!-- Logo -->
             <a href="/" class="flex items-center gap-3 group">
                 <img src="assets/images/logo.png" alt="Logo EG" class="h-8 w-auto group-hover:drop-shadow-[0_0_10px_rgba(0,225,255,0.5)] transition">
@@ -157,17 +150,15 @@
         </div>
     </header>
 
-    <!-- CONTAINER PRINCIPAL (Corrigido para evitar quebras) -->
+    <!-- CONTAINER PRINCIPAL -->
     <main class="w-full min-h-screen pt-32 pb-20 px-4 md:px-6">
-        
         <!-- Loading -->
         <div id="loading" class="flex flex-col items-center justify-center py-20">
             <div class="w-12 h-12 border-4 border-brand-blue/20 border-t-brand-blue rounded-full animate-spin mb-4"></div>
             <p class="text-brand-blue font-tech text-sm animate-pulse uppercase tracking-widest">Carregando...</p>
         </div>
 
-        <!-- Conteúdo do Artigo (Centralizado e Restrito a 800px) -->
-        <!-- IMPORTANTE: removi o "hidden" inicial para evitar flash, controlado via JS -->
+        <!-- Conteúdo do Artigo -->
         <article id="article-content" class="hidden max-w-[800px] mx-auto animate-fade-in">
             
             <!-- Cabeçalho do Post -->
@@ -187,7 +178,7 @@
                 </div>
             </header>
 
-            <!-- Imagem Principal (Corrigida proporção e sombra) -->
+            <!-- Imagem Principal -->
             <figure class="w-full aspect-video rounded-2xl overflow-hidden mb-12 shadow-[0_0_50px_rgba(0,225,255,0.1)] border border-white/10 relative">
                 <div class="absolute inset-0 bg-gradient-to-t from-eg-dark via-transparent to-transparent opacity-60"></div>
                 <img id="post-image" src="" alt="Capa do Artigo" class="w-full h-full object-cover">
@@ -198,7 +189,7 @@
                 <!-- Conteúdo HTML injetado via JS -->
             </div>
 
-            <!-- "Leia Também" (Bloco Final) -->
+            <!-- "Leia Também" -->
             <aside class="mt-24 pt-10 border-t border-white/10">
                 <p class="text-center text-slate-500 text-xs uppercase tracking-[0.2em] mb-8">Continue Evoluindo</p>
                 
@@ -219,12 +210,12 @@
 
         </article>
     </main>
-
+    
     <!-- Footer -->
     <footer class="py-12 text-center border-t border-white/5 bg-black/40 backdrop-blur-sm">
         <p class="text-xs text-slate-600 uppercase tracking-widest">© 2026 EG Empório Digital.</p>
     </footer>
-
+    
     <!-- Scripts -->
     <script src="js/blog-db.js"></script>
     <script>
