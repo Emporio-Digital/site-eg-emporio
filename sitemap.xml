@@ -4,7 +4,7 @@
    <!-- PÁGINAS ESTÁTICAS PRINCIPAIS -->
    <url>
       <loc>https://egemporiodigital.com.br/</loc>
-      <lastmod>2026-02-23</lastmod>
+      <lastmod>2026-02-26</lastmod>
       <priority>1.00</priority>
    </url>
    <url>
@@ -28,6 +28,41 @@
       <priority>0.70</priority>
    </url>
 
+   <!-- PROJETO DOMINANDO TERRITÓRIOS (SEO LOCAL) -->
+   <!-- Hub Principal de Serviços -->
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.95</priority>
+   </url>
+
+   <!-- Páginas de Cidades/Bairros (Fase 1) -->
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/campinas</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/jundiai</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/sorocaba</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/vila-prudente</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/tatuape</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+
    <!-- ARTIGOS DO BLOG (ANTIGOS MANTIDOS) -->
    <url>
       <loc>https://egemporiodigital.com.br/artigo?id=site-vs-saas</loc>
@@ -46,36 +81,26 @@
    </url>
 
    <!-- NOVOS ARTIGOS (ADICIONADOS HOJE) -->
-   
-   <!-- 1. SEO Técnico -->
    <url>
       <loc>https://egemporiodigital.com.br/artigo?id=seo-tecnico-google</loc>
       <lastmod>2026-02-23</lastmod>
       <priority>0.90</priority>
    </url>
-
-   <!-- 2. Gestão de Tráfego -->
    <url>
       <loc>https://egemporiodigital.com.br/artigo?id=trafego-pago-roi</loc>
       <lastmod>2026-02-23</lastmod>
       <priority>0.90</priority>
    </url>
-
-   <!-- 3. Performance de Sites -->
    <url>
       <loc>https://egemporiodigital.com.br/artigo?id=site-lento-performance</loc>
       <lastmod>2026-02-23</lastmod>
       <priority>0.85</priority>
    </url>
-
-   <!-- 4. Copywriting LP -->
    <url>
       <loc>https://egemporiodigital.com.br/artigo?id=copywriting-landing-page</loc>
       <lastmod>2026-02-23</lastmod>
       <priority>0.85</priority>
    </url>
-
-   <!-- 5. Escalando SaaS -->
    <url>
       <loc>https://egemporiodigital.com.br/artigo?id=escalando-saas</loc>
       <lastmod>2026-02-23</lastmod>

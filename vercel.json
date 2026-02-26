@@ -2,6 +2,14 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/criacao-de-sites",
+      "destination": "/criacao-de-sites/index.html"
+    },
+    {
+      "source": "/criacao-de-sites/:slug",
+      "destination": "/criacao-de-sites/:slug.html"
+    },
+    {
       "source": "/lp",
       "destination": "https://emporio-digital.github.io/lp/"
     },
