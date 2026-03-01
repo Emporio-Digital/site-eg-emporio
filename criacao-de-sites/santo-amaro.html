@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- SEO HUB: GERAL -->
-    <title>Criação de Sites Profissionais e Lojas Virtuais | EG Empório Digital</title>
-    <meta name="description" content="Especialistas em criação de sites, landing pages e lojas virtuais de alta conversão. Design moderno e tecnologia de ponta para empresas que querem vender mais.">
+    <!-- SEO LOCAL: SANTO AMARO -->
+    <title>Criação de Sites em Santo Amaro | Landing Pages e Lojas Virtuais - EG Empório</title>
+    <meta name="description" content="Especialistas em criação de sites profissionais em Santo Amaro. Fazemos sites, landing pages de alta conversão e lojas virtuais para o polo empresarial da Zona Sul.">
     
-    <!-- CANONICAL (Aponta para ele mesmo, pois é a Pai) -->
-    <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/">
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/santo-amaro">
     
-    <!-- SCHEMA MARKUP (Organization/Service) -->
+    <!-- SCHEMA MARKUP (LOCAL BUSINESS) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      "name": "EG Empório Digital - Desenvolvimento Web",
-      "url": "https://egemporiodigital.com.br/criacao-de-sites/",
+      "name": "EG Empório Digital - Criação de Sites em Santo Amaro",
+      "url": "https://egemporiodigital.com.br/criacao-de-sites/santo-amaro",
       "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "areaServed": "BR",
-      "description": "Agência especializada em criação de sites profissionais, e-commerce e estratégias digitais.",
+      "areaServed": ["Santo Amaro", "Largo Treze", "Socorro", "Granja Julieta", "Alto da Boa Vista", "Chácara Santo Antônio"],
+      "description": "Agência especializada em criação de sites, landing pages e lojas virtuais em Santo Amaro e toda Zona Sul de SP.",
       "priceRange": "$$"
     }
     </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link rel="shortcut icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo.png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -49,10 +51,15 @@
                         tech: ['Orbitron', 'sans-serif'], 
                     },
                     animation: {
-                        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'scroll': 'scroll 25s linear infinite',
                         'fade-in': 'fadeIn 0.3s ease-out',
+                        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
                         fadeIn: {
                             '0%': { opacity: '0', transform: 'translateY(-10px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
@@ -77,11 +84,12 @@
             filter: drop-shadow(0 0 20px rgba(0, 225, 255, 0.3));
         }
 
+        .gpu-accelerated { transform: translateZ(0); will-change: transform; }
+
         .glass-tech {
             background: rgba(2, 6, 23, 0.6);
             border: 1px solid rgba(0, 225, 255, 0.1);
             backdrop-filter: blur(5px);
-            transition: all 0.3s ease;
         }
         .glass-tech:hover {
             border-color: rgba(0, 225, 255, 0.4);
@@ -126,12 +134,12 @@
 
             <!-- NAV LINKS -->
             <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
-                <a href="../index.html" class="hover:text-brand-blue transition-colors">Home</a>
-                <a href="#projetos-disponiveis" class="text-brand-blue transition-colors">Projetos</a>
-                <a href="#locais-atendimento" class="hover:text-brand-blue transition-colors">Onde Atendemos</a>
+                <a href="../index.html" class="hover:text-brand-blue transition-colors">Início</a>
+                <a href="#servicos-locais" class="text-brand-blue transition-colors">Serviços Locais</a>
+                <a href="#projetos-disponiveis" class="hover:text-brand-blue transition-colors">Portfólio</a>
             </nav>
 
-            <a href="https://wa.me/5511916053292?text=Olá, gostaria de um orçamento para criação de site." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+            <a href="https://wa.me/5511916053292?text=Olá, sou de Santo Amaro e vi o site, gostaria de um orçamento." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
                 Fale com a gente
             </a>
 
@@ -142,55 +150,105 @@
 
         <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
             <a href="../index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Voltar ao Início</a>
-            <a href="#projetos-disponiveis" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Portfólio</a>
-            <a href="#locais-atendimento" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Cidades</a>
+            <a href="#servicos-locais" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços</a>
+            <a href="https://wa.me/5511916053292?text=Olá, sou de Santo Amaro e vi o site, gostaria de um orçamento." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
+                Fale com a gente
+            </a>
         </div>
     </header>
 
-    <!-- HERO SECTION (HUB PRINCIPAL) -->
+    <!-- HERO SECTION -->
     <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
         
         <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
-            CRIAÇÃO DE SITES <br> <span class="text-white">PROFISSIONAIS</span>
+            CRIAÇÃO DE SITES <br> EM <span class="text-white">SANTO AMARO</span>
         </h1>
 
         <h2 class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
-            TECNOLOGIA, DESIGN E ALTA CONVERSÃO
+            DOMINE O MERCADO DIGITAL NA ZONA SUL
         </h2>
 
         <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-8 z-10"></div>
 
         <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
-            Transformamos sua ideia em uma máquina de vendas. Especialistas em <strong>Lojas Virtuais</strong>, <strong>Landing Pages</strong> e Sistemas Web. 
-            Atendemos empresas visionárias em todo o Brasil com foco em performance e SEO.
+            Você busca por <strong>web design profissional</strong>? Somos especialistas em elevar negócios em Santo Amaro. 
+            Transformamos sua ideia em uma <strong class="text-white">loja online</strong> ou site institucional que gera resultados e destaca sua marca na região.
         </p>
 
-        <!-- CTA BUTTONS -->
         <div class="flex flex-col md:flex-row gap-4 z-10">
-            <a href="https://wa.me/5511916053292?text=Quero um site profissional." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+            <a href="https://wa.me/5511916053292?text=Preciso de um site em Santo Amaro para aumentar minhas vendas." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
                 Solicitar Orçamento
             </a>
-            <a href="#locais-atendimento" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
-                Ver Regiões Atendidas
+            <a href="#projetos-disponiveis" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
+                Ver Portfólio
             </a>
+        </div>
+
+    </section>
+
+    <!-- SEÇÃO DE CONTEÚDO SEO (SANTO AMARO) -->
+    <section id="servicos-locais" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20">
+            <div class="text-left mb-10">
+                <h2 class="font-tech text-3xl md:text-4xl text-white mb-4 uppercase leading-tight">
+                    Por que contratar a <span class="text-brand-blue">EG Empório</span> em Santo Amaro?
+                </h2>
+                <p class="text-slate-300 text-lg leading-relaxed">
+                    Santo Amaro é o coração comercial e corporativo da Zona Sul. De escritórios na Chácara Santo Antônio ao comércio do Largo Treze, sua empresa precisa de uma <strong>criação de site</strong> que transmita robustez e confiança.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Coluna 1 -->
+                <div>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Especialistas em Criação de Sites</h3>
+                    <p class="text-slate-400 mb-6">
+                        Nós <strong>fazemos sites</strong> focados em conversão. Para a <strong>criação de sites profissionais</strong> em Santo Amaro e Granja Julieta, unimos tecnologia e estratégia. Nosso <strong>design de site</strong> é pensado para quem não aceita ser apenas mais um no Google.
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site otimizado (SEO Local)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site responsivo e moderno</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites ultra-rápidos para performance</li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Lojas Virtuais e Landing Pages</h3>
+                    <p class="text-slate-400 mb-6">
+                        Quer vender mais? Desenvolvemos sua <strong>loja online</strong> ou <strong>loja virtual</strong> completa. Se o seu foco é capturar leads qualificados na região da Adolfo Pinheiro ou Socorro, nossas <strong>Landing Pages</strong> são projetadas para converter tráfego em lucro.
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Site de vendas com checkout fluido</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages para Google Ads</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Nós fazemos sites que geram leads reais</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <a href="https://wa.me/5511916053292?text=Preciso de um site profissional em Santo Amaro." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
+                    Quero meu site agora <i class="ph ph-arrow-right"></i>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- SEÇÃO: PROJETOS DISPONÍVEIS (8 CARDS CLICÁVEIS) -->
+    <!-- SEÇÃO: PROJETOS DISPONÍVEIS (TODOS OS 8 CARDS) -->
     <section id="projetos-disponiveis" class="scroll-mt-32 py-20 px-6 max-w-7xl mx-auto border-t border-white/5 relative z-10">
         
         <div class="text-center mb-16">
             <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase tracking-wide">
-                Nosso <span class="text-brand-blue">Portfólio</span>
+                Exemplos de <span class="text-brand-blue">Projetos Reais</span>
             </h2>
             <p class="text-slate-500 text-sm max-w-2xl mx-auto">
-                Confira a qualidade que entregamos para clientes de todo o Brasil.
+                Veja o nível de qualidade que entregamos para clientes em Santo Amaro e todo o Brasil.
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <!-- CARD 1: ESTÉTICA -->
+            <!-- CARD 1: ESTÉTICA AUTOMOTIVA -->
             <div onclick="openProjectModal('NKRiU16RUmk', 'https://vitrine-projetos-two.vercel.app/estetica-auto.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/estetica.png" alt="Estética Automotiva" 
@@ -204,7 +262,7 @@
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Automotivo</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Estética Automotiva</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Ideal para centros automotivos de alto padrão.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Solução digital completa para estética e cuidado de veículos.</p>
                 </div>
             </div>
 
@@ -221,12 +279,12 @@
                 </div>
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Serviços</span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Despachante VIP</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Landing Page de alta conversão para serviços.</p>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Despachante</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Landing Page de alta conversão para serviços de documentação.</p>
                 </div>
             </div>
 
-            <!-- CARD 3: NOIR GASTROBAR -->
+            <!-- 3. NOIR GASTROBAR -->
             <div onclick="openProjectModal('3MXvILsR5DA', 'https://vitrine-projetos-two.vercel.app/saas-ia.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="https://i.ibb.co/kb2NGD7/Captura-de-tela-2026-02-05-003024.png" alt="Projeto Noir Gastrobar" 
@@ -238,59 +296,44 @@
                     </div>
                 </div>
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Gastronomia</span>
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Cardápio Digital</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Noir Gastrobar</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Ideal para restaurantes e bares.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Menu digital interativo com design de alto luxo e glassmorphism.</p>
                 </div>
             </div>
 
-            <!-- CARD 4: AUTOMOTIVO LUXURY -->
+            <!-- 4. AUTOMOTIVO LUXURY -->
             <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-automotivo.jpg" alt="Projeto Automotivo" 
                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                    </div>
-                </div>
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Conceito</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Automotivo Luxury</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos de alto padrão.</p>
                 </div>
             </div>
 
-            <!-- CARD 5: ARQUITETURA -->
+            <!-- 5. ARQUITETURA -->
             <div onclick="openProjectModal('y8MOpAC93MU', 'https://vitrine-projetos-two.vercel.app/arquitetura.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-arquitetura.jpg" alt="Projeto Arquitetura" 
                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                    </div>
-                </div>
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Imobiliária</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Arquitetura Minimal</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Design clean e sofisticado para escritórios.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Design clean e sofisticado para escritórios de arquitetura.</p>
                 </div>
             </div>
 
-            <!-- CARD 6: FINANCEIRO -->
+            <!-- 6. FINANCEIRO -->
             <div onclick="openProjectModal('IrjsnvJxBzM', 'https://vitrine-projetos-two.vercel.app/financeiro.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-financeiro.jpg" alt="Projeto Financeiro" 
                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                    </div>
-                </div>
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Fintech</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Dashboard Financeira</h3>
@@ -298,158 +341,36 @@
                 </div>
             </div>
 
-            <!-- CARD 7: E-COMMERCE -->
-            <div onclick="openProjectModal('WKpuUGV41iM', 'https://vitrine-projetos-two.vercel.app/loja.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/capa-loja.jpg" alt="Projeto Loja" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">E-commerce</span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Loja Virtual Moderna</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Experiência de compra premium.</p>
-                </div>
-            </div>
+             <!-- 7. E-COMMERCE -->
+             <div onclick="openProjectModal('WKpuUGV41iM', 'https://vitrine-projetos-two.vercel.app/loja.html')" 
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+               <img src="../assets/images/capa-loja.jpg" alt="Projeto Loja" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+               <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">E-commerce</span>
+                   <h3 class="text-2xl font-tech text-white mb-1 uppercase">Loja Moderna</h3>
+                   <p class="text-slate-400 text-sm line-clamp-2">Experiência de compra fluida com interações dinâmicas.</p>
+               </div>
+           </div>
 
-            <!-- CARD 8: FITNESS -->
-            <div onclick="openProjectModal('4nwWammXuc4', 'https://vitrine-projetos-two.vercel.app/fitness.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Projeto Fitness" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Fitness</span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Iron Force Fitness</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Site de alta performance para academias.</p>
-                </div>
-            </div>
+           <!-- 8. FITNESS -->
+           <div onclick="openProjectModal('4nwWammXuc4', 'https://vitrine-projetos-two.vercel.app/fitness.html')" 
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+               <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Projeto Fitness" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+               <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Institucional / Academia</span>
+                   <h3 class="text-2xl font-tech text-white mb-1 uppercase">Iron Force Fitness</h3>
+                   <p class="text-slate-400 text-sm line-clamp-2">Site de alta performance para academias e personal trainers.</p>
+               </div>
+           </div>
 
         </div>
     </section>
 
-    <!-- SEÇÃO: LOCAIS DE ATENDIMENTO (O DIRETÓRIO) -->
-    <section id="locais-atendimento" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20">
-            <div class="text-left mb-10">
-                <h2 class="font-tech text-3xl md:text-4xl text-white mb-4 uppercase leading-tight">
-                    Onde <span class="text-brand-blue">Atendemos</span>
-                </h2>
-                <p class="text-slate-300 text-lg leading-relaxed max-w-3xl">
-                    A EG Empório Digital atende clientes em todo o mundo, mas possuímos estratégias de <strong>SEO Local</strong> otimizadas para regiões específicas. Selecione sua localização:
-                </p>
-            </div>
-
-            <!-- GRID DE LINKS (ATUALIZADO COM TODAS AS PÁGINAS DO PRINT) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                
-                <a href="sao-paulo.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Capital</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">São Paulo (SP)</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="campinas.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Interior</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Campinas</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="guarulhos.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Grande SP</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Guarulhos</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="sao-bernardo.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">ABC Paulista</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">São Bernardo</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="santo-andre.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">ABC Paulista</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Santo André</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="sao-caetano.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">ABC Paulista</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">São Caetano</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="santo-amaro.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Zona Sul</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Santo Amaro</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="tatuape.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Zona Leste</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Tatuapé</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="vila-prudente.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Zona Leste</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Vila Prudente</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="santos.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Litoral</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Santos</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="ilha-bela.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Litoral Norte</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Ilha Bela</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-                
-                <!-- Card Genérico para SEO -->
-                <div class="p-6 border border-white/5 rounded-xl flex items-center justify-center text-center">
-                    <span class="text-sm text-slate-500">Mais cidades em breve...</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO SEO EXPANDÍVEL (HUB MASTER) - INJEÇÃO DE KEYWORDS -->
+    <!-- SEÇÃO SEO EXPANDÍVEL (SANTO AMARO) - FOCO TOTAL EM CRIAÇÃO DE SITES NO DOSSIÊ -->
     <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
@@ -457,47 +378,116 @@
             <div onclick="toggleSeoText()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
                     <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
-                        <i class="ph-fill ph-rocket text-brand-blue mr-2"></i> Glossário Técnico: Nossos Serviços
+                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Guia Técnico: Autoridade Digital em Santo Amaro
                     </h2>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Saiba mais sobre nossa metodologia</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Estratégias para o polo corporativo da Zona Sul</span>
                 </div>
                 <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
                     <i id="seo-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
-            <!-- CONTEÚDO EXPANDÍVEL (INJEÇÃO DE PALAVRAS-CHAVE SOLICITADAS) -->
+            <!-- CONTEÚDO EXPANDÍVEL (Regra de Ouro: Títulos H3 com "Criação de Sites") -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
                 <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-6 font-light">
                     
                     <p>
-                        A EG Empório Digital é referência quando o assunto é <strong>criação de sites profissionais</strong>. Entendemos que cada negócio é único e precisa de uma presença digital que realmente converta visitantes em clientes. Abaixo, explicamos como nossa tecnologia atende às principais buscas do mercado.
+                        Santo Amaro é um dos bairros mais estratégicos de São Paulo. Com uma malha empresarial que abrange a Chácara Santo Antônio e o movimentado Largo Treze, a <strong>criação de site</strong> aqui exige um nível superior de qualidade. A EG Empório Digital desenvolve soluções que conectam o poder corporativo da Zona Sul ao mundo digital.
                     </p>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Especialistas em Criação de Site e Plataformas Web</h3>
+                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Profissionais e Institucionais em Santo Amaro</h3>
                     <p>
-                        Se você busca uma agência séria para <strong>criacao de site</strong> ou <strong>criação de um site</strong> institucional, nós temos a solução. Nossa equipe de desenvolvedores utiliza códigos limpos e modernos. Quando um cliente nos procura para <strong>fazer site</strong>, nós não entregamos apenas um layout, entregamos uma ferramenta de negócios. Nós <strong>fazemos sites</strong> que carregam rápido e posicionam bem no Google.
+                        Para empresas da Zona Sul, a <strong>criação de sites profissionais</strong> é o pilar da credibilidade. Nós <strong>fazemos sites</strong> institucionais de alto padrão para consultorias e indústrias que buscam autoridade. A <strong>criação de um site</strong> moderno, responsivo e rápido garante que sua marca seja a primeira escolha quando um cliente busca por seus serviços na região.
                     </p>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Soluções Completas de E-commerce</h3>
+                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites para Lojas Virtuais e E-commerce</h3>
                     <p>
-                        O mercado digital não para de crescer. Desenvolvemos sua <strong>loja online</strong> com painel administrativo intuitivo e checkout seguro. Ter um <strong>site de vendas online</strong> (E-commerce) permite escalar seu negócio 24 horas por dia. Seja uma <strong>loja virtual</strong> robusta ou um catálogo simples, nossa estrutura de <strong>site de vendas</strong> é preparada para alta demanda de tráfego.
+                        O comércio de Santo Amaro é referência. Sua empresa precisa de uma <strong>loja virtual</strong> (E-commerce) preparada para vender 24h. Na <strong>criação de sites</strong> de vendas, focamos em checkout seguro e design intuitivo. Ter um <strong>site de vendas online</strong> otimizado é vital para expandir seu faturamento além das fronteiras físicas do bairro. Seja um <strong>site de vendas</strong> de produtos ou serviços, nós entregamos performance.
                     </p>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Design de Site e Landing Pages de Alta Conversão</h3>
+                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Estilo Landing Page para Conversão</h3>
                     <p>
-                        O <strong>design de site</strong> é o que define a credibilidade da sua marca nos primeiros segundos. Criamos layouts exclusivos focados na experiência do usuário (UX). Além disso, somos experts em <strong>landing pages</strong> (páginas de aterrissagem) focadas em captura de leads. Quem <strong>cria sites</strong> conosco recebe um projeto visualmente impactante e tecnicamente perfeito.
+                        Para prestadores de serviços e profissionais liberais que precisam de resultados rápidos, <strong>fazer site</strong> do tipo Landing Page é a melhor escolha. Projetamos <strong>Landing Pages</strong> com foco total em capturar leads via WhatsApp. É a estratégia ideal de <strong>criação de sites</strong> para quem roda tráfego pago no Google focando em clientes de Santo Amaro, Socorro e Interlagos.
+                    </p>
+
+                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites com Design Moderno e Responsivo</h3>
+                    <p>
+                        O <strong>design de site</strong> da sua empresa é o seu cartão de visitas digital. Um visual defasado afasta o público qualificado da Zona Sul. Nós garantimos um <strong>design de site</strong> premium, com estética moderna ("Dark Mode") e total adaptabilidade para celulares. Na EG Empório, nós <strong>fazemos sites</strong> que elevam o patamar da sua comunicação.
                     </p>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        Resumo: A EG Empório Digital é a parceira ideal para <strong>criação de sites profissionais</strong>, desenvolvimento de <strong>loja virtual</strong> e estratégias de crescimento online.
+                        Conclusão: Se sua empresa está em Santo Amaro e você precisa de <strong>criação de site</strong>, expansão com <strong>loja online</strong> ou quer saber como <strong>fazer site</strong> para dominar seu nicho, a EG Empório Digital é sua parceira estratégica. Nós não apenas <strong>criamos sites</strong>; nós construímos ativos digitais de alta rentabilidade.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MODAL DE VÍDEO (ADICIONADO AGORA) -->
+    <!-- SEÇÃO FAQ (SEO BOOSTER COMPLETA) -->
+    <section class="py-20 px-6 max-w-4xl mx-auto relative z-10">
+        <div class="text-center mb-12">
+            <h2 class="font-tech text-2xl md:text-3xl text-white mb-4 uppercase">
+                Dúvidas <span class="text-brand-blue">Frequentes</span>
+            </h2>
+            <div class="w-24 h-1 bg-brand-blue mx-auto rounded-full opacity-50"></div>
+        </div>
+
+        <div class="space-y-4">
+            <!-- Pergunta 1 -->
+            <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
+                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto custa para criar um site em Santo Amaro?</span>
+                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                        O valor varia conforme a complexidade. Uma Landing Page para capturar leads tem um investimento menor que uma Loja Virtual completa. Na EG Empório Digital, criamos projetos personalizados que cabem no orçamento de pequenas e médias empresas da Zona Sul, sempre focando no ROI.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
+                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">O site vai aparecer no Google de Santo Amaro?</span>
+                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                        Sim! Todos os nossos sites são desenvolvidos com técnicas avançadas de SEO Local. Estruturamos o código para que sua empresa seja encontrada por clientes que buscam seus serviços na região de Santo Amaro e arredores.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
+                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês entregam o site pronto em quanto tempo?</span>
+                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                        Prezamos pela agilidade. Landing Pages costumam ser entregues entre 5 a 10 dias úteis. Sites institucionais e Lojas Virtuais podem levar de 15 a 30 dias, dependendo das funcionalidades e integrações solicitadas.
+                    </div>
+                </div>
+            </div>
+
+             <!-- Pergunta 4 -->
+             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
+                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Preciso pagar mensalidade?</span>
+                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                        O desenvolvimento do site é um pagamento único. Você terá apenas os custos básicos de manutenção anual (Domínio e Hospedagem). Nós te orientamos em todo esse processo técnico para que você tenha total autonomia sobre seu site.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE VÍDEO -->
     <div id="project-modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeProjectModal()"></div>
         <div class="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-fade-in flex flex-col">
@@ -519,7 +509,7 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- FOOTER COMPLETO -->
     <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col items-center">
@@ -549,7 +539,7 @@
 
             <div class="text-center">
                 <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
-                <p class="text-[10px] text-slate-700 mt-1">Todos os direitos reservados.</p>
+                <p class="text-[10px] text-slate-700 mt-1">Especialistas em Santo Amaro e Zona Sul.</p>
             </div>
         </div>
     </footer>
@@ -568,7 +558,7 @@
             }
         }
 
-        // MODAL DE VÍDEO (FUNCIONALIDADE RESTAURADA)
+        // MODAL DE VÍDEO
         const modal = document.getElementById('project-modal');
         const iframe = document.getElementById('modal-iframe');
         const linkBtn = document.getElementById('modal-link-btn');
@@ -597,6 +587,30 @@
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
             
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.classList.remove('rotate-180');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // TOGGLE DO FAQ
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Fecha todos os outros FAQs abertos
+            document.querySelectorAll('.max-h-0').forEach(el => {
+                if (el !== content && el.id !== 'seo-content') {
+                    el.style.maxHeight = null;
+                    if(el.previousElementSibling && el.previousElementSibling.querySelector('i')) {
+                        el.previousElementSibling.querySelector('i').classList.remove('rotate-180');
+                    }
+                }
+            });
+
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
                 icon.classList.remove('rotate-180');

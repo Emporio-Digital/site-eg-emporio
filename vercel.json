@@ -40,6 +40,14 @@
     {
       "source": "/pneus/:path*",
       "destination": "https://elite-pneus.vercel.app/:path*"
+    },
+    {
+      "source": "/gestao-de-trafego",
+      "destination": "/gestao-de-trafego/index.html"
+    },
+    {
+      "source": "/gestao-de-trafego/:slug",
+      "destination": "/gestao-de-trafego/:slug.html"
     }
   ]
 }
