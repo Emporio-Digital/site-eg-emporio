@@ -124,6 +124,40 @@
             z-index: -50;
             overflow: hidden;
         }
+
+        /* --- EFEITO LOGO DINÂMICO (PADRÃO DOSSIÊ) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
     </style>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
@@ -140,7 +174,7 @@
             
             <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
-                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </a>
@@ -173,12 +207,10 @@
     <!-- HERO SECTION (ESTRATÉGIA AGRESSIVA: GUARULHOS) -->
     <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
         
-        <!-- H1: FOCO NO RANKING (Dominando Territórios) -->
         <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
             CRIAÇÃO DE SITES <br> EM <span class="text-white">GUARULHOS</span>
         </h1>
 
-        <!-- H2: FOCO NA AUTORIDADE (Copy para Empresas de Guarulhos) -->
         <h2 class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
             AUMENTE SUAS VENDAS NA PORTA DE ENTRADA DO BRASIL
         </h2>
@@ -409,53 +441,129 @@
         </div>
     </section>
 
-    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
-    <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
+    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS - CORRIGIDA MOBILE) -->
+    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
             <!-- HEADER DO CARD (Clicável) -->
             <div onclick="toggleSeoText()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
-                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Guia Técnico: Criação de Sites Profissionais em Guarulhos
+                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade: Criação de Sites Profissionais em Guarulhos
                     </h2>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para a região logística</span>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para a região logística</span>
                 </div>
-                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
-                    <i id="seo-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
-            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS) -->
+            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS - 12 PILARES VERTICAIS) -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-6 font-light">
+                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
                     
-                    <p>
-                        No cenário competitivo de uma das cidades mais produtivas de São Paulo, a <strong>criação de site</strong> em Guarulhos não é apenas um luxo, mas uma necessidade estratégica para indústrias e comércios locais. A cidade exige que negócios se destaquem digitalmente na <strong>Dutra, Fernão Dias ou arredores do Aeroporto</strong>, e nós, da EG Empório Digital, entendemos essa potência. Nosso foco é entregar mais do que código; entregamos resultados que posicionam sua marca no topo do Google em Guarulhos.
+                    <p class="mb-4">
+                        No coração logístico do Brasil, a <strong>criação de site</strong> em Guarulhos é o fator determinante para empresas que desejam dominar o mercado na <strong>Dutra, Fernão Dias e imediações do Aeroporto de Cumbica</strong>. Nós, da EG Empório Digital, desenvolvemos soluções de elite que posicionam sua marca no topo do Google em Guarulhos, garantindo que seu negócio seja a autoridade máxima em uma das economias mais produtivas de São Paulo.
                     </p>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Profissionais e Institucionais em Guarulhos</h3>
-                    <p>
-                        Muitos empreendedores tentam soluções amadoras, mas a <strong>criação de sites profissionais</strong> é o que separa indústrias consolidadas de negócios passageiros. Quando <strong>fazemos sites</strong>, aplicamos técnicas de engenharia de software e psicologia de vendas. Um site lento ou mal estruturado expulsa o cliente em segundos. Por isso, investir na <strong>criação de um site</strong> otimizado na EG é investir na autoridade da sua marca perante o mercado exigente de Guarulhos e Arujá.
-                    </p>
+                    <!-- PILAR 1 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Criação de Sites Profissionais e Institucionais em Guarulhos</h3>
+                        <p>
+                            Muitas transportadoras e indústrias em Guarulhos ainda operam com sites datados, perdendo autoridade para concorrentes mais ágeis. A <strong>criação de sites profissionais</strong> é o que separa marcas consolidadas de negócios amadores. Quando <strong>fazemos sites</strong> para indústrias em Cumbica ou Bonsucesso, aplicamos engenharia de conversão. Um site institucional deve ser o espelho da robustez da sua empresa, transmitindo confiança imediata para grandes parceiros e clientes em Guarulhos e Arujá.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites para E-commerce e Lojas Virtuais</h3>
-                    <p>
-                        Se o seu objetivo é vender produtos a partir do maior hub logístico do país, ter uma <strong>loja virtual</strong> robusta é obrigatório. Desenvolvemos sua <strong>loja online</strong> com checkout transparente, segurança SSL e integração total com transportadoras. Um <strong>site de vendas online</strong> em Guarulhos precisa operar 24 horas por dia sem falhas. Nós criamos estruturas que suportam alto tráfego e convertem visitantes em compradores, transformando sua vitrine digital em uma máquina de receita recorrente. Seja um <strong>site de vendas</strong> B2B ou B2C, a tecnologia é a mesma: performance total.
-                    </p>
+                    <!-- PILAR 2 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Criação de Sites para E-commerce e Lojas Virtuais</h3>
+                        <p>
+                            Guarulhos é o maior hub logístico do país, e sua <strong>loja virtual</strong> precisa aproveitar essa vantagem competitiva. Desenvolvemos sua <strong>loja online</strong> com checkout fluido, segurança SSL de nível bancário e integrações estratégicas com sistemas de frete. Um <strong>site de vendas online</strong> em Guarulhos precisa operar sem atritos 24h por dia. Criamos ecossistemas de e-commerce que suportam alto volume de tráfego e convertem visitantes em receita recorrente, otimizando cada etapa do funil de compras.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Estilo Landing Page para Alta Conversão</h3>
-                    <p>
-                        Para prestadores de serviços, a estratégia de <strong>criação de site</strong> estilo Landing Page é a mais eficaz. Diferente de um site institucional comum, uma Landing Page é focada em uma única ação: fazer o cliente de Guarulhos entrar em contato via WhatsApp. Se você busca <strong>fazer site</strong> para campanhas de Google Ads ou tráfego pago no Maia ou Centro, essa é a ferramenta ideal. Nossa agência <strong>cria sites</strong> focados em capturar leads qualificados, usando gatilhos mentais e layout persuasivo.
-                    </p>
+                    <!-- PILAR 3 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Criação de Sites Estilo Landing Page para Alta Conversão</h3>
+                        <p>
+                            Para prestadores de serviços no <strong>Centro, Maia ou Vila Galvão</strong>, a estratégia de <strong>criação de site</strong> estilo Landing Page é o caminho mais curto para o lucro. Diferente de sites complexos, uma Landing Page foca em uma única meta: fazer o cliente de Guarulhos clicar no seu WhatsApp. Se você investe em Google Ads ou tráfego pago, ter uma página de alta performance é obrigatório. Nós <strong>criamos sites</strong> com gatilhos persuasivos que blindam sua marca e maximizam o retorno sobre investimento.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites com Design Moderno e Performance Logística</h3>
-                    <p>
-                        O <strong>design de site</strong> (UI/UX) é o que define se o usuário confia ou não na sua empresa. Em uma cidade que não para, um visual moderno transmite autoridade. Não basta apenas funcionalidade; a estética importa para o público de Guarulhos. Nós alinhamos o <strong>design de site</strong> à identidade visual da sua marca, garantindo que ela seja memorável. Se você quer saber <strong>como fazer site</strong> que realmente impacta o mercado local, a resposta está na união entre beleza e velocidade máxima de carregamento.
-                    </p>
+                    <!-- PILAR 4 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Criação de Sites com Design Moderno e UX (User Experience)</h3>
+                        <p>
+                            O <strong>design de site</strong> (UI/UX) define se o usuário confia ou abandona sua página em segundos. Em Guarulhos, uma cidade que respira negócios, um visual moderno transmite autoridade instantânea. Não entregamos apenas "sites bonitos"; entregamos interfaces projetadas para a melhor experiência do usuário. Alinhamos o <strong>design de site</strong> à identidade visual da sua empresa, garantindo uma navegação intuitiva que conduz o cliente naturalmente até o fechamento do negócio.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 5 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Criação de Sites Mobile-First (Otimizados para Celular)</h3>
+                        <p>
+                            A maioria absoluta das buscas em Guarulhos é feita via dispositivos móveis. Por isso, <strong>criamos sites</strong> sob a filosofia Mobile-First. Sua página terá um carregamento impecável em smartphones e tablets, garantindo que o cliente que busca serviços enquanto transita pela Dutra ou Fernão Dias encontre sua empresa com facilidade. A adaptação perfeita em todas as telas é o que evita que você perca oportunidades valiosas para a concorrência local.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 6 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Criação de Sites com Performance e Velocidade Extrema</h3>
+                        <p>
+                            Velocidade não é apenas conforto, é rankeamento. A EG Empório Digital <strong>cria sites</strong> ultrarrápidos seguindo os rigorosos critérios do Google (Core Web Vitals). Em um polo dinâmico como Guarulhos, cada milissegundo de atraso é um cliente perdido. Utilizamos compressão de dados avançada e código limpo para garantir que sua página carregue quase instantaneamente, mantendo o usuário engajado e satisfeito desde o primeiro clique.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 7 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Criação de Sites Otimizados para SEO Local</h3>
+                        <p>
+                            Dominar o Google em Guarulhos é nossa especialidade. Estruturamos o SEO (Search Engine Optimization) para que sua empresa apareça no topo para quem realmente importa: o cliente da sua região. Através de palavras-chave geolocalizadas e técnicas avançadas de rankeamento, fazemos sua marca ser a primeira opção quando alguém buscar por serviços em Cumbica, Bonsucesso ou Pimentas, transformando o Google em seu maior vendedor.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 8 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Criação de Sites Blindados e Seguros (Certificado SSL)</h3>
+                        <p>
+                            Protegemos seus dados e a privacidade dos seus clientes. Todo projeto de <strong>criação de site</strong> na EG inclui certificado SSL (HTTPS) e camadas de segurança contra ataques. Em Guarulhos, onde operam grandes volumes comerciais, a segurança digital é um pilar de confiança. Sites seguros não apenas protegem informações, mas também recebem prioridade no rankeamento do Google, transmitindo o profissionalismo que sua empresa exige.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 9 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
+                        <p>
+                            Damos o controle total ao empresário de Guarulhos. Ao finalizar a <strong>criação do site</strong>, você recebe um painel administrativo intuitivo (CMS) onde pode alterar textos, banners e produtos sem depender de programadores. Essa agilidade é fundamental para negócios que precisam atualizar promoções ou novos serviços em tempo real, acompanhando a velocidade constante do mercado da Grande São Paulo.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 10 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Criação de Sites Integrados com Automação de WhatsApp</h3>
+                        <p>
+                            O WhatsApp é a principal ferramenta de fechamento em Guarulhos. Nossos projetos vêm com integrações inteligentes que reduzem a fricção no atendimento comercial. O lead clica e cai direto na conversa com seu vendedor. Eliminamos barreiras técnicas para que a comunicação flua rapidamente, aumentando drasticamente as taxas de conversão e garantindo que nenhum contato vindo do site seja desperdiçado.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 11 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Criação de Sites Estratégicos para Escalar Negócios Locais</h3>
+                        <p>
+                            Não apenas <strong>fazemos sites</strong>; construímos ativos que valorizam sua empresa. Planejamos a arquitetura digital pensando no crescimento do seu negócio. Seja para expansão de serviços ou integração com novos canais de marketing, seu site será preparado para escalar. Em Guarulhos, estar pronto para o crescimento é a diferença entre ser líder de mercado ou apenas mais um na lista telefônica digital.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 12 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Criação de Sites com Manutenção e Suporte Técnico Especializado</h3>
+                        <p>
+                            Oferecemos garantia de continuidade. Uma agência de elite não entrega o projeto e desaparece. Nossa <strong>manutenção de sites</strong> garante que sua infraestrutura esteja sempre atualizada, rápida e protegida 24h por dia. Com suporte técnico dedicado em Guarulhos e região, você tem a tranquilidade de saber que sua máquina de vendas online está em boas mãos, performando no máximo rendimento todos os dias.
+                        </p>
+                    </div>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        Em resumo: se você precisa de <strong>criação de site em Guarulhos</strong>, <strong>loja virtual</strong> ou quer saber como <strong>fazer site</strong> pode mudar o rumo do seu faturamento, a EG Empório Digital é a parceira certa. Nós não apenas <strong>fazemos sites</strong>; nós construímos ativos digitais que valorizam sua empresa na Grande São Paulo.
+                        Se você busca <strong>criação de site em Guarulhos</strong> com entrega profissional, performance técnica e foco total em faturamento, a EG Empório Digital é sua parceira certa para dominar o território digital.
                     </p>
                 </div>
             </div>
@@ -472,7 +580,6 @@
         </div>
 
         <div class="space-y-4">
-            <!-- Pergunta 1 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
                     <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual o valor para criação de um site em Guarulhos?</span>
@@ -480,33 +587,31 @@
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        O investimento para a <strong>criação de um site</strong> profissional em Guarulhos varia conforme as necessidades do projeto. Uma Landing Page para serviços tem um investimento menor que uma Loja Virtual completa. Na EG Empório Digital, oferecemos o melhor custo-benefício para empresas da região.
+                        O investimento varia conforme as necessidades técnicas. Uma Landing Page foca em conversão rápida e tem um valor menor que um E-commerce completo. Na EG, criamos orçamentos personalizados para empresas de Guarulhos.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 2 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês fazem sites para transportadoras e indústrias?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês atendem transportadoras em Cumbica e indústrias?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Sim! Somos especialistas em <strong>criação de sites profissionais</strong> para o setor de logística e industrial de Cumbica e Bonsucesso. Criamos sites que transmitem a robustez necessária para fechar grandes contratos.
+                        Sim! Somos especialistas na <strong>criação de sites profissionais</strong> para logística e indústria. Desenvolvemos interfaces que transmitem a robustez necessária para fechar grandes contratos no hub logístico.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 3 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto tempo leva para o site ficar pronto?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto tempo leva o desenvolvimento do site?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Prezamos pela agilidade. Landing Pages costumam ser entregues em 5 a 10 dias úteis. Projetos de <strong>criação de sites</strong> institucionais ou Lojas Virtuais podem levar de 15 a 30 dias, dependendo da complexidade das integrações solicitadas.
+                        Prezamos pela velocidade. Landing Pages são entregues entre 5 a 10 dias úteis. Sites institucionais ou Lojas Virtuais levam entre 15 e 30 dias, dependendo da complexidade das integrações.
                     </div>
                 </div>
             </div>
@@ -535,44 +640,43 @@
         </div>
     </div>
 
-    <!-- FOOTER SIMPLIFICADO -->
+    <!-- FOOTER -->
     <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col items-center">
                 <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
-                <div class="font-tech text-xl font-bold text-white uppercase">
+                <div class="logo-animate font-tech text-xl font-bold text-white uppercase" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </div>
             
             <div class="flex gap-8">
                 <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-instagram-logo text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300"></i>
                     </div>
                 </a>
                 <a href="https://egemporiodigital.com.br/blog" target="_blank" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-article text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-article text-2xl text-slate-300"></i>
                     </div>
                 </a>
                 <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-envelope-simple text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300"></i>
                     </div>
                 </a>
             </div>
 
             <div class="text-center">
                 <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
-                <p class="text-[10px] text-slate-700 mt-1">GUARULHOS - GRANDE SÃO PAULO</p>
+                <p class="text-[10px] text-slate-700 mt-1 uppercase">GUARULHOS - GRANDE SÃO PAULO</p>
             </div>
         </div>
     </footer>
 
-    <!-- SCRIPTS (MENU MOBILE, MODAL, SEO TEXT E FAQ) -->
+    <!-- SCRIPTS -->
     <script>
-        // MENU MOBILE
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             if (menu.classList.contains('hidden')) {
@@ -584,7 +688,6 @@
             }
         }
 
-        // MODAL DE VÍDEO
         const modal = document.getElementById('project-modal');
         const iframe = document.getElementById('modal-iframe');
         const linkBtn = document.getElementById('modal-link-btn');
@@ -603,18 +706,14 @@
         }
 
         document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeProjectModal();
-            }
+            if (event.key === "Escape") closeProjectModal();
         });
 
-        // TOGGLE DO TEXTÃO SEO
         function toggleSeoText() {
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
-            
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
                 icon.classList.remove('rotate-180');
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
@@ -622,11 +721,9 @@
             }
         }
 
-        // TOGGLE DO FAQ
         function toggleFaq(button) {
             const content = button.nextElementSibling;
             const icon = button.querySelector('i');
-            
             document.querySelectorAll('.max-h-0').forEach(el => {
                 if (el !== content && el.id !== 'seo-content') { 
                     el.style.maxHeight = null;
@@ -635,7 +732,6 @@
                     }
                 }
             });
-
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
                 icon.classList.remove('rotate-180');

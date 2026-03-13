@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- SEO LOCAL: TATUAPÉ & ANÁLIA FRANCO -->
-    <title>Criação de Sites no Tatuapé | Web Design Anália Franco e ZL - EG Empório</title>
-    <meta name="description" content="Especialistas em criação de sites profissionais no Tatuapé. Desenvolvemos sites, landing pages e lojas virtuais de alto padrão no Anália Franco. Orçamento rápido.">
+    <!-- SEO LOCAL: TATUAPÉ & ANÁLIA FRANCO (ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
+    <title>Criação de Sites no Tatuapé | Anália Franco e ZL - EG Empório</title>
+    <meta name="description" content="Especialistas em criação de sites profissionais no Tatuapé. Atendemos o Jardim Anália Franco, Rua Itapura e Apucarana. Sites de alto padrão e Lojas Virtuais.">
     
-    <!-- CANONICAL -->
+    <!-- CANONICAL: VALIDAÇÃO DE ORIGINALIDADE (SELF-REFERENCING) -->
     <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/tatuape">
     
-    <!-- SCHEMA MARKUP (LOCAL BUSINESS - TATUAPÉ) -->
+    <!-- SCHEMA MARKUP (LOCAL BUSINESS / PROFESSIONAL SERVICE) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -19,22 +19,22 @@
       "name": "EG Empório Digital - Criação de Sites no Tatuapé",
       "url": "https://egemporiodigital.com.br/criacao-de-sites/tatuape",
       "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "areaServed": {
-        "@type": "Neighborhood",
-        "name": "Tatuapé",
-        "containedInPlace": {
-          "@type": "City",
-          "name": "São Paulo"
-        }
-      },
+      "priceRange": "$$",
+      "telephone": "+5511916053292",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "São Paulo",
+        "streetAddress": "Rua Itapura",
+        "addressLocality": "Tatuapé",
         "addressRegion": "SP",
         "addressCountry": "BR"
       },
-      "description": "Líder em criação de sites de alto padrão, e-commerce e landing pages no Tatuapé e Jardim Anália Franco.",
-      "priceRange": "$$"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.5407",
+        "longitude": "-46.5768"
+      },
+      "areaServed": ["Tatuapé", "Jardim Anália Franco", "Vila Gomes Cardim", "Vila Carrão", "Belenzinho", "Mooca", "Zona Leste SP"],
+      "description": "Agência de elite especializada em criação de sites, landing pages de alta conversão e lojas virtuais no Tatuapé, atendendo o polo de luxo e corporativo da Zona Leste."
     }
     </script>
 
@@ -97,6 +97,8 @@
             filter: drop-shadow(0 0 20px rgba(0, 225, 255, 0.3));
         }
 
+        .gpu-accelerated { transform: translateZ(0); will-change: transform; }
+
         .glass-tech {
             background: rgba(2, 6, 23, 0.6);
             border: 1px solid rgba(0, 225, 255, 0.1);
@@ -122,6 +124,40 @@
             z-index: -50;
             overflow: hidden;
         }
+
+        /* --- EFEITO LOGO DINÂMICO (PADRÃO DOSSIÊ) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
     </style>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
@@ -134,11 +170,11 @@
 
     <!-- HEADER -->
     <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center relative z-50">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
             
             <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
-                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </a>
@@ -150,25 +186,25 @@
                 <a href="#projetos-disponiveis" class="hover:text-brand-blue transition-colors">Portfólio</a>
             </nav>
 
-            <a href="https://wa.me/5511916053292?text=Olá, sou do Tatuapé e gostaria de um orçamento." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+            <a href="https://wa.me/5511916053292?text=Olá, sou do Tatuapé e quero um orçamento para meu site." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
                 Fale com a gente
             </a>
 
             <button id="menu-btn" class="md:hidden text-brand-blue text-3xl focus:outline-none" onclick="toggleMenu()">
-                <i id="menu-icon" class="ph ph-list"></i>
+                <i class="ph ph-list"></i>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden fixed inset-x-0 top-24 bg-eg-dark/98 backdrop-blur-xl border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
+        <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
             <a href="../index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Voltar ao Início</a>
-            <a href="#servicos-locais" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços</a>
-            <a href="https://wa.me/5511916053292?text=Olá, sou do Tatuapé e gostaria de um orçamento." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
+            <a href="#servicos-locais" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços no Tatuapé</a>
+            <a href="https://wa.me/5511916053292?text=Olá, sou do Tatuapé e quero um orçamento para meu site." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
                 Fale com a gente
             </a>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (ESTRATÉGIA AGRESSIVA: TATUAPÉ) -->
     <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
         
         <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
@@ -176,70 +212,68 @@
         </h1>
 
         <h2 class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
-            LIDERE O MERCADO DE LUXO DO TATUAPÉ E ANÁLIA FRANCO
+            DOMINE O MERCADO DE LUXO DA ZONA LESTE
         </h2>
 
         <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-8 z-10"></div>
 
         <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
-            O público do <strong>Tatuapé</strong> exige sofisticação absoluta. De consultórios na <strong>Rua Apucarana</strong> a sedes no <strong>Platina 220</strong>. 
-            Sua empresa merece a <strong>criação de um site</strong> que reflita esse padrão premium. 
-            Domine a Zona Leste com uma <strong class="text-white">loja virtual</strong> ou Landing Page de elite.
+            Se sua empresa está no <strong>Jardim Anália Franco, Rua Itapura ou Rua Apucarana</strong>, você precisa de um posicionamento digital de alto padrão. Se busca <strong>criação de um site</strong> profissional no Tatuapé, entregamos a sofisticação visual e a performance técnica para o novo eixo corporativo de SP. Tenha uma <strong class="text-white">loja online</strong> ou site institucional blindado para converter o público mais seleto da região.
         </p>
 
         <div class="flex flex-col md:flex-row gap-4 z-10">
-            <a href="https://wa.me/5511916053292?text=Quero orçar um site no Tatuapé." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
-                ORÇAR SITE AGORA
+            <a href="https://wa.me/5511916053292?text=Preciso de um site profissional no Tatuapé para superar a concorrência." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+                Solicitar Orçamento
             </a>
             <a href="#projetos-disponiveis" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
-                VER PORTFÓLIO
+                Ver Portfólio
             </a>
         </div>
 
     </section>
 
-    <!-- SEÇÃO DE CONTEÚDO SEO (TATUAPÉ) -->
+    <!-- SEÇÃO DE CONTEÚDO SEO (KEYWORDS INJETADAS) -->
     <section id="servicos-locais" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20">
             <div class="text-left mb-10">
                 <h2 class="font-tech text-3xl md:text-4xl text-white mb-4 uppercase leading-tight">
-                    Sua Marca em Destaque na <span class="text-brand-blue">Zona Leste</span>
+                    Por que contratar a <span class="text-brand-blue">EG Empório</span> no Tatuapé?
                 </h2>
                 <p class="text-slate-300 text-lg leading-relaxed">
-                    No <strong>Tatuapé</strong> e <strong>Jardim Anália Franco</strong> o amadorismo não tem vez. Aqui, a <strong>criação de sites profissionais</strong> é o divisor de águas entre autoridade e esquecimento.
+                    Sabemos que o <strong>Tatuapé</strong> e o <strong>Anália Franco</strong> formam o polo econômico mais dinâmico da Zona Leste. De clínicas médicas de elite a comércios de alto padrão, sua empresa precisa de uma <strong>criação de site</strong> que transmita autoridade instantânea.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <!-- Coluna 1 -->
                 <div>
-                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Sites Institucionais de Luxo</h3>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Especialistas em Criação de Sites Profissionais</h3>
                     <p class="text-slate-400 mb-6">
-                        Para clínicas e escritórios no eixo da <strong>Rua Itapura</strong> ou nos novos complexos corporativos, nós <strong>fazemos sites</strong> que impõem respeito. Nossa metodologia une <strong>design de site</strong> minimalista com performance extrema.
+                        Nós <strong>fazemos sites</strong> focados em UX Premium e design exclusivo. Seja para <strong>criação de sites profissionais</strong> para escritórios no Platina 220 ou clínicas na Serra de Bragança, utilizamos stacks modernas para garantir velocidade extrema. Nosso <strong>design de site</strong> é minimalista e tecnológico, alinhado ao público exigente do Tatuapé.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> SEO Geolocalizado para o Tatuapé</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Layout exclusivo e tecnológico</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Velocidade de carregamento otimizada</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site otimizado (SEO Local Tatuapé)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site responsivo (Foco em Conversão)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites ultrarrápidos para o público da Zona Leste</li>
                     </ul>
                 </div>
 
                 <!-- Coluna 2 -->
                 <div>
-                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">E-commerce e Vendas Online</h3>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Lojas Virtuais e Landing Pages de Luxo</h3>
                     <p class="text-slate-400 mb-6">
-                        Expanda o alcance da sua loja física. A EG Empório Digital desenvolve <strong>loja virtual</strong> (E-commerce) e <strong>site de vendas online</strong> com foco total em conversão e checkouts seguros.
+                        Quer vender seus produtos com o requinte que o Anália Franco exige? Desenvolvemos sua <strong>loja online</strong> ou <strong>loja virtual</strong> com integrações seguras e checkout fluido. Se o seu foco é capturar leads qualificados para serviços de alto valor, nossas <strong>Landing Pages</strong> são estruturadas com gatilhos de conversão agressivos. Tenha um <strong>site de vendas online</strong> operando 24h.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages de Alta Conversão</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Integração com sistemas logísticos</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Fazemos sites que geram lucro real</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Site de vendas com checkout fluido e seguro</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages para anúncios no Google e Meta</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Nós fazemos sites que dominam o mercado digital</li>
                     </ul>
                 </div>
             </div>
             
             <div class="mt-10 text-center">
-                <a href="https://wa.me/5511916053292?text=Preciso de um site profissional no Tatuapé." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
+                <a href="https://wa.me/5511916053292?text=Quero um site profissional no Tatuapé agora." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
                     Solicitar Orçamento <i class="ph ph-arrow-right"></i>
                 </a>
             </div>
@@ -251,16 +285,16 @@
         
         <div class="text-center mb-16">
             <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase tracking-wide">
-                Portfólio <span class="text-brand-blue">Selecionado</span>
+                Exemplos de <span class="text-brand-blue">Projetos Reais</span>
             </h2>
             <p class="text-slate-500 text-sm max-w-2xl mx-auto">
-                Confira projetos reais que elevam o nível do mercado.
+                Veja o nível de qualidade que entregamos para clientes no Tatuapé e em todo o Brasil.
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <!-- CARD 1: ESTÉTICA -->
+            <!-- CARD 1: ESTÉTICA AUTOMOTIVA -->
             <div onclick="openProjectModal('NKRiU16RUmk', 'https://vitrine-projetos-two.vercel.app/estetica-auto.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/estetica.png" alt="Estética Automotiva" 
@@ -274,7 +308,7 @@
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Automotivo</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Estética Automotiva</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Ideal para centros automotivos de alto padrão.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Solução digital completa para estética e cuidado de veículos.</p>
                 </div>
             </div>
 
@@ -291,12 +325,12 @@
                 </div>
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Serviços</span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Despachante VIP</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Landing Page de alta conversão para serviços.</p>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Despachante</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Landing Page de alta conversão para serviços de documentação.</p>
                 </div>
             </div>
 
-            <!-- CARD 3: NOIR GASTROBAR -->
+            <!-- 3. NOIR GASTROBAR -->
             <div onclick="openProjectModal('3MXvILsR5DA', 'https://vitrine-projetos-two.vercel.app/saas-ia.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="https://i.ibb.co/kb2NGD7/Captura-de-tela-2026-02-05-003024.png" alt="Projeto Noir Gastrobar" 
@@ -308,13 +342,13 @@
                     </div>
                 </div>
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Gastronomia</span>
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Cardápio Digital</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Noir Gastrobar</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Ideal para restaurantes do Tatuapé e Anália Franco.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Menu digital interativo com design de alto luxo e glassmorphism.</p>
                 </div>
             </div>
 
-            <!-- CARD 4: AUTOMOTIVO LUXURY -->
+            <!-- 4. AUTOMOTIVO -->
             <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-automotivo.jpg" alt="Projeto Automotivo" 
@@ -328,11 +362,11 @@
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Conceito</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Automotivo Luxury</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos de alto padrão.</p>
                 </div>
             </div>
 
-            <!-- CARD 5: ARQUITETURA -->
+            <!-- 5. ARQUITETURA -->
             <div onclick="openProjectModal('y8MOpAC93MU', 'https://vitrine-projetos-two.vercel.app/arquitetura.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-arquitetura.jpg" alt="Projeto Arquitetura" 
@@ -346,11 +380,11 @@
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Imobiliária</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Arquitetura Minimal</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Design clean e sofisticado para escritórios.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Design clean e sofisticado para escritórios de arquitetura.</p>
                 </div>
             </div>
 
-            <!-- CARD 6: FINANCEIRO -->
+            <!-- 6. FINANCEIRO -->
             <div onclick="openProjectModal('IrjsnvJxBzM', 'https://vitrine-projetos-two.vercel.app/financeiro.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-financeiro.jpg" alt="Projeto Financeiro" 
@@ -368,104 +402,179 @@
                 </div>
             </div>
 
-            <!-- CARD 7: E-COMMERCE -->
-            <div onclick="openProjectModal('WKpuUGV41iM', 'https://vitrine-projetos-two.vercel.app/loja.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/capa-loja.jpg" alt="Projeto Loja" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">E-commerce</span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Loja Virtual Moderna</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Experiência de compra premium.</p>
-                </div>
-            </div>
+             <!-- 7. E-COMMERCE -->
+             <div onclick="openProjectModal('WKpuUGV41iM', 'https://vitrine-projetos-two.vercel.app/loja.html')" 
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+               <img src="../assets/images/capa-loja.jpg" alt="Projeto Loja" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                       <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                   </div>
+               </div>
+               <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">E-commerce</span>
+                   <h3 class="text-2xl font-tech text-white mb-1 uppercase">Loja Moderna</h3>
+                   <p class="text-slate-400 text-sm line-clamp-2">Experiência de compra fluida com interações dinâmicas.</p>
+               </div>
+           </div>
 
-            <!-- CARD 8: FITNESS -->
-            <div onclick="openProjectModal('4nwWammXuc4', 'https://vitrine-projetos-two.vercel.app/fitness.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Projeto Fitness" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Fitness</span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Iron Force Fitness</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Site de alta performance para academias.</p>
-                </div>
-            </div>
+           <!-- 8. FITNESS -->
+           <div onclick="openProjectModal('4nwWammXuc4', 'https://vitrine-projetos-two.vercel.app/fitness.html')" 
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+               <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Projeto Fitness" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                       <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                   </div>
+               </div>
+               <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Institucional / Academia</span>
+                   <h3 class="text-2xl font-tech text-white mb-1 uppercase">Iron Force Fitness</h3>
+                   <p class="text-slate-400 text-sm line-clamp-2">Site de alta performance para academias e personal trainers.</p>
+               </div>
+           </div>
 
         </div>
     </section>
 
-    <!-- SEO ACCORDION: PROJETO DOMINANDO TERRITÓRIOS (TATUAPÉ) -->
-    <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
+    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS - TATUAPÉ) -->
+    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
-            <!-- HEADER DO CARD -->
+            <!-- HEADER DO CARD (Clicável) -->
             <div onclick="toggleSeoText()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
                         <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade: Criação de Sites no Tatuapé
                     </h2>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler o dossiê de resultados no Anália Franco</span>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para o Jardim Anália Franco e região</span>
                 </div>
-                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue transition-all">
-                    <i id="seo-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
-            <!-- CONTEÚDO EXPANDÍVEL (MARTELAGEM H3) -->
+            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS - 12 PILARES VERTICAIS) -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-8 font-light">
+                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
                     
-                    <p>
-                        O Tatuapé se consolidou como o polo financeiro e comercial mais sofisticado da Zona Leste de São Paulo. Do <strong>Jardim Anália Franco</strong> ao complexo do <strong>Platina 220</strong>, a <strong>criação de site</strong> de alto padrão é o pré-requisito básico para quem deseja ditar as regras do mercado local. Na EG Empório Digital, entregamos a engenharia necessária para que sua empresa converta autoridade em faturamento real.
+                    <p class="mb-4">
+                        No coração econômico da Zona Leste de São Paulo, a <strong>criação de site</strong> no Tatuapé é o fator determinante para empresas que desejam dominar o mercado no <strong>Jardim Anália Franco, Rua Itapura e Avenida Regente Feijó</strong>. Nós, da EG Empório Digital, desenvolvemos soluções de elite que posicionam sua marca no topo do Google, garantindo que seu negócio seja a autoridade máxima em uma das regiões mais valorizadas e dinâmicas de São Paulo.
                     </p>
 
-                    <!-- H3 MARTELADOS CONFORME O DOSSIÊ -->
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Criação de Sites Profissionais e Institucionais no Tatuapé</h3>
-                    <p>
-                        A <strong>criação de sites profissionais</strong> no Tatuapé deve refletir o prestígio da região. Se seu negócio está localizado na <strong>Rua Apucarana</strong> ou arredores, sua marca digital não pode ser mediana. Quando <strong>fazemos sites</strong> para o mercado premium, focamos em design minimalista e código ultraveloz. A <strong>criação de um site</strong> em nossa agência passa por otimizações rigorosas de SEO local para garantir que você seja a primeira opção em São Paulo.
-                    </p>
+                    <!-- PILAR 1 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Criação de Sites Profissionais e Institucionais no Tatuapé</h3>
+                        <p>
+                            O Tatuapé abriga um dos centros de serviços e medicina mais qualificados da capital. A <strong>criação de sites profissionais</strong> é o que separa marcas consolidadas de negócios amadores. Quando <strong>fazemos sites</strong> para clínicas no Santa Paula ou escritórios no Barcelona, aplicamos engenharia de credibilidade. Um site institucional deve ser o espelho da excelência da sua empresa, transmitindo confiança imediata para clientes de alto padrão no Tatuapé e Anália Franco.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Criação de Sites para E-commerce e Lojas Virtuais no Tatuapé</h3>
-                    <p>
-                        O potencial de vendas online no Tatuapé e Anália Franco é incomparável. Projetamos sua <strong>loja virtual</strong> com sistemas de pagamento seguros e UX focada em conversão imediata. Desenvolver uma <strong>loja online</strong> no ABC ou na Zona Leste requer uma plataforma que aguente escala. Nosso objetivo é tornar seu <strong>site de vendas online</strong> seu canal de maior lucro. A <strong>criação de sites</strong> voltados ao e-commerce é a nossa especialidade para quem busca dominar o varejo digital a partir de SP.
-                    </p>
+                    <!-- PILAR 2 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Criação de Sites para E-commerce e Lojas Virtuais no Anália Franco</h3>
+                        <p>
+                            O mercado consumidor do Jardim Anália Franco possui alto poder aquisitivo, e sua <strong>loja virtual</strong> precisa acompanhar esse nível. Desenvolvemos sua <strong>loja online</strong> com checkout fluido, segurança SSL de nível bancário e integrações estratégicas. Um <strong>site de vendas online</strong> no Tatuapé precisa operar sem fricção 24h por dia. Criamos estruturas de e-commerce que convertem visitantes em receita recorrente, otimizando cada etapa do funil de compras para o exigente público da Zona Leste.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Criação de Sites Estilo Landing Page para Alta Conversão no Tatuapé</h3>
-                    <p>
-                        Para profissionais liberais e startups que buscam leads qualificados no Tatuapé, as <strong>Landing Pages</strong> são fundamentais. Ao <strong>fazer site</strong> de página única, focamos exclusivamente no "Call to Action", guiando o cliente para o fechamento. A <strong>criação de sites</strong> focados em captura de contatos é o que separa empresas líderes de amadores. Capture o tráfego da Zona Leste e converta com a nossa tecnologia de aterrissagem.
-                    </p>
+                    <!-- PILAR 3 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Criação de Sites Estilo Landing Page para Alta Conversão na Zona Leste</h3>
+                        <p>
+                            Para especialistas e prestadores de serviços no <strong>eixo corporativo do Tatuapé</strong>, a estratégia de <strong>criação de site</strong> estilo Landing Page é o caminho mais curto para o lucro. Diferente de sites complexos, uma Landing Page foca em uma única meta: fazer o cliente clicar no seu WhatsApp. Nós <strong>criamos sites</strong> com gatilhos persuasivos de autoridade que blindam sua marca e maximizam o ROI em campanhas de tráfego pago no Google Ads.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Criação de Sites com Design Moderno e Performance no Tatuapé</h3>
-                    <p>
-                        O <strong>design de site</strong> é a fachada digital da sua competência. Negligenciar a estética do seu site no Tatuapé é ceder espaço para a concorrência. Nosso <strong>design de site</strong> segue as tendências mundiais de UX/UI, garantindo fluidez total em dispositivos móveis. Não apenas <strong>criamos sites</strong>; nós edificamos marcas digitais imbatíveis no Google.
-                    </p>
+                    <!-- PILAR 4 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Criação de Sites com Design Moderno e UX (User Experience)</h3>
+                        <p>
+                            O <strong>design de site</strong> (UI/UX) define se o usuário confia ou abandona sua página em segundos. No Tatuapé, uma região que valoriza a estética e a tecnologia, um visual moderno transmite autoridade instantânea. Não entregamos apenas funcionalidade; entregamos interfaces projetadas para a melhor experiência do usuário. Alinhamos o <strong>design de site</strong> à identidade visual da sua empresa, garantindo uma navegação intuitiva que conduz o cliente naturalmente ao fechamento do negócio.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 5 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Criação de Sites Mobile-First (Otimizados para Celular)</h3>
+                        <p>
+                            A maioria absoluta das buscas por serviços qualificados no Tatuapé é feita via smartphones. Por isso, <strong>criamos sites</strong> sob a filosofia Mobile-First. Sua página terá um carregamento impecável em smartphones e tablets, garantindo que o cliente que busca soluções enquanto transita pela Radial Leste encontre sua empresa com facilidade. A adaptação perfeita em todas as telas é o que evita que você perca oportunidades valiosas para a concorrência local.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 6 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Criação de Sites com Performance e Velocidade Extrema</h3>
+                        <p>
+                            Velocidade não é apenas conforto, é rankeamento técnico. A EG Empório Digital <strong>cria sites</strong> ultrarrápidos seguindo os rigorosos critérios do Google (Core Web Vitals). Em um polo dinâmico como o Tatuapé, cada milissegundo de atraso é um cliente perdido. Utilizamos compressão de dados avançada e código limpo para garantir que sua página carregue quase instantaneamente, mantendo o usuário engajado e satisfeito desde o primeiro clique.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 7 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Criação de Sites Otimizados para SEO Local</h3>
+                        <p>
+                            Dominar o Google no Tatuapé é nossa especialidade. Estruturamos o SEO para que sua empresa apareça no topo para quem busca serviços na região. Através de palavras-chave geolocalizadas e técnicas avançadas de rankeamento, fazemos sua marca ser a primeira opção quando alguém buscar por soluções no Anália Franco ou Vila Carrão, transformando as buscas locais em faturamento direto para seu negócio.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 8 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Criação de Sites Blindados e Seguros (Certificado SSL)</h3>
+                        <p>
+                            Protegemos os dados da sua empresa e a privacidade dos seus clientes. Todo projeto de <strong>criação de site</strong> na EG inclui certificado SSL (HTTPS) e camadas extras de segurança contra invasões. No Tatuapé, onde operam grandes volumes comerciais e médicos, a segurança digital é inegociável. Sites seguros não apenas protegem informações, mas recebem prioridade no Google, transmitindo o profissionalismo que sua marca exige.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 9 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
+                        <p>
+                            Damos o controle total ao empresário do Tatuapé. Ao finalizar a <strong>criação do site</strong>, você recebe um painel administrativo intuitivo (CMS) onde pode alterar textos, fotos e portfólios sem depender de programadores. Essa agilidade é fundamental para negócios que precisam atualizar novos serviços ou promoções em tempo real, acompanhando a velocidade constante do mercado da Zona Leste.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 10 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Criação de Sites Integrados com Automação de WhatsApp</h3>
+                        <p>
+                            O WhatsApp é a principal ferramenta de fechamento no Tatuapé. Nossos projetos vêm com integrações inteligentes que reduzem a fricção no atendimento comercial. O lead clica no site e cai direto na conversa com seu vendedor. Eliminamos barreiras técnicas para que a comunicação flua rapidamente, aumentando drasticamente as taxas de conversão e garantindo que nenhum contato vindo do site seja perdido.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 11 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Criação de Sites Estratégicos para Escalar Negócios Locais</h3>
+                        <p>
+                            Não apenas <strong>fazemos sites</strong>; construímos ativos que valorizam sua marca no Tatuapé. Planejamos a arquitetura digital pensando no crescimento do seu negócio. Seja para expansão de serviços médicos ou novas unidades de comércio, seu site será preparado para escalar. No Tatuapé, estar pronto para o crescimento é a diferença entre ser líder de mercado ou apenas mais um na Zona Leste.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 12 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Criação de Sites com Manutenção e Suporte Técnico Especializado</h3>
+                        <p>
+                            Oferecemos garantia de continuidade operacional. Nossa <strong>manutenção de sites</strong> garante que sua infraestrutura esteja sempre atualizada, rápida e protegida 24h por dia. Com suporte técnico dedicado no Tatuapé e região, você tem a tranquilidade de saber que sua vitrine online está em boas mãos, performando no máximo rendimento todos os dias do ano.
+                        </p>
+                    </div>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        Resumo Técnico: Se você busca por <strong>criação de site</strong> no Tatuapé, quer entender como <strong>fazer site</strong> de alta performance ou deseja lançar uma <strong>loja virtual</strong> imbatível no Anália Franco, a EG Empório Digital é sua unidade de inteligência no digital.
+                        Se você busca <strong>criação de site no Tatuapé</strong> com entrega profissional, performance técnica e foco total em faturamento, a EG Empório Digital é sua parceira certa para dominar o território digital na Zona Leste.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO FAQ (SEO BOOSTER TATUAPÉ) -->
+    <!-- SEÇÃO FAQ (SEO BOOSTER) -->
     <section class="py-20 px-6 max-w-4xl mx-auto relative z-10">
         <div class="text-center mb-12">
             <h2 class="font-tech text-2xl md:text-3xl text-white mb-4 uppercase">
-                FAQ: <span class="text-brand-blue">Sites no Tatuapé</span>
+                Dúvidas <span class="text-brand-blue">Frequentes</span>
             </h2>
             <div class="w-24 h-1 bg-brand-blue mx-auto rounded-full opacity-50"></div>
         </div>
@@ -473,24 +582,36 @@
         <div class="space-y-4">
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">O site vai ranquear para buscas no Tatuapé e Anália Franco?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual o valor para criação de um site no Tatuapé?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Sim! Aplicamos SEO Local cirúrgico para que sua empresa seja encontrada por quem busca serviços na Zona Leste, priorizando a visibilidade regional e autoridade no Google Maps.
+                        O investimento varia conforme a complexidade técnica. Uma Landing Page para clínicas foca em conversão rápida e tem um valor menor que um E-commerce ou Portal Corporativo. Na EG, criamos orçamentos personalizados para empresas do Tatuapé focados em ROI.
                     </div>
                 </div>
             </div>
 
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual a diferença entre site institucional e Landing Page?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês atendem clínicas na Rua Apucarana e Itapura?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        O institucional foca em autoridade e apresentação completa da empresa. A Landing Page é focada em uma única ação (venda ou lead), ideal para anúncios pagos. Ambos são fundamentais para o sucesso no Tatuapé.
+                        Sim! Somos especialistas na <strong>criação de sites profissionais</strong> para o setor médico e de saúde no Tatuapé. Desenvolvemos interfaces que transmitem a credibilidade necessária para clínicas de elite próximas ao Anália Franco.
+                    </div>
+                </div>
+            </div>
+
+            <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
+                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto tempo leva o desenvolvimento do site?</span>
+                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                        Prezamos pela agilidade que o mercado de SP exige. Landing Pages são entregues entre 5 a 10 dias úteis. Sites institucionais ou Lojas Virtuais levam entre 15 e 30 dias, dependendo da complexidade das integrações solicitadas.
                     </div>
                 </div>
             </div>
@@ -523,14 +644,33 @@
     <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col items-center">
-                <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 opacity-50 mb-2">
-                <div class="font-tech text-xl font-bold text-white uppercase">
+                <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
+                <div class="logo-animate font-tech text-xl font-bold text-white uppercase" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </div>
+            
+            <div class="flex gap-8">
+                <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+                <a href="https://egemporiodigital.com.br/blog" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-article text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+                <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+            </div>
+
             <div class="text-center">
-                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital - Unidade Tatuapé.</p>
-                <p class="text-[10px] text-slate-700 mt-1">Todos os direitos reservados.</p>
+                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
+                <p class="text-[10px] text-slate-700 mt-1 uppercase">TATUAPÉ - ZONA LESTE SÃO PAULO</p>
             </div>
         </div>
     </footer>
@@ -539,20 +679,12 @@
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('menu-icon');
-            
             if (menu.classList.contains('hidden')) {
                 menu.classList.remove('hidden');
                 menu.classList.add('flex');
-                icon.classList.remove('ph-list');
-                icon.classList.add('ph-x');
-                document.body.style.overflow = 'hidden'; 
             } else {
                 menu.classList.add('hidden');
                 menu.classList.remove('flex');
-                icon.classList.remove('ph-x');
-                icon.classList.add('ph-list');
-                document.body.style.overflow = 'auto';
             }
         }
 
@@ -573,11 +705,15 @@
             document.body.style.overflow = 'auto';
         }
 
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") closeProjectModal();
+        });
+
         function toggleSeoText() {
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
                 icon.classList.remove('rotate-180');
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
@@ -591,7 +727,7 @@
             document.querySelectorAll('.max-h-0').forEach(el => {
                 if (el !== content && el.id !== 'seo-content') { 
                     el.style.maxHeight = null;
-                    if(el.previousElementSibling.querySelector('i')) {
+                    if(el.previousElementSibling && el.previousElementSibling.querySelector('i')) {
                         el.previousElementSibling.querySelector('i').classList.remove('rotate-180');
                     }
                 }

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- SEO LOCAL E PALAVRAS-CHAVE: SÃO PAULO (ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
+    <!-- SEO LOCAL: SÃO PAULO (ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
     <title>Criação de Sites em São Paulo | Landing Pages e Lojas Virtuais - EG Empório</title>
-    <meta name="description" content="Especialistas em criação de sites profissionais em São Paulo. Atendemos empresas na Avenida Paulista, Faria Lima e toda capital. Sites rápidos e Lojas Virtuais.">
+    <meta name="description" content="Especialistas em criação de sites profissionais em São Paulo. Atendemos Avenida Paulista, Faria Lima, Itaim Bibi e toda capital. Sites rápidos e Lojas Virtuais de elite.">
     
     <!-- CANONICAL: VALIDAÇÃO DE ORIGINALIDADE (SELF-REFERENCING) -->
     <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/sao-paulo">
@@ -33,11 +33,8 @@
         "latitude": "-23.561414",
         "longitude": "-46.655881"
       },
-      "areaServed": {
-        "@type": "City",
-        "name": "São Paulo"
-      },
-      "description": "Agência especializada em criação de sites, landing pages de alta conversão e lojas virtuais para empresas em São Paulo, SP."
+      "areaServed": ["São Paulo", "Avenida Paulista", "Faria Lima", "Itaim Bibi", "Vila Olímpia", "Pinheiros", "Moema", "Tatuapé", "Santana", "Morumbi", "Brooklin"],
+      "description": "Agência de elite especializada em criação de sites, landing pages de alta conversão e lojas virtuais para empresas na capital de São Paulo."
     }
     </script>
 
@@ -127,6 +124,40 @@
             z-index: -50;
             overflow: hidden;
         }
+
+        /* --- EFEITO LOGO DINÂMICO (PADRÃO DOSSIÊ) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
     </style>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
@@ -143,7 +174,7 @@
             
             <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
-                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </a>
@@ -151,11 +182,11 @@
             <!-- NAV LINKS -->
             <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
                 <a href="../index.html" class="hover:text-brand-blue transition-colors">Início</a>
-                <a href="#servicos-locais" class="text-brand-blue transition-colors">Serviços Locais</a>
+                <a href="#servicos-locais" class="text-brand-blue transition-colors">SP & Bairros</a>
                 <a href="#projetos-disponiveis" class="hover:text-brand-blue transition-colors">Portfólio</a>
             </nav>
 
-            <a href="https://wa.me/5511916053292?text=Olá, vi a página de São Paulo e quero um orçamento." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+            <a href="https://wa.me/5511916053292?text=Olá, vi a página de São Paulo e quero um orçamento para minha marca." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
                 Fale com a gente
             </a>
 
@@ -166,34 +197,32 @@
 
         <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
             <a href="../index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Voltar ao Início</a>
-            <a href="#servicos-locais" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços</a>
-            <a href="https://wa.me/5511916053292?text=Olá, vi a página de São Paulo e quero um orçamento." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
+            <a href="#servicos-locais" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços em SP</a>
+            <a href="https://wa.me/5511916053292?text=Olá, vi a página de São Paulo e quero um orçamento para minha marca." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
                 Fale com a gente
             </a>
         </div>
     </header>
 
-    <!-- HERO SECTION (ESTRATÉGIA AGRESSIVA: SP CAPITAL) -->
+    <!-- HERO SECTION (ESTRATÉGIA AGRESSIVA: SÃO PAULO) -->
     <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
         
-        <!-- H1: FOCO NO RANKING (Dominando Territórios) -->
         <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
             CRIAÇÃO DE SITES <br> EM <span class="text-white">SÃO PAULO</span>
         </h1>
 
-        <!-- H2: FOCO NA AUTORIDADE (Copy para Empresários de SP) -->
         <h2 class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
-            DOMINE O MERCADO NA CAPITAL DOS NEGÓCIOS
+            DOMINE O MERCADO NA CAPITAL FINANCEIRA DO BRASIL
         </h2>
 
         <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-8 z-10"></div>
 
         <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
-            Do coração da <strong>Avenida Paulista</strong> ao centro financeiro da <strong>Faria Lima</strong>, a EG Empório Digital entrega a tecnologia necessária para empresas paulistanas escalarem. Se você busca <strong>criação de um site</strong> profissional na capital, não aceite amadorismo. Tenha uma <strong class="text-white">loja online</strong> ou site institucional blindado para superar a concorrência na metrópole mais competitiva do Brasil.
+            Se sua empresa está na <strong>Faria Lima, Itaim Bibi ou Avenida Paulista</strong>, você precisa de uma presença digital de vanguarda. Se busca <strong>criação de um site</strong> profissional em São Paulo, entregamos autoridade e performance técnica para a metrópole que nunca dorme. Tenha uma <strong class="text-white">loja online</strong> ou site institucional blindado para converter o público mais exigente do país.
         </p>
 
         <div class="flex flex-col md:flex-row gap-4 z-10">
-            <a href="https://wa.me/5511916053292?text=Preciso de um site em SP para superar a concorrência." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+            <a href="https://wa.me/5511916053292?text=Preciso de um site profissional em SP para superar a concorrência." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
                 Solicitar Orçamento
             </a>
             <a href="#projetos-disponiveis" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
@@ -211,41 +240,41 @@
                     Por que contratar a <span class="text-brand-blue">EG Empório</span> em São Paulo?
                 </h2>
                 <p class="text-slate-300 text-lg leading-relaxed">
-                    Sabemos que o mercado em <strong>São Paulo</strong> exige velocidade e performance. Atuamos em bairros como <strong>Itaim Bibi, Pinheiros, Moema, Vila Olímpia e Tatuapé</strong>, levando soluções digitais que realmente convertem.
+                    Sabemos que em <strong>São Paulo</strong> a competitividade é extrema. Atuamos em bairros como <strong>Vila Olímpia, Pinheiros, Moema e Tatuapé</strong>, levando soluções digitais que transformam a vitrine da sua empresa em uma máquina de faturamento.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <!-- Coluna 1 -->
                 <div>
-                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Especialistas em Criação de Sites</h3>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Especialistas em Criação de Sites Profissionais</h3>
                     <p class="text-slate-400 mb-6">
-                        Nós <strong>fazemos sites</strong> focados em resultado para o empresário paulistano. Seja para <strong>criação de sites profissionais</strong> institucionais ou sistemas complexos, utilizamos tecnologias de ponta para garantir velocidade e segurança. Nosso <strong>design de site</strong> é pensado para reter o cliente e gerar confiança imediata, fundamental no ritmo acelerado de SP.
+                        Nós <strong>fazemos sites</strong> focados em autoridade corporativa e UX de elite. Seja para <strong>criação de sites profissionais</strong> para holdings na Faria Lima ou clínicas nos Jardins, utilizamos as linguagens mais modernas para garantir velocidade extrema. Nosso <strong>design de site</strong> é projetado para transmitir confiança imediata no mercado paulistano.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site otimizado (SEO Local SP)</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site responsivo (Mobile First)</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites rápidos para quem não gosta de perder tempo</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site otimizado (SEO Local São Paulo)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site responsivo (Mobile-First de Elite)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites ultrarrápidos para o ritmo acelerado de SP</li>
                     </ul>
                 </div>
 
                 <!-- Coluna 2 -->
                 <div>
-                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Lojas Virtuais e Landing Pages</h3>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Lojas Virtuais e Landing Pages em SP</h3>
                     <p class="text-slate-400 mb-6">
-                        Quer vender na internet para todo o país a partir de São Paulo? Desenvolvemos sua <strong>loja online</strong> ou <strong>loja virtual</strong> completa. Se o seu foco é capturar leads ou vender um produto específico, nossas <strong>Landing Pages</strong> são projetadas com gatilhos mentais e estruturas de alta conversão. Tenha um <strong>site de vendas online</strong> que trabalha enquanto você dorme.
+                        Quer vender seus produtos a partir do maior centro logístico da América Latina? Desenvolvemos sua <strong>loja online</strong> ou <strong>loja virtual</strong> com integrações completas e checkout fluido. Se o seu foco é capturar leads qualificados para serviços de alto valor, nossas <strong>Landing Pages</strong> são estruturadas com gatilhos de conversão agressivos. Tenha um <strong>site de vendas online</strong> operando 24h.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Site de vendas com checkout transparente</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages para tráfego pago (Google/Meta)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Site de vendas com checkout fluido e seguro</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages para anúncios no Google e Meta</li>
                         <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Nós fazemos sites que dominam o mercado digital</li>
                     </ul>
                 </div>
             </div>
             
             <div class="mt-10 text-center">
-                <a href="https://wa.me/5511916053292?text=Preciso de um site profissional em São Paulo." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
-                    Quero meu site agora <i class="ph ph-arrow-right"></i>
+                <a href="https://wa.me/5511916053292?text=Quero um site profissional em São Paulo agora." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
+                    Solicitar Orçamento <i class="ph ph-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -259,7 +288,7 @@
                 Exemplos de <span class="text-brand-blue">Projetos Reais</span>
             </h2>
             <p class="text-slate-500 text-sm max-w-2xl mx-auto">
-                Veja o nível de qualidade que entregamos para clientes em São Paulo e em todo o ecossistema digital brasileiro.
+                Veja o nível de qualidade que entregamos para clientes em São Paulo e em todo o Brasil.
             </p>
         </div>
 
@@ -412,53 +441,129 @@
         </div>
     </section>
 
-    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
-    <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
+    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS - SÃO PAULO) -->
+    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
             <!-- HEADER DO CARD (Clicável) -->
             <div onclick="toggleSeoText()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
-                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Guia Técnico: Criação de Sites Profissionais em SP
+                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade: Criação de Sites Profissionais em São Paulo
                     </h2>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para a capital</span>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para a capital financeira do Brasil</span>
                 </div>
-                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
-                    <i id="seo-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
-            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS) -->
+            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS - 12 PILARES VERTICAIS) -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-6 font-light">
+                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
                     
-                    <p>
-                        No cenário competitivo da maior metrópole da América Latina, a <strong>criação de site</strong> em São Paulo não é apenas um luxo, mas uma necessidade estratégica para empresas que desejam sobreviver e crescer. A metrópole paulistana exige que negócios se destaquem digitalmente na <strong>Marginal Pinheiros, Largo Treze ou Santana</strong>, e nós, da EG Empório Digital, entendemos essa urgência. Nosso foco é entregar mais do que código; entregamos resultados que posicionam sua marca como líder.
+                    <p class="mb-4">
+                        Na metrópole que nunca dorme e coração econômico da América Latina, a <strong>criação de site</strong> em São Paulo é o fator determinante para empresas que desejam dominar o mercado na <strong>Avenida Paulista, Faria Lima, Itaim Bibi e Vila Olímpia</strong>. Nós, da EG Empório Digital, desenvolvemos soluções de elite que posicionam sua marca no topo do Google na capital, garantindo que seu negócio seja a autoridade máxima em uma das economias mais competitivas do mundo.
                     </p>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Profissionais e Institucionais em São Paulo</h3>
-                    <p>
-                        Muitos empreendedores tentam soluções amadoras, mas a <strong>criação de sites profissionais</strong> é o que separa marcas consolidadas de aventuras passageiras em SP. Quando <strong>fazemos sites</strong>, aplicamos técnicas de engenharia de software e psicologia de vendas. Um site lento ou mal estruturado expulsa o cliente em segundos. Por isso, investir na <strong>criação de um site</strong> otimizado na EG é investir na credibilidade da sua marca perante o público exigente de São Paulo.
-                    </p>
+                    <!-- PILAR 1 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Criação de Sites Profissionais e Institucionais em São Paulo</h3>
+                        <p>
+                            A capital paulista abriga as maiores empresas do país. A <strong>criação de sites profissionais</strong> é o que separa marcas consolidadas de negócios amadores. Quando <strong>fazemos sites</strong> para escritórios e corporações no centro financeiro, aplicamos engenharia de credibilidade. Um site institucional deve ser o espelho da robustez da sua empresa, transmitindo confiança imediata para grandes parceiros e clientes em SP.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites para E-commerce e Lojas Virtuais</h3>
-                    <p>
-                        Se o seu objetivo é vender produtos a partir do hub logístico paulista, ter uma <strong>loja virtual</strong> robusta é obrigatório. Desenvolvemos sua <strong>loja online</strong> com checkout transparente, segurança SSL e integração com transportadoras. Um <strong>site de vendas online</strong> em São Paulo precisa operar 24 horas por dia sem falhas. Nós criamos estruturas que suportam alto tráfego e convertem visitantes em compradores, transformando sua vitrine digital em uma máquina de receita recorrente. Seja um <strong>site de vendas</strong> B2B ou B2C, a tecnologia é a mesma: performance máxima.
-                    </p>
+                    <!-- PILAR 2 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Criação de Sites para E-commerce e Lojas Virtuais de Alta Escala</h3>
+                        <p>
+                            São Paulo é o maior hub logístico do país, e sua <strong>loja virtual</strong> precisa aproveitar essa força. Desenvolvemos sua <strong>loja online</strong> com checkout fluido, segurança SSL de nível bancário e integrações logísticas complexas. Um <strong>site de vendas online</strong> em São Paulo precisa operar sem fricção 24h por dia. Criamos ecossistemas de e-commerce que convertem visitantes em receita recorrente, otimizando cada etapa do funil de compras para o exigente público paulistano.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Estilo Landing Page para Alta Conversão</h3>
-                    <p>
-                        Para prestadores de serviços, a estratégia muda drasticamente. Aqui entram as <strong>Landing Pages</strong> de alta conversão. Diferente de um site institucional comum, a <strong>criação de site</strong> estilo Landing Page é focada em uma única ação: fazer o cliente paulista entrar em contato. Se você busca <strong>fazer site</strong> para campanhas de Google Ads ou tráfego pago nas redes sociais, essa é a ferramenta ideal. Nossa agência <strong>cria sites</strong> focados em capturar leads qualificados, usando gatilhos mentais e layout persuasivo.
-                    </p>
+                    <!-- PILAR 3 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Criação de Sites Estilo Landing Page para Alta Conversão em SP</h3>
+                        <p>
+                            Para prestadores de serviços no <strong>Tatuapé, Santana ou Moema</strong>, a estratégia de <strong>criação de site</strong> estilo Landing Page é o caminho mais curto para o lucro. Diferente de sites complexos, uma Landing Page foca em uma única meta: fazer o cliente de São Paulo entrar em contato. Nós <strong>criamos sites</strong> com gatilhos persuasivos que blindam sua marca e maximizam o ROI em campanhas de tráfego pago.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites com Design Moderno e Performance</h3>
-                    <p>
-                        O <strong>design de site</strong> (UI/UX) é o que define se o usuário confia ou não na sua empresa. Em uma cidade que respira inovação, um visual moderno transmite autoridade imediata. Não basta apenas funcionalidade; a estética importa para o público da <strong>Vila Madalena</strong> ou dos Jardins. Nós alinhamos o <strong>design de site</strong> à identidade visual da sua marca, garantindo que ela seja memorável. Se você quer saber <strong>como fazer site</strong> que realmente impacta, a resposta está na união entre beleza e velocidade.
-                    </p>
+                    <!-- PILAR 4 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Criação de Sites com Design Moderno e UX (User Experience)</h3>
+                        <p>
+                            O <strong>design de site</strong> (UI/UX) define se o usuário confia ou abandona sua página em segundos. Em São Paulo, uma cidade que dita tendências, um visual moderno transmite autoridade instantânea. Não entregamos apenas funcionalidade; entregamos interfaces projetadas para a melhor experiência do usuário. Alinhamos o <strong>design de site</strong> à identidade visual da sua marca, garantindo uma navegação intuitiva que conduz o cliente naturalmente ao fechamento do negócio.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 5 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Criação de Sites Mobile-First (Otimizados para Celular)</h3>
+                        <p>
+                            A maioria absoluta das buscas em SP é feita via smartphones, seja no metrô ou no trânsito. Por isso, <strong>criamos sites</strong> sob a filosofia Mobile-First. Sua página terá um carregamento impecável em smartphones e tablets, garantindo que o executivo que transita pela Marginal Pinheiros encontre sua empresa com facilidade. A adaptação perfeita em todas as telas é o que evita que você perca oportunidades valiosas para a concorrência local.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 6 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Criação de Sites com Performance e Velocidade Extrema</h3>
+                        <p>
+                            Velocidade não é luxo, é rankeamento técnico. A EG Empório Digital <strong>cria sites</strong> ultrarrápidos seguindo os rigorosos critérios do Google (Core Web Vitals). Em um polo dinâmico como São Paulo, cada milissegundo de atraso é um cliente perdido. Utilizamos compressão de dados avançada e código limpo para garantir que sua página carregue quase instantaneamente, mantendo o usuário engajado e satisfeito desde o primeiro clique.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 7 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Criação de Sites Otimizados para SEO Local</h3>
+                        <p>
+                            Dominar o Google em São Paulo é nossa especialidade. Estruturamos o SEO para que sua empresa apareça no topo para quem busca serviços na capital. Através de palavras-chave geolocalizadas e técnicas avançadas de rankeamento, fazemos sua marca ser a primeira opção quando alguém buscar por soluções na sua região, transformando as buscas locais em faturamento direto para seu negócio.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 8 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Criação de Sites Blindados e Seguros (Certificado SSL)</h3>
+                        <p>
+                            Protegemos os dados da sua empresa e a privacidade dos seus clientes. Todo projeto de <strong>criação de site</strong> na EG inclui certificado SSL (HTTPS) e camadas extras de segurança contra invasões. Em São Paulo, onde operam grandes volumes comerciais, a segurança digital é inegociável. Sites seguros não apenas protegem informações, mas também recebem prioridade no rankeamento do Google.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 9 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
+                        <p>
+                            Damos o controle total ao empresário paulistano. Ao finalizar a <strong>criação do site</strong>, você recebe um painel administrativo intuitivo (CMS) onde pode alterar textos, banners e produtos sem depender de programadores. Essa agilidade é fundamental para negócios que precisam atualizar promoções ou novos portfólios em tempo real, acompanhando a velocidade constante do mercado paulista.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 10 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Criação de Sites Integrados com Automação de WhatsApp</h3>
+                        <p>
+                            O WhatsApp é a principal ferramenta de fechamento em São Paulo. Nossos projetos vêm com integrações inteligentes que reduzem a fricção no atendimento comercial. O lead clica no site e cai direto na conversa com seu vendedor. Eliminamos barreiras técnicas para que a comunicação flua rapidamente, aumentando drasticamente as taxas de conversão e garantindo que nenhum contato vindo do site seja perdido.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 11 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Criação de Sites Estratégicos para Escalar Negócios Locais</h3>
+                        <p>
+                            Não apenas <strong>fazemos sites</strong>; construímos ativos que valorizam sua empresa na capital. Planejamos a arquitetura digital pensando no crescimento futuro do seu negócio. Seja para expansão de serviços ou integração com novos canais de marketing digital, seu site será preparado para escalar. Em São Paulo, estar pronto para o crescimento é a diferença entre ser líder de mercado ou apenas mais um no Google.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 12 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Criação de Sites com Manutenção e Suporte Técnico Especializado</h3>
+                        <p>
+                            Oferecemos garantia de continuidade operacional. Nossa <strong>manutenção de sites</strong> garante que sua infraestrutura esteja sempre atualizada, rápida e protegida 24h por dia. Com suporte técnico dedicado em São Paulo, você tem a tranquilidade de saber que sua máquina de vendas online está em boas mãos, performando no máximo rendimento todos os dias do ano.
+                        </p>
+                    </div>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        Em resumo: se você precisa de <strong>criação de site em São Paulo</strong>, <strong>loja virtual</strong> ou quer entender como <strong>fazer site</strong> pode mudar o rumo do seu faturamento, a EG Empório Digital é a parceira certa na capital. Nós não apenas <strong>fazemos sites</strong>; nós construímos ativos digitais que valorizam sua empresa em todo o estado de São Paulo.
+                        Se você busca <strong>criação de site em São Paulo</strong> com entrega profissional, performance técnica e foco total em faturamento, a EG Empório Digital é sua parceira certa para dominar o território digital na capital paulista.
                     </p>
                 </div>
             </div>
@@ -475,54 +580,38 @@
         </div>
 
         <div class="space-y-4">
-            <!-- Pergunta 1 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto custa a criação de um site em São Paulo?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual o valor para criação de um site em São Paulo?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        O investimento para a <strong>criação de um site</strong> profissional em São Paulo varia conforme a complexidade. Uma Landing Page focada em conversão tem um investimento menor que uma Loja Virtual completa com centenas de produtos. Na EG Empório Digital, criamos orçamentos personalizados que garantem o melhor ROI para o empresário paulista.
+                        O investimento varia conforme a complexidade técnica. Uma Landing Page foca em conversão rápida e tem um valor menor que um E-commerce de grande escala ou Portal Corporativo. Na EG, criamos orçamentos personalizados para empresas de São Paulo focados em ROI.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 2 (ADAPTADA PARA SÃO PAULO) -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Meu site aparecerá nas buscas locais de São Paulo?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês atendem empresas na Faria Lima e Paulista?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Sim! Utilizamos técnicas avançadas de SEO Local para que sua <strong>criação de site</strong> seja indexada corretamente para buscas em São Paulo e bairros específicos. Estruturamos o código para que o Google entenda sua área de atuação geográfica na capital.
+                        Sim! Atendemos o polo corporativo de São Paulo, incluindo Avenida Paulista, Faria Lima, Vila Olímpia e Berrini. Desenvolvemos interfaces de alto padrão que transmitem a robustez necessária para o setor financeiro e de tecnologia.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 3 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual o prazo para fazer um site profissional?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto tempo leva o desenvolvimento do site em SP?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Sabemos que São Paulo não para. Por isso, somos ágeis. Uma Landing Page profissional pode ser entregue entre 5 a 10 dias úteis. Projetos de <strong>criação de sites</strong> institucionais ou e-commerces levam de 15 a 30 dias, dependendo das integrações necessárias.
-                    </div>
-                </div>
-            </div>
-
-             <!-- Pergunta 4 -->
-             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
-                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Preciso pagar mensalidades após a criação do site?</span>
-                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
-                </button>
-                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
-                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Não cobramos mensalidades obrigatórias de desenvolvimento. Uma vez que <strong>fazemos o site</strong>, ele é seu. Você terá apenas os custos anuais de domínio e hospedagem, que são essenciais para qualquer site no ar. Oferecemos suporte técnico opcional conforme sua necessidade.
+                        Prezamos pela velocidade que o mercado paulista exige. Landing Pages profissionais são entregues entre 5 a 10 dias úteis. Sites institucionais ou Lojas Virtuais levam entre 15 e 30 dias, dependendo da complexidade das integrações solicitadas.
                     </div>
                 </div>
             </div>
@@ -551,44 +640,43 @@
         </div>
     </div>
 
-    <!-- FOOTER SIMPLIFICADO -->
+    <!-- FOOTER -->
     <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col items-center">
                 <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
-                <div class="font-tech text-xl font-bold text-white uppercase">
+                <div class="logo-animate font-tech text-xl font-bold text-white uppercase" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </div>
             
             <div class="flex gap-8">
                 <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-instagram-logo text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300"></i>
                     </div>
                 </a>
                 <a href="https://egemporiodigital.com.br/blog" target="_blank" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-article text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-article text-2xl text-slate-300"></i>
                     </div>
                 </a>
                 <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-envelope-simple text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300"></i>
                     </div>
                 </a>
             </div>
 
             <div class="text-center">
                 <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
-                <p class="text-[10px] text-slate-700 mt-1">SÃO PAULO - BRASIL</p>
+                <p class="text-[10px] text-slate-700 mt-1 uppercase">SÃO PAULO - CAPITAL FINANCEIRA</p>
             </div>
         </div>
     </footer>
 
-    <!-- SCRIPTS (MENU MOBILE, MODAL, SEO TEXT E FAQ) -->
+    <!-- SCRIPTS -->
     <script>
-        // MENU MOBILE
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             if (menu.classList.contains('hidden')) {
@@ -600,7 +688,6 @@
             }
         }
 
-        // MODAL DE VÍDEO
         const modal = document.getElementById('project-modal');
         const iframe = document.getElementById('modal-iframe');
         const linkBtn = document.getElementById('modal-link-btn');
@@ -619,18 +706,14 @@
         }
 
         document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeProjectModal();
-            }
+            if (event.key === "Escape") closeProjectModal();
         });
 
-        // TOGGLE DO TEXTÃO SEO (ACCORDION)
         function toggleSeoText() {
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
-            
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
                 icon.classList.remove('rotate-180');
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
@@ -638,12 +721,9 @@
             }
         }
 
-        // TOGGLE DO FAQ
         function toggleFaq(button) {
             const content = button.nextElementSibling;
             const icon = button.querySelector('i');
-            
-            // Fecha todos os outros (exceto o SEO content principal que tem ID próprio)
             document.querySelectorAll('.max-h-0').forEach(el => {
                 if (el !== content && el.id !== 'seo-content') { 
                     el.style.maxHeight = null;
@@ -652,7 +732,6 @@
                     }
                 }
             });
-
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
                 icon.classList.remove('rotate-180');

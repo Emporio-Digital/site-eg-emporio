@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- SEO LOCAL: SANTO AMARO -->
+    <!-- SEO LOCAL: SANTO AMARO (ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
     <title>Criação de Sites em Santo Amaro | Landing Pages e Lojas Virtuais - EG Empório</title>
-    <meta name="description" content="Especialistas em criação de sites profissionais em Santo Amaro. Fazemos sites, landing pages de alta conversão e lojas virtuais para o polo empresarial da Zona Sul.">
+    <meta name="description" content="Especialistas em criação de sites profissionais em Santo Amaro. Atendemos escritórios na Chácara Santo Antônio, Granja Julieta e comércio no Largo Treze. Sites rápidos e Lojas Virtuais.">
     
-    <!-- CANONICAL -->
+    <!-- CANONICAL: VALIDAÇÃO DE ORIGINALIDADE (SELF-REFERENCING) -->
     <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/santo-amaro">
     
-    <!-- SCHEMA MARKUP (LOCAL BUSINESS) -->
+    <!-- SCHEMA MARKUP (LOCAL BUSINESS / PROFESSIONAL SERVICE) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -19,9 +19,22 @@
       "name": "EG Empório Digital - Criação de Sites em Santo Amaro",
       "url": "https://egemporiodigital.com.br/criacao-de-sites/santo-amaro",
       "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "areaServed": ["Santo Amaro", "Largo Treze", "Socorro", "Granja Julieta", "Alto da Boa Vista", "Chácara Santo Antônio"],
-      "description": "Agência especializada em criação de sites, landing pages e lojas virtuais em Santo Amaro e toda Zona Sul de SP.",
-      "priceRange": "$$"
+      "priceRange": "$$",
+      "telephone": "+5511916053292",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chácara Santo Antônio",
+        "addressLocality": "Santo Amaro",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.6481",
+        "longitude": "-46.7031"
+      },
+      "areaServed": ["Santo Amaro", "Chácara Santo Antônio", "Granja Julieta", "Alto da Boa Vista", "Largo Treze", "Socorro", "Vila Cruzeiro", "Marginal Pinheiros"],
+      "description": "Agência especializada em criação de sites, landing pages de alta conversão e lojas virtuais em Santo Amaro, atendendo o polo corporativo e comercial da Zona Sul de SP."
     }
     </script>
 
@@ -111,6 +124,40 @@
             z-index: -50;
             overflow: hidden;
         }
+
+        /* --- EFEITO LOGO DINÂMICO (PADRÃO DOSSIÊ) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
     </style>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
@@ -127,7 +174,7 @@
             
             <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
-                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </a>
@@ -135,11 +182,11 @@
             <!-- NAV LINKS -->
             <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
                 <a href="../index.html" class="hover:text-brand-blue transition-colors">Início</a>
-                <a href="#servicos-locais" class="text-brand-blue transition-colors">Serviços Locais</a>
+                <a href="#servicos-locais" class="text-brand-blue transition-colors">Santo Amaro & ZS</a>
                 <a href="#projetos-disponiveis" class="hover:text-brand-blue transition-colors">Portfólio</a>
             </nav>
 
-            <a href="https://wa.me/5511916053292?text=Olá, sou de Santo Amaro e vi o site, gostaria de um orçamento." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+            <a href="https://wa.me/5511916053292?text=Olá, sou de Santo Amaro e quero um orçamento para minha empresa." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
                 Fale com a gente
             </a>
 
@@ -151,13 +198,13 @@
         <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
             <a href="../index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Voltar ao Início</a>
             <a href="#servicos-locais" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços</a>
-            <a href="https://wa.me/5511916053292?text=Olá, sou de Santo Amaro e vi o site, gostaria de um orçamento." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
+            <a href="https://wa.me/5511916053292?text=Olá, sou de Santo Amaro e quero um orçamento para minha empresa." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
                 Fale com a gente
             </a>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (ESTRATÉGIA AGRESSIVA: SANTO AMARO) -->
     <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
         
         <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
@@ -165,18 +212,17 @@
         </h1>
 
         <h2 class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
-            DOMINE O MERCADO DIGITAL NA ZONA SUL
+            DOMINE O POLO EMPRESARIAL DA ZONA SUL
         </h2>
 
         <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-8 z-10"></div>
 
         <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
-            Você busca por <strong>web design profissional</strong>? Somos especialistas em elevar negócios em Santo Amaro. 
-            Transformamos sua ideia em uma <strong class="text-white">loja online</strong> ou site institucional que gera resultados e destaca sua marca na região.
+            Se sua empresa está na <strong>Chácara Santo Antônio, Granja Julieta ou Alto da Boa Vista</strong>, você precisa de uma vitrine que transmita o poder corporativo da região. Se busca <strong>criação de um site</strong> profissional em Santo Amaro, entregamos autoridade visual e performance técnica para superar a concorrência na Zona Sul. Tenha uma <strong class="text-white">loja online</strong> ou site institucional blindado para converter leads qualificados.
         </p>
 
         <div class="flex flex-col md:flex-row gap-4 z-10">
-            <a href="https://wa.me/5511916053292?text=Preciso de um site em Santo Amaro para aumentar minhas vendas." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+            <a href="https://wa.me/5511916053292?text=Preciso de um site profissional em Santo Amaro para minha empresa." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
                 Solicitar Orçamento
             </a>
             <a href="#projetos-disponiveis" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
@@ -186,7 +232,7 @@
 
     </section>
 
-    <!-- SEÇÃO DE CONTEÚDO SEO (SANTO AMARO) -->
+    <!-- SEÇÃO DE CONTEÚDO SEO (KEYWORDS INJETADAS) -->
     <section id="servicos-locais" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20">
             <div class="text-left mb-10">
@@ -194,7 +240,7 @@
                     Por que contratar a <span class="text-brand-blue">EG Empório</span> em Santo Amaro?
                 </h2>
                 <p class="text-slate-300 text-lg leading-relaxed">
-                    Santo Amaro é o coração comercial e corporativo da Zona Sul. De escritórios na Chácara Santo Antônio ao comércio do Largo Treze, sua empresa precisa de uma <strong>criação de site</strong> que transmita robustez e confiança.
+                    Sabemos que <strong>Santo Amaro</strong> é o coração comercial da Zona Sul de São Paulo. De grandes escritórios de advocacia a comércios tradicionais no <strong>Largo Treze</strong>, sua empresa precisa de uma <strong>criação de site</strong> que equilibre tradição e inovação tecnológica.
                 </p>
             </div>
 
@@ -203,12 +249,12 @@
                 <div>
                     <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Especialistas em Criação de Sites</h3>
                     <p class="text-slate-400 mb-6">
-                        Nós <strong>fazemos sites</strong> focados em conversão. Para a <strong>criação de sites profissionais</strong> em Santo Amaro e Granja Julieta, unimos tecnologia e estratégia. Nosso <strong>design de site</strong> é pensado para quem não aceita ser apenas mais um no Google.
+                        Nós <strong>fazemos sites</strong> focados em gerar credibilidade corporativa. Seja para <strong>criação de sites profissionais</strong> para clínicas médicas no Alto da Boa Vista ou sistemas para indústrias no Socorro, utilizamos stacks modernas para garantir velocidade extrema. Nosso <strong>design de site</strong> é projetado para converter o tráfego qualificado da Marginal Pinheiros.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site otimizado (SEO Local)</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site responsivo e moderno</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites ultra-rápidos para performance</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site otimizado (SEO Local Santo Amaro)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site responsivo (Foco em UX Premium)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites leves que carregam instantaneamente</li>
                     </ul>
                 </div>
 
@@ -216,25 +262,25 @@
                 <div>
                     <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Lojas Virtuais e Landing Pages</h3>
                     <p class="text-slate-400 mb-6">
-                        Quer vender mais? Desenvolvemos sua <strong>loja online</strong> ou <strong>loja virtual</strong> completa. Se o seu foco é capturar leads qualificados na região da Adolfo Pinheiro ou Socorro, nossas <strong>Landing Pages</strong> são projetadas para converter tráfego em lucro.
+                        Quer vender seus produtos para toda São Paulo saindo de Santo Amaro? Desenvolvemos sua <strong>loja online</strong> ou <strong>loja virtual</strong> com integrações seguras. Se o seu foco é capturar leads qualificados para serviços de alto valor, nossas <strong>Landing Pages</strong> são estruturadas com gatilhos de conversão agressivos. Tenha um <strong>site de vendas online</strong> ativo 24h.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Site de vendas com checkout fluido</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages para Google Ads</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Nós fazemos sites que geram leads reais</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Site de vendas com checkout fluido e seguro</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages para Google Ads e Tráfego Pago</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Nós fazemos sites que dominam o mercado digital</li>
                     </ul>
                 </div>
             </div>
             
             <div class="mt-10 text-center">
-                <a href="https://wa.me/5511916053292?text=Preciso de um site profissional em Santo Amaro." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
-                    Quero meu site agora <i class="ph ph-arrow-right"></i>
+                <a href="https://wa.me/5511916053292?text=Quero um site profissional em Santo Amaro agora." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
+                    Solicitar Orçamento <i class="ph ph-arrow-right"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO: PROJETOS DISPONÍVEIS (TODOS OS 8 CARDS) -->
+    <!-- SEÇÃO: PROJETOS DISPONÍVEIS -->
     <section id="projetos-disponiveis" class="scroll-mt-32 py-20 px-6 max-w-7xl mx-auto border-t border-white/5 relative z-10">
         
         <div class="text-center mb-16">
@@ -242,7 +288,7 @@
                 Exemplos de <span class="text-brand-blue">Projetos Reais</span>
             </h2>
             <p class="text-slate-500 text-sm max-w-2xl mx-auto">
-                Veja o nível de qualidade que entregamos para clientes em Santo Amaro e todo o Brasil.
+                Veja o nível de qualidade que entregamos para clientes em Santo Amaro e em todo o Brasil.
             </p>
         </div>
 
@@ -302,12 +348,17 @@
                 </div>
             </div>
 
-            <!-- 4. AUTOMOTIVO LUXURY -->
+            <!-- 4. AUTOMOTIVO -->
             <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-automotivo.jpg" alt="Projeto Automotivo" 
                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Conceito</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Automotivo Luxury</h3>
@@ -321,6 +372,11 @@
                 <img src="../assets/images/capa-arquitetura.jpg" alt="Projeto Arquitetura" 
                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Imobiliária</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Arquitetura Minimal</h3>
@@ -334,6 +390,11 @@
                 <img src="../assets/images/capa-financeiro.jpg" alt="Projeto Financeiro" 
                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Fintech</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Dashboard Financeira</h3>
@@ -347,6 +408,11 @@
                <img src="../assets/images/capa-loja.jpg" alt="Projeto Loja" 
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                       <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                   </div>
+               </div>
                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">E-commerce</span>
                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Loja Moderna</h3>
@@ -360,6 +426,11 @@
                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Projeto Fitness" 
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                       <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                   </div>
+               </div>
                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Institucional / Academia</span>
                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Iron Force Fitness</h3>
@@ -370,60 +441,136 @@
         </div>
     </section>
 
-    <!-- SEÇÃO SEO EXPANDÍVEL (SANTO AMARO) - FOCO TOTAL EM CRIAÇÃO DE SITES NO DOSSIÊ -->
-    <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
+    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS - SANTO AMARO) -->
+    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
             <!-- HEADER DO CARD (Clicável) -->
             <div onclick="toggleSeoText()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
-                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Guia Técnico: Autoridade Digital em Santo Amaro
+                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade: Criação de Sites Profissionais em Santo Amaro
                     </h2>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Estratégias para o polo corporativo da Zona Sul</span>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para o polo corporativo da Zona Sul</span>
                 </div>
-                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
-                    <i id="seo-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
-            <!-- CONTEÚDO EXPANDÍVEL (Regra de Ouro: Títulos H3 com "Criação de Sites") -->
+            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS - 12 PILARES VERTICAIS) -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-6 font-light">
+                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
                     
-                    <p>
-                        Santo Amaro é um dos bairros mais estratégicos de São Paulo. Com uma malha empresarial que abrange a Chácara Santo Antônio e o movimentado Largo Treze, a <strong>criação de site</strong> aqui exige um nível superior de qualidade. A EG Empório Digital desenvolve soluções que conectam o poder corporativo da Zona Sul ao mundo digital.
+                    <p class="mb-4">
+                        No coração empresarial da Zona Sul de São Paulo, a <strong>criação de site</strong> em Santo Amaro é o fator decisivo para empresas que buscam autoridade na <strong>Marginal Pinheiros, Chácara Santo Antônio e Granja Julieta</strong>. Nós, da EG Empório Digital, desenvolvemos ecossistemas digitais de elite que posicionam sua marca no topo do Google em Santo Amaro, garantindo que seu negócio se destaque em um dos maiores hubs comerciais e corporativos do Brasil.
                     </p>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Profissionais e Institucionais em Santo Amaro</h3>
-                    <p>
-                        Para empresas da Zona Sul, a <strong>criação de sites profissionais</strong> é o pilar da credibilidade. Nós <strong>fazemos sites</strong> institucionais de alto padrão para consultorias e indústrias que buscam autoridade. A <strong>criação de um site</strong> moderno, responsivo e rápido garante que sua marca seja a primeira escolha quando um cliente busca por seus serviços na região.
-                    </p>
+                    <!-- PILAR 1 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Criação de Sites Profissionais e Institucionais em Santo Amaro</h3>
+                        <p>
+                            Santo Amaro abriga desde comércios tradicionais no Largo Treze até complexos corporativos modernos. A <strong>criação de sites profissionais</strong> é o que separa empresas consolidadas de negócios amadores. Quando <strong>fazemos sites</strong> para escritórios e consultorias na Granja Julieta, aplicamos engenharia de credibilidade. Um site institucional deve ser o reflexo da robustez da sua empresa, transmitindo confiança imediata para grandes parceiros e clientes na Zona Sul de SP.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites para Lojas Virtuais e E-commerce</h3>
-                    <p>
-                        O comércio de Santo Amaro é referência. Sua empresa precisa de uma <strong>loja virtual</strong> (E-commerce) preparada para vender 24h. Na <strong>criação de sites</strong> de vendas, focamos em checkout seguro e design intuitivo. Ter um <strong>site de vendas online</strong> otimizado é vital para expandir seu faturamento além das fronteiras físicas do bairro. Seja um <strong>site de vendas</strong> de produtos ou serviços, nós entregamos performance.
-                    </p>
+                    <!-- PILAR 2 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Criação de Sites para E-commerce e Lojas Virtuais</h3>
+                        <p>
+                            O varejo e o setor de serviços em Santo Amaro são gigantescos, e sua <strong>loja virtual</strong> precisa acompanhar esse ritmo. Desenvolvemos sua <strong>loja online</strong> com checkout fluido, segurança máxima e integrações logísticas. Um <strong>site de vendas online</strong> em Santo Amaro precisa operar sem fricção 24h por dia. Criamos estruturas de e-commerce que suportam alto volume de transações, transformando visitantes em receita recorrente para o seu negócio.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Estilo Landing Page para Conversão</h3>
-                    <p>
-                        Para prestadores de serviços e profissionais liberais que precisam de resultados rápidos, <strong>fazer site</strong> do tipo Landing Page é a melhor escolha. Projetamos <strong>Landing Pages</strong> com foco total em capturar leads via WhatsApp. É a estratégia ideal de <strong>criação de sites</strong> para quem roda tráfego pago no Google focando em clientes de Santo Amaro, Socorro e Interlagos.
-                    </p>
+                    <!-- PILAR 3 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Criação de Sites Estilo Landing Page para Alta Conversão</h3>
+                        <p>
+                            Para prestadores de serviços no <strong>Alto da Boa Vista ou Socorro</strong>, a estratégia de <strong>criação de site</strong> estilo Landing Page é o caminho mais curto para gerar leads qualificados. Diferente de sites complexos, uma Landing Page foca em uma única meta: fazer o cliente de Santo Amaro entrar em contato. Nós <strong>criamos sites</strong> com gatilhos persuasivos que blindam sua marca e maximizam o retorno em campanhas de tráfego pago.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites com Design Moderno e Responsivo</h3>
-                    <p>
-                        O <strong>design de site</strong> da sua empresa é o seu cartão de visitas digital. Um visual defasado afasta o público qualificado da Zona Sul. Nós garantimos um <strong>design de site</strong> premium, com estética moderna ("Dark Mode") e total adaptabilidade para celulares. Na EG Empório, nós <strong>fazemos sites</strong> que elevam o patamar da sua comunicação.
-                    </p>
+                    <!-- PILAR 4 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Criação de Sites com Design Moderno e UX (User Experience)</h3>
+                        <p>
+                            O <strong>design de site</strong> (UI/UX) define se o usuário confia ou abandona sua página em segundos. Em Santo Amaro, uma região que exala negócios, um visual moderno transmite autoridade instantânea. Não entregamos apenas funcionalidade; entregamos interfaces projetadas para a melhor experiência do usuário. Alinhamos o <strong>design de site</strong> à identidade visual da sua marca, garantindo uma navegação intuitiva que conduz o cliente ao fechamento do negócio.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 5 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Criação de Sites Mobile-First (Otimizados para Celular)</h3>
+                        <p>
+                            A maioria absoluta das buscas por serviços em Santo Amaro é feita via smartphone. Por isso, <strong>criamos sites</strong> sob a filosofia Mobile-First. Sua página terá carregamento impecável em celulares e tablets, garantindo que o executivo que transita pela Marginal Pinheiros encontre sua empresa com facilidade. A adaptação perfeita em todas as telas é o que evita que você perca oportunidades valiosas para a concorrência local.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 6 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Criação de Sites com Performance e Velocidade Extrema</h3>
+                        <p>
+                            Velocidade não é apenas conforto, é rankeamento técnico. A EG Empório Digital <strong>cria sites</strong> ultrarrápidos seguindo os rigorosos critérios do Google (Core Web Vitals). Em um polo dinâmico como Santo Amaro, cada milissegundo de atraso é um cliente perdido. Utilizamos código limpo e compressão de dados avançada para garantir que sua página carregue quase instantaneamente, mantendo o usuário engajado desde o primeiro clique.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 7 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Criação de Sites Otimizados para SEO Local</h3>
+                        <p>
+                            Dominar o Google em Santo Amaro é nossa especialidade. Estruturamos o SEO para que sua empresa apareça no topo para quem busca serviços na Zona Sul. Através de palavras-chave geolocalizadas e técnicas avançadas de rankeamento, fazemos sua marca ser a primeira opção quando alguém buscar por soluções na Chácara Santo Antônio ou Largo Treze, transformando as buscas locais em faturamento.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 8 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Criação de Sites Blindados e Seguros (Certificado SSL)</h3>
+                        <p>
+                            Protegemos os dados da sua empresa e dos seus clientes. Todo projeto de <strong>criação de site</strong> na EG inclui certificado SSL e camadas extras de segurança. Em Santo Amaro, onde operam grandes volumes comerciais e corporativos, a segurança digital é inegociável. Sites seguros não apenas protegem informações, mas recebem prioridade no Google, transmitindo o profissionalismo que sua marca exige.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 9 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
+                        <p>
+                            Damos total controle ao empresário de Santo Amaro. Ao finalizar a <strong>criação do site</strong>, você recebe um painel administrativo intuitivo para alterar textos, banners e produtos sem depender de programadores. Essa agilidade é fundamental para negócios que precisam atualizar portfólios ou promoções em tempo real, acompanhando a velocidade constante do mercado da Zona Sul paulistana.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 10 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Criação de Sites Integrados com Automação de WhatsApp</h3>
+                        <p>
+                            O WhatsApp é a principal ferramenta de fechamento em Santo Amaro. Nossos projetos vêm com integrações inteligentes que reduzem a fricção no atendimento comercial. O lead clica e cai direto na conversa com seu time de vendas. Eliminamos barreiras técnicas para que a comunicação flua rapidamente, aumentando drasticamente as taxas de conversão e garantindo que nenhum contato vindo do site seja perdido.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 11 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Criação de Sites Estratégicos para Escalar Negócios Locais</h3>
+                        <p>
+                            Não apenas <strong>fazemos sites</strong>; construímos ativos que valorizam sua empresa. Planejamos a arquitetura digital pensando no crescimento do seu negócio. Seja para expansão de serviços ou integração com novos canais de marketing digital, seu site será preparado para escalar. Em Santo Amaro, estar pronto para o crescimento é a diferença entre ser líder de mercado ou apenas mais um na Zona Sul.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 12 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Criação de Sites com Manutenção e Suporte Técnico Especializado</h3>
+                        <p>
+                            Oferecemos garantia de continuidade operacional. Nossa <strong>manutenção de sites</strong> garante que sua infraestrutura esteja sempre atualizada, rápida e protegida 24h por dia. Com suporte técnico dedicado em Santo Amaro e região, você tem a tranquilidade de saber que sua vitrine online está em boas mãos, performando no máximo rendimento todos os dias do ano.
+                        </p>
+                    </div>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        Conclusão: Se sua empresa está em Santo Amaro e você precisa de <strong>criação de site</strong>, expansão com <strong>loja online</strong> ou quer saber como <strong>fazer site</strong> para dominar seu nicho, a EG Empório Digital é sua parceira estratégica. Nós não apenas <strong>criamos sites</strong>; nós construímos ativos digitais de alta rentabilidade.
+                        Se você busca <strong>criação de site em Santo Amaro</strong> com entrega profissional, performance corporativa e foco total em faturamento, a EG Empório Digital é sua parceira certa para dominar o território digital na Zona Sul.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO FAQ (SEO BOOSTER COMPLETA) -->
+    <!-- SEÇÃO FAQ (SEO BOOSTER) -->
     <section class="py-20 px-6 max-w-4xl mx-auto relative z-10">
         <div class="text-center mb-12">
             <h2 class="font-tech text-2xl md:text-3xl text-white mb-4 uppercase">
@@ -433,54 +580,38 @@
         </div>
 
         <div class="space-y-4">
-            <!-- Pergunta 1 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto custa para criar um site em Santo Amaro?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual o valor para criação de um site em Santo Amaro?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        O valor varia conforme a complexidade. Uma Landing Page para capturar leads tem um investimento menor que uma Loja Virtual completa. Na EG Empório Digital, criamos projetos personalizados que cabem no orçamento de pequenas e médias empresas da Zona Sul, sempre focando no ROI.
+                        O investimento varia conforme a complexidade. Uma Landing Page para capturar leads tem um valor menor que um E-commerce completo ou um Portal Corporativo. Na EG, criamos orçamentos personalizados para empresas de Santo Amaro.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 2 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">O site vai aparecer no Google de Santo Amaro?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês atendem escritórios na Chácara Santo Antônio?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Sim! Todos os nossos sites são desenvolvidos com técnicas avançadas de SEO Local. Estruturamos o código para que sua empresa seja encontrada por clientes que buscam seus serviços na região de Santo Amaro e arredores.
+                        Sim! Somos especialistas na <strong>criação de sites profissionais</strong> para o setor corporativo. Desenvolvemos interfaces que transmitem a robustez necessária para consultorias, escritórios de advocacia e empresas de tecnologia na Zona Sul.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 3 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês entregam o site pronto em quanto tempo?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto tempo leva o desenvolvimento do site?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Prezamos pela agilidade. Landing Pages costumam ser entregues entre 5 a 10 dias úteis. Sites institucionais e Lojas Virtuais podem levar de 15 a 30 dias, dependendo das funcionalidades e integrações solicitadas.
-                    </div>
-                </div>
-            </div>
-
-             <!-- Pergunta 4 -->
-             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
-                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Preciso pagar mensalidade?</span>
-                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
-                </button>
-                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
-                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        O desenvolvimento do site é um pagamento único. Você terá apenas os custos básicos de manutenção anual (Domínio e Hospedagem). Nós te orientamos em todo esse processo técnico para que você tenha total autonomia sobre seu site.
+                        Prezamos pela agilidade. Landing Pages são entregues entre 5 a 10 dias úteis. Sites institucionais ou Lojas Virtuais levam entre 15 e 30 dias, dependendo da complexidade das integrações e do volume de conteúdo.
                     </div>
                 </div>
             </div>
@@ -509,44 +640,43 @@
         </div>
     </div>
 
-    <!-- FOOTER COMPLETO -->
+    <!-- FOOTER -->
     <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col items-center">
                 <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
-                <div class="font-tech text-xl font-bold text-white uppercase">
+                <div class="logo-animate font-tech text-xl font-bold text-white uppercase" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </div>
             
             <div class="flex gap-8">
                 <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-instagram-logo text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300"></i>
                     </div>
                 </a>
                 <a href="https://egemporiodigital.com.br/blog" target="_blank" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-article text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-article text-2xl text-slate-300"></i>
                     </div>
                 </a>
                 <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-envelope-simple text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300"></i>
                     </div>
                 </a>
             </div>
 
             <div class="text-center">
                 <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
-                <p class="text-[10px] text-slate-700 mt-1">Especialistas em Santo Amaro e Zona Sul.</p>
+                <p class="text-[10px] text-slate-700 mt-1 uppercase">SANTO AMARO - ZONA SUL SÃO PAULO</p>
             </div>
         </div>
     </footer>
 
     <!-- SCRIPTS -->
     <script>
-        // MENU MOBILE
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             if (menu.classList.contains('hidden')) {
@@ -558,7 +688,6 @@
             }
         }
 
-        // MODAL DE VÍDEO
         const modal = document.getElementById('project-modal');
         const iframe = document.getElementById('modal-iframe');
         const linkBtn = document.getElementById('modal-link-btn');
@@ -577,18 +706,14 @@
         }
 
         document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeProjectModal();
-            }
+            if (event.key === "Escape") closeProjectModal();
         });
 
-        // TOGGLE DO TEXTÃO SEO
         function toggleSeoText() {
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
-            
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
                 icon.classList.remove('rotate-180');
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
@@ -596,21 +721,17 @@
             }
         }
 
-        // TOGGLE DO FAQ
         function toggleFaq(button) {
             const content = button.nextElementSibling;
             const icon = button.querySelector('i');
-            
-            // Fecha todos os outros FAQs abertos
             document.querySelectorAll('.max-h-0').forEach(el => {
-                if (el !== content && el.id !== 'seo-content') {
+                if (el !== content && el.id !== 'seo-content') { 
                     el.style.maxHeight = null;
                     if(el.previousElementSibling && el.previousElementSibling.querySelector('i')) {
                         el.previousElementSibling.querySelector('i').classList.remove('rotate-180');
                     }
                 }
             });
-
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
                 icon.classList.remove('rotate-180');

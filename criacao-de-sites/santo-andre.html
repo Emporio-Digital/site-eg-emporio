@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- SEO LOCAL E PALAVRAS-CHAVE: SANTO ANDRÉ & ABC PAULISTA -->
+    <!-- SEO LOCAL: SANTO ANDRÉ (ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
     <title>Criação de Sites em Santo André | Landing Pages e Lojas Virtuais - EG Empório</title>
-    <meta name="description" content="Especialistas em criação de sites profissionais em Santo André. Fazemos sites, landing pages de alta conversão e lojas virtuais no ABC Paulista. Orçamento rápido.">
+    <meta name="description" content="Especialistas em criação de sites profissionais em Santo André. Atendemos o Bairro Jardim, Campestre e comércio na Oliveira Lima. Sites rápidos e Lojas Virtuais no ABC.">
     
-    <!-- CANONICAL (Nível 3: Página Local) -->
+    <!-- CANONICAL: VALIDAÇÃO DE ORIGINALIDADE (SELF-REFERENCING) -->
     <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/santo-andre">
     
-    <!-- SCHEMA MARKUP (PROFESSIONAL SERVICE - SANTO ANDRÉ) -->
+    <!-- SCHEMA MARKUP (LOCAL BUSINESS / PROFESSIONAL SERVICE) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -19,23 +19,29 @@
       "name": "EG Empório Digital - Criação de Sites em Santo André",
       "url": "https://egemporiodigital.com.br/criacao-de-sites/santo-andre",
       "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "areaServed": {
-        "@type": "City",
-        "name": "Santo André"
-      },
+      "priceRange": "$$",
+      "telephone": "+5511916053292",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Bairro Jardim",
         "addressLocality": "Santo André",
         "addressRegion": "SP",
         "addressCountry": "BR"
       },
-      "description": "Agência especializada em desenvolvimento de sites de alta performance, e-commerce e landing pages em Santo André e todo o ABC.",
-      "priceRange": "$$"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.6666",
+        "longitude": "-46.5333"
+      },
+      "areaServed": ["Santo André", "Bairro Jardim", "Campestre", "Vila Assunção", "Vila Pires", "Oliveira Lima", "Parque das Nações", "ABC Paulista"],
+      "description": "Agência especializada em criação de sites, landing pages de alta conversão e lojas virtuais em Santo André, atendendo o polo industrial e comercial do ABC Paulista."
     }
     </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link rel="shortcut icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo.png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -118,23 +124,57 @@
             z-index: -50;
             overflow: hidden;
         }
+
+        /* --- EFEITO LOGO DINÂMICO (PADRÃO DOSSIÊ) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
     </style>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
 
     <!-- BACKGROUND FIXO -->
     <div class="bg-fixed-mobile flex items-center justify-center">
-        <img src="../assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0, 225, 255, 0.2)]">
+        <img src="../assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40"></div>
     </div>
 
     <!-- HEADER -->
     <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center relative z-50">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
             
             <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
-                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </a>
@@ -146,19 +186,19 @@
                 <a href="#projetos-disponiveis" class="hover:text-brand-blue transition-colors">Portfólio</a>
             </nav>
 
-            <a href="https://wa.me/5511916053292?text=Olá, vi a página de Santo André e quero um orçamento." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+            <a href="https://wa.me/5511916053292?text=Olá, vi a página de Santo André e quero um orçamento para meu site." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
                 Fale com a gente
             </a>
 
             <button id="menu-btn" class="md:hidden text-brand-blue text-3xl focus:outline-none" onclick="toggleMenu()">
-                <i id="menu-icon" class="ph ph-list"></i>
+                <i class="ph ph-list"></i>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden fixed inset-x-0 top-24 bg-eg-dark/98 backdrop-blur-xl border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
+        <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
             <a href="../index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Voltar ao Início</a>
             <a href="#servicos-locais" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços no ABC</a>
-            <a href="https://wa.me/5511916053292?text=Olá, vi a página de Santo André e quero um orçamento." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
+            <a href="https://wa.me/5511916053292?text=Olá, vi a página de Santo André e quero um orçamento para meu site." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
                 Fale com a gente
             </a>
         </div>
@@ -172,19 +212,17 @@
         </h1>
 
         <h2 class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
-            AUTORIDADE DIGITAL NO CORAÇÃO DO ABC PAULISTA
+            AUMENTE SEU FATURAMENTO NO CORAÇÃO DO ABC PAULISTA
         </h2>
 
         <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-8 z-10"></div>
 
         <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
-            Do comércio no <strong>Bairro Jardim</strong> às indústrias da <strong>Vila Pires</strong>. 
-            Sua empresa em <strong>Santo André</strong> merece a <strong>criação de um site</strong> que transmita confiança e tecnologia. 
-            Domine o mercado local com uma <strong class="text-white">loja virtual</strong> ou Landing Page de alta performance.
+            Se sua empresa está no <strong>Bairro Jardim, Campestre ou Vila Assunção</strong>, você precisa de uma presença digital de elite para superar a concorrência local. Se busca <strong>criação de um site</strong> profissional em Santo André, entregamos a performance técnica e o design que o ABC demanda. Tenha uma <strong class="text-white">loja online</strong> ou site institucional blindado para dominar as buscas orgânicas na região.
         </p>
 
         <div class="flex flex-col md:flex-row gap-4 z-10">
-            <a href="https://wa.me/5511916053292?text=Preciso de um site em Santo André para minha empresa." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+            <a href="https://wa.me/5511916053292?text=Preciso de um site em Santo André focado em vender mais." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
                 Solicitar Orçamento
             </a>
             <a href="#projetos-disponiveis" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
@@ -194,69 +232,63 @@
 
     </section>
 
-    <!-- SEÇÃO DE CONTEÚDO SEO (REGRA 70/30) -->
+    <!-- SEÇÃO DE CONTEÚDO SEO (KEYWORDS INJETADAS) -->
     <section id="servicos-locais" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20">
             <div class="text-left mb-10">
                 <h2 class="font-tech text-3xl md:text-4xl text-white mb-4 uppercase leading-tight">
-                    Expertise em <span class="text-brand-blue">Criação de Sites</span> em Santo André
+                    Por que contratar a <span class="text-brand-blue">EG Empório</span> em Santo André?
                 </h2>
                 <p class="text-slate-300 text-lg leading-relaxed">
-                    A cidade de <strong>Santo André</strong> é um dos polos econômicos mais dinâmicos de SP. 
-                    Se você está próximo à <strong>Rua Oliveira Lima</strong> ou no <strong>Campestre</strong>, sabe que a concorrência é alta. 
-                    Nós entregamos sites que não são apenas bonitos, mas que rankeiam no topo.
+                    Santo André é o motor do Grande ABC. De serviços de luxo no <strong>Campestre</strong> ao comércio intenso da <strong>Oliveira Lima</strong>, sua marca precisa de uma <strong>criação de site</strong> que transmita autoridade instantânea e gere resultados reais.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <!-- Coluna 1 -->
                 <div>
-                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Desenvolvimento de Sites Profissionais</h3>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Especialistas em Criação de Sites</h3>
                     <p class="text-slate-400 mb-6">
-                        Nós <strong>fazemos sites</strong> focados no público do ABC. Seja para um escritório de advocacia na <strong>Vila Assunção</strong> 
-                        ou um serviço especializado, nossa <strong>criação de sites profissionais</strong> utiliza SEO avançado para garantir visibilidade regional. 
-                        O <strong>design de site</strong> é pensado para converter o usuário andreense.
+                        Nós <strong>fazemos sites</strong> focados em autoridade técnica e estética industrial-moderna. Seja para <strong>criação de sites profissionais</strong> para indústrias na Vila Pires ou clínicas no Bairro Jardim, utilizamos stacks de alta performance. Nosso <strong>design de site</strong> é projetado para transmitir a confiança necessária no mercado andreense.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site otimizado para o Google ABC</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site moderno com foco em UX</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites institucionais blindados e rápidos</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site otimizado (SEO Local Santo André)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site responsivo (Adaptável ao ABC)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites leves que carregam em instantes</li>
                     </ul>
                 </div>
 
                 <!-- Coluna 2 -->
                 <div>
-                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Lojas Virtuais e Conversão</h3>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Lojas Virtuais e Landing Pages</h3>
                     <p class="text-slate-400 mb-6">
-                        O e-commerce em <strong>Santo André</strong> cresce a cada dia. Projete sua <strong>loja virtual</strong> conosco 
-                        e tenha um checkout fluido e seguro. Se o seu foco é captação de clientes, nossas <strong>Landing Pages</strong> são a ferramenta ideal 
-                        para suas campanhas. Tenha um <strong>site de vendas online</strong> que realmente gera lucro.
+                        Quer vender online a partir do maior polo comercial do ABC? Desenvolvemos sua <strong>loja online</strong> ou <strong>loja virtual</strong> com integrações seguras. Se o seu foco é capturar leads qualificados rapidamente, nossas <strong>Landing Pages</strong> são projetadas com gatilhos de conversão agressivos. Tenha um <strong>site de vendas online</strong> ativo 24h.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Loja online com integração total de estoque</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages de alta conversão para serviços</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Especialistas em criar sites que vendem no ABC</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Site de vendas com checkout fluido e seguro</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages para anúncios no Google e Meta</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Nós fazemos sites que dominam o mercado digital</li>
                     </ul>
                 </div>
             </div>
             
             <div class="mt-10 text-center">
-                <a href="https://wa.me/5511916053292?text=Quero um orçamento para site em Santo André." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
-                    Solicitar meu Site Agora <i class="ph ph-arrow-right"></i>
+                <a href="https://wa.me/5511916053292?text=Preciso de um site profissional em Santo André." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
+                    Quero meu site agora <i class="ph ph-arrow-right"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO: PROJETOS DISPONÍVEIS (OS 8 CARDS) -->
+    <!-- SEÇÃO: PROJETOS DISPONÍVEIS -->
     <section id="projetos-disponiveis" class="scroll-mt-32 py-20 px-6 max-w-7xl mx-auto border-t border-white/5 relative z-10">
         
         <div class="text-center mb-16">
             <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase tracking-wide">
-                Portfólio de <span class="text-brand-blue">Elite</span>
+                Exemplos de <span class="text-brand-blue">Projetos Reais</span>
             </h2>
             <p class="text-slate-500 text-sm max-w-2xl mx-auto">
-                Confira o padrão de qualidade EG entregue em Santo André e em todo o Brasil.
+                Veja o nível de qualidade que entregamos para clientes em Santo André e em todo o Brasil.
             </p>
         </div>
 
@@ -298,7 +330,7 @@
                 </div>
             </div>
 
-            <!-- CARD 3: NOIR GASTROBAR -->
+            <!-- 3. NOIR GASTROBAR -->
             <div onclick="openProjectModal('3MXvILsR5DA', 'https://vitrine-projetos-two.vercel.app/saas-ia.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="https://i.ibb.co/kb2NGD7/Captura-de-tela-2026-02-05-003024.png" alt="Projeto Noir Gastrobar" 
@@ -312,11 +344,11 @@
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Cardápio Digital</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Noir Gastrobar</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Menu digital interativo com design de alto luxo.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Menu digital interativo com design de alto luxo e glassmorphism.</p>
                 </div>
             </div>
 
-            <!-- CARD 4: AUTOMOTIVO LUXURY -->
+            <!-- 4. AUTOMOTIVO -->
             <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-automotivo.jpg" alt="Projeto Automotivo" 
@@ -330,11 +362,11 @@
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Conceito</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Automotivo Luxury</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para veículos de alto padrão.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos de alto padrão.</p>
                 </div>
             </div>
 
-            <!-- CARD 5: ARQUITETURA -->
+            <!-- 5. ARQUITETURA -->
             <div onclick="openProjectModal('y8MOpAC93MU', 'https://vitrine-projetos-two.vercel.app/arquitetura.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-arquitetura.jpg" alt="Projeto Arquitetura" 
@@ -348,11 +380,11 @@
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Imobiliária</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Arquitetura Minimal</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Design clean e sofisticado para escritórios.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Design clean e sofisticado para escritórios de arquitetura.</p>
                 </div>
             </div>
 
-            <!-- CARD 6: FINANCEIRO -->
+            <!-- 6. FINANCEIRO -->
             <div onclick="openProjectModal('IrjsnvJxBzM', 'https://vitrine-projetos-two.vercel.app/financeiro.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-financeiro.jpg" alt="Projeto Financeiro" 
@@ -370,7 +402,7 @@
                 </div>
             </div>
 
-             <!-- CARD 7: E-COMMERCE -->
+             <!-- 7. E-COMMERCE -->
              <div onclick="openProjectModal('WKpuUGV41iM', 'https://vitrine-projetos-two.vercel.app/loja.html')" 
                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                <img src="../assets/images/capa-loja.jpg" alt="Projeto Loja" 
@@ -388,7 +420,7 @@
                </div>
            </div>
 
-           <!-- CARD 8: FITNESS -->
+           <!-- 8. FITNESS -->
            <div onclick="openProjectModal('4nwWammXuc4', 'https://vitrine-projetos-two.vercel.app/fitness.html')" 
                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Projeto Fitness" 
@@ -400,112 +432,186 @@
                    </div>
                </div>
                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Institucional</span>
+                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Institucional / Academia</span>
                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Iron Force Fitness</h3>
-                   <p class="text-slate-400 text-sm line-clamp-2">Site de alta performance para academias e personals.</p>
+                   <p class="text-slate-400 text-sm line-clamp-2">Site de alta performance para academias e personal trainers.</p>
                </div>
            </div>
 
         </div>
     </section>
 
-    <!-- SEÇÃO SEO EXPANDÍVEL (O "TEXTÃO" DE SANTO ANDRÉ - MARTELAGEM H3) -->
-    <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
-        <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl">
+    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS - SANTO ANDRÉ) -->
+    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
+        <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
+            <!-- HEADER DO CARD (Clicável) -->
             <div onclick="toggleSeoText()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
-                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade Digital: Santo André
+                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade: Criação de Sites Profissionais em Santo André
                     </h2>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa engenharia de resultados no ABC</span>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para o ABC Paulista</span>
                 </div>
-                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue transition-all">
-                    <i id="seo-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
+            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS - 12 PILARES VERTICAIS) -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-8 font-light">
+                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
                     
-                    <p>
-                        No cenário empresarial de Santo André, a <strong>criação de site</strong> se tornou o divisor de águas entre empresas que lideram o mercado e as que apenas observam. No ABC Paulista, a competitividade exige que marcas locais tenham uma presença digital impecável. A EG Empório Digital entende a dinâmica andreense, unindo o peso industrial da região à leveza e sofisticação do setor de serviços moderno.
+                    <p class="mb-4">
+                        No dinâmico polo econômico do Grande ABC, a <strong>criação de site</strong> em Santo André é o fator determinante para empresas que desejam dominar o mercado local. Do <strong>Bairro Jardim ao Campestre e Vila Assunção</strong>, nós da EG Empório Digital desenvolvemos soluções de elite que posicionam sua marca no topo do Google, garantindo que seu negócio seja a autoridade máxima em uma das cidades mais produtivas de São Paulo.
                     </p>
 
-                    <!-- H3 MARTELADOS CONFORME O DOSSIÊ -->
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Criação de Sites Profissionais e Institucionais em Santo André</h3>
-                    <p>
-                        A <strong>criação de sites profissionais</strong> em Santo André deve refletir a robustez da economia local. Seja para uma clínica no bairro Campestre ou um escritório no centro, quando <strong>fazemos sites</strong>, priorizamos a autoridade e a velocidade. Um site institucional deve ser o reflexo da seriedade da sua marca. Por isso, a <strong>criação de um site</strong> em nossa agência passa por rigorosos testes de performance, garantindo que o público de Santo André encontre sua empresa rapidamente no Google.
-                    </p>
+                    <!-- PILAR 1 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Criação de Sites Profissionais e Institucionais em Santo André</h3>
+                        <p>
+                            Santo André possui um dos mercados de serviços mais qualificados do estado. A <strong>criação de sites profissionais</strong> é o que separa marcas consolidadas de negócios amadores no ABC. Quando <strong>fazemos sites</strong> para clínicas no Bairro Jardim ou indústrias na Vila Pires, aplicamos engenharia de conversão. Um site institucional deve ser o reflexo da robustez da sua empresa, transmitindo confiança imediata para clientes e parceiros em Santo André e arredores.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Criação de Sites para E-commerce e Lojas Virtuais em Santo André</h3>
-                    <p>
-                        Vender online a partir do ABC Paulista é uma oportunidade estratégica imensa. Projetamos sua <strong>loja virtual</strong> com foco absoluto em conversão. Desenvolver uma <strong>loja online</strong> em Santo André exige integrações logísticas inteligentes e segurança de dados. Nosso objetivo é que seu <strong>site de vendas online</strong> seja uma máquina de receita recorrente. A <strong>criação de sites</strong> voltados para o comércio eletrônico é um dos nossos pilares de sucesso para empresários da região.
-                    </p>
+                    <!-- PILAR 2 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Criação de Sites para E-commerce e Lojas Virtuais</h3>
+                        <p>
+                            A força comercial da Rua Oliveira Lima se expandiu para o digital, e sua <strong>loja virtual</strong> precisa acompanhar esse ritmo. Desenvolvemos sua <strong>loja online</strong> com checkout fluido, segurança máxima e integrações logísticas. Um <strong>site de vendas online</strong> em Santo André precisa operar 24h por dia sem falhas. Criamos estruturas de e-commerce que suportam alto tráfego e convertem visitantes em faturamento real para o seu negócio no ABC.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Criação de Sites Estilo Landing Page para Alta Conversão no ABC</h3>
-                    <p>
-                        Para prestadores de serviços que buscam leads qualificados em Santo André, as <strong>Landing Pages</strong> são a ferramenta mais eficaz. Ao <strong>fazer site</strong> focado em uma única ação, eliminamos distrações e aumentamos drasticamente sua taxa de conversão. Seja para Google Ads ou redes sociais, a <strong>criação de sites</strong> de conversão na EG Empório Digital utiliza gatilhos mentais e design persuasivo para colocar o cliente no seu WhatsApp.
-                    </p>
+                    <!-- PILAR 3 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Criação de Sites Estilo Landing Page para Alta Conversão</h3>
+                        <p>
+                            Para prestadores de serviços no <strong>Parque das Nações ou Vila Assunção</strong>, a estratégia de <strong>criação de site</strong> estilo Landing Page é o caminho mais curto para o lucro. Diferente de sites complexos, uma Landing Page foca em uma única meta: fazer o cliente andreense clicar no seu WhatsApp. Nós <strong>criamos sites</strong> com gatilhos persuasivos que blindam sua marca e maximizam o retorno sobre investimento em campanhas de tráfego pago.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Criação de Sites com Design Moderno e Performance no Grande ABC</h3>
-                    <p>
-                        O <strong>design de site</strong> é a embalagem da sua competência. Marcas que negligenciam a estética digital em Santo André perdem autoridade. Nosso <strong>design de site</strong> é fundamentado em UI/UX, garantindo que a experiência do usuário seja fluida em qualquer dispositivo. Não apenas <strong>criamos sites</strong>; nós construímos identidades digitais que valorizam o seu negócio perante os clientes mais exigentes do ABC.
-                    </p>
+                    <!-- PILAR 4 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Criação de Sites com Design Moderno e UX (User Experience)</h3>
+                        <p>
+                            O <strong>design de site</strong> (UI/UX) define se o usuário confia ou abandona sua página em segundos. Em Santo André, uma região que valoriza a inovação, um visual moderno transmite autoridade instantânea. Não entregamos apenas funcionalidade; entregamos interfaces projetadas para a melhor experiência do usuário. Alinhamos o <strong>design de site</strong> à identidade visual da sua empresa, garantindo uma navegação intuitiva que conduz o cliente ao fechamento do negócio.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 5 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Criação de Sites Mobile-First (Otimizados para Celular)</h3>
+                        <p>
+                            A maioria absoluta das buscas por serviços no ABC é feita via dispositivos móveis. Por isso, <strong>criamos sites</strong> sob a filosofia Mobile-First. Sua página terá um carregamento impecável em smartphones e tablets, garantindo que o cliente que busca soluções enquanto transita por Santo André encontre sua empresa com facilidade. A adaptação perfeita em todas as telas é o que evita que você perca oportunidades valiosas para a concorrência local.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 6 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Criação de Sites com Performance e Velocidade Extrema</h3>
+                        <p>
+                            Velocidade não é apenas conforto, é rankeamento técnico. A EG Empório Digital <strong>cria sites</strong> ultrarrápidos seguindo os rigorosos critérios do Google (Core Web Vitals). Em um polo dinâmico como Santo André, cada milissegundo de atraso é um cliente perdido. Utilizamos compressão de dados avançada e código limpo para garantir que sua página carregue quase instantaneamente, mantendo o usuário engajado e satisfeito desde o primeiro clique.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 7 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Criação de Sites Otimizados para SEO Local</h3>
+                        <p>
+                            Dominar o Google em Santo André é nossa especialidade. Estruturamos o SEO para que sua empresa apareça no topo para quem realmente importa: o cliente da sua região. Através de palavras-chave geolocalizadas e técnicas avançadas de rankeamento, fazemos sua marca ser a primeira opção quando alguém buscar por serviços no Campestre ou Bairro Jardim, transformando as buscas locais em faturamento para o seu negócio.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 8 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Criação de Sites Blindados e Seguros (Certificado SSL)</h3>
+                        <p>
+                            Protegemos os dados da sua empresa e a privacidade dos seus clientes. Todo projeto de <strong>criação de site</strong> na EG inclui certificado SSL (HTTPS) e camadas de segurança contra ataques. Em Santo André, onde operam grandes volumes comerciais e industriais, a segurança digital é inegociável. Sites seguros não apenas protegem informações, mas também recebem prioridade no rankeamento do Google, transmitindo o profissionalismo que sua marca exige.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 9 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
+                        <p>
+                            Damos o controle total ao empresário de Santo André. Ao finalizar a <strong>criação do site</strong>, você recebe um painel administrativo intuitivo (CMS) onde pode alterar textos, banners e fotos sem depender de programadores. Essa agilidade é fundamental para negócios que precisam atualizar promoções ou portfólios em tempo real, acompanhando a velocidade constante do mercado da região do ABC.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 10 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Criação de Sites Integrados com Automação de WhatsApp</h3>
+                        <p>
+                            O WhatsApp é a principal ferramenta de fechamento em Santo André. Nossos projetos vêm com integrações inteligentes que reduzem a fricção no atendimento comercial. O lead clica no site e cai direto na conversa com seu vendedor. Eliminamos barreiras técnicas para que a comunicação flua rapidamente, aumentando drasticamente as taxas de conversão e garantindo que nenhum contato vindo do site seja desperdiçado.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 11 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Criação de Sites Estratégicos para Escalar Negócios Locais</h3>
+                        <p>
+                            Não apenas <strong>fazemos sites</strong>; construímos ativos que valorizam sua empresa no ABC. Planejamos a arquitetura digital pensando no crescimento futuro do seu negócio. Seja para expansão de serviços ou integração com novos canais de marketing digital, seu site será preparado para escalar. Em Santo André, estar pronto para o crescimento é a diferença entre ser líder de mercado ou apenas mais um na lista telefônica digital.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 12 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Criação de Sites com Manutenção e Suporte Técnico Especializado</h3>
+                        <p>
+                            Oferecemos garantia de continuidade. Uma agência de elite não entrega o projeto e desaparece. Nossa <strong>manutenção de sites</strong> garante que sua infraestrutura esteja sempre atualizada, rápida e protegida 24h por dia. Com suporte técnico dedicado em Santo André e em todo o ABC, você tem a tranquilidade de saber que sua máquina de vendas online está em boas mãos, performando no máximo rendimento todos os dias.
+                        </p>
+                    </div>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        Resumo Técnico: Se você precisa de <strong>criação de site</strong> em Santo André, deseja lançar uma <strong>loja virtual</strong> de sucesso ou entender como <strong>fazer site</strong> pode escalar sua empresa no ABC Paulista, a EG Empório Digital é sua parceira de elite.
+                        Se você busca <strong>criação de site em Santo André</strong> com entrega profissional, performance técnica e foco total em faturamento, a EG Empório Digital é sua parceira certa para dominar o território digital no ABC Paulista.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO FAQ (SEO BOOSTER SANTO ANDRÉ) -->
+    <!-- SEÇÃO FAQ (SEO BOOSTER) -->
     <section class="py-20 px-6 max-w-4xl mx-auto relative z-10">
         <div class="text-center mb-12">
             <h2 class="font-tech text-2xl md:text-3xl text-white mb-4 uppercase">
-                Perguntas Frequentes: <span class="text-brand-blue">Sites no ABC</span>
+                Dúvidas <span class="text-brand-blue">Frequentes</span>
             </h2>
             <div class="w-24 h-1 bg-brand-blue mx-auto rounded-full opacity-50"></div>
         </div>
 
         <div class="space-y-4">
-            <!-- Pergunta 1 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Por que minha empresa em Santo André precisa de um site profissional?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual o valor para criação de um site em Santo André?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Santo André é um polo altamente competitivo. Um site profissional garante que sua empresa seja encontrada no Google, transmita credibilidade imediata e funcione como uma vitrine 24/7 para seus clientes em todo o ABC Paulista.
+                        O investimento varia conforme as necessidades técnicas. Uma Landing Page foca em conversão rápida e tem um valor menor que um E-commerce completo ou site institucional. Na EG, criamos orçamentos personalizados para empresas de Santo André e ABC.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 2 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês fazem SEO específico para a região de Santo André?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês atendem o Bairro Jardim e o Campestre?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Sim! Aplicamos técnicas de SEO Local para que seu site apareça prioritariamente para quem busca seus serviços em Santo André, São Bernardo e São Caetano, maximizando o tráfego regional qualificado.
+                        Sim! Somos especialistas na <strong>criação de sites profissionais</strong> para os setores mais qualificados de Santo André. Desenvolvemos interfaces de alto padrão para clínicas, escritórios e comércios no Bairro Jardim, Campestre e região.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 3 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto tempo leva para criar uma Landing Page no ABC?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto tempo leva o desenvolvimento do site?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Landing Pages profissionais costumam ser entregues em até 7 dias úteis após o recebimento do briefing. Sites institucionais completos podem levar de 15 a 20 dias, dependendo da complexidade das integrações solicitadas.
+                        Prezamos pela velocidade. Landing Pages são entregues entre 5 a 10 dias úteis. Sites institucionais ou Lojas Virtuais levam entre 15 e 30 dias, dependendo da complexidade das integrações solicitadas.
                     </div>
                 </div>
             </div>
@@ -538,14 +644,33 @@
     <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col items-center">
-                <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 opacity-50 mb-2">
-                <div class="font-tech text-xl font-bold text-white uppercase">
+                <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
+                <div class="logo-animate font-tech text-xl font-bold text-white uppercase" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </div>
+            
+            <div class="flex gap-8">
+                <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+                <a href="https://egemporiodigital.com.br/blog" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-article text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+                <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+            </div>
+
             <div class="text-center">
-                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital - Unidade Santo André.</p>
-                <p class="text-[10px] text-slate-700 mt-1">Todos os direitos reservados.</p>
+                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
+                <p class="text-[10px] text-slate-700 mt-1 uppercase">SANTO ANDRÉ - ABC PAULISTA</p>
             </div>
         </div>
     </footer>
@@ -554,20 +679,12 @@
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('menu-icon');
-            
             if (menu.classList.contains('hidden')) {
                 menu.classList.remove('hidden');
                 menu.classList.add('flex');
-                icon.classList.remove('ph-list');
-                icon.classList.add('ph-x');
-                document.body.style.overflow = 'hidden'; 
             } else {
                 menu.classList.add('hidden');
                 menu.classList.remove('flex');
-                icon.classList.remove('ph-x');
-                icon.classList.add('ph-list');
-                document.body.style.overflow = 'auto';
             }
         }
 
@@ -588,11 +705,15 @@
             document.body.style.overflow = 'auto';
         }
 
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") closeProjectModal();
+        });
+
         function toggleSeoText() {
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
                 icon.classList.remove('rotate-180');
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
@@ -606,7 +727,7 @@
             document.querySelectorAll('.max-h-0').forEach(el => {
                 if (el !== content && el.id !== 'seo-content') { 
                     el.style.maxHeight = null;
-                    if(el.previousElementSibling.querySelector('i')) {
+                    if(el.previousElementSibling && el.previousElementSibling.querySelector('i')) {
                         el.previousElementSibling.querySelector('i').classList.remove('rotate-180');
                     }
                 }

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- SEO LOCAL E PALAVRAS-CHAVE: SÃO CAETANO DO SUL & SCS -->
+    <!-- SEO LOCAL: SÃO CAETANO DO SUL (ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
     <title>Criação de Sites em São Caetano do Sul | SCS | EG Empório</title>
-    <meta name="description" content="Especialistas em criação de sites professionals em São Caetano do Sul (SCS). Desenvolvemos sites, landing pages e lojas virtuais no ABC. Orçamento rápido.">
+    <meta name="description" content="Especialistas em criação de sites profissionais em São Caetano do Sul. Atendemos o Espaço Cerâmica, Bairro Santa Paula e Avenida Goiás. Sites rápidos e Lojas Virtuais em SCS.">
     
-    <!-- CANONICAL -->
+    <!-- CANONICAL: VALIDAÇÃO DE ORIGINALIDADE (SELF-REFERENCING) -->
     <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/sao-caetano">
     
-    <!-- SCHEMA MARKUP (LOCAL BUSINESS - SCS) -->
+    <!-- SCHEMA MARKUP (LOCAL BUSINESS / PROFESSIONAL SERVICE) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -19,23 +19,29 @@
       "name": "EG Empório Digital - Criação de Sites em São Caetano do Sul",
       "url": "https://egemporiodigital.com.br/criacao-de-sites/sao-caetano",
       "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "areaServed": {
-        "@type": "City",
-        "name": "São Caetano do Sul"
-      },
+      "priceRange": "$$",
+      "telephone": "+5511916053292",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Bairro Santa Paula",
         "addressLocality": "São Caetano do Sul",
         "addressRegion": "SP",
         "addressCountry": "BR"
       },
-      "description": "Líder em criação de sites, lojas virtuais e landing pages de alta conversão em São Caetano do Sul e Grande ABC.",
-      "priceRange": "$$"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.6167",
+        "longitude": "-46.5500"
+      },
+      "areaServed": ["São Caetano do Sul", "SCS", "Bairro Santa Paula", "Bairro Cerâmica", "Espaço Cerâmica", "Bairro Barcelona", "Avenida Goiás", "Bairro Mauá", "Bairro Jardim São Caetano", "ABC Paulista"],
+      "description": "Agência especializada em criação de sites, landing pages de alta conversão e lojas virtuais em São Caetano do Sul, atendendo o polo corporativo e médico de elite do ABC."
     }
     </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link rel="shortcut icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo.png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -118,23 +124,57 @@
             z-index: -50;
             overflow: hidden;
         }
+
+        /* --- EFEITO LOGO DINÂMICO (PADRÃO DOSSIÊ) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
     </style>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
 
     <!-- BACKGROUND FIXO -->
     <div class="bg-fixed-mobile flex items-center justify-center">
-        <img src="../assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0, 225, 255, 0.2)]">
+        <img src="../assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40"></div>
     </div>
 
     <!-- HEADER -->
     <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center relative z-50">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
             
             <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
-                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </a>
@@ -146,25 +186,25 @@
                 <a href="#projetos-disponiveis" class="hover:text-brand-blue transition-colors">Portfólio</a>
             </nav>
 
-            <a href="https://wa.me/5511916053292?text=Olá, vi a página de São Caetano e quero um orçamento." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+            <a href="https://wa.me/5511916053292?text=Olá, vi a página de São Caetano e quero um orçamento para minha marca." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
                 Fale com a gente
             </a>
 
             <button id="menu-btn" class="md:hidden text-brand-blue text-3xl focus:outline-none" onclick="toggleMenu()">
-                <i id="menu-icon" class="ph ph-list"></i>
+                <i class="ph ph-list"></i>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden fixed inset-x-0 top-24 bg-eg-dark/98 backdrop-blur-xl border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
+        <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
             <a href="../index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Voltar ao Início</a>
             <a href="#servicos-locais" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços em SCS</a>
-            <a href="https://wa.me/5511916053292?text=Olá, vi a página de SCS e quero um orçamento." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
+            <a href="https://wa.me/5511916053292?text=Olá, vi a página de São Caetano e quero um orçamento para minha marca." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
                 Fale com a gente
             </a>
         </div>
     </header>
 
-    <!-- HERO SECTION (ESTRATÉGIA: SÃO CAETANO DO SUL) -->
+    <!-- HERO SECTION (ESTRATÉGIA AGRESSIVA: SÃO CAETANO DO SUL) -->
     <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
         
         <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
@@ -172,19 +212,17 @@
         </h1>
 
         <h2 class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
-            O MELHOR IDH DO BRASIL NO TOPO DO GOOGLE
+            A EXCELÊNCIA DO MELHOR IDH DO BRASIL NO TOPO DO GOOGLE
         </h2>
 
         <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-8 z-10"></div>
 
         <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
-            Do polo comercial do <strong>Bairro Santa Paula</strong> ao requinte do <strong>Espaço Cerâmica</strong>. 
-            Sua empresa em <strong>São Caetano do Sul</strong> merece a <strong>criação de um site</strong> que reflita sua excelência. 
-            Domine o ABC com uma <strong class="text-white">loja virtual</strong> ou Landing Page de elite.
+            Se sua empresa está no <strong>Santa Paula, Barcelona ou no Espaço Cerâmica</strong>, você precisa de um posicionamento digital que reflita o padrão premium de São Caetano do Sul. Se busca <strong>criação de um site</strong> profissional em SCS, entregamos a sofisticação e a performance técnica que o ABC demanda. Tenha uma <strong class="text-white">loja online</strong> ou site institucional blindado para converter o público mais qualificado de São Paulo.
         </p>
 
         <div class="flex flex-col md:flex-row gap-4 z-10">
-            <a href="https://wa.me/5511916053292?text=Preciso de um site em São Caetano para minha empresa." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+            <a href="https://wa.me/5511916053292?text=Preciso de um site profissional em São Caetano para superar a concorrência." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
                 Solicitar Orçamento
             </a>
             <a href="#projetos-disponiveis" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
@@ -194,49 +232,49 @@
 
     </section>
 
-    <!-- SEÇÃO DE CONTEÚDO SEO -->
+    <!-- SEÇÃO DE CONTEÚDO SEO (KEYWORDS INJETADAS) -->
     <section id="servicos-locais" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20">
             <div class="text-left mb-10">
                 <h2 class="font-tech text-3xl md:text-4xl text-white mb-4 uppercase leading-tight">
-                    Referência em <span class="text-brand-blue">Criação de Sites</span> em SCS
+                    Por que contratar a <span class="text-brand-blue">EG Empório</span> em São Caetano?
                 </h2>
                 <p class="text-slate-300 text-lg leading-relaxed">
-                    Em <strong>São Caetano do Sul</strong>, a exigência é maior. Se você busca se destacar na <strong>Avenida Goiás</strong> ou no <strong>Bairro Barcelona</strong>, sua presença digital precisa ser impecável e veloz. 
+                    Sabemos que em <strong>São Caetano do Sul</strong> a exigência por qualidade é absoluta. Do polo médico no <strong>Bairro Santa Paula</strong> ao hub tecnológico no <strong>Barcelona</strong>, sua empresa precisa de uma <strong>criação de site</strong> que transmita autoridade instantânea.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <!-- Coluna 1 -->
                 <div>
-                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Especialistas em Sites Profissionais</h3>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Especialistas em Criação de Sites Profissionais</h3>
                     <p class="text-slate-400 mb-6">
-                        Nós <strong>fazemos sites</strong> para o ecossistema empresarial de <strong>São Caetano</strong>. Atendemos desde corporações no <strong>Bairro Cerâmica</strong> até clínicas e consultórios no <strong>Santa Paula</strong>. Nossa <strong>criação de sites profissionais</strong> foca em autoridade técnica e ranqueamento regional de alto nível.
+                        Nós <strong>fazemos sites</strong> focados em autoridade técnica e design premium. Seja para <strong>criação de sites profissionais</strong> para clínicas de alto padrão ou sistemas para corporações no Espaço Cerâmica, utilizamos stacks modernas para garantir velocidade extrema. Nosso <strong>design de site</strong> é minimalista e eficiente, alinhado ao público de SCS.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site com SEO focado em SCS</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site moderno e responsivo</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites institucionais de alto carregamento</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site otimizado (SEO Local São Caetano)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site responsivo (Adaptável a tudo)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites ultrarrápidos que carregam em instantes</li>
                     </ul>
                 </div>
 
                 <!-- Coluna 2 -->
                 <div>
-                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">E-commerce e Landing Pages</h3>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Lojas Virtuais e Landing Pages de Elite</h3>
                     <p class="text-slate-400 mb-6">
-                        O mercado de <strong>São Caetano</strong> possui alto poder de consumo. Tenha uma <strong>loja virtual</strong> robusta para atender com excelência. Se você precisa de volume de leads qualificados, nossas <strong>Landing Pages</strong> são projetadas para converter o tráfego em vendas reais. Tenha um <strong>site de vendas online</strong> de padrão premium.
+                        Quer vender seus produtos com a eficiência que São Caetano exige? Desenvolvemos sua <strong>loja online</strong> ou <strong>loja virtual</strong> com integrações seguras. Se o seu foco é capturar leads qualificados para serviços de alto valor, nossas <strong>Landing Pages</strong> são estruturadas com gatilhos de conversão agressivos. Tenha um <strong>site de vendas online</strong> operando 24h.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Loja online com checkout transparente</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages focadas em conversão imediata</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Fazemos sites que realmente vendem no ABC</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Site de vendas com checkout fluido e seguro</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages para anúncios no Google e Meta</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Nós fazemos sites que dominam o mercado digital</li>
                     </ul>
                 </div>
             </div>
             
             <div class="mt-10 text-center">
-                <a href="https://wa.me/5511916053292?text=Preciso de um site profissional em São Caetano do Sul." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
-                    Quero meu site em SCS <i class="ph ph-arrow-right"></i>
+                <a href="https://wa.me/5511916053292?text=Quero um site profissional em São Caetano agora." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
+                    Solicitar Orçamento <i class="ph ph-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -247,10 +285,10 @@
         
         <div class="text-center mb-16">
             <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase tracking-wide">
-                Exemplos de <span class="text-brand-blue">Projetos Atuais</span>
+                Exemplos de <span class="text-brand-blue">Projetos Reais</span>
             </h2>
             <p class="text-slate-500 text-sm max-w-2xl mx-auto">
-                Conheça o padrão EG Empório Digital entregue em São Caetano e todo o Brasil.
+                Veja o nível de qualidade que entregamos para clientes em São Caetano do Sul e em todo o Brasil.
             </p>
         </div>
 
@@ -292,7 +330,7 @@
                 </div>
             </div>
 
-            <!-- CARD 3: NOIR GASTROBAR -->
+            <!-- 3. NOIR GASTROBAR -->
             <div onclick="openProjectModal('3MXvILsR5DA', 'https://vitrine-projetos-two.vercel.app/saas-ia.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="https://i.ibb.co/kb2NGD7/Captura-de-tela-2026-02-05-003024.png" alt="Projeto Noir Gastrobar" 
@@ -306,11 +344,11 @@
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Cardápio Digital</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Noir Gastrobar</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Menu digital interativo com design de alto luxo.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Menu digital interativo com design de alto luxo e glassmorphism.</p>
                 </div>
             </div>
 
-            <!-- CARD 4: AUTOMOTIVO LUXURY -->
+            <!-- 4. AUTOMOTIVO -->
             <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-automotivo.jpg" alt="Projeto Automotivo" 
@@ -324,11 +362,11 @@
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Conceito</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Automotivo Luxury</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para veículos de alto padrão.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos de alto padrão.</p>
                 </div>
             </div>
 
-            <!-- CARD 5: ARQUITETURA -->
+            <!-- 5. ARQUITETURA -->
             <div onclick="openProjectModal('y8MOpAC93MU', 'https://vitrine-projetos-two.vercel.app/arquitetura.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-arquitetura.jpg" alt="Projeto Arquitetura" 
@@ -346,7 +384,7 @@
                 </div>
             </div>
 
-            <!-- CARD 6: FINANCEIRO -->
+            <!-- 6. FINANCEIRO -->
             <div onclick="openProjectModal('IrjsnvJxBzM', 'https://vitrine-projetos-two.vercel.app/financeiro.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-financeiro.jpg" alt="Projeto Financeiro" 
@@ -364,7 +402,7 @@
                 </div>
             </div>
 
-             <!-- CARD 7: E-COMMERCE -->
+             <!-- 7. E-COMMERCE -->
              <div onclick="openProjectModal('WKpuUGV41iM', 'https://vitrine-projetos-two.vercel.app/loja.html')" 
                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                <img src="../assets/images/capa-loja.jpg" alt="Projeto Loja" 
@@ -382,7 +420,7 @@
                </div>
            </div>
 
-           <!-- CARD 8: FITNESS -->
+           <!-- 8. FITNESS -->
            <div onclick="openProjectModal('4nwWammXuc4', 'https://vitrine-projetos-two.vercel.app/fitness.html')" 
                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Projeto Fitness" 
@@ -394,111 +432,186 @@
                    </div>
                </div>
                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Institucional</span>
+                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Institucional / Academia</span>
                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Iron Force Fitness</h3>
-                   <p class="text-slate-400 text-sm line-clamp-2">Site de alta performance para academias e personals.</p>
+                   <p class="text-slate-400 text-sm line-clamp-2">Site de alta performance para academias e personal trainers.</p>
                </div>
            </div>
 
         </div>
     </section>
 
-    <!-- SEÇÃO SEO EXPANDÍVEL -->
-    <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
-        <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl">
+    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS - SCS) -->
+    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
+        <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
+            <!-- HEADER DO CARD (Clicável) -->
             <div onclick="toggleSeoText()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
-                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade Digital: São Caetano do Sul
+                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade: Criação de Sites Profissionais em São Caetano
                     </h2>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa engenharia de resultados em SCS</span>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para a cidade com melhor IDH do Brasil</span>
                 </div>
-                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue transition-all">
-                    <i id="seo-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
+            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS - 12 PILARES VERTICAIS) -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-8 font-light">
+                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
                     
-                    <p>
-                        No seleto cenário econômico de São Caetano do Sul, a <strong>criação de site</strong> é o cartão de visitas que define o sucesso. Como cidade com o melhor IDH do Brasil, São Caetano exige que empresas locais projetem excelência digital absoluta. A EG Empório Digital domina as técnicas para conectar marcas andreenses e sul-são-caetanenses ao topo dos resultados de busca.
+                    <p class="mb-4">
+                        Na cidade que ostenta o melhor IDH do Brasil, a <strong>criação de site</strong> em São Caetano do Sul é o fator determinante para empresas que desejam dominar o mercado na <strong>Avenida Goiás, Espaço Cerâmica e Bairro Santa Paula</strong>. Nós, da EG Empório Digital, desenvolvemos soluções de elite que posicionam sua marca no topo do Google em SCS, garantindo que seu negócio seja a autoridade máxima em uma das economias mais qualificadas de São Paulo.
                     </p>
 
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Criação de Sites Profissionais e Institucionais em São Caetano do Sul</h3>
-                    <p>
-                        A <strong>criação de sites profissionais</strong> em São Caetano do Sul deve acompanhar o ritmo dinâmico da Avenida Goiás e do Bairro Santa Paula. Quando <strong>fazemos sites</strong> para prestadores de serviços de luxo ou setor corporativo, priorizamos velocidade e SEO técnico de elite. Um site institucional em SCS precisa converter confiança em cliques. A <strong>criação de um site</strong> em nossa agência garante que o empresário de São Caetano seja a autoridade máxima em seu nicho.
-                    </p>
+                    <!-- PILAR 1 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Criação de Sites Profissionais e Institucionais em São Caetano do Sul</h3>
+                        <p>
+                            São Caetano abriga um dos centros de serviços e medicina mais qualificados do estado. A <strong>criação de sites profissionais</strong> é o que separa marcas consolidadas de negócios amadores. Quando <strong>fazemos sites</strong> para clínicas no Santa Paula ou escritórios no Barcelona, aplicamos engenharia de credibilidade. Um site institucional deve ser o espelho da excelência da sua empresa, transmitindo confiança imediata para clientes de alto padrão em SCS e em todo o ABC.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Criação de Sites para E-commerce e Lojas Virtuais em SCS</h3>
-                    <p>
-                        O poder de compra em São Caetano é um dos maiores do país. Projetamos sua <strong>loja virtual</strong> com foco em UX (User Experience) de alto padrão. Desenvolver uma <strong>loja online</strong> em SCS exige segurança total e fluidez Mobile. Nosso objetivo é tornar seu <strong>site de vendas online</strong> um gerador constante de lucros. A <strong>criação de sites</strong> para e-commerce é o motor de crescimento para quem busca escala a partir do ABC Paulista.
-                    </p>
+                    <!-- PILAR 2 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Criação de Sites para E-commerce e Lojas Virtuais de Alto Padrão</h3>
+                        <p>
+                            O mercado consumidor de São Caetano possui alto poder aquisitivo, e sua <strong>loja virtual</strong> precisa acompanhar esse nível. Desenvolvemos sua <strong>loja online</strong> com checkout fluido, segurança SSL de nível bancário e integrações estratégicas. Um <strong>site de vendas online</strong> em São Caetano precisa operar sem fricção 24h por dia. Criamos estruturas de e-commerce que convertem visitantes em receita recorrente, otimizando cada etapa do funil de compras para o exigente público andreense e sul-são-caetanense.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Criação de Sites Estilo Landing Page para Alta Conversão no ABC</h3>
-                    <p>
-                        Para especialistas e clínicas que buscam leads qualificados em São Caetano, as <strong>Landing Pages</strong> são a ferramenta ideal. Ao <strong>fazer site</strong> focado em nichos específicos, eliminamos o ruído e focamos no fechamento do negócio. A <strong>criação de sites</strong> direcionados para conversão é a nossa tática mestre para dominar o mercado local de SCS.
-                    </p>
+                    <!-- PILAR 3 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Criação de Sites Estilo Landing Page para Alta Conversão em SCS</h3>
+                        <p>
+                            Para especialistas e prestadores de serviços no <strong>Bairro Cerâmica ou Santa Paula</strong>, a estratégia de <strong>criação de site</strong> estilo Landing Page é o caminho mais curto para o lucro. Diferente de sites complexos, uma Landing Page foca em uma única meta: fazer o cliente de São Caetano clicar no seu WhatsApp. Nós <strong>criamos sites</strong> com gatilhos persuasivos de autoridade que blindam sua marca e maximizam o ROI em campanhas de tráfego pago na região.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Criação de Sites com Design Premium e Performance em São Caetano</h3>
-                    <p>
-                        O <strong>design de site</strong> comunica o valor da sua marca em milésimos de segundo. Em São Caetano do Sul, amadorismo não tem espaço. Nosso <strong>design de site</strong> é minimalista, tecnológico e focado no usuário. Não apenas <strong>criamos sites</strong>; entregamos plataformas de autoridade que elevam seu posicionamento no ecossistema econômico de SCS.
-                    </p>
+                    <!-- PILAR 4 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Criação de Sites com Design Moderno e UX (User Experience)</h3>
+                        <p>
+                            O <strong>design de site</strong> (UI/UX) define se o usuário confia ou abandona sua página em segundos. Em São Caetano, uma cidade que valoriza a estética e a tecnologia, um visual moderno transmite autoridade instantânea. Não entregamos apenas funcionalidade; entregamos interfaces projetadas para a melhor experiência do usuário. Alinhamos o <strong>design de site</strong> à identidade visual da sua empresa, garantindo uma navegação intuitiva que conduz o cliente naturalmente ao fechamento do negócio.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 5 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Criação de Sites Mobile-First (Otimizados para Celular)</h3>
+                        <p>
+                            A maioria absoluta das buscas por serviços qualificados em SCS é feita via dispositivos móveis. Por isso, <strong>criamos sites</strong> sob a filosofia Mobile-First. Sua página terá um carregamento impecável em smartphones e tablets, garantindo que o cliente que busca soluções enquanto transita pela Avenida Goiás encontre sua empresa com facilidade. A adaptação perfeita em todas as telas é o que evita que você perca oportunidades valiosas para a concorrência local.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 6 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Criação de Sites com Performance e Velocidade Extrema</h3>
+                        <p>
+                            Velocidade não é apenas conforto, é rankeamento técnico. A EG Empório Digital <strong>cria sites</strong> ultrarrápidos seguindo os rigorosos critérios do Google (Core Web Vitals). Em um polo dinâmico como São Caetano do Sul, cada milissegundo de atraso é um cliente perdido. Utilizamos compressão de dados avançada e código limpo para garantir que sua página carregue quase instantaneamente, mantendo o usuário engajado e satisfeito desde o primeiro clique.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 7 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Criação de Sites Otimizados para SEO Local</h3>
+                        <p>
+                            Dominar o Google em São Caetano é nossa especialidade. Estruturamos o SEO para que sua empresa apareça no topo para quem busca serviços na região. Através de palavras-chave geolocalizadas e técnicas avançadas de rankeamento, fazemos sua marca ser a primeira opção quando alguém buscar por soluções no Santa Paula, Barcelona ou Cerâmica, transformando as buscas locais em faturamento direto para seu negócio.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 8 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Criação de Sites Blindados e Seguros (Certificado SSL)</h3>
+                        <p>
+                            Protegemos os dados da sua empresa e a privacidade dos seus clientes. Todo projeto de <strong>criação de site</strong> na EG inclui certificado SSL (HTTPS) e camadas extras de segurança. Em São Caetano, onde operam grandes volumes comerciais e médicos, a segurança digital é inegociável. Sites seguros não apenas protegem informações, mas recebem prioridade no Google, transmitindo o profissionalismo que sua marca exige no mercado do ABC.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 9 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
+                        <p>
+                            Damos o controle total ao empresário de São Caetano. Ao finalizar a <strong>criação do site</strong>, você recebe um painel administrativo intuitivo (CMS) onde pode alterar textos, fotos e portfólios sem depender de programadores. Essa agilidade é fundamental para negócios que precisam atualizar novos serviços ou promoções em tempo real, acompanhando a velocidade constante do mercado da Grande São Paulo.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 10 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Criação de Sites Integrados com Automação de WhatsApp</h3>
+                        <p>
+                            O WhatsApp é a principal ferramenta de fechamento em SCS. Nossos projetos vêm com integrações inteligentes que reduzem a fricção no atendimento comercial. O lead clica e cai direto na conversa com seu vendedor. Eliminamos barreiras técnicas para que a comunicação flua rapidamente, aumentando drasticamente as taxas de conversão e garantindo que nenhum contato vindo do site seja perdido.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 11 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Criação de Sites Estratégicos para Escalar Negócios Locais</h3>
+                        <p>
+                            Não apenas <strong>fazemos sites</strong>; construímos ativos que valorizam sua marca em São Caetano. Planejamos a arquitetura digital pensando no crescimento do seu negócio. Seja para expansão de serviços médicos ou novas unidades de comércio, seu site será preparado para escalar. Em São Caetano, estar pronto para o crescimento é a diferença entre ser líder de mercado ou apenas mais um no ABC.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 12 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Criação de Sites com Manutenção e Suporte Técnico Especializado</h3>
+                        <p>
+                            Oferecemos garantia de continuidade operacional. Nossa <strong>manutenção de sites</strong> garante que sua infraestrutura esteja sempre atualizada, rápida e protegida 24h por dia. Com suporte técnico dedicado em São Caetano e região, você tem a tranquilidade de saber que sua vitrine online está em boas mãos, performando no máximo rendimento todos os dias do ano.
+                        </p>
+                    </div>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        Resumo Técnico: Se você busca <strong>criação de site</strong> em São Caetano do Sul, quer lançar uma <strong>loja virtual</strong> premium ou entender como <strong>fazer site</strong> de alta performance, a EG Empório Digital é sua unidade de inteligência digital no ABC.
+                        Se você busca <strong>criação de site em São Caetano do Sul</strong> com entrega profissional, performance técnica e foco total em faturamento, a EG Empório Digital é sua parceira certa para dominar o território digital em SCS.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO FAQ -->
+    <!-- SEÇÃO FAQ (SEO BOOSTER) -->
     <section class="py-20 px-6 max-w-4xl mx-auto relative z-10">
         <div class="text-center mb-12">
             <h2 class="font-tech text-2xl md:text-3xl text-white mb-4 uppercase">
-                Perguntas Frequentes: <span class="text-brand-blue">Sites em SCS</span>
+                Dúvidas <span class="text-brand-blue">Frequentes</span>
             </h2>
             <div class="w-24 h-1 bg-brand-blue mx-auto rounded-full opacity-50"></div>
         </div>
 
         <div class="space-y-4">
-            <!-- Pergunta 1 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Minha empresa em São Caetano aparecerá para o público regional?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual o valor para criação de um site em São Caetano?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Com certeza! Aplicamos SEO Local configurado para que seu site seja prioridade nas buscas feitas em São Caetano do Sul e arredores do ABC, atraindo clientes geolocalizados.
+                        O investimento varia conforme a complexidade técnica. Uma Landing Page para clínicas foca em conversão rápida e tem um valor menor que um E-commerce ou Portal Corporativo. Na EG, criamos orçamentos personalizados para empresas de São Caetano.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 2 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto tempo leva para criar um site em São Caetano do Sul?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês atendem clínicas no Bairro Santa Paula?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Depende da complexidade, mas prezamos pela agilidade. Projetos de Landing Pages podem ser entregues rapidamente, enquanto Lojas Virtuais completas passam por uma homologação mais detalhada. Consulte nossos prazos via WhatsApp.
+                        Sim! Somos especialistas na <strong>criação de sites profissionais</strong> para o setor médico e de saúde em São Caetano. Desenvolvemos interfaces que transmitem a credibilidade necessária para clínicas de elite no Santa Paula.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 3 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês atendem escritórios na Avenida Goiás?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto tempo leva o desenvolvimento do site?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Sim! Atendemos diversos escritórios, clínicas e empresas situadas no coração financeiro de São Caetano, oferecendo suporte presencial se necessário e soluções digitais sob medida.
+                        Prezamos pela agilidade que São Caetano exige. Landing Pages são entregues entre 5 a 10 dias úteis. Sites institucionais ou Lojas Virtuais levam entre 15 e 30 dias, dependendo da complexidade das integrações solicitadas.
                     </div>
                 </div>
             </div>
@@ -531,14 +644,33 @@
     <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col items-center">
-                <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 opacity-50 mb-2">
-                <div class="font-tech text-xl font-bold text-white uppercase">
+                <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
+                <div class="logo-animate font-tech text-xl font-bold text-white uppercase" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </div>
+            
+            <div class="flex gap-8">
+                <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+                <a href="https://egemporiodigital.com.br/blog" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-article text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+                <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+            </div>
+
             <div class="text-center">
-                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital - Unidade São Caetano.</p>
-                <p class="text-[10px] text-slate-700 mt-1">Todos os direitos reservados.</p>
+                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
+                <p class="text-[10px] text-slate-700 mt-1 uppercase">SÃO CAETANO DO SUL - ABC PAULISTA</p>
             </div>
         </div>
     </footer>
@@ -547,20 +679,12 @@
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('menu-icon');
-            
             if (menu.classList.contains('hidden')) {
                 menu.classList.remove('hidden');
                 menu.classList.add('flex');
-                icon.classList.remove('ph-list');
-                icon.classList.add('ph-x');
-                document.body.style.overflow = 'hidden'; 
             } else {
                 menu.classList.add('hidden');
                 menu.classList.remove('flex');
-                icon.classList.remove('ph-x');
-                icon.classList.add('ph-list');
-                document.body.style.overflow = 'auto';
             }
         }
 
@@ -581,11 +705,15 @@
             document.body.style.overflow = 'auto';
         }
 
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") closeProjectModal();
+        });
+
         function toggleSeoText() {
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
                 icon.classList.remove('rotate-180');
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
@@ -599,7 +727,7 @@
             document.querySelectorAll('.max-h-0').forEach(el => {
                 if (el !== content && el.id !== 'seo-content') { 
                     el.style.maxHeight = null;
-                    if(el.previousElementSibling.querySelector('i')) {
+                    if(el.previousElementSibling && el.previousElementSibling.querySelector('i')) {
                         el.previousElementSibling.querySelector('i').classList.remove('rotate-180');
                     }
                 }

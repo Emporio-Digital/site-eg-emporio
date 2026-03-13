@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- SEO LOCAL: SÃO BERNARDO DO CAMPO (ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
-    <title>Criação de Sites em São Bernardo do Campo | Web Design ABC - EG Empório</title>
-    <meta name="description" content="Especialistas em criação de sites profissionais em São Bernardo do Campo. Atendemos indústrias e comércios no Rudge Ramos, Paulicéia e Centro. Sites rápidos e Lojas Virtuais.">
+    <title>Criação de Sites em São Bernardo do Campo | Landing Pages e Lojas Virtuais - EG Empório</title>
+    <meta name="description" content="Especialistas em criação de sites profissionais em São Bernardo do Campo. Atendemos indústrias no Demarchi, Paulicéia e comércios no Rudge Ramos e Centro. Sites rápidos.">
     
     <!-- CANONICAL: VALIDAÇÃO DE ORIGINALIDADE (SELF-REFERENCING) -->
     <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/sao-bernardo">
@@ -23,7 +23,7 @@
       "telephone": "+5511916053292",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rua Marechal Deodoro",
+        "streetAddress": "Centro",
         "addressLocality": "São Bernardo do Campo",
         "addressRegion": "SP",
         "addressCountry": "BR"
@@ -33,8 +33,8 @@
         "latitude": "-23.7121",
         "longitude": "-46.5481"
       },
-      "areaServed": ["São Bernardo do Campo", "Rudge Ramos", "Paulicéia", "Centro", "Demarchi", "Assunção", "ABC Paulista"],
-      "description": "Desenvolvimento de sites de alta performance, landing pages e lojas virtuais para o polo industrial e comercial de São Bernardo do Campo e Grande ABC."
+      "areaServed": ["São Bernardo do Campo", "Rudge Ramos", "Demarchi", "Paulicéia", "Assunção", "Taboão", "Alvarenga", "ABC Paulista"],
+      "description": "Agência especializada em criação de sites, landing pages de alta conversão e lojas virtuais em São Bernardo do Campo, atendendo o polo industrial e automotivo do ABC."
     }
     </script>
 
@@ -124,6 +124,40 @@
             z-index: -50;
             overflow: hidden;
         }
+
+        /* --- EFEITO LOGO DINÂMICO (PADRÃO DOSSIÊ) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
     </style>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
@@ -140,7 +174,7 @@
             
             <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
-                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </a>
@@ -152,7 +186,7 @@
                 <a href="#projetos-disponiveis" class="hover:text-brand-blue transition-colors">Portfólio</a>
             </nav>
 
-            <a href="https://wa.me/5511916053292?text=Olá, vi a página de São Bernardo e quero um orçamento." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+            <a href="https://wa.me/5511916053292?text=Olá, vi a página de São Bernardo e quero um orçamento para minha empresa." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
                 Fale com a gente
             </a>
 
@@ -163,8 +197,8 @@
 
         <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
             <a href="../index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Voltar ao Início</a>
-            <a href="#servicos-locais" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços</a>
-            <a href="https://wa.me/5511916053292?text=Olá, vi a página de São Bernardo e quero um orçamento." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
+            <a href="#servicos-locais" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços em SBC</a>
+            <a href="https://wa.me/5511916053292?text=Olá, vi a página de São Bernardo e quero um orçamento para minha empresa." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
                 Fale com a gente
             </a>
         </div>
@@ -173,24 +207,22 @@
     <!-- HERO SECTION (ESTRATÉGIA AGRESSIVA: SÃO BERNARDO DO CAMPO) -->
     <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
         
-        <!-- H1: FOCO NO RANKING (Dominando Territórios) -->
         <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
             CRIAÇÃO DE SITES <br> EM <span class="text-white">SÃO BERNARDO</span>
         </h1>
 
-        <!-- H2: FOCO NA AUTORIDADE (Copy para Empresas de SBC) -->
         <h2 class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
-            AUMENTE SUAS VENDAS NO CORAÇÃO INDUSTRIAL DO ABC
+            DOMINE O MAIOR POLO INDUSTRIAL DA AMÉRICA LATINA
         </h2>
 
         <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-8 z-10"></div>
 
         <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
-            Se sua empresa está no <strong>Rudge Ramos, Paulicéia ou Demarchi</strong>, você precisa de um parceiro que entenda a força comercial de São Bernardo do Campo. Se você busca <strong>criação de um site</strong> profissional no ABC, nós entregamos a tecnologia industrial que sua marca merece. Tenha uma <strong class="text-white">loja online</strong> ou site institucional blindado para superar a concorrência na Marechal Deodoro e em toda a região.
+            Se sua empresa está no <strong>Demarchi, Paulicéia ou Rudge Ramos</strong>, você precisa de uma estrutura digital que acompanhe o peso da indústria de São Bernardo do Campo. Se busca <strong>criação de um site</strong> profissional no ABC, entregamos a robustez técnica e a performance necessária para liderar na Anchieta. Tenha uma <strong class="text-white">loja online</strong> ou site institucional blindado para converter o tráfego qualificado da região.
         </p>
 
         <div class="flex flex-col md:flex-row gap-4 z-10">
-            <a href="https://wa.me/5511916053292?text=Preciso de um site em SBC para superar a concorrência." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+            <a href="https://wa.me/5511916053292?text=Preciso de um site profissional em São Bernardo para superar a concorrência." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
                 Solicitar Orçamento
             </a>
             <a href="#projetos-disponiveis" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
@@ -208,7 +240,7 @@
                     Por que contratar a <span class="text-brand-blue">EG Empório</span> em São Bernardo?
                 </h2>
                 <p class="text-slate-300 text-lg leading-relaxed">
-                    Sabemos que o mercado no <strong>ABC Paulista</strong> é movido por indústrias e serviços de alta qualidade. Não basta um site amador; sua empresa no <strong>Assunção ou Taboão</strong> precisa de uma máquina de vendas.
+                    Sabemos que em <strong>São Bernardo do Campo</strong> e todo o ABC Paulista, a economia é movida pela excelência industrial e comércios tradicionais. Não basta ter um site comum; sua empresa no <strong>Assunção ou Taboão</strong> precisa de uma máquina de conversão otimizada.
                 </p>
             </div>
 
@@ -217,12 +249,12 @@
                 <div>
                     <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Especialistas em Criação de Sites</h3>
                     <p class="text-slate-400 mb-6">
-                        Nós <strong>fazemos sites</strong> focados em autoridade técnica. Seja para <strong>criação de sites profissionais</strong> institucionais para o setor automotivo ou sistemas de logística, utilizamos tecnologias modernas para garantir velocidade. Nosso <strong>design de site</strong> é pensado para transmitir a solidez necessária no polo industrial de SBC.
+                        Nós <strong>fazemos sites</strong> com foco total em ROI e autoridade corporativa. Seja para <strong>criação de sites profissionais</strong> para indústrias automotivas, transportadoras ou comércios na Marechal Deodoro, utilizamos stacks modernas para garantir velocidade extrema. Nosso <strong>design de site</strong> é projetado para transmitir a solidez que o mercado de SBC exige.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site otimizado (SEO Local ABC)</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site responsivo (Adaptável a tudo)</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites leves que carregam em conexões 4G/5G</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site otimizado (SEO Local SBC)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site responsivo (Performance Industrial)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites leves que carregam instantaneamente no 5G</li>
                     </ul>
                 </div>
 
@@ -230,19 +262,19 @@
                 <div>
                     <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Lojas Virtuais e Landing Pages</h3>
                     <p class="text-slate-400 mb-6">
-                        Quer vender seus produtos para além da Anchieta? Desenvolvemos sua <strong>loja online</strong> ou <strong>loja virtual</strong> com sistemas de frete integrados. Se o seu foco é capturar leads para serviços especializados em São Bernardo, nossas <strong>Landing Pages</strong> são projetadas com gatilhos de conversão. Tenha um <strong>site de vendas online</strong> que não para.
+                        Quer vender seus produtos saindo do maior polo econômico do ABC? Desenvolvemos sua <strong>loja online</strong> ou <strong>loja virtual</strong> com integrações completas e checkout seguro. Se o seu foco é capturar leads qualificados para serviços especializados, nossas <strong>Landing Pages</strong> são estruturadas com gatilhos de conversão agressivos. Tenha um <strong>site de vendas online</strong> ativo 24h.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Site de vendas com checkout direto e seguro</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages para anúncios no Google/Meta</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Nós fazemos sites que geram lucro real</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Site de vendas com checkout fluido e seguro</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages para anúncios no Google e Meta</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Nós fazemos sites que dominam o mercado digital</li>
                     </ul>
                 </div>
             </div>
             
             <div class="mt-10 text-center">
-                <a href="https://wa.me/5511916053292?text=Preciso de um site profissional em São Bernardo." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
-                    Quero meu site agora <i class="ph ph-arrow-right"></i>
+                <a href="https://wa.me/5511916053292?text=Quero um site profissional em São Bernardo agora." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
+                    Solicitar Orçamento <i class="ph ph-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -256,7 +288,7 @@
                 Exemplos de <span class="text-brand-blue">Projetos Reais</span>
             </h2>
             <p class="text-slate-500 text-sm max-w-2xl mx-auto">
-                Veja o nível de qualidade que entregamos para clientes em São Bernardo do Campo e em todo o ABC.
+                Veja o nível de qualidade que entregamos para clientes em São Bernardo do Campo e em todo o Brasil.
             </p>
         </div>
 
@@ -409,53 +441,129 @@
         </div>
     </section>
 
-    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
-    <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
+    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS - SBC) -->
+    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
             <!-- HEADER DO CARD (Clicável) -->
             <div onclick="toggleSeoText()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
-                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Guia Técnico: Criação de Sites Profissionais em SBC
+                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade: Criação de Sites Profissionais em São Bernardo
                     </h2>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para o ABC</span>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para o polo industrial do ABC</span>
                 </div>
-                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
-                    <i id="seo-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
-            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS) -->
+            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS - 12 PILARES VERTICAIS) -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-6 font-light">
+                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
                     
-                    <p>
-                        No cenário competitivo do Grande ABC, a <strong>criação de site</strong> em São Bernardo do Campo não é apenas um luxo, mas uma necessidade estratégica para indústrias e comércios locais. A cidade exige que negócios se destaquem digitalmente na <strong>Anchieta, Rudge Ramos ou Paulicéia</strong>, e nós, da EG Empório Digital, entendemos essa força. Nosso foco é entregar mais do que código; entregamos resultados que posicionam sua marca no topo do Google em SBC.
+                    <p class="mb-4">
+                        No coração industrial do Brasil, a <strong>criação de site</strong> em São Bernardo do Campo é o fator determinante para empresas que desejam dominar o mercado na <strong>Anchieta, Rudge Ramos, Paulicéia e Demarchi</strong>. Nós, da EG Empório Digital, desenvolvemos soluções de elite que posicionam sua marca no topo do Google em SBC, garantindo que seu negócio seja a autoridade máxima em uma das economias mais robustas de São Paulo.
                     </p>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Profissionais e Institucionais em São Bernardo do Campo</h3>
-                    <p>
-                        Muitos empreendedores tentam soluções amadoras, mas a <strong>criação de sites profissionais</strong> é o que separa indústrias consolidadas de negócios passageiros no ABC. Quando <strong>fazemos sites</strong>, aplicamos técnicas de engenharia de software e psicologia de vendas. Um site lento ou mal estruturado expulsa o cliente em segundos. Por isso, investir na <strong>criação de um site</strong> otimizado na EG é investir na autoridade da sua marca perante o mercado exigente de São Bernardo do Campo.
-                    </p>
+                    <!-- PILAR 1 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Criação de Sites Profissionais e Institucionais em São Bernardo</h3>
+                        <p>
+                            Muitas indústrias e empresas de serviços em SBC ainda operam com sites obsoletos, perdendo autoridade para concorrentes mais tecnológicos. A <strong>criação de sites profissionais</strong> é o que separa marcas líderes de negócios amadores. Quando <strong>fazemos sites</strong> para indústrias no Demarchi ou escritórios no Centro de SBC, aplicamos engenharia de conversão. Um site institucional deve ser o espelho da solidez da sua empresa, transmitindo confiança imediata para grandes parceiros e clientes no ABC.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites para E-commerce e Lojas Virtuais no ABC</h3>
-                    <p>
-                        Se o seu objetivo é vender produtos a partir do maior polo industrial do país, ter uma <strong>loja virtual</strong> robusta é obrigatório. Desenvolvemos sua <strong>loja online</strong> com checkout transparente, segurança SSL e integração logística para todo o Brasil. Um <strong>site de vendas online</strong> em SBC precisa operar 24 horas por dia sem falhas. Nós criamos estruturas que suportam alto tráfego e convertem visitantes em compradores, transformando sua vitrine digital em uma máquina de receita recorrente. Seja um <strong>site de vendas</strong> B2B ou B2C, a tecnologia é a mesma: performance total.
-                    </p>
+                    <!-- PILAR 2 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Criação de Sites para E-commerce e Lojas Virtuais no ABC</h3>
+                        <p>
+                            São Bernardo é um polo comercial gigante, e sua <strong>loja virtual</strong> precisa acompanhar esse ritmo. Desenvolvemos sua <strong>loja online</strong> com checkout fluido, segurança SSL de alto nível e integrações logísticas estratégicas. Um <strong>site de vendas online</strong> em SBC precisa operar sem falhas 24h por dia. Criamos ecossistemas de e-commerce que suportam alto tráfego e convertem visitantes em receita recorrente, otimizando cada etapa do funil de compras para o público do ABC.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Estilo Landing Page para Conversão Imediata</h3>
-                    <p>
-                        Para prestadores de serviços, a estratégia de <strong>criação de site</strong> estilo Landing Page é a mais eficaz. Diferente de um site institucional comum, uma Landing Page é focada em uma única ação: fazer o cliente de São Bernardo entrar em contato via WhatsApp. Se você busca <strong>fazer site</strong> para campanhas de Google Ads ou tráfego pago na região do ABC, essa é a ferramenta ideal. Nossa agência <strong>cria sites</strong> focados em capturar leads qualificados, usando gatilhos mentais industriais e layout persuasivo.
-                    </p>
+                    <!-- PILAR 3 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Criação de Sites Estilo Landing Page para Alta Conversão</h3>
+                        <p>
+                            Para prestadores de serviços no <strong>Rudge Ramos, Assunção ou Paulicéia</strong>, a estratégia de <strong>criação de site</strong> estilo Landing Page é o caminho mais curto para o lucro. Diferente de sites complexos, uma Landing Page foca em uma única meta: fazer o cliente de São Bernardo clicar no seu WhatsApp. Nós <strong>criamos sites</strong> com gatilhos persuasivos que blindam sua marca e maximizam o retorno sobre investimento em Google Ads e tráfego pago.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites com Web Design Moderno e Performance Industrial</h3>
-                    <p>
-                        O <strong>design de site</strong> (UI/UX) é o que define se o usuário confia ou não na sua empresa. Em uma cidade que respira engenharia e tecnologia, um visual moderno transmite autoridade. Não basta apenas funcionalidade; a estética importa. Nós alinhamos o <strong>design de site</strong> à identidade visual da sua marca, garantindo que ela seja memorável. Se você quer saber <strong>como fazer site</strong> que realmente impacta o mercado do ABC, a resposta está na união entre beleza e velocidade máxima de carregamento.
-                    </p>
+                    <!-- PILAR 4 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Criação de Sites com Design Moderno e UX (User Experience)</h3>
+                        <p>
+                            O <strong>design de site</strong> (UI/UX) define se o usuário confia ou abandona sua página em segundos. Em São Bernardo, uma cidade movida por engenharia e inovação, um visual moderno transmite autoridade técnica. Não entregamos apenas funcionalidade; entregamos interfaces projetadas para a melhor experiência do usuário. Alinhamos o <strong>design de site</strong> à identidade visual da sua empresa, garantindo uma navegação intuitiva que conduz o cliente naturalmente ao fechamento do negócio.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 5 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Criação de Sites Mobile-First (Otimizados para Celular)</h3>
+                        <p>
+                            A maioria absoluta das buscas em SBC é feita via dispositivos móveis. Por isso, <strong>criamos sites</strong> sob a filosofia Mobile-First. Sua página terá um carregamento impecável em smartphones e tablets, garantindo que o cliente que busca serviços enquanto transita pela Anchieta ou Imigrantes encontre sua empresa com facilidade. A adaptação perfeita em todas as telas é o que evita que você perca oportunidades valiosas para a concorrência local no ABC.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 6 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Criação de Sites com Performance e Velocidade Extrema</h3>
+                        <p>
+                            Velocidade não é apenas conforto, é rankeamento técnico. A EG Empório Digital <strong>cria sites</strong> ultrarrápidos seguindo os rigorosos critérios do Google (Core Web Vitals). Em um polo dinâmico como São Bernardo do Campo, cada milissegundo de atraso é um cliente perdido. Utilizamos compressão de dados avançada e código limpo para garantir que sua página carregue quase instantaneamente, mantendo o usuário engajado e satisfeito desde o primeiro clique.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 7 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Criação de Sites Otimizados para SEO Local</h3>
+                        <p>
+                            Dominar o Google em São Bernardo é nossa especialidade. Estruturamos o SEO para que sua empresa apareça no topo para quem realmente importa: o cliente da sua região. Através de palavras-chave geolocalizadas e técnicas avançadas de rankeamento, fazemos sua marca ser a primeira opção quando alguém buscar por serviços em Rudge Ramos, Demarchi ou Paulicéia, transformando o Google em seu maior vendedor.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 8 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Criação de Sites Blindados e Seguros (Certificado SSL)</h3>
+                        <p>
+                            Protegemos seus dados e a privacidade dos seus clientes. Todo projeto de <strong>criação de site</strong> na EG inclui certificado SSL (HTTPS) e camadas de segurança contra ataques. Em São Bernardo, onde operam grandes volumes comerciais e industriais, a segurança digital é um pilar de confiança. Sites seguros não apenas protegem informações, mas também recebem prioridade no rankeamento do Google, transmitindo o profissionalismo que sua empresa exige.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 9 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
+                        <p>
+                            Damos o controle total ao empresário de São Bernardo. Ao finalizar a <strong>criação do site</strong>, você recebe um painel administrativo intuitivo (CMS) onde pode alterar textos, banners e fotos sem depender de programadores. Essa agilidade é fundamental para negócios que precisam atualizar catálogos de produtos ou novos serviços em tempo real, acompanhando a velocidade constante do mercado da Grande São Paulo.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 10 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Criação de Sites Integrados com Automação de WhatsApp</h3>
+                        <p>
+                            O WhatsApp é a principal ferramenta de fechamento em SBC. Nossos projetos vêm com integrações inteligentes que reduzem a fricção no atendimento comercial. O lead clica e cai direto na conversa com seu vendedor. Eliminamos barreiras técnicas para que a comunicação flua rapidamente, aumentando drasticamente as taxas de conversão e garantindo que nenhum contato vindo do site seja desperdiçado.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 11 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Criação de Sites Estratégicos para Escalar Negócios Locais</h3>
+                        <p>
+                            Não apenas <strong>fazemos sites</strong>; construímos ativos que valorizam sua empresa no ABC. Planejamos a arquitetura digital pensando no crescimento futuro do seu negócio. Seja para expansão de serviços ou integração com novos canais de marketing digital, seu site será preparado para escalar. Em São Bernardo, estar pronto para o crescimento é a diferença entre ser líder de mercado ou apenas mais um na lista telefônica digital.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 12 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Criação de Sites com Manutenção e Suporte Técnico Especializado</h3>
+                        <p>
+                            Oferecemos garantia de continuidade. Uma agência de elite não entrega o projeto e desaparece. Nossa <strong>manutenção de sites</strong> garante que sua infraestrutura esteja sempre atualizada, rápida e protegida 24h por dia. Com suporte técnico dedicado em São Bernardo e região, você tem a tranquilidade de saber que sua máquina de vendas online está em boas mãos, performando no máximo rendimento todos os dias.
+                        </p>
+                    </div>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        Em resumo: se você precisa de <strong>criação de site em São Bernardo do Campo</strong>, <strong>loja virtual</strong> ou quer saber como <strong>fazer site</strong> pode mudar o rumo do seu faturamento, a EG Empório Digital é a parceira certa. Nós não apenas <strong>fazemos sites</strong>; nós construímos ativos digitais que valorizam sua empresa no Grande ABC.
+                        Se você busca <strong>criação de site em São Bernardo do Campo</strong> com entrega profissional, performance técnica e foco total em faturamento, a EG Empório Digital é sua parceira certa para dominar o território digital no ABC Paulista.
                     </p>
                 </div>
             </div>
@@ -472,7 +580,6 @@
         </div>
 
         <div class="space-y-4">
-            <!-- Pergunta 1 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
                     <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual o valor para criação de um site em São Bernardo?</span>
@@ -480,33 +587,31 @@
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        O investimento para a <strong>criação de um site</strong> profissional em SBC varia conforme as funcionalidades. Uma Landing Page para serviços tem um investimento menor que uma Loja Virtual B2B completa. Na EG Empório Digital, criamos orçamentos sob medida para o tamanho da sua empresa no ABC.
+                        O investimento varia conforme a complexidade técnica. Uma Landing Page para serviços locais tem um valor menor que um E-commerce ou site institucional para indústrias. Na EG, criamos orçamentos personalizados para empresas de SBC focados em ROI.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 2 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês fazem sites para indústrias de SBC?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês atendem indústrias e empresas de logística?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Sim! Somos especialistas em <strong>criação de sites profissionais</strong> para o setor industrial. Entendemos a necessidade de catálogos técnicos, áreas de orçamento robustas e visual que transmita confiança para grandes parcerias comerciais.
+                        Sim! Somos especialistas na <strong>criação de sites profissionais</strong> para o setor industrial e automotivo de São Bernardo do Campo. Desenvolvemos interfaces que transmitem a robustez necessária para fechar grandes contratos comerciais.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 3 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto tempo leva para o site ficar pronto?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto tempo leva o desenvolvimento do site?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Prezamos pela eficiência do ABC. Landing Pages profissionais costumam ser entregues em 5 a 10 dias úteis. Projetos de <strong>criação de sites</strong> institucionais ou Lojas Virtuais podem levar de 15 a 30 dias, dependendo da complexidade das integrações.
+                        Prezamos pela velocidade que o mercado do ABC exige. Landing Pages são entregues entre 5 a 10 dias úteis. Sites institucionais ou Lojas Virtuais levam entre 15 e 30 dias, dependendo da complexidade das integrações solicitadas.
                     </div>
                 </div>
             </div>
@@ -535,44 +640,43 @@
         </div>
     </div>
 
-    <!-- FOOTER SIMPLIFICADO -->
+    <!-- FOOTER -->
     <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col items-center">
                 <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
-                <div class="font-tech text-xl font-bold text-white uppercase">
+                <div class="logo-animate font-tech text-xl font-bold text-white uppercase" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </div>
             
             <div class="flex gap-8">
                 <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-instagram-logo text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300"></i>
                     </div>
                 </a>
                 <a href="https://egemporiodigital.com.br/blog" target="_blank" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-article text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-article text-2xl text-slate-300"></i>
                     </div>
                 </a>
                 <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-envelope-simple text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300"></i>
                     </div>
                 </a>
             </div>
 
             <div class="text-center">
                 <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
-                <p class="text-[10px] text-slate-700 mt-1">SÃO BERNARDO DO CAMPO - ABC</p>
+                <p class="text-[10px] text-slate-700 mt-1 uppercase">SÃO BERNARDO DO CAMPO - ABC PAULISTA</p>
             </div>
         </div>
     </footer>
 
-    <!-- SCRIPTS (MENU MOBILE, MODAL, SEO TEXT E FAQ) -->
+    <!-- SCRIPTS -->
     <script>
-        // MENU MOBILE
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             if (menu.classList.contains('hidden')) {
@@ -584,7 +688,6 @@
             }
         }
 
-        // MODAL DE VÍDEO
         const modal = document.getElementById('project-modal');
         const iframe = document.getElementById('modal-iframe');
         const linkBtn = document.getElementById('modal-link-btn');
@@ -603,18 +706,14 @@
         }
 
         document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeProjectModal();
-            }
+            if (event.key === "Escape") closeProjectModal();
         });
 
-        // TOGGLE DO TEXTÃO SEO
         function toggleSeoText() {
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
-            
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
                 icon.classList.remove('rotate-180');
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
@@ -622,11 +721,9 @@
             }
         }
 
-        // TOGGLE DO FAQ
         function toggleFaq(button) {
             const content = button.nextElementSibling;
             const icon = button.querySelector('i');
-            
             document.querySelectorAll('.max-h-0').forEach(el => {
                 if (el !== content && el.id !== 'seo-content') { 
                     el.style.maxHeight = null;
@@ -635,7 +732,6 @@
                     }
                 }
             });
-
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
                 icon.classList.remove('rotate-180');

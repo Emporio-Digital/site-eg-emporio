@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- SEO LOCAL: GESTÃO DE TRÁFEGO EM SÃO PAULO -->
+    <!-- SEO LOCAL: GESTÃO DE TRÁFEGO SÃO PAULO (ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
     <title>Gestão de Tráfego em São Paulo | Google Ads e Meta Ads - EG Empório</title>
-    <meta name="description" content="Especialistas em gestão de tráfego pago em São Paulo. Potencialize suas vendas com anúncios no Google, Instagram e Facebook. Foco em ROI e resultados reais.">
+    <meta name="description" content="Especialistas em gestão de tráfego pago em São Paulo. Anúncios no Google, Instagram e Facebook para empresas na Paulista e Faria Lima. Foco em ROI e Escala.">
     
-    <!-- CANONICAL (Novo Silo: gestao-de-trafego) -->
+    <!-- CANONICAL: VALIDAÇÃO DE ORIGINALIDADE -->
     <link rel="canonical" href="https://egemporiodigital.com.br/gestao-de-trafego/sao-paulo">
     
-    <!-- SCHEMA MARKUP (PROFESSIONAL SERVICE - TRAFFIC MANAGEMENT) -->
+    <!-- SCHEMA MARKUP (PROFESSIONAL SERVICE / MARKETING) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -19,17 +19,29 @@
       "name": "EG Empório Digital - Gestão de Tráfego em São Paulo",
       "url": "https://egemporiodigital.com.br/gestao-de-trafego/sao-paulo",
       "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "areaServed": {
-        "@type": "City",
-        "name": "São Paulo"
+      "priceRange": "$$$",
+      "telephone": "+5511916053292",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avenida Paulista",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
       },
-      "description": "Agência de alta performance em gestão de tráfego pago, anúncios no Google Ads e Meta Ads em São Paulo.",
-      "priceRange": "$$$"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.561414",
+        "longitude": "-46.655881"
+      },
+      "areaServed": ["São Paulo", "Avenida Paulista", "Faria Lima", "Itaim Bibi", "Vila Olímpia", "Berrini", "Pinheiros", "Tatuapé", "Santana", "Zona Sul", "Zona Leste"],
+      "description": "Agência de alta performance em gestão de tráfego pago em São Paulo, especializada em Google Ads, Meta Ads e estratégias de escala para negócios locais e e-commerce."
     }
     </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link rel="shortcut icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo.png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -97,6 +109,40 @@
             box-shadow: 0 0 30px rgba(0, 225, 255, 0.1);
         }
 
+        /* --- EFEITO LOGO DINÂMICO (PADRÃO DOSSIÊ) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
+
         #mobile-menu {
             background: rgba(2, 6, 23, 0.98);
             backdrop-filter: blur(20px);
@@ -118,7 +164,7 @@
 
     <!-- BACKGROUND FIXO -->
     <div class="bg-fixed-mobile flex items-center justify-center">
-        <img src="../assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0, 225, 255, 0.2)]">
+        <img src="../assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40"></div>
     </div>
 
@@ -128,7 +174,7 @@
             
             <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
-                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </a>
@@ -137,7 +183,7 @@
             <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
                 <a href="../index.html" class="hover:text-brand-blue transition-colors">Início</a>
                 <a href="#estratégia-local" class="text-brand-blue transition-colors">Tráfego em SP</a>
-                <a href="#projetos-disponiveis" class="hover:text-brand-blue transition-colors">Vitrine</a>
+                <a href="#vitrine-performance" class="hover:text-brand-blue transition-colors">Performance</a>
             </nav>
 
             <a href="https://wa.me/5511916053292?text=Olá, vi a página de Gestão de Tráfego em SP e quero vender mais." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
@@ -145,20 +191,20 @@
             </a>
 
             <button id="menu-btn" class="md:hidden text-brand-blue text-3xl focus:outline-none" onclick="toggleMenu()">
-                <i id="menu-icon" class="ph ph-list"></i>
+                <i class="ph ph-list"></i>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden fixed top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
+        <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
             <a href="../index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Voltar ao Início</a>
-            <a href="#estratégia-local" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços de Tráfego</a>
+            <a href="#estratégia-local" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Tráfego em SP</a>
             <a href="https://wa.me/5511916053292?text=Olá, vi a página de Gestão de Tráfego em SP e quero vender mais." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
                 Fale com a gente
             </a>
         </div>
     </header>
 
-    <!-- HERO SECTION (GESTÃO DE TRÁFEGO SP) -->
+    <!-- HERO SECTION (GESTÃO DE TRÁFEGO SÃO PAULO) -->
     <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
         
         <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
@@ -166,79 +212,77 @@
         </h1>
 
         <h2 class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
-            ANÚNCIOS INTELIGENTES QUE TRANSFORMAM CLIQUES EM LUCRO
+            ALTA PERFORMANCE NA CAPITAL QUE NÃO PARA
         </h2>
 
         <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-8 z-10"></div>
 
         <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
-            Na capital onde o tempo é dinheiro, sua empresa não pode depender da sorte. 
-            Nossa <strong>gestão de tráfego</strong> em São Paulo coloca sua marca na frente de quem realmente quer comprar. 
-            Domine o <strong>Google Ads</strong> e <strong>Meta Ads</strong> com estratégias de alta performance.
+            Se sua empresa está na <strong>Avenida Paulista, Faria Lima ou Berrini</strong>, você não pode depender apenas de indicação. Se busca <strong>gestão de tráfego</strong> profissional em São Paulo, entregamos a inteligência de dados e a escala necessária para o mercado mais competitivo do Brasil. Domine o <strong>Google Ads e Meta Ads</strong> e transforme cliques em faturamento real.
         </p>
 
         <div class="flex flex-col md:flex-row gap-4 z-10">
-            <a href="https://wa.me/5511916053292?text=Preciso de Gestão de Tráfego em SP para escalar minhas vendas." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+            <a href="https://wa.me/5511916053292?text=Quero escalar meu faturamento em SP com gestão de tráfego." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
                 Escalar meu Negócio
             </a>
-            <a href="#projetos-disponiveis" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
-                Ver Vitrine
+            <a href="#vitrine-performance" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
+                Ver Resultados
             </a>
         </div>
 
     </section>
 
-    <!-- SEÇÃO DE CONTEÚDO SEO -->
+    <!-- SEÇÃO DE CONTEÚDO SEO (KEYWORDS INJETADAS) -->
     <section id="estratégia-local" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20">
             <div class="text-left mb-10">
                 <h2 class="font-tech text-3xl md:text-4xl text-white mb-4 uppercase leading-tight">
-                    Performance em <span class="text-brand-blue">Gestão de Tráfego</span> em São Paulo
+                    Por que contratar a <span class="text-brand-blue">EG Empório</span> em São Paulo?
                 </h2>
                 <p class="text-slate-300 text-lg leading-relaxed">
-                    De escritórios na <strong>Av. Paulista</strong> a comércios em <strong>Santo Amaro</strong>, o tráfego pago é o caminho mais rápido para o crescimento. 
-                    Nós não apenas criamos anúncios; nós gerimos o seu capital com foco em ROI.
+                    Sabemos que em <strong>São Paulo</strong> o custo por clique é um dos mais altos do mundo. Não basta apertar botões; sua empresa no <strong>Itaim Bibi ou Vila Olímpia</strong> precisa de uma estratégia de tráfego que otimize cada centavo investido.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Coluna 1 -->
                 <div>
                     <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Gestão de Tráfego no Google Ads</h3>
                     <p class="text-slate-400 mb-6">
-                        Apareça para quem está procurando pelo seu serviço agora. Nossa <strong>gestão de tráfego</strong> no Google Ads foca em palavras-chave de intenção de compra. 
-                        Nós garantimos que seu investimento em anúncios traga leads qualificados em <strong>São Paulo</strong>.
+                        Apareça para quem está com o cartão na mão. Nossa <strong>gestão de tráfego</strong> no Google foca em palavras-chave de altíssima intenção de compra. Seja para serviços B2B ou varejo de luxo, dominamos os leilões em <strong>São Paulo</strong> para garantir o menor custo por lead possível.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-trend-up text-brand-blue"></i> Anúncios na rede de pesquisa do Google</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-trend-up text-brand-blue"></i> Remarketing estratégico em SP</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-trend-up text-brand-blue"></i> Foco total em custo por aquisição (CPA)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-trend-up text-brand-blue"></i> Pesquisa Google (Intenção de Compra)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-trend-up text-brand-blue"></i> Rede de Display e YouTube Ads</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-trend-up text-brand-blue"></i> Google Shopping para E-commerce</li>
                     </ul>
                 </div>
+
+                <!-- Coluna 2 -->
                 <div>
                     <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Meta Ads: Instagram e Facebook</h3>
                     <p class="text-slate-400 mb-6">
-                        Construa desejo e gere demanda. Através da <strong>gestão de tráfego</strong> no Meta Ads, segmentamos seu público em São Paulo por interesses e 
-                        geolocalização precisa. Transformamos o feed do seu cliente em uma vitrine de alta conversão.
+                        Interrompa o scroll com criativos impossíveis de ignorar. Nossa <strong>gestão de tráfego</strong> no Meta Ads utiliza públicos de interesse e segmentação geográfica precisa em São Paulo. Construímos funis de vendas que levam o cliente do "desconhecido" à "compra" em tempo recorde.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-trend-up text-brand-blue"></i> Anúncios persuasivos para Reels e Stories</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-trend-up text-brand-blue"></i> Estratégias de escala para e-commerce em SP</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-trend-up text-brand-blue"></i> Otimização diária baseada em dados reais</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-trend-up text-brand-blue"></i> Criativos focados em Conversão</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-trend-up text-brand-blue"></i> Remarketing Dinâmico e Perseguidor</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-trend-up text-brand-blue"></i> Escala previsível de faturamento</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- VITRINE DE PROJETOS (PADRÃO ORIGINAL RESTAURADO) -->
-    <section id="projetos-disponiveis" class="scroll-mt-32 py-20 px-6 max-w-7xl mx-auto border-t border-white/5 relative z-10">
+    <!-- SEÇÃO: VITRINE DE PERFORMANCE -->
+    <section id="vitrine-performance" class="scroll-mt-32 py-20 px-6 max-w-7xl mx-auto border-t border-white/5 relative z-10">
         
         <div class="text-center mb-16">
             <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase tracking-wide">
-                Nossa <span class="text-brand-blue">Vitrine</span> Interativa
+                Destinos de <span class="text-brand-blue">Alta Conversão</span>
             </h2>
             <p class="text-slate-500 text-sm max-w-2xl mx-auto">
-                Para o tráfego performar, o destino precisa ser de elite. Explore os projetos reais abaixo.
+                Para o tráfego performar, o site precisa ser uma máquina. Veja onde enviamos o tráfego dos nossos clientes.
             </p>
         </div>
 
@@ -247,7 +291,7 @@
             <!-- CARD 1: ESTÉTICA AUTOMOTIVA -->
             <div onclick="openProjectModal('NKRiU16RUmk', 'https://vitrine-projetos-two.vercel.app/estetica-auto.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/estetica.png" alt="Estética Automotiva" 
+                <img src="../assets/images/estetica.png" alt="Performance Automotiva" 
                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                 <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -256,16 +300,16 @@
                     </div>
                 </div>
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Automotivo</span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Estética Automotiva</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Solução digital completa para estética e cuidado de veículos.</p>
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Landing Page</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Conversão em Estética</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Páginas blindadas para Google Ads com foco em agendamento.</p>
                 </div>
             </div>
 
             <!-- CARD 2: DESPACHANTE -->
             <div onclick="openProjectModal('ga1F1eZ5sNQ', 'https://vitrine-projetos-two.vercel.app/despachante.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/despachante.png" alt="Despachante" 
+                <img src="../assets/images/despachante.png" alt="Performance Serviços" 
                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                 <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -274,203 +318,216 @@
                     </div>
                 </div>
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Serviços</span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Despachante</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Landing Page de alta conversão para serviços de documentação.</p>
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Lead Magnet</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Despachante Online</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Estratégia de captura direta para serviços de documentação rápida.</p>
                 </div>
             </div>
-
-            <!-- 3. NOIR GASTROBAR -->
-            <div onclick="openProjectModal('3MXvILsR5DA', 'https://vitrine-projetos-two.vercel.app/saas-ia.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="https://i.ibb.co/kb2NGD7/Captura-de-tela-2026-02-05-003024.png" alt="Projeto Noir Gastrobar" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Cardápio Digital</span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Noir Gastrobar</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Menu digital interativo com design de alto luxo.</p>
-                </div>
-            </div>
-
-            <!-- 4. AUTOMOTIVO -->
-            <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/capa-automotivo.jpg" alt="Projeto Automotivo" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Conceito</span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Automotivo Luxury</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos de alto padrão.</p>
-                </div>
-            </div>
-
-            <!-- 5. ARQUITETURA -->
-            <div onclick="openProjectModal('y8MOpAC93MU', 'https://vitrine-projetos-two.vercel.app/arquitetura.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/capa-arquitetura.jpg" alt="Projeto Arquitetura" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Imobiliária</span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Arquitetura Minimal</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Design clean e sofisticado para escritórios de arquitetura.</p>
-                </div>
-            </div>
-
-            <!-- 6. FINANCEIRO -->
-            <div onclick="openProjectModal('IrjsnvJxBzM', 'https://vitrine-projetos-two.vercel.app/financeiro.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/capa-financeiro.jpg" alt="Projeto Financeiro" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                    </div>
-                </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Fintech</span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Dashboard Financeira</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Interface de dados complexos com visualização intuitiva.</p>
-                </div>
-            </div>
-
-             <!-- 7. E-COMMERCE -->
-             <div onclick="openProjectModal('WKpuUGV41iM', 'https://vitrine-projetos-two.vercel.app/loja.html')" 
-                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-               <img src="../assets/images/capa-loja.jpg" alt="Projeto Loja" 
-                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                   <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                       <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                   </div>
-               </div>
-               <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">E-commerce</span>
-                   <h3 class="text-2xl font-tech text-white mb-1 uppercase">Loja Moderna</h3>
-                   <p class="text-slate-400 text-sm line-clamp-2">Experiência de compra fluida com interações dinâmicas.</p>
-               </div>
-           </div>
-
-           <!-- 8. FITNESS -->
-           <div onclick="openProjectModal('4nwWammXuc4', 'https://vitrine-projetos-two.vercel.app/fitness.html')" 
-                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-               <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Projeto Fitness" 
-                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                   <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                       <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                   </div>
-               </div>
-               <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Institucional</span>
-                   <h3 class="text-2xl font-tech text-white mb-1 uppercase">Iron Force Fitness</h3>
-                   <p class="text-slate-400 text-sm line-clamp-2">Site de alta performance para academias e personal trainers.</p>
-               </div>
-           </div>
 
         </div>
     </section>
 
-    <!-- SEÇÃO SEO EXPANDÍVEL (A MARTELAGEM DE GESTÃO DE TRÁFEGO) -->
-    <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
-        <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl">
+    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - GESTÃO DE TRÁFEGO SP) -->
+    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
+        <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
+            <!-- HEADER DO CARD -->
             <div onclick="toggleSeoText()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
-                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Guia Técnico: Gestão de Tráfego de Alta Performance
+                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade: Gestão de Tráfego Profissional em São Paulo
                     </h2>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa engenharia de resultados em SP</span>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia de anúncios na capital financeira</span>
                 </div>
-                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue transition-all">
-                    <i id="seo-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
+            <!-- CONTEÚDO EXPANDÍVEL (12 PILARES ADAPTADOS PARA GESTÃO DE TRÁFEGO) -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-8 font-light">
+                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
                     
-                    <p>
-                        A <strong>gestão de tráfego em São Paulo</strong> exige precisão cirúrgica. Com o mercado mais concorrido do Brasil, não há espaço para tentativas amadoras. Na EG Empório Digital, encaramos os anúncios como uma ferramenta de escala previsível.
+                    <p class="mb-4">
+                        Em um mercado tão denso quanto o de São Paulo, a <strong>gestão de tráfego</strong> pago é o motor que separa as empresas que escalam daquelas que apenas sobrevivem. Estar no topo da <strong>Avenida Paulista ou Faria Lima</strong> requer anúncios que dominem a atenção do público certo. Nós, da EG Empório Digital, desenvolvemos estratégias de anúncios que posicionam sua marca como a autoridade máxima em São Paulo.
                     </p>
 
-                    <!-- MARTELAGEM H3 CONFORME O DOSSIÊ -->
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Gestão de Tráfego Pago para Google Ads em São Paulo</h3>
-                    <p>
-                        A <strong>gestão de tráfego</strong> no Google Ads coloca sua empresa na frente de quem está com o cartão na mão. Em São Paulo, dominamos os leilões mais disputados através de uma <strong>gestão de tráfego</strong> analítica, focada em negativar termos inúteis e maximizar o índice de qualidade dos anúncios.
-                    </p>
+                    <!-- PILAR 1 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Gestão de Tráfego Profissional e Estratégico em São Paulo</h3>
+                        <p>
+                            Não basta "impulsionar" publicações. A <strong>gestão de tráfego</strong> profissional envolve análise profunda de público-alvo e concorrência na capital. Quando realizamos a <strong>gestão de tráfego</strong> para empresas em SP, aplicamos inteligência de dados para encontrar o cliente ideal na Marginal Pinheiros ou no Tatuapé, garantindo que sua marca seja vista por quem realmente tem potencial de compra.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Gestão de Tráfego para Redes Sociais e Meta Ads</h3>
-                    <p>
-                        Interromper o scroll do seu cliente exige criatividade e segmentação. Nossa <strong>gestão de tráfego</strong> para Instagram e Facebook utiliza públicos de interesse e lookalike para encontrar compradores em São Paulo com alta precisão. Através de uma <strong>gestão de tráfego</strong> constante, otimizamos seus criativos para manter o ROI sempre positivo.
-                    </p>
+                    <!-- PILAR 2 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Gestão de Tráfego para E-commerce e Lojas Virtuais</h3>
+                        <p>
+                            Escalar uma <strong>loja virtual</strong> em São Paulo exige domínio absoluto do CPA (Custo por Aquisição). Nossa <strong>gestão de tráfego</strong> para e-commerce foca em remarketing agressivo e campanhas dinâmicas que perseguem o comprador até o fechamento. Transformamos seu <strong>site de vendas online</strong> em uma máquina de escala, integrando anúncios ao estoque e à logística rápida que a capital demanda.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Gestão de Tráfego para E-commerce e Lojas Virtuais</h3>
-                    <p>
-                        Escalar uma loja virtual em São Paulo requer inteligência de dados. Implementamos campanhas dinâmicas e estratégias de remarketing agressivas. Uma <strong>gestão de tráfego</strong> eficiente para e-commerce foca no custo por venda (CPA), garantindo que sua operação seja lucrativa e escalável.
-                    </p>
+                    <!-- PILAR 3 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Gestão de Tráfego Estilo Direct Response para Alta Conversão</h3>
+                        <p>
+                            Para prestadores de serviços, a <strong>gestão de tráfego</strong> de resposta direta é vital. Projetamos anúncios que levam o cliente de São Paulo direto para o seu WhatsApp ou <strong>Landing Page</strong> de conversão. É a tática de <strong>fazer site</strong> e tráfego trabalharem em conjunto para blindar sua marca e maximizar o ROI (Retorno sobre Investimento) em campanhas de Google Ads.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg font-tech">Gestão de Tráfego com Foco em ROI e Alta Performance</h3>
-                    <p>
-                        O sucesso da nossa <strong>gestão de tráfego</strong> é medido pelo lucro na sua conta. Realizamos uma <strong>gestão de tráfego</strong> transparente, onde você acompanha métricas de conversão reais. Se você busca uma agência que respira performance em São Paulo, nossa <strong>gestão de tráfego</strong> é o motor que seu negócio precisa.
-                    </p>
+                    <!-- PILAR 4 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Gestão de Tráfego com Design de Criativos Modernos e UX</h3>
+                        <p>
+                            O <strong>design de site</strong> e o design dos anúncios definem o clique. Em uma cidade que respira inovação, criativos datados são ignorados. Nossa <strong>gestão de tráfego</strong> inclui a curadoria estética dos anúncios, garantindo que a comunicação visual transmita autoridade instantânea e profissionalismo para o público exigente de bairros como Itaim Bibi e Moema.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 5 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Gestão de Tráfego Mobile-First (Otimizado para Smartphones)</h3>
+                        <p>
+                            O paulistano vive no celular. Por isso, nossa <strong>gestão de tráfego</strong> é inteiramente Mobile-First. Garantimos que seus anúncios e o destino do tráfego (seja site ou <strong>loja online</strong>) carreguem impecavelmente em smartphones, capturando o cliente que está no trânsito, no metrô ou em reuniões pela capital.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 6 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Gestão de Tráfego com Foco em Performance e Velocidade de Escala</h3>
+                        <p>
+                            Performance técnica não é apenas velocidade de site, mas velocidade de aprendizado dos algoritmos. Nossa <strong>gestão de tráfego</strong> utiliza pixels de rastreamento avançados para que o Facebook e Google aprendam rápido quem é seu cliente em SP. Cada milissegundo e cada dado contam para otimizar sua verba e acelerar o faturamento.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 7 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Gestão de Tráfego Otimizada para SEO Local e Google Maps</h3>
+                        <p>
+                            Dominar o Google Maps em São Paulo é fundamental para negócios físicos. Nossa <strong>gestão de tráfego</strong> inclui campanhas geolocalizadas que atraem o cliente que está a poucos metros da sua empresa na Vila Olímpia ou Santana. Através de palavras-chave locais, fazemos sua marca ser a primeira opção na palma da mão do consumidor regional.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 8 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Gestão de Tráfego Blindada com Tag Manager e Rastreamento Seguro</h3>
+                        <p>
+                            Dados são o novo petróleo. Nossa <strong>gestão de tráfego</strong> envolve a instalação técnica de GTM (Google Tag Manager) e API de Conversão. Isso garante que cada centavo investido em São Paulo seja rastreado, protegendo suas informações e garantindo que o Google priorize seus anúncios por terem dados mais limpos e seguros.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 9 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Gestão de Tráfego com Relatórios e Gestão de Dados Independente</h3>
+                        <p>
+                            Damos transparência total ao empresário paulistano. Além da <strong>gestão de tráfego</strong>, você recebe dashboards intuitivos para acompanhar métricas de vendas e leads sem depender de termos técnicos complexos. Essa agilidade na leitura de dados é fundamental para quem precisa tomar decisões rápidas no mercado dinâmico de São Paulo.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 10 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Gestão de Tráfego Integrada com Automação de WhatsApp</h3>
+                        <p>
+                            O WhatsApp é onde o fechamento acontece em SP. Nossa <strong>gestão de tráfego</strong> cria pontes inteligentes: o lead clica no anúncio e cai direto no funil de atendimento do seu vendedor. Eliminamos barreiras para que a comunicação flua rapidamente, aumentando drasticamente as taxas de conversão comercial.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 11 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Gestão de Tráfego Estratégica para Escalar Negócios Locais</h3>
+                        <p>
+                            Não apenas "criamos anúncios"; construímos ativos que valorizam sua empresa. Planejamos a <strong>gestão de tráfego</strong> pensando no crescimento do seu negócio em São Paulo. Seja para expansão de serviços ou abertura de novas unidades, sua estratégia de anúncios estará preparada para escalar de forma previsível e lucrativa.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 12 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Gestão de Tráfego com Manutenção e Suporte Técnico Especializado</h3>
+                        <p>
+                            O mercado de anúncios muda todo dia. Oferecemos garantia de continuidade operacional com <strong>manutenção de campanhas</strong> ativa 24h. Com suporte técnico dedicado para o empresário de São Paulo, você tem a tranquilidade de saber que sua máquina de vendas online está sendo monitorada e otimizada por especialistas todos os dias.
+                        </p>
+                    </div>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        Se você precisa de <strong>gestão de tráfego</strong> em São Paulo ou quer entender como <strong>fazer anúncios</strong> de forma profissional para seu negócio, a EG Empório Digital é sua parceira de elite.
+                        Se você busca <strong>gestão de tráfego em São Paulo</strong> com foco em faturamento real, escala previsível e autoridade técnica, a EG Empório Digital é sua parceira de elite na capital dos negócios.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- FAQ (SEO BOOSTER) -->
     <section class="py-20 px-6 max-w-4xl mx-auto relative z-10">
         <div class="text-center mb-12">
-            <h2 class="font-tech text-2xl md:text-3xl text-white mb-4 uppercase">FAQ: <span class="text-brand-blue">Tráfego Pago SP</span></h2>
+            <h2 class="font-tech text-2xl md:text-3xl text-white mb-4 uppercase">
+                Dúvidas <span class="text-brand-blue">Frequentes</span>
+            </h2>
             <div class="w-24 h-1 bg-brand-blue mx-auto rounded-full opacity-50"></div>
         </div>
 
         <div class="space-y-4">
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm uppercase">Em quanto tempo vejo os primeiros resultados?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual o investimento mínimo para Gestão de Tráfego em SP?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Cliques e acessos são imediatos. No entanto, a otimização completa das campanhas de <strong>gestão de tráfego</strong> costuma levar de 30 a 45 dias para atingir o ROI ideal em São Paulo.
+                        O investimento é composto pela taxa da agência e pela verba de anúncios. Em São Paulo, recomendamos verbas competitivas para bater a concorrência. Na EG, criamos orçamentos personalizados focados em lucro, não apenas em cliques.
+                    </div>
+                </div>
+            </div>
+
+            <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
+                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês gerenciam Google Ads e Meta Ads simultaneamente?</span>
+                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                        Sim! Somos especialistas na <strong>gestão de tráfego</strong> multicanal. Integramos estratégias de Google (intenção) e Meta (geração de demanda) para cercar o cliente em todos os pontos de contato digital na capital.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MODAL DE VÍDEO (PADRÃO ORIGINAL RESTAURADO) -->
+    <!-- FOOTER -->
+    <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col items-center">
+                <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
+                <div class="logo-animate font-tech text-xl font-bold text-white uppercase" data-text="EG EMPÓRIO DIGITAL">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </div>
+            
+            <div class="flex gap-8">
+                <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+                <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center">
+                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
+                <p class="text-[10px] text-slate-700 mt-1 uppercase">SÃO PAULO - PERFORMANCE DE ELITE</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL DE VÍDEO -->
     <div id="project-modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeProjectModal()"></div>
         <div class="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-fade-in flex flex-col">
             <div class="flex justify-between items-center p-4 border-b border-white/10 bg-black/50">
-                <span class="text-sm font-tech text-white uppercase tracking-widest">Demonstração Interativa</span>
+                <span class="text-sm font-tech text-white uppercase tracking-widest">Performance Live</span>
                 <button onclick="closeProjectModal()" class="text-slate-400 hover:text-white transition">
                     <i class="ph ph-x text-2xl"></i>
                 </button>
@@ -487,34 +544,16 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
-    <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
-        <div class="flex flex-col items-center gap-8">
-            <div class="flex flex-col items-center">
-                <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 opacity-50 mb-2">
-                <div class="font-tech text-xl font-bold text-white uppercase">
-                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
-                </div>
-            </div>
-            <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital - Performance São Paulo.</p>
-        </div>
-    </footer>
-
     <!-- SCRIPTS -->
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('menu-icon');
             if (menu.classList.contains('hidden')) {
                 menu.classList.remove('hidden');
                 menu.classList.add('flex');
-                icon.classList.remove('ph-list');
-                icon.classList.add('ph-x');
             } else {
                 menu.classList.add('hidden');
                 menu.classList.remove('flex');
-                icon.classList.remove('ph-x');
-                icon.classList.add('ph-list');
             }
         }
 
@@ -535,11 +574,15 @@
             document.body.style.overflow = 'auto';
         }
 
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") closeProjectModal();
+        });
+
         function toggleSeoText() {
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
                 icon.classList.remove('rotate-180');
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
@@ -550,6 +593,14 @@
         function toggleFaq(button) {
             const content = button.nextElementSibling;
             const icon = button.querySelector('i');
+            document.querySelectorAll('.max-h-0').forEach(el => {
+                if (el !== content && el.id !== 'seo-content') { 
+                    el.style.maxHeight = null;
+                    if(el.previousElementSibling && el.previousElementSibling.querySelector('i')) {
+                        el.previousElementSibling.querySelector('i').classList.remove('rotate-180');
+                    }
+                }
+            });
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
                 icon.classList.remove('rotate-180');

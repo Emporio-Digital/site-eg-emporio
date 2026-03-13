@@ -124,6 +124,40 @@
             z-index: -50;
             overflow: hidden;
         }
+
+        /* --- EFEITO LOGO DINÂMICO (PADRÃO DOSSIÊ) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
     </style>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
@@ -140,7 +174,7 @@
             
             <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
-                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </a>
@@ -409,53 +443,129 @@
         </div>
     </section>
 
-    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
-    <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
+    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS - CORRIGIDA MOBILE) -->
+    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
             <!-- HEADER DO CARD (Clicável) -->
             <div onclick="toggleSeoText()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
-                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Guia Técnico: Criação de Sites Profissionais em Campinas
+                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade: Criação de Sites Profissionais em Campinas
                     </h2>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para a RMC</span>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para a RMC</span>
                 </div>
-                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
-                    <i id="seo-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
-            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS) -->
+            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS - 12 PILARES VERTICAIS) -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-6 font-light">
+                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
                     
-                    <p>
+                    <p class="mb-4">
                         No cenário competitivo do interior paulista, a <strong>criação de site</strong> em Campinas não é apenas um luxo, mas uma necessidade estratégica para empresas que desejam dominar o "Vale do Silício Brasileiro". A cidade exige que negócios se destaquem digitalmente do <strong>Taquaral ao Aeroporto de Viracopos</strong>, e nós, da EG Empório Digital, entendemos essa urgência. Nosso foco é entregar mais do que código; entregamos resultados que posicionam sua marca no topo do Google em Campinas.
                     </p>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Profissionais e de Alta Performance em Campinas</h3>
-                    <p>
-                        Muitos empreendedores tentam soluções amadoras, mas a <strong>criação de sites profissionais</strong> é o que separa marcas consolidadas de aventuras passageiras na RMC. Quando <strong>fazemos sites</strong>, aplicamos técnicas de engenharia de software e psicologia de vendas. Um site lento ou mal estruturado expulsa o cliente em segundos. Por isso, investir na <strong>criação de um site</strong> otimizado na EG é investir na autoridade da sua marca perante o público exigente de Campinas e Valinhos.
-                    </p>
+                    <!-- PILAR 1 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Criação de Sites Profissionais e Institucionais em Campinas</h3>
+                        <p>
+                            Muitos empreendedores tentam soluções amadoras, mas a <strong>criação de sites profissionais</strong> é o que separa marcas consolidadas de aventuras passageiras na RMC. Quando <strong>fazemos sites</strong>, aplicamos técnicas de engenharia de software e psicologia de vendas. Um site lento ou mal estruturado expulsa o cliente em segundos. Por isso, investir na <strong>criação de um site</strong> otimizado na EG é investir na autoridade da sua marca perante o público exigente de Campinas e Valinhos.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites para E-commerce e Lojas Virtuais na RMC</h3>
-                    <p>
-                        Se o seu objetivo é vender produtos a partir do maior hub logístico do interior, ter uma <strong>loja virtual</strong> robusta é obrigatório. Desenvolvemos sua <strong>loja online</strong> com checkout transparente, segurança SSL e integração logística privilegiada via Viracopos. Um <strong>site de vendas online</strong> em Campinas precisa operar 24 horas por dia sem falhas. Nós criamos estruturas que suportam alto tráfego e convertem visitantes em compradores, transformando sua vitrine digital em uma máquina de receita recorrente. Seja um <strong>site de vendas</strong> B2B ou B2C, a tecnologia é a mesma: performance total.
-                    </p>
+                    <!-- PILAR 2 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Criação de Sites para E-commerce e Lojas Virtuais</h3>
+                        <p>
+                            Se o seu objetivo é vender produtos a partir do maior hub logístico do interior, ter uma <strong>loja virtual</strong> robusta é obrigatório. Desenvolvemos sua <strong>loja online</strong> com checkout transparente, segurança SSL e integração logística privilegiada via Viracopos. Um <strong>site de vendas online</strong> em Campinas precisa operar 24 horas por dia sem falhas. Nós criamos estruturas que suportam alto tráfego e convertem visitantes em compradores.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Estilo Landing Page para Conversão Imediata</h3>
-                    <p>
-                        Para prestadores de serviços, a estratégia de <strong>criação de site</strong> estilo Landing Page é a mais eficaz na Região Metropolitana de Campinas. Diferente de um site institucional comum, uma Landing Page é focada em uma única ação: fazer o cliente campineiro entrar em contato via WhatsApp. Se você busca <strong>fazer site</strong> para campanhas de Google Ads ou tráfego pago em Paulínia e Vinhedo, essa é a ferramenta ideal. Nossa agência <strong>cria sites</strong> focados em capturar leads qualificados, usando gatilhos mentais e layout persuasivo.
-                    </p>
+                    <!-- PILAR 3 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Criação de Sites Estilo Landing Page para Alta Conversão</h3>
+                        <p>
+                            Para prestadores de serviços, a estratégia de <strong>criação de site</strong> estilo Landing Page é a mais eficaz na Região Metropolitana de Campinas. Diferente de um site institucional comum, uma Landing Page é focada em uma única ação: fazer o cliente campineiro entrar em contato via WhatsApp. Se você busca <strong>fazer site</strong> para campanhas de Google Ads ou tráfego pago em Paulínia e Vinhedo, essa é a ferramenta ideal para capturar leads qualificados.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites com Design Moderno e Inovação Tecnológica</h3>
-                    <p>
-                        O <strong>design de site</strong> (UI/UX) é o que define se o usuário confia ou não na sua empresa. Em uma cidade que respira ciência e tecnologia, um visual moderno transmite autoridade imediata. Não basta apenas funcionalidade; a estética importa para o público do <strong>Cambuí</strong> ou de <strong>Barão Geraldo</strong>. Nós alinhamos o <strong>design de site</strong> à identidade visual da sua marca, garantindo que ela seja memorável. Se você quer saber <strong>como fazer site</strong> que realmente impacta o mercado local, a resposta está na união entre beleza e velocidade máxima de carregamento.
-                    </p>
+                    <!-- PILAR 4 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Criação de Sites com Design Moderno e UX</h3>
+                        <p>
+                            O <strong>design de site</strong> (UI/UX) é o que define se o usuário confia ou não na sua empresa. Em uma cidade que respira ciência e tecnologia, um visual moderno transmite autoridade imediata. Não basta apenas funcionalidade; a estética importa para o público do <strong>Cambuí</strong> ou de <strong>Barão Geraldo</strong>. Nós alinhamos o <strong>design de site</strong> à identidade visual da sua marca, garantindo que ela seja memorável.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 5 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Criação de Sites Mobile-First (Otimizados para Celular)</h3>
+                        <p>
+                            A maior parte das buscas em Campinas vem do celular. Por isso, <strong>criamos sites</strong> que funcionam perfeitamente em qualquer dispositivo móvel e tablets. Nossa metodologia Mobile-First garante que a navegação seja fluida, rápida e intuitiva, evitando que você perca clientes que estão em trânsito pela cidade ou buscando serviços de forma rápida via smartphone.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 6 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Criação de Sites com Performance e Velocidade Extrema</h3>
+                        <p>
+                            A EG Empório Digital <strong>cria sites</strong> ultrarrápidos. Performance técnica não é apenas sobre o usuário, mas sobre agradar aos algoritmos do Google (Core Web Vitals). Em uma região de alta produtividade como a RMC, cada milissegundo de carregamento conta. Utilizamos tecnologias de ponta para garantir que sua página carregue quase instantaneamente, reduzindo a taxa de rejeição.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 7 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Criação de Sites Otimizados para SEO Local</h3>
+                        <p>
+                            Dominamos o Google em Campinas. Estruturamos o código fonte de cada página para que sua empresa apareça para quem realmente importa: o cliente local. Através de técnicas avançadas de SEO e Google Meu Negócio, fazemos com que sua marca seja a autoridade máxima quando alguém buscar por serviços na sua coordenada geográfica.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 8 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Criação de Sites Blindados e Seguros (SSL)</h3>
+                        <p>
+                            Segurança de dados é prioridade. Sua <strong>loja virtual</strong> ou site institucional terá proteção máxima contra invasões e selos de navegação segura (HTTPS). Isso não apenas protege as informações dos seus clientes campineiros, mas também aumenta a confiança do Google no seu domínio, ajudando diretamente no rankeamento e na conversão.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 9 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Criação de Sites com Gestão de Conteúdo Independente</h3>
+                        <p>
+                            Damos autonomia total ao cliente. Ao finalizar a <strong>criação do site</strong>, você terá acesso a um painel de gestão intuitivo (CMS) onde poderá alterar textos, fotos e banners sem depender de programadores. Essa agilidade é fundamental para empresas em Campinas que precisam atualizar promoções ou portfólios em tempo real.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 10 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Criação de Sites Integrados com Automação de WhatsApp</h3>
+                        <p>
+                            Reduzimos a fricção no atendimento comercial. Nossos projetos vêm com integrações inteligentes de WhatsApp que direcionam o lead direto para o seu time de vendas. Em Campinas, a velocidade de resposta é o que fecha o negócio, e nós facilitamos essa ponte entre o site e o seu fechamento comercial.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 11 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Criação de Sites Estratégicos para Escalar Negócios</h3>
+                        <p>
+                            Não apenas <strong>fazemos sites</strong>; construímos ativos digitais que valorizam sua empresa no interior de São Paulo. Planejamos a arquitetura do site pensando no futuro crescimento do seu negócio, permitindo expansões, novos serviços e integrações de marketing digital conforme sua empresa escala na região.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 12 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Criação de Sites com Manutenção e Suporte Técnico</h3>
+                        <p>
+                            Oferecemos garantia de continuidade. Nossa agência não apenas <strong>cria sites</strong> e desaparece; oferecemos planos de manutenção e suporte especializado para garantir que sua infraestrutura digital esteja sempre atualizada, segura e performando no topo do mercado de Campinas e região metropolitana, 24 horas por dia.
+                        </p>
+                    </div>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        Em resumo: se você precisa de <strong>criação de site em Campinas</strong>, <strong>loja virtual</strong> ou quer saber como <strong>fazer site</strong> pode mudar o rumo do seu faturamento, a EG Empório Digital é a parceira técnica certa. Nós não apenas <strong>fazemos sites</strong>; nós construímos ativos digitais que valorizam sua empresa no interior de São Paulo.
+                        Em resumo: se você precisa de <strong>criação de site em Campinas</strong>, <strong>loja virtual</strong> ou quer saber como <strong>fazer site</strong> pode mudar o rumo do seu faturamento, a EG Empório Digital é a parceira técnica certa.
                     </p>
                 </div>
             </div>
@@ -540,7 +650,7 @@
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col items-center">
                 <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
-                <div class="font-tech text-xl font-bold text-white uppercase">
+                <div class="logo-animate font-tech text-xl font-bold text-white uppercase" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </div>
@@ -608,15 +718,16 @@
             }
         });
 
-        // TOGGLE DO TEXTÃO SEO
+        // TOGGLE DO TEXTÃO SEO (AJUSTADO PARA MOBILE)
         function toggleSeoText() {
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
             
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
                 icon.classList.remove('rotate-180');
             } else {
+                // Forçamos o recálculo da altura real para o mobile não truncar nada
                 content.style.maxHeight = content.scrollHeight + "px";
                 icon.classList.add('rotate-180');
             }

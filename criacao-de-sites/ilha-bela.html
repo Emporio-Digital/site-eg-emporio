@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- SEO LOCAL: ILHABELA -->
+    <!-- SEO LOCAL: ILHABELA (ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
     <title>Criação de Sites em Ilhabela | Landing Pages e Lojas Virtuais - EG Empório</title>
-    <meta name="description" content="Especialistas em criação de sites profissionais em Ilhabela. Fazemos sites, landing pages de alta conversão e lojas virtuais para o setor de turismo e comércio de Ilhabela.">
+    <meta name="description" content="Especialistas em criação de sites profissionais em Ilhabela. Atendemos pousadas no Perequê, comércios na Vila e serviços no Curral. Sites de alto luxo e Lojas Virtuais.">
     
-    <!-- CANONICAL -->
+    <!-- CANONICAL: VALIDAÇÃO DE ORIGINALIDADE (SELF-REFERENCING) -->
     <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/ilhabela">
     
-    <!-- SCHEMA MARKUP (LOCAL BUSINESS) -->
+    <!-- SCHEMA MARKUP (LOCAL BUSINESS / PROFESSIONAL SERVICE) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -19,9 +19,22 @@
       "name": "EG Empório Digital - Criação de Sites em Ilhabela",
       "url": "https://egemporiodigital.com.br/criacao-de-sites/ilhabela",
       "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "areaServed": ["Ilhabela", "Perequê", "Vila", "Praia do Curral", "Litoral Norte", "São Sebastião"],
-      "description": "Agência especializada em criação de sites, landing pages e lojas virtuais em Ilhabela e Litoral Norte de SP.",
-      "priceRange": "$$$"
+      "priceRange": "$$$",
+      "telephone": "+5511916053292",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Perequê",
+        "addressLocality": "Ilhabela",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.7781",
+        "longitude": "-45.3581"
+      },
+      "areaServed": ["Ilhabela", "Perequê", "Vila", "Praia do Curral", "Itaguaçu", "Água Branca", "Litoral Norte", "São Sebastião"],
+      "description": "Agência especializada em criação de sites, landing pages de alta conversão e lojas virtuais em Ilhabela, com foco em turismo, hotelaria e mercado náutico."
     }
     </script>
 
@@ -111,6 +124,40 @@
             z-index: -50;
             overflow: hidden;
         }
+
+        /* --- EFEITO LOGO DINÂMICO (PADRÃO DOSSIÊ) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
     </style>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
@@ -123,11 +170,11 @@
 
     <!-- HEADER -->
     <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center relative z-50">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
             
             <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
-                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </a>
@@ -135,29 +182,29 @@
             <!-- NAV LINKS -->
             <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
                 <a href="../index.html" class="hover:text-brand-blue transition-colors">Início</a>
-                <a href="#servicos-locais" class="text-brand-blue transition-colors">Serviços Locais</a>
+                <a href="#servicos-locais" class="text-brand-blue transition-colors">Ilhabela & Litoral</a>
                 <a href="#projetos-disponiveis" class="hover:text-brand-blue transition-colors">Portfólio</a>
             </nav>
 
-            <a href="https://wa.me/5511916053292?text=Olá, sou de Ilhabela e vi o site, gostaria de um orçamento." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+            <a href="https://wa.me/5511916053292?text=Olá, sou de Ilhabela e quero um orçamento para meu site." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
                 Fale com a gente
             </a>
 
             <button id="menu-btn" class="md:hidden text-brand-blue text-3xl focus:outline-none" onclick="toggleMenu()">
-                <i id="menu-icon" class="ph ph-list"></i>
+                <i class="ph ph-list"></i>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden fixed inset-x-0 top-24 bg-eg-dark/98 backdrop-blur-xl border-b border-brand-blue/20 flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
+        <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
             <a href="../index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Voltar ao Início</a>
             <a href="#servicos-locais" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços</a>
-            <a href="https://wa.me/5511916053292?text=Olá, sou de Ilhabela e vi o site, gostaria de um orçamento." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
+            <a href="https://wa.me/5511916053292?text=Olá, sou de Ilhabela e quero um orçamento para meu site." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
                 Fale com a gente
             </a>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (ESTRATÉGIA AGRESSIVA: ILHABELA) -->
     <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
         
         <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
@@ -165,18 +212,17 @@
         </h1>
 
         <h2 class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
-            AUMENTE SUAS RESERVAS E VENDAS NO LITORAL
+            AUMENTE SUAS RESERVAS E VENDAS NA CAPITAL DA VELA
         </h2>
 
         <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-8 z-10"></div>
 
         <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
-            Procurando por <strong>web design profissional</strong>? Somos especialistas em posicionar marcas de Ilhabela no topo. 
-            Criamos sua <strong class="text-white">loja online</strong>, site para pousadas ou landing pages de alto luxo que conectam seu negócio ao público certo.
+            Se sua empresa está no <strong>Perequê, na Vila ou no Curral</strong>, você precisa de uma presença digital que acompanhe o luxo e a exclusividade da ilha. Se você busca <strong>criação de um site</strong> profissional em Ilhabela, entregamos o design refinado e a performance necessária para o setor hoteleiro e náutico. Tenha uma <strong class="text-white">loja online</strong> ou site para pousada blindado para dominar o Litoral Norte.
         </p>
 
         <div class="flex flex-col md:flex-row gap-4 z-10">
-            <a href="https://wa.me/5511916053292?text=Preciso de um site em Ilhabela para aumentar minhas vendas." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+            <a href="https://wa.me/5511916053292?text=Preciso de um site em Ilhabela focado em alta conversão." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
                 Solicitar Orçamento
             </a>
             <a href="#projetos-disponiveis" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
@@ -186,15 +232,15 @@
 
     </section>
 
-    <!-- SEÇÃO DE CONTEÚDO SEO (ILHABELA) -->
+    <!-- SEÇÃO DE CONTEÚDO SEO (KEYWORDS INJETADAS) -->
     <section id="servicos-locais" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20">
             <div class="text-left mb-10">
                 <h2 class="font-tech text-3xl md:text-4xl text-white mb-4 uppercase leading-tight">
-                    Destaque sua empresa na <span class="text-brand-blue">Capital Nacional da Vela</span>
+                    Por que contratar a <span class="text-brand-blue">EG Empório</span> em Ilhabela?
                 </h2>
                 <p class="text-slate-300 text-lg leading-relaxed">
-                    Ilhabela é um polo de turismo e luxo. Para pousadas no Perequê, serviços na Vila ou comércios na Praia do Curral, a <strong>criação de site</strong> precisa refletir o padrão de excelência que o turista espera encontrar na ilha.
+                    Sabemos que o mercado em <strong>Ilhabela</strong> é movido pelo turismo de alto padrão, eventos exclusivos e o setor náutico. Não basta um site comum; sua pousada no <strong>Itaguaçu ou Água Branca</strong> precisa de uma interface que encante e converta em reservas.
                 </p>
             </div>
 
@@ -203,12 +249,12 @@
                 <div>
                     <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Especialistas em Criação de Sites</h3>
                     <p class="text-slate-400 mb-6">
-                        Nós <strong>fazemos sites</strong> focados em experiência do usuário. Para a <strong>criação de sites profissionais</strong> em Ilhabela, priorizamos imagens de alta qualidade e carregamento rápido (essencial para quem navega via 4G no litoral). Nosso <strong>design de site</strong> é premium e exclusivo.
+                        Nós <strong>fazemos sites</strong> focados em autoridade visual. Seja para <strong>criação de sites profissionais</strong> para pousadas boutique ou sistemas de aluguel de lanchas, utilizamos tecnologias que garantem velocidade, mesmo com fotos pesadas. Nosso <strong>design de site</strong> é pensado para transmitir o requinte necessário na Vila e em todo o Litoral Norte.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site otimizado para pousadas</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site responsivo e elegante</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites focados em agendamentos e reservas</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Criação de site otimizado (SEO Local Ilhabela)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Design de site responsivo (Adaptável a turistas)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Integração com sistemas de reservas diretas</li>
                     </ul>
                 </div>
 
@@ -216,25 +262,25 @@
                 <div>
                     <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Lojas Virtuais e Landing Pages</h3>
                     <p class="text-slate-400 mb-6">
-                        Quer vender online? Desenvolvemos sua <strong>loja online</strong> ou <strong>loja virtual</strong> completa. Se o seu foco é capturar leads para eventos ou aluguéis de temporada, nossas <strong>Landing Pages</strong> são projetadas com gatilhos mentais para alta conversão imediata.
+                        Quer vender seus produtos ou serviços para quem frequenta a ilha? Desenvolvemos sua <strong>loja online</strong> ou <strong>loja virtual</strong> com checkout seguro. Se o seu foco é capturar leads qualificados para casamentos ou eventos pé na areia, nossas <strong>Landing Pages</strong> são projetadas com gatilhos de alto luxo. Tenha um <strong>site de vendas online</strong> ativo 24h.
                     </p>
                     <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Site de vendas com checkout seguro</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages para serviços de luxo</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Fazemos sites que vendem a imagem da Ilha</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Site de vendas com foco em serviços exclusivos</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages para anúncios de alta temporada</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Nós fazemos sites que geram faturamento real</li>
                     </ul>
                 </div>
             </div>
             
             <div class="mt-10 text-center">
                 <a href="https://wa.me/5511916053292?text=Preciso de um site profissional em Ilhabela." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
-                    Solicitar Orçamento <i class="ph ph-arrow-right"></i>
+                    Quero meu site agora <i class="ph ph-arrow-right"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO: PROJETOS DISPONÍVEIS (TODOS OS 8 CARDS) -->
+    <!-- SEÇÃO: PROJETOS DISPONÍVEIS -->
     <section id="projetos-disponiveis" class="scroll-mt-32 py-20 px-6 max-w-7xl mx-auto border-t border-white/5 relative z-10">
         
         <div class="text-center mb-16">
@@ -242,7 +288,7 @@
                 Exemplos de <span class="text-brand-blue">Projetos Reais</span>
             </h2>
             <p class="text-slate-500 text-sm max-w-2xl mx-auto">
-                Veja o nível de qualidade que entregamos para nossos parceiros em todo o Brasil.
+                Veja o nível de qualidade que entregamos para clientes em Ilhabela e em todo o Brasil.
             </p>
         </div>
 
@@ -262,7 +308,7 @@
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Automotivo</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Estética Automotiva</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Solução digital completa para estética de veículos.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Solução digital completa para estética e cuidado de veículos.</p>
                 </div>
             </div>
 
@@ -298,11 +344,11 @@
                 <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Cardápio Digital</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Noir Gastrobar</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Menu digital interativo com design de luxo e glassmorphism.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Menu digital interativo com design de alto luxo e glassmorphism.</p>
                 </div>
             </div>
 
-            <!-- 4. AUTOMOTIVO LUXURY -->
+            <!-- 4. AUTOMOTIVO -->
             <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 <img src="../assets/images/capa-automotivo.jpg" alt="Projeto Automotivo" 
@@ -395,58 +441,136 @@
         </div>
     </section>
 
-    <!-- SEÇÃO SEO EXPANDÍVEL (ILHABELA) - REGRA DE OURO DOS TÍTULOS -->
-    <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
+    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS - ILHABELA) -->
+    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
+            <!-- HEADER DO CARD (Clicável) -->
             <div onclick="toggleSeoText()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
-                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Guia Técnico: Presença Digital em Ilhabela
+                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade: Criação de Sites Profissionais em Ilhabela
                     </h2>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Estratégias para o turismo e comércio de luxo</span>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para o turismo de alto padrão</span>
                 </div>
-                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue transition-all">
-                    <i id="seo-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
+            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS - 12 PILARES VERTICAIS) -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-6 font-light">
+                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
                     
-                    <p>
-                        Ilhabela é um dos destinos mais exclusivos do país. Com um mercado focado em hospitalidade, náutica e casamentos pé na areia, a <strong>criação de site</strong> aqui exige um refinamento visual superior. A EG Empório Digital desenvolve ativos digitais que capturam a essência da ilha e convertem o turista de alto padrão em cliente fiel.
+                    <p class="mb-4">
+                        Na Capital Nacional da Vela, a <strong>criação de site</strong> em Ilhabela é o divisor de águas entre pousadas com agenda cheia e negócios que dependem apenas de plataformas de terceiros. Nós, da EG Empório Digital, desenvolvemos soluções de elite que posicionam sua marca no topo do Google no Litoral Norte, garantindo que seu hotel ou serviço náutico seja a autoridade máxima do <strong>Perequê à Vila e Praia do Curral</strong>.
                     </p>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Profissionais para Hotéis e Pousadas em Ilhabela</h3>
-                    <p>
-                        No setor hoteleiro do Litoral Norte, a <strong>criação de sites profissionais</strong> é a base para o aumento das reservas diretas. Nós <strong>fazemos sites</strong> com motores de reserva integrados e galerias de fotos imersivas. A <strong>criação de um site</strong> rápido e otimizado garante que sua pousada seja encontrada por quem busca o refúgio perfeito em Ilhabela.
-                    </p>
+                    <!-- PILAR 1 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Criação de Sites Profissionais e Institucionais em Ilhabela</h3>
+                        <p>
+                            O mercado de Ilhabela exige um refinamento visual superior. A <strong>criação de sites profissionais</strong> para pousadas boutique e agências de turismo deve refletir a sofisticação da ilha. Quando <strong>fazemos sites</strong> para o mercado hoteleiro, aplicamos engenharia de conversão focada em reservas diretas. Um site institucional em Ilhabela precisa ser o espelho do paraíso, transmitindo confiança imediata para turistas de alto padrão que buscam exclusividade.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites para E-commerce e Lojas Virtuais Náuticas</h3>
-                    <p>
-                        O mercado náutico e o comércio local de Ilhabela precisam de uma <strong>loja virtual</strong> (E-commerce) de alta performance. Na <strong>criação de sites</strong> de vendas, focamos em segurança e facilidade de navegação. Ter um <strong>site de vendas online</strong> permite que sua marca atenda clientes da ilha e de todo o estado. Nós <strong>criamos sites</strong> que funcionam como verdadeiras máquinas de vendas.
-                    </p>
+                    <!-- PILAR 2 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Criação de Sites para E-commerce e Lojas Virtuais</h3>
+                        <p>
+                            Seja para vender produtos locais ou pacotes turísticos, sua <strong>loja virtual</strong> precisa ser impecável. Desenvolvemos sua <strong>loja online</strong> com checkout fluido, segurança SSL e foco total na experiência do usuário. Um <strong>site de vendas online</strong> em Ilhabela deve estar preparado para transações rápidas e seguras, transformando o desejo do turista em faturamento real através de um ecossistema de vendas robusto.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites Estilo Landing Page para Pousadas e Eventos</h3>
-                    <p>
-                        Para serviços de casamentos, passeios de lancha e aluguéis de temporada em Ilhabela, <strong>fazer site</strong> do tipo Landing Page é o caminho mais curto para gerar leads qualificados. Projetamos <strong>Landing Pages</strong> com gatilhos de urgência e foco total no WhatsApp. É a estratégia ideal de <strong>criação de sites</strong> para quem investe em tráfego pago.
-                    </p>
+                    <!-- PILAR 3 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Criação de Sites Estilo Landing Page para Alta Conversão</h3>
+                        <p>
+                            Para serviços de aluguel de lanchas, casamentos na praia ou passeios de jipe, a <strong>criação de site</strong> estilo Landing Page é a estratégia mais agressiva de lucro. Focamos em uma única meta: levar o cliente direto para o seu WhatsApp. Nós <strong>criamos sites</strong> de página única que blindam sua marca contra a concorrência e maximizam o ROI em campanhas de tráfego pago no Litoral Norte de São Paulo.
+                        </p>
+                    </div>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Criação de Sites com Design Moderno para o Litoral Norte</h3>
-                    <p>
-                        O <strong>design de site</strong> em um ambiente paradisíaco deve ser clean, fluido e elegante. Um visual amador afasta o cliente de alto luxo. Nós garantimos um <strong>design de site</strong> de classe mundial, focado em performance mobile. Na EG Empório, nós <strong>fazemos sites</strong> que transmitem a sofisticação que Ilhabela representa.
-                    </p>
+                    <!-- PILAR 4 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Criação de Sites com Design Moderno e UX (User Experience)</h3>
+                        <p>
+                            O <strong>design de site</strong> em Ilhabela não pode ser genérico. Ele deve capturar a estética náutica e paradisíaca da região. Não entregamos apenas páginas, entregamos experiências imersivas. Alinhamos o <strong>design de site</strong> à identidade visual do seu negócio, garantindo uma navegação intuitiva (UX) que conduz o turista naturalmente até o fechamento da reserva ou compra.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 5 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Criação de Sites Mobile-First (Otimizados para Celular)</h3>
+                        <p>
+                            Turistas em Ilhabela buscam informações enquanto estão na praia ou navegando. Por isso, <strong>criamos sites</strong> sob a filosofia Mobile-First. Sua página terá carregamento impecável em smartphones, garantindo que o cliente que busca um restaurante na Vila ou uma pousada no Curral encontre sua empresa com facilidade e rapidez absoluta, independentemente de onde estiver na ilha.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 6 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Criação de Sites com Performance e Velocidade Extrema</h3>
+                        <p>
+                            Velocidade é luxo e rankeamento. A EG Empório Digital <strong>cria sites</strong> ultrarrápidos seguindo os critérios do Google Core Web Vitals. Em um destino onde a conexão pode oscilar, um site leve é fundamental. Utilizamos compressão de dados avançada para garantir que suas fotos de alta resolução das praias carreguem instantaneamente, mantendo o usuário engajado e satisfeito.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 7 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Criação de Sites Otimizados para SEO Local</h3>
+                        <p>
+                            Dominar as buscas em Ilhabela e São Sebastião é nossa especialidade. Estruturamos o SEO para que sua empresa apareça no topo quando o turista pesquisar por "pousada em ilhabela" ou "o que fazer na ilha". Através de palavras-chave geolocalizadas e técnicas avançadas, transformamos o Google no seu principal canal de aquisição de clientes sem depender apenas de comissões de terceiros.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 8 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Criação de Sites Blindados e Seguros (Certificado SSL)</h3>
+                        <p>
+                            Protegemos a privacidade dos seus hóspedes e clientes. Todo projeto de <strong>criação de site</strong> inclui certificado SSL e camadas de segurança contra invasões. Sites seguros transmitem o profissionalismo que o mercado de luxo de Ilhabela exige, além de serem priorizados pelo Google, garantindo que os dados de cartões e reservas estejam sempre sob proteção máxima.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 9 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
+                        <p>
+                            Damos total liberdade ao empresário de Ilhabela. Ao finalizar a <strong>criação do site</strong>, você recebe um painel administrativo intuitivo para atualizar fotos de novos quartos, pratos ou pacotes de passeios sem depender de terceiros. Essa agilidade é vital para acompanhar a dinâmica da temporada turística e manter as informações sempre frescas para o seu público.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 10 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Criação de Sites Integrados com Automação de WhatsApp</h3>
+                        <p>
+                            O WhatsApp é o fechamento de vendas em Ilhabela. Nossos projetos incluem integrações inteligentes que reduzem a fricção no atendimento. O turista clica no site e cai direto na conversa com sua recepção ou equipe de vendas. Eliminamos barreiras técnicas para que a comunicação seja imediata, aumentando drasticamente sua taxa de ocupação e vendas.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 11 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Criação de Sites Estratégicos para Escalar Negócios Locais</h3>
+                        <p>
+                            Não apenas <strong>fazemos sites</strong>; construímos ativos digitais que valorizam sua marca no Litoral Norte. Planejamos a arquitetura pensando no crescimento do seu negócio, seja para expansão de novos serviços náuticos ou novas unidades hoteleiras. Estar pronto para o crescimento digital é o que define os líderes do mercado turístico de Ilhabela.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 12 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Criação de Sites com Manutenção e Suporte Técnico Especializado</h3>
+                        <p>
+                            Sua vitrine digital nunca dorme. Oferecemos garantia de continuidade e <strong>manutenção de sites</strong> para que sua infraestrutura esteja sempre online, rápida e segura 24h por dia. Com suporte técnico dedicado para o empresário de Ilhabela, você tem a paz de espírito para focar no atendimento ao hóspede enquanto nós cuidamos da sua máquina de vendas online.
+                        </p>
+                    </div>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        Conclusão: Se você busca <strong>criação de site</strong> em Ilhabela ou quer saber como <strong>fazer site</strong> para atrair mais turistas, a EG Empório Digital é a sua agência. Transformamos o potencial da ilha em resultados digitais sólidos.
+                        Se você busca <strong>criação de site em Ilhabela</strong> com foco em design de luxo, performance hoteleira e faturamento real, a EG Empório Digital é sua parceira técnica definitiva no Litoral Norte.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO FAQ (SEO BOOSTER COMPLETA) -->
+    <!-- SEÇÃO FAQ (SEO BOOSTER) -->
     <section class="py-20 px-6 max-w-4xl mx-auto relative z-10">
         <div class="text-center mb-12">
             <h2 class="font-tech text-2xl md:text-3xl text-white mb-4 uppercase">
@@ -456,41 +580,38 @@
         </div>
 
         <div class="space-y-4">
-            <!-- Pergunta 1 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto custa para criar um site em Ilhabela?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual o valor para criação de um site em Ilhabela?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        O investimento é proporcional ao objetivo. Landing Pages para serviços rápidos têm valor menor, enquanto sites de pousadas com sistema de reserva ou Lojas Virtuais robustas exigem mais detalhes. Na EG Empório Digital, focamos no retorno sobre o investimento para o empresário de Ilhabela.
+                        O investimento depende da complexidade. Uma Landing Page para aluguel de lanchas é diferente de um site para pousada com motor de reservas. Criamos orçamentos personalizados para empresas de Ilhabela focados em ROI.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 2 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">O site vai aparecer no Google para turistas?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês atendem pousadas e o setor náutico?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        Sim! Aplicamos SEO Local e Regional. Estruturamos o site para ser encontrado por quem busca serviços em Ilhabela, seja morador ou turistas de São Paulo e outras capitais que frequentam a ilha.
+                        Sim! Somos especialistas na <strong>criação de sites profissionais</strong> para turismo e hotelaria. Desenvolvemos interfaces que vendem a experiência única de Ilhabela para o turista nacional e internacional.
                     </div>
                 </div>
             </div>
 
-            <!-- Pergunta 3 -->
             <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
                 <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
-                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">O site funciona bem em celulares?</span>
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">O site vai ajudar a aumentar minhas reservas diretas?</span>
                     <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
                 </button>
                 <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
                     <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                        100%. Sabemos que em Ilhabela a navegação mobile é predominante. Todos os nossos projetos são Mobile-First, garantindo velocidade e beleza em qualquer smartphone.
+                        Com certeza. A <strong>criação do site</strong> foca em eliminar intermediários. Com SEO Local e design de alta conversão, seu site se torna seu canal de vendas mais rentável, diminuindo a dependência de aplicativos de reserva.
                     </div>
                 </div>
             </div>
@@ -502,7 +623,7 @@
         <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeProjectModal()"></div>
         <div class="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-fade-in flex flex-col">
             <div class="flex justify-between items-center p-4 border-b border-white/10 bg-black/50">
-                <span class="text-sm font-tech text-white uppercase tracking-widest">Portfólio Interativo</span>
+                <span class="text-sm font-tech text-white uppercase tracking-widest">Demonstração Interativa</span>
                 <button onclick="closeProjectModal()" class="text-slate-400 hover:text-white transition">
                     <i class="ph ph-x text-2xl"></i>
                 </button>
@@ -511,9 +632,9 @@
                 <iframe id="modal-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="p-6 text-center bg-black/50 flex flex-col md:flex-row items-center justify-between gap-4">
-                <p class="text-xs text-slate-500 hidden md:block">Visualização em alta performance.</p>
-                <a id="modal-link-btn" href="#" target="_blank" class="w-full md:w-auto px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all">
-                    Acessar Site Live <i class="ph ph-arrow-up-right ml-2"></i>
+                <p class="text-xs text-slate-500 hidden md:block">Para melhor experiência, visualize no Desktop.</p>
+                <a id="modal-link-btn" href="#" target="_blank" class="w-full md:w-auto px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                    Acessar Site <i class="ph ph-arrow-up-right ml-2"></i>
                 </a>
             </div>
         </div>
@@ -524,27 +645,32 @@
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col items-center">
                 <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
-                <div class="font-tech text-xl font-bold text-white uppercase">
+                <div class="logo-animate font-tech text-xl font-bold text-white uppercase" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </div>
             
             <div class="flex gap-8">
                 <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-instagram-logo text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+                <a href="https://egemporiodigital.com.br/blog" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-article text-2xl text-slate-300"></i>
                     </div>
                 </a>
                 <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-envelope-simple text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300"></i>
                     </div>
                 </a>
             </div>
 
             <div class="text-center">
                 <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
-                <p class="text-[10px] text-slate-700 mt-1">Sua agência de criação de sites em Ilhabela.</p>
+                <p class="text-[10px] text-slate-700 mt-1 uppercase">ILHABELA - LITORAL NORTE SP</p>
             </div>
         </div>
     </footer>
@@ -553,41 +679,41 @@
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('menu-icon');
-            
             if (menu.classList.contains('hidden')) {
                 menu.classList.remove('hidden');
                 menu.classList.add('flex');
-                icon.classList.remove('ph-list');
-                icon.classList.add('ph-x');
-                document.body.style.overflow = 'hidden'; 
             } else {
                 menu.classList.add('hidden');
                 menu.classList.remove('flex');
-                icon.classList.remove('ph-x');
-                icon.classList.add('ph-list');
-                document.body.style.overflow = 'auto';
             }
         }
 
+        const modal = document.getElementById('project-modal');
+        const iframe = document.getElementById('modal-iframe');
+        const linkBtn = document.getElementById('modal-link-btn');
+
         function openProjectModal(videoId, projectUrl) {
-            document.getElementById('modal-link-btn').href = projectUrl;
-            document.getElementById('modal-iframe').src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-            document.getElementById('project-modal').classList.remove('hidden');
+            linkBtn.href = projectUrl;
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0`;
+            modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         }
 
         function closeProjectModal() {
-            document.getElementById('project-modal').classList.add('hidden');
-            document.getElementById('modal-iframe').src = '';
+            modal.classList.add('hidden');
+            iframe.src = '';
             document.body.style.overflow = 'auto';
         }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") closeProjectModal();
+        });
 
         function toggleSeoText() {
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
                 icon.classList.remove('rotate-180');
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
@@ -599,9 +725,11 @@
             const content = button.nextElementSibling;
             const icon = button.querySelector('i');
             document.querySelectorAll('.max-h-0').forEach(el => {
-                if (el !== content && el.id !== 'seo-content') {
+                if (el !== content && el.id !== 'seo-content') { 
                     el.style.maxHeight = null;
-                    if(el.previousElementSibling.querySelector('i')) el.previousElementSibling.querySelector('i').classList.remove('rotate-180');
+                    if(el.previousElementSibling && el.previousElementSibling.querySelector('i')) {
+                        el.previousElementSibling.querySelector('i').classList.remove('rotate-180');
+                    }
                 }
             });
             if (content.style.maxHeight) {
