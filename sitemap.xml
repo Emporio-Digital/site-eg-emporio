@@ -36,9 +36,9 @@
       <priority>0.95</priority>
    </url>
 
-   <!-- Páginas de Cidades/Bairros (Completo conforme seu Explorer) -->
+   <!-- Páginas de Cidades/Bairros (29 Locais Atualizados) -->
    <url>
-      <loc>https://egemporiodigital.com.br/criacao-de-sites/sao-paulo</loc>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/aruja</loc>
       <lastmod>2026-02-26</lastmod>
       <priority>0.80</priority>
    </url>
@@ -48,7 +48,42 @@
       <priority>0.80</priority>
    </url>
    <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/carrao</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/ferraz-de-vasconcelos</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
       <loc>https://egemporiodigital.com.br/criacao-de-sites/guarulhos</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/ilha-bela</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/itaquaquecetuba</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/itaquera</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/jabaquara</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/jacarei</loc>
       <lastmod>2026-02-26</lastmod>
       <priority>0.80</priority>
    </url>
@@ -58,7 +93,47 @@
       <priority>0.80</priority>
    </url>
    <url>
-      <loc>https://egemporiodigital.com.br/criacao-de-sites/sorocaba</loc>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/lapa</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/mogi-das-cruzes</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/penha</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/poa</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/santa-isabel</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/santana</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/santo-amaro</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/santo-andre</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/santos</loc>
       <lastmod>2026-02-26</lastmod>
       <priority>0.80</priority>
    </url>
@@ -68,12 +143,47 @@
       <priority>0.80</priority>
    </url>
    <url>
-      <loc>https://egemporiodigital.com.br/criacao-de-sites/vila-prudente</loc>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/sao-caetano</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/sao-jose-do-rio-preto</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/sao-jose-dos-campos</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/sao-miguel-paulista</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/sao-paulo</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/sorocaba</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/suzano</loc>
       <lastmod>2026-02-26</lastmod>
       <priority>0.80</priority>
    </url>
    <url>
       <loc>https://egemporiodigital.com.br/criacao-de-sites/tatuape</loc>
+      <lastmod>2026-02-26</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/vila-prudente</loc>
       <lastmod>2026-02-26</lastmod>
       <priority>0.80</priority>
    </url>

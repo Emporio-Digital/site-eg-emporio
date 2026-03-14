@@ -103,6 +103,40 @@
             z-index: -50;
             overflow: hidden;
         }
+
+        /* --- EFEITO LOGO DINÂMICO (REPLICADO DA HOME) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
     </style>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
@@ -119,7 +153,7 @@
             
             <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
-                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </a>
@@ -337,119 +371,154 @@
         </div>
     </section>
 
-    <!-- SEÇÃO: LOCAIS DE ATENDIMENTO (O DIRETÓRIO) -->
+    <!-- SEÇÃO: LOCAIS DE ATENDIMENTO (CARD CLICÁVEL) -->
     <section id="locais-atendimento" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20">
-            <div class="text-left mb-10">
-                <h2 class="font-tech text-3xl md:text-4xl text-white mb-4 uppercase leading-tight">
-                    Onde <span class="text-brand-blue">Atendemos</span>
-                </h2>
-                <p class="text-slate-300 text-lg leading-relaxed max-w-3xl">
-                    A EG Empório Digital atende clientes em todo o mundo, mas possuímos estratégias de <strong>SEO Local</strong> otimizadas para regiões específicas. Selecione sua localização:
-                </p>
+        <div class="glass-tech rounded-2xl overflow-hidden border-brand-blue/20 shadow-2xl">
+            
+            <!-- HEADER CLICÁVEL -->
+            <div onclick="toggleLocais()" class="cursor-pointer p-8 md:p-12 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
+                <div class="text-left">
+                    <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase leading-tight group-hover:text-brand-blue transition-colors">
+                        Onde <span class="text-brand-blue">Atendemos</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm md:text-base max-w-2xl">
+                        Clique para visualizar as regiões atendidas com estratégias exclusivas de SEO Local.
+                    </p>
+                </div>
+                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="locais-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
+                </div>
             </div>
 
-            <!-- GRID DE LINKS (ATUALIZADO COM TODAS AS PÁGINAS DO PRINT) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                
-                <a href="sao-paulo.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Capital</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">São Paulo (SP)</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
+            <!-- CONTEÚDO EXPANDÍVEL (OS 29 LOCAIS) -->
+            <div id="locais-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
+                <div class="p-8 md:p-12 border-t border-white/10">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        
+                        <a href="aruja.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Arujá</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="campinas.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Campinas</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="carrao.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Carrão</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="ferraz-de-vasconcelos.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Ferraz de Vasconcelos</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="guarulhos.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Guarulhos</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="ilha-bela.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Ilha Bela</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="itaquaquecetuba.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Itaquaquecetuba</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="itaquera.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Itaquera</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="jabaquara.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Jabaquara</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="jacarei.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Jacareí</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="lapa.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Lapa</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="mogi-das-cruzes.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Mogi das Cruzes</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="penha.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Penha</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="poa.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Poá</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="santa-isabel.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santa Isabel</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="santana.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santana</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="santo-amaro.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santo Amaro</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="santo-andre.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santo André</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="santos.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santos</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="sao-bernardo.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São Bernardo</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="sao-caetano.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São Caetano</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="sao-jose-do-rio-preto.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">S. J. Rio Preto</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="sao-jose-dos-campos.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">S. J. Campos</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="sao-miguel-paulista.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São Miguel</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="sao-paulo.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São Paulo</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="sorocaba.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Sorocaba</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="suzano.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Suzano</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="tatuape.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Tatuapé</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="vila-prudente.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Vila Prudente</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
 
-                <a href="campinas.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Interior</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Campinas</span>
                     </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="guarulhos.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Grande SP</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Guarulhos</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="sao-bernardo.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">ABC Paulista</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">São Bernardo</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="santo-andre.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">ABC Paulista</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Santo André</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="sao-caetano.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">ABC Paulista</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">São Caetano</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="santo-amaro.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Zona Sul</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Santo Amaro</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="tatuape.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Zona Leste</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Tatuapé</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="vila-prudente.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Zona Leste</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Vila Prudente</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="santos.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Litoral</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Santos</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <a href="ilha-bela.html" class="glass-tech p-6 rounded-xl flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Litoral Norte</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">Ilha Bela</span>
-                    </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-                
-                <!-- Card Genérico para SEO -->
-                <div class="p-6 border border-white/5 rounded-xl flex items-center justify-center text-center">
-                    <span class="text-sm text-slate-500">Mais cidades em breve...</span>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO SEO EXPANDÍVEL (HUB MASTER) - INJEÇÃO DE KEYWORDS -->
+    <!-- SEÇÃO SEO EXPANDÍVEL (HUB MASTER) -->
     <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
@@ -466,7 +535,7 @@
                 </div>
             </div>
 
-            <!-- CONTEÚDO EXPANDÍVEL (INJEÇÃO DE PALAVRAS-CHAVE SOLICITADAS) -->
+            <!-- CONTEÚDO EXPANDÍVEL -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
                 <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-6 font-light">
                     
@@ -497,7 +566,7 @@
         </div>
     </section>
 
-    <!-- MODAL DE VÍDEO (ADICIONADO AGORA) -->
+    <!-- MODAL DE VÍDEO -->
     <div id="project-modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeProjectModal()"></div>
         <div class="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-fade-in flex flex-col">
@@ -524,7 +593,7 @@
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col items-center">
                 <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
-                <div class="font-tech text-xl font-bold text-white uppercase">
+                <div class="logo-animate font-tech text-xl font-bold uppercase" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </div>
@@ -540,6 +609,21 @@
                         <i class="ph ph-article text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
                     </div>
                 </a>
+                
+                <!-- LINK DO HUB DE CRIAÇÃO DE SITES -->
+                <a href="/criacao-de-sites/" class="group relative" title="Criação de Sites">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-layout text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    </div>
+                </a>
+
+                <!-- LINK DO HUB DE GESTÃO DE TRÁFEGO -->
+                <a href="/gestao-de-trafego/cidade.html" class="group relative" title="Gestão de Tráfego">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-trend-up text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    </div>
+                </a>
+
                 <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
                     <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
                         <i class="ph ph-envelope-simple text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
@@ -568,7 +652,7 @@
             }
         }
 
-        // MODAL DE VÍDEO (FUNCIONALIDADE RESTAURADA)
+        // MODAL DE VÍDEO
         const modal = document.getElementById('project-modal');
         const iframe = document.getElementById('modal-iframe');
         const linkBtn = document.getElementById('modal-link-btn');
@@ -596,6 +680,20 @@
         function toggleSeoText() {
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.classList.remove('rotate-180');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // TOGGLE DOS LOCAIS DE ATENDIMENTO
+        function toggleLocais() {
+            const content = document.getElementById('locais-content');
+            const icon = document.getElementById('locais-icon');
             
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;

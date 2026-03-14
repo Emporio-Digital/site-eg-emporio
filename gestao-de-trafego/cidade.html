@@ -104,6 +104,40 @@
             z-index: -50;
             overflow: hidden;
         }
+
+        /* --- EFEITO LOGO DINÂMICO (REPLICADO DA HOME) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
     </style>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
@@ -120,7 +154,7 @@
             
             <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
-                <div class="font-tech text-sm md:text-xl font-bold tracking-widest text-white uppercase block">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </a>
@@ -385,46 +419,55 @@
         </div>
     </section>
 
-    <!-- SEÇÃO: PERFORMANCE REGIONAL (DIRETÓRIO ATIVO) -->
+    <!-- SEÇÃO: PERFORMANCE REGIONAL (CARD CLICÁVEL) -->
     <section id="locais-atendimento" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20">
-            <div class="text-left mb-10">
-                <h2 class="font-tech text-3xl md:text-4xl text-white mb-4 uppercase leading-tight">
-                    Performance <span class="text-brand-blue">Regional</span>
-                </h2>
-                <p class="text-slate-300 text-lg leading-relaxed max-w-3xl">
-                    Nossas estratégias de <strong>gestão de tráfego pago</strong> são adaptadas para o comportamento de consumo local. Veja nossas regiões ativas:
-                </p>
+        <div class="glass-tech rounded-2xl overflow-hidden border-brand-blue/20 shadow-2xl">
+            
+            <!-- HEADER CLICÁVEL -->
+            <div onclick="toggleLocais()" class="cursor-pointer p-8 md:p-12 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
+                <div class="text-left">
+                    <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase leading-tight group-hover:text-brand-blue transition-colors">
+                        Performance <span class="text-brand-blue">Regional</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm md:text-base max-w-2xl">
+                        Nossas estratégias de <strong>gestão de tráfego pago</strong> são adaptadas para o comportamento de consumo local. Veja nossas regiões ativas:
+                    </p>
+                </div>
+                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="locais-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
+                </div>
             </div>
 
-            <!-- GRID DE LINKS (DIRECIONADOS CONFORME PASTA ATUAL) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                
-                <!-- Único link ativo conforme o print -->
-                <a href="sao-paulo.html" class="glass-tech p-6 rounded-xl border-brand-blue/40 flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                    <div>
-                        <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Tráfego Pago Ativo</span>
-                        <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">São Paulo (SP)</span>
+            <!-- CONTEÚDO EXPANDÍVEL -->
+            <div id="locais-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
+                <div class="p-8 md:p-12 border-t border-white/10">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        
+                        <a href="sao-paulo.html" class="glass-tech p-6 rounded-xl border-brand-blue/40 flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <div>
+                                <span class="text-xs font-bold text-brand-blue uppercase tracking-widest block mb-1">Tráfego Pago Ativo</span>
+                                <span class="text-lg font-tech text-white group-hover:text-brand-blue transition">São Paulo (SP)</span>
+                            </div>
+                            <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
+                        </a>
+
+                        <div class="p-6 border border-white/5 rounded-xl flex flex-col justify-center opacity-40">
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest block mb-1">Em Breve</span>
+                            <span class="text-lg font-tech text-slate-600">ABC Paulista</span>
+                        </div>
+
+                        <div class="p-6 border border-white/5 rounded-xl flex flex-col justify-center opacity-40">
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest block mb-1">Em Breve</span>
+                            <span class="text-lg font-tech text-slate-600">Interior SP</span>
+                        </div>
+
                     </div>
-                    <i class="ph ph-arrow-right text-xl text-white/50 group-hover:text-brand-blue group-hover:translate-x-1 transition-all"></i>
-                </a>
-
-                <!-- Placeholders para futuras expansões -->
-                <div class="p-6 border border-white/5 rounded-xl flex flex-col justify-center opacity-40">
-                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest block mb-1">Em Breve</span>
-                    <span class="text-lg font-tech text-slate-600">ABC Paulista</span>
                 </div>
-
-                <div class="p-6 border border-white/5 rounded-xl flex flex-col justify-center opacity-40">
-                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest block mb-1">Em Breve</span>
-                    <span class="text-lg font-tech text-slate-600">Interior SP</span>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO SEO ACCORDION (HUB GESTÃO DE TRÁFEGO) - MARTELANDO KEYWORDS -->
+    <!-- SEÇÃO SEO ACCORDION (HUB GESTÃO DE TRÁFEGO) -->
     <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
@@ -441,7 +484,7 @@
                 </div>
             </div>
 
-            <!-- CONTEÚDO EXPANDÍVEL (INJEÇÃO DE PALAVRAS-CHAVE) -->
+            <!-- CONTEÚDO EXPANDÍVEL -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
                 <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-6 font-light">
                     
@@ -504,7 +547,7 @@
         <div class="flex flex-col items-center gap-8">
             <div class="flex flex-col items-center">
                 <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
-                <div class="font-tech text-xl font-bold text-white uppercase">
+                <div class="logo-animate font-tech text-xl font-bold uppercase" data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </div>
@@ -520,6 +563,21 @@
                         <i class="ph ph-article text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
                     </div>
                 </a>
+
+                <!-- LINK DO HUB DE CRIAÇÃO DE SITES -->
+                <a href="/criacao-de-sites/" class="group relative" title="Criação de Sites">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-layout text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    </div>
+                </a>
+
+                <!-- LINK DO HUB DE GESTÃO DE TRÁFEGO -->
+                <a href="/gestao-de-trafego/cidade.html" class="group relative" title="Gestão de Tráfego">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-trend-up text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
+                    </div>
+                </a>
+
                 <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
                     <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
                         <i class="ph ph-envelope-simple text-2xl text-slate-300 group-hover:text-brand-blue transition-colors"></i>
@@ -570,6 +628,20 @@
         function toggleSeoText() {
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
+            
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.classList.remove('rotate-180');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        // TOGGLE DOS LOCAIS DE ATENDIMENTO
+        function toggleLocais() {
+            const content = document.getElementById('locais-content');
+            const icon = document.getElementById('locais-icon');
             
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO LOCAL: ITAQUAQUECETUBA (ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
+    <title>Criação de Sites em Itaquaquecetuba | Landing Pages - EG Empório</title>
+    <meta name="description" content="Especialistas em criação de sites profissionais em Itaquaquecetuba. Atendemos Centro, Jardim Caiuby e polos industriais. Lojas Virtuais e Landing Pages.">
+    
+    <!-- CANONICAL: VALIDAÇÃO DE ORIGINALIDADE (SELF-REFERENCING) -->
+    <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/itaquaquecetuba">
+    
+    <!-- SCHEMA MARKUP (LOCAL BUSINESS / PROFESSIONAL SERVICE) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "EG Empório Digital - Criação de Sites em Itaquaquecetuba",
+      "url": "https://egemporiodigital.com.br/criacao-de-sites/itaquaquecetuba",
+      "image": "https://egemporiodigital.com.br/assets/images/logo.png",
+      "priceRange": "$$",
+      "telephone": "+5511916053292",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Centro",
+        "addressLocality": "Itaquaquecetuba",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.4861",
+        "longitude": "-46.3483"
+      },
+      "areaServed":["Itaquaquecetuba", "Itaquá", "Centro de Itaquá", "Jardim Caiuby", "Jardim Odete", "Vila Virgínia", "Polo Industrial", "Alto Tietê"],
+      "description": "Agência de desenvolvimento web especializada em criação de sites, landing pages de alta conversão e lojas virtuais para indústrias e comércios de Itaquaquecetuba."
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link rel="shortcut icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fontes e Ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'eg-dark': '#020617',       
+                        'brand-blue': '#00e1ff',    
+                        'brand-dark-blue': '#004e92', 
+                    },
+                    fontFamily: {
+                        sans:['Inter', 'sans-serif'],
+                        tech:['Orbitron', 'sans-serif'], 
+                    },
+                    animation: {
+                        'scroll': 'scroll 25s linear infinite',
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #020617;
+            background-image: radial-gradient(circle at 50% 10%, #0a2540 0%, #020617 70%);
+            background-attachment: fixed;
+        }
+        
+        .flyer-title {
+            background: linear-gradient(to bottom, #ffffff, #00e1ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 20px rgba(0, 225, 255, 0.3));
+        }
+
+        .gpu-accelerated { transform: translateZ(0); will-change: transform; }
+
+        .glass-tech {
+            background: rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(0, 225, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        .glass-tech:hover {
+            border-color: rgba(0, 225, 255, 0.4);
+            box-shadow: 0 0 30px rgba(0, 225, 255, 0.1);
+        }
+
+        #mobile-menu {
+            background: rgba(2, 6, 23, 0.98);
+            backdrop-filter: blur(20px);
+        }
+
+        .bg-fixed-mobile {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -50;
+            overflow: hidden;
+        }
+
+        /* --- EFEITO LOGO DINÂMICO (PADRÃO DOSSIÊ) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
+    </style>
+</head>
+<body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
+
+    <!-- BACKGROUND FIXO -->
+    <div class="bg-fixed-mobile flex items-center justify-center">
+        <img src="../assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            
+            <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </a>
+
+            <!-- NAV LINKS -->
+            <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
+                <a href="../index.html" class="hover:text-brand-blue transition-colors">Início</a>
+                <a href="#servicos-locais" class="text-brand-blue transition-colors">Itaquá & Região</a>
+                <a href="#projetos-disponiveis" class="hover:text-brand-blue transition-colors">Portfólio</a>
+            </nav>
+
+            <a href="https://wa.me/5511916053292?text=Olá, vi a página de Itaquaquecetuba e quero um orçamento." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+                Fale com a gente
+            </a>
+
+            <button id="menu-btn" class="md:hidden text-brand-blue text-3xl focus:outline-none" onclick="toggleMenu()">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
+            <a href="../index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Voltar ao Início</a>
+            <a href="#servicos-locais" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços em Itaquá</a>
+            <a href="https://wa.me/5511916053292?text=Olá, vi a página de Itaquaquecetuba e quero um orçamento." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
+                Fale com a gente
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (ESTRATÉGIA AGRESSIVA: ITAQUAQUECETUBA) -->
+    <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
+        
+        <h1 class="font-tech text-4xl md:text-5xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
+            CRIAÇÃO DE SITES EM <br> <span class="text-white">ITAQUÁ</span>
+        </h1>
+
+        <h2 class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
+            IMPULSIONE SUAS VENDAS NO MAIOR POLO LOGÍSTICO E INDUSTRIAL DO ALTO TIETÊ
+        </h2>
+
+        <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-8 z-10"></div>
+
+        <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
+            Se a sua empresa está no <strong>Centro de Itaquá, no Jardim Caiuby ou nos polos industriais próximos à Rodovia Ayrton Senna</strong>, você precisa de um posicionamento digital robusto. Se busca a <strong>criação de um site</strong> profissional, entregamos alta performance. Tenha uma <strong class="text-white">loja online</strong> de ponta ou uma Landing Page tática para transformar acessos em clientes fiéis.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-4 z-10">
+            <a href="https://wa.me/5511916053292?text=Preciso de um site profissional em Itaquaquecetuba." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+                Solicitar Orçamento
+            </a>
+            <a href="#projetos-disponiveis" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
+                Ver Portfólio
+            </a>
+        </div>
+
+    </section>
+
+    <!-- SEÇÃO DE CONTEÚDO SEO (KEYWORDS INJETADAS) -->
+    <section id="servicos-locais" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20">
+            <div class="text-left mb-10">
+                <h2 class="font-tech text-3xl md:text-4xl text-white mb-4 uppercase leading-tight">
+                    Por que contratar a <span class="text-brand-blue">EG Empório</span> em Itaquá?
+                </h2>
+                <p class="text-slate-300 text-lg leading-relaxed">
+                    Itaquaquecetuba vive um momento de forte expansão. Desde os comércios próximos ao <strong>Itaquá Park Shopping</strong> até as fábricas ao longo das rodovias, sua empresa precisa de inovação. Atuamos como a sua <strong>agência de sites</strong> para elevar sua marca ao topo das buscas no Alto Tietê.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Coluna 1 -->
+                <div>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Criação de Sites e Plataformas Profissionais</h3>
+                    <p class="text-slate-400 mb-6">
+                        Nós <strong>fazemos sites</strong> projetados para o ambiente corporativo e varejista. Seja na <strong>criação de sites profissionais</strong> para a indústria metalúrgica ou clínicas no Jardim Odete, desenvolvemos tecnologia de ponta. Nosso <strong>design de site</strong> transmite a credibilidade de que grandes clientes e parceiros precisam para fechar negócio com você.
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Presença local otimizada (SEO Itaquaquecetuba)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Plataformas 100% responsivas para celulares</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Estrutura rápida que favorece suas vendas online</li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">E-commerces e Landing Pages de Captura</h3>
+                    <p class="text-slate-400 mb-6">
+                        Aproveite a facilidade logística de Itaquá e expanda para o Brasil inteiro. Construímos a sua <strong>loja virtual</strong> com controle de estoque integrado. Para prestadores de serviço locais, nossas <strong>Landing Pages</strong> são especialistas em captar leads agressivamente. Um <strong>site de vendas online</strong> bem estruturado trabalha como o seu melhor funcionário, 24 horas por dia.
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Lojas online blindadas contra fraudes e seguras</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages focadas em conversão rápida pelo WhatsApp</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Desenvolvimento web orientado ao crescimento do seu caixa</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <a href="https://wa.me/5511916053292?text=Quero modernizar minha empresa com um site em Itaquaquecetuba." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
+                    Solicitar Orçamento <i class="ph ph-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: PROJETOS DISPONÍVEIS -->
+    <section id="projetos-disponiveis" class="scroll-mt-32 py-20 px-6 max-w-7xl mx-auto border-t border-white/5 relative z-10">
+        
+        <div class="text-center mb-16">
+            <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase tracking-wide">
+                Exemplos de <span class="text-brand-blue">Projetos Reais</span>
+            </h2>
+            <p class="text-slate-500 text-sm max-w-2xl mx-auto">
+                Veja o nível de qualidade que entregamos para clientes em Itaquaquecetuba e em todo o Brasil.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- CARD 1: ESTÉTICA AUTOMOTIVA -->
+            <div onclick="openProjectModal('NKRiU16RUmk', 'https://vitrine-projetos-two.vercel.app/estetica-auto.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/estetica.png" alt="Estética Automotiva" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Automotivo</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Estética Automotiva</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Solução digital completa para estética e cuidado de veículos.</p>
+                </div>
+            </div>
+
+            <!-- CARD 2: DESPACHANTE -->
+            <div onclick="openProjectModal('ga1F1eZ5sNQ', 'https://vitrine-projetos-two.vercel.app/despachante.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/despachante.png" alt="Despachante" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Serviços</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Despachante</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Landing Page de alta conversão para serviços de documentação.</p>
+                </div>
+            </div>
+
+            <!-- 3. NOIR GASTROBAR -->
+            <div onclick="openProjectModal('3MXvILsR5DA', 'https://vitrine-projetos-two.vercel.app/saas-ia.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="https://i.ibb.co/kb2NGD7/Captura-de-tela-2026-02-05-003024.png" alt="Projeto Noir Gastrobar" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Cardápio Digital</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Noir Gastrobar</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Menu digital interativo com design de alto luxo e glassmorphism.</p>
+                </div>
+            </div>
+
+            <!-- 4. AUTOMOTIVO -->
+            <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/capa-automotivo.jpg" alt="Projeto Automotivo" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Conceito</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Automotivo Luxury</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos de alto padrão.</p>
+                </div>
+            </div>
+
+            <!-- 5. ARQUITETURA -->
+            <div onclick="openProjectModal('y8MOpAC93MU', 'https://vitrine-projetos-two.vercel.app/arquitetura.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/capa-arquitetura.jpg" alt="Projeto Arquitetura" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Imobiliária</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Arquitetura Minimal</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Design clean e sofisticado para escritórios de arquitetura.</p>
+                </div>
+            </div>
+
+            <!-- 6. FINANCEIRO -->
+            <div onclick="openProjectModal('IrjsnvJxBzM', 'https://vitrine-projetos-two.vercel.app/financeiro.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/capa-financeiro.jpg" alt="Projeto Financeiro" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Fintech</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Dashboard Financeira</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Interface de dados complexos com visualização intuitiva.</p>
+                </div>
+            </div>
+
+             <!-- 7. E-COMMERCE -->
+             <div onclick="openProjectModal('WKpuUGV41iM', 'https://vitrine-projetos-two.vercel.app/loja.html')" 
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+               <img src="../assets/images/capa-loja.jpg" alt="Projeto Loja" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                       <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                   </div>
+               </div>
+               <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">E-commerce</span>
+                   <h3 class="text-2xl font-tech text-white mb-1 uppercase">Loja Moderna</h3>
+                   <p class="text-slate-400 text-sm line-clamp-2">Experiência de compra fluida com interações dinâmicas.</p>
+               </div>
+           </div>
+
+           <!-- 8. FITNESS -->
+           <div onclick="openProjectModal('4nwWammXuc4', 'https://vitrine-projetos-two.vercel.app/fitness.html')" 
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+               <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Projeto Fitness" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                       <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                   </div>
+               </div>
+               <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Institucional / Academia</span>
+                   <h3 class="text-2xl font-tech text-white mb-1 uppercase">Iron Force Fitness</h3>
+                   <p class="text-slate-400 text-sm line-clamp-2">Site de alta performance para academias e personal trainers.</p>
+               </div>
+           </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS - ITAQUÁ) -->
+    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
+        <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
+            
+            <!-- HEADER DO CARD (Clicável) -->
+            <div onclick="toggleSeoText()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
+                <div class="flex flex-col">
+                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade: Criação de Sites Profissionais em Itaquá
+                    </h2>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva para o setor produtivo</span>
+                </div>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
+                </div>
+            </div>
+
+            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS - 12 PILARES VERTICAIS) -->
+            <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
+                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
+                    
+                    <p class="mb-4">
+                        Com uma forte presença industrial e rotas logísticas como a Rodovia Ayrton Senna, a <strong>criação de site</strong> em Itaquaquecetuba é a fundação para empresas que pensam grande. Se você opera na <strong>Vila Virgínia, Jardim Odete ou Centro de Itaquá</strong>, a EG Empório Digital aplica tecnologia corporativa de elite para elevar o status da sua marca, conectando você aos melhores clientes do Alto Tietê e do Brasil.
+                    </p>
+
+                    <!-- PILAR 1 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Criação de Sites Profissionais e Institucionais em Itaquaquecetuba</h3>
+                        <p>
+                            Indústrias e empresas B2B não fecham contratos milionários com quem tem uma apresentação digital fraca. A <strong>criação de sites profissionais</strong> assegura que sua fábrica ou escritório transmita solidez. Quando nós <strong>fazemos sites</strong> para o polo industrial ou comercial de Itaquá, entregamos layouts que exalam confiança, fundamentais para fechar vendas e atrair grandes parcerias estratégicas.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 2 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Criação de Sites para E-commerce e Lojas Virtuais</h3>
+                        <p>
+                            Estar perto das principais rodovias e do Rodoanel é um diferencial logístico gigante. Aproveite isso investindo em uma <strong>loja virtual</strong>. Estruturamos a sua <strong>loja online</strong> para escoar sua mercadoria de forma eficiente. Um bom <strong>site de vendas online</strong> construído por nós suporta integração com os Correios e transportadoras privadas, automatizando suas vendas e alavancando seu faturamento nacional.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 3 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Criação de Sites Estilo Landing Page para Alta Conversão</h3>
+                        <p>
+                            Para dentistas, advogados e empreiteiras atuando no <strong>Centro ou no Jardim Caiuby</strong>, captar orçamentos é o coração do negócio. A estratégia de <strong>criação de site</strong> em formato Landing Page tem o foco exclusivo em conversão rápida. Atuamos como a sua <strong>agência de sites</strong> especialista em criar páginas vendedoras que fisgam leads diretamente pelo WhatsApp vindos de anúncios no Google Ads.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 4 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Criação de Sites com Design Moderno e UX (User Experience)</h3>
+                        <p>
+                            Em Itaquá, muitos negócios tradicionais perdem para a concorrência por falta de inovação digital. O <strong>design de site</strong> que aplicamos resolve esse problema atualizando a sua marca. Desenhamos cada seção da sua plataforma com foco na Experiência do Usuário (UX), garantindo que a navegação seja óbvia e simples, guiando o cliente até o clique final de compra com extrema naturalidade.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 5 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Criação de Sites Mobile-First (Otimizados para Celular)</h3>
+                        <p>
+                            No dia a dia corrido de quem utiliza o transporte de Itaquaquecetuba, a internet na palma da mão é essencial. Nossa agência <strong>cria sites</strong> sob a técnica Mobile-First, desenhando primeiro para o celular e depois para o desktop. Essa otimização garante que o carregamento da sua plataforma seja impecável para os consumidores que estão em movimento pelo município, retendo visitantes que a concorrência perde.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 6 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Criação de Sites com Performance e Velocidade Extrema</h3>
+                        <p>
+                            Lentidão na internet significa perda direta de dinheiro. Tratamos o <strong>desenvolvimento web</strong> como engenharia de performance. Inserimos rotinas de cache e minimização de códigos pesados para que sua página abra como um raio. Um site rápido segura o cliente de Itaquá na sua oferta e ainda eleva o status da sua empresa perante os robôs de ranqueamento.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 7 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Criação de Sites Otimizados para SEO Local (Google Meu Negócio)</h3>
+                        <p>
+                            Nós cercamos o seu território. Quando você contrata nosso SEO Local, calibramos o seu site para dominar as buscas em bairros como <strong>Vila Virgínia e Jardim Odete</strong>. Sempre que alguém nessas regiões procurar pelo que você faz no Google, nós sinalizamos aos algoritmos que o seu serviço é a melhor resposta na região, capturando o tráfego orgânico gratuito.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 8 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Criação de Sites Blindados e Seguros (Certificado SSL)</h3>
+                        <p>
+                            A confiança que os clientes têm na sua empresa física precisa ir para o digital. No processo de <strong>criação de site</strong>, blindamos sua estrutura com o Certificado SSL (protocolo HTTPS). Para quem opera uma <strong>loja online</strong> B2C ou B2B, essa é a garantia máxima de que dados bancários, e-mails e negociações estão totalmente protegidos contra hackers.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 9 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
+                        <p>
+                            Liberdade para o empresário de Itaquá controlar suas campanhas. Nossos sites vêm com um sistema gerenciador (CMS) altamente intuitivo. Isso significa que você não precisa depender de terceiros para adicionar novos maquinários, peças ou produtos ao seu catálogo online. Altere textos e fotos sempre que seu portfólio exigir renovação.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 10 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Criação de Sites Integrados com Automação de WhatsApp</h3>
+                        <p>
+                            Não deixe seu cliente esperando. Na região de Itaquaquecetuba, vendas corporativas e serviços locais muitas vezes são decididos no WhatsApp. Inserimos botões fixos e flutuantes em todas as páginas para encurtar a distância entre o cliente e o seu vendedor. Um clique, e o lead já estará conversando com a sua equipe técnica.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 11 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Criação de Sites Estratégicos para Escalar Negócios Locais</h3>
+                        <p>
+                            Nós <strong>fazemos sites</strong> pensando no futuro da sua operação no Alto Tietê. Se hoje você precisa apenas de um portal institucional, nós o criamos com uma arquitetura preparada para suportar, amanhã, uma loja virtual completa ou a integração com sistemas ERP industriais. O seu ativo digital vai crescer na mesma proporção que os seus lucros.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 12 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Criação de Sites com Manutenção e Suporte Técnico Especializado</h3>
+                        <p>
+                            Sua empresa não pode ter a produção parada por problemas de servidor. Contamos com um serviço robusto de <strong>manutenção de sites</strong>, mantendo seu projeto constantemente monitorado, ágil e blindado contra ameaças virtuais. Entregamos a paz de espírito necessária para o empresário focar unicamente na gestão do seu negócio em Itaquá.
+                        </p>
+                    </div>
+
+                    <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
+                        O comércio e a indústria de Itaquaquecetuba merecem alta performance. Com a <strong>criação de site em Itaquá</strong> realizada pela EG Empório Digital, sua empresa estará um nível acima em credibilidade, segurança e volume de vendas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO FAQ (SEO BOOSTER) -->
+    <section class="py-20 px-6 max-w-4xl mx-auto relative z-10">
+        <div class="text-center mb-12">
+            <h2 class="font-tech text-2xl md:text-3xl text-white mb-4 uppercase">
+                Dúvidas <span class="text-brand-blue">Frequentes</span>
+            </h2>
+            <div class="w-24 h-1 bg-brand-blue mx-auto rounded-full opacity-50"></div>
+        </div>
+
+        <div class="space-y-4">
+            <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
+                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual é o custo para criar um site em Itaquaquecetuba?</span>
+                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                        O valor varia de acordo com a finalidade do seu projeto. Uma Landing Page focada em geração de leads (orçamentos rápidos) tem um custo mais otimizado. Já um Portal Corporativo para Indústrias ou Lojas Virtuais completas possuem orçamentos adequados às horas de engenharia necessárias. Atendemos empresários em Itaquá focados em resultados reais.
+                    </div>
+                </div>
+            </div>
+
+            <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
+                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Atendem indústrias e comércios de Itaquá e Região?</span>
+                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                        Sim, com toda certeza! Temos forte atuação construindo a presença digital de empresas localizadas em todo o polo de Itaquaquecetuba, incluindo Centro, Jardim Caiuby, Jardim Odete, Vila Virgínia e polos industriais ao longo da Ayrton Senna.
+                    </div>
+                </div>
+            </div>
+
+            <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
+                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Quanto tempo demora a entrega de um site?</span>
+                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                        Depende da robustez exigida. Se a sua empresa em Itaquá precisa de uma Landing Page rápida para campanhas de Google, o prazo médio é de 5 a 10 dias úteis. Para E-commerces e sites B2B complexos, o prazo de desenvolvimento e testes fica entre 15 e 30 dias.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE VÍDEO -->
+    <div id="project-modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeProjectModal()"></div>
+        <div class="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-fade-in flex flex-col">
+            <div class="flex justify-between items-center p-4 border-b border-white/10 bg-black/50">
+                <span class="text-sm font-tech text-white uppercase tracking-widest">Demonstração Interativa</span>
+                <button onclick="closeProjectModal()" class="text-slate-400 hover:text-white transition">
+                    <i class="ph ph-x text-2xl"></i>
+                </button>
+            </div>
+            <div class="relative aspect-video bg-black">
+                <iframe id="modal-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="p-6 text-center bg-black/50 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-slate-500 hidden md:block">Para melhor experiência, visualize no Desktop.</p>
+                <a id="modal-link-btn" href="#" target="_blank" class="w-full md:w-auto px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                    Acessar Site <i class="ph ph-arrow-up-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col items-center">
+                <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
+                <div class="logo-animate font-tech text-xl font-bold text-white uppercase" data-text="EG EMPÓRIO DIGITAL">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </div>
+            
+            <div class="flex gap-8">
+                <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+                <a href="https://egemporiodigital.com.br/blog" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-article text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+                <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center">
+                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
+                <p class="text-[10px] text-slate-700 mt-1 uppercase">ITAQUAQUECETUBA - ALTO TIETÊ SP</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        }
+
+        const modal = document.getElementById('project-modal');
+        const iframe = document.getElementById('modal-iframe');
+        const linkBtn = document.getElementById('modal-link-btn');
+
+        function openProjectModal(videoId, projectUrl) {
+            linkBtn.href = projectUrl;
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0`;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProjectModal() {
+            modal.classList.add('hidden');
+            iframe.src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") closeProjectModal();
+        });
+
+        function toggleSeoText() {
+            const content = document.getElementById('seo-content');
+            const icon = document.getElementById('seo-icon');
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
+                icon.classList.remove('rotate-180');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            document.querySelectorAll('.max-h-0').forEach(el => {
+                if (el !== content && el.id !== 'seo-content') { 
+                    el.style.maxHeight = null;
+                    if(el.previousElementSibling && el.previousElementSibling.querySelector('i')) {
+                        el.previousElementSibling.querySelector('i').classList.remove('rotate-180');
+                    }
+                }
+            });
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.classList.remove('rotate-180');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.classList.add('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO LOCAL: FERRAZ DE VASCONCELOS (ESTRATÉGIA DOMINANDO TERRITÓRIOS) -->
+    <title>Criação de Sites em Ferraz de Vasconcelos | Landing Pages e Lojas Virtuais - EG Empório</title>
+    <meta name="description" content="Especialistas em criação de sites profissionais em Ferraz de Vasconcelos. Atendemos Avenida Brasil, Centro e Vila Romanópolis. Lojas Virtuais e Landing Pages.">
+    
+    <!-- CANONICAL: VALIDAÇÃO DE ORIGINALIDADE (SELF-REFERENCING) -->
+    <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/ferraz-de-vasconcelos">
+    
+    <!-- SCHEMA MARKUP (LOCAL BUSINESS / PROFESSIONAL SERVICE) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "EG Empório Digital - Criação de Sites em Ferraz de Vasconcelos",
+      "url": "https://egemporiodigital.com.br/criacao-de-sites/ferraz-de-vasconcelos",
+      "image": "https://egemporiodigital.com.br/assets/images/logo.png",
+      "priceRange": "$$",
+      "telephone": "+5511916053292",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Centro",
+        "addressLocality": "Ferraz de Vasconcelos",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.5416",
+        "longitude": "-46.3697"
+      },
+      "areaServed":["Ferraz de Vasconcelos", "Centro de Ferraz", "Avenida Brasil", "Vila Romanópolis", "Jardim Bela Vista", "Cidade Kemel", "Alto Tietê"],
+      "description": "Agência de desenvolvimento web especializada em criação de sites, landing pages de alta conversão e lojas virtuais para empresas de Ferraz de Vasconcelos."
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+    <link rel="shortcut icon" href="../assets/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fontes e Ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'eg-dark': '#020617',       
+                        'brand-blue': '#00e1ff',    
+                        'brand-dark-blue': '#004e92', 
+                    },
+                    fontFamily: {
+                        sans:['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'], 
+                    },
+                    animation: {
+                        'scroll': 'scroll 25s linear infinite',
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #020617;
+            background-image: radial-gradient(circle at 50% 10%, #0a2540 0%, #020617 70%);
+            background-attachment: fixed;
+        }
+        
+        .flyer-title {
+            background: linear-gradient(to bottom, #ffffff, #00e1ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 20px rgba(0, 225, 255, 0.3));
+        }
+
+        .gpu-accelerated { transform: translateZ(0); will-change: transform; }
+
+        .glass-tech {
+            background: rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(0, 225, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        .glass-tech:hover {
+            border-color: rgba(0, 225, 255, 0.4);
+            box-shadow: 0 0 30px rgba(0, 225, 255, 0.1);
+        }
+
+        #mobile-menu {
+            background: rgba(2, 6, 23, 0.98);
+            backdrop-filter: blur(20px);
+        }
+
+        .bg-fixed-mobile {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -50;
+            overflow: hidden;
+        }
+
+        /* --- EFEITO LOGO DINÂMICO (PADRÃO DOSSIÊ) --- */
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
+    </style>
+</head>
+<body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
+
+    <!-- BACKGROUND FIXO -->
+    <div class="bg-fixed-mobile flex items-center justify-center">
+        <img src="../assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            
+            <a href="../index.html" class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                <img src="../assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </a>
+
+            <!-- NAV LINKS -->
+            <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
+                <a href="../index.html" class="hover:text-brand-blue transition-colors">Início</a>
+                <a href="#servicos-locais" class="text-brand-blue transition-colors">Ferraz & Região</a>
+                <a href="#projetos-disponiveis" class="hover:text-brand-blue transition-colors">Portfólio</a>
+            </nav>
+
+            <a href="https://wa.me/5511916053292?text=Olá, vi a página de Ferraz de Vasconcelos e quero um orçamento." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+                Fale com a gente
+            </a>
+
+            <button id="menu-btn" class="md:hidden text-brand-blue text-3xl focus:outline-none" onclick="toggleMenu()">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
+            <a href="../index.html" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Voltar ao Início</a>
+            <a href="#servicos-locais" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços em Ferraz</a>
+            <a href="https://wa.me/5511916053292?text=Olá, vi a página de Ferraz de Vasconcelos e quero um orçamento." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
+                Fale com a gente
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (ESTRATÉGIA AGRESSIVA: FERRAZ DE VASCONCELOS) -->
+    <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
+        
+        <h1 class="font-tech text-4xl md:text-5xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
+            CRIAÇÃO DE SITES EM <br> <span class="text-white">FERRAZ DE VASCONCELOS</span>
+        </h1>
+
+        <h2 class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
+            AUMENTE SEU FATURAMENTO NO POLO CRESCENTE DO ALTO TIETÊ
+        </h2>
+
+        <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-8 z-10"></div>
+
+        <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
+            Se sua empresa está no <strong>Centro de Ferraz, na Avenida Brasil ou na Vila Romanópolis</strong>, você precisa de uma presença digital de elite para dominar a concorrência. Se busca a <strong>criação de um site</strong> profissional na região, entregamos tecnologia e conversão. Tenha uma <strong class="text-white">loja online</strong> completa ou uma Landing Page blindada para captar clientes qualificados diariamente.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-4 z-10">
+            <a href="https://wa.me/5511916053292?text=Preciso de um site profissional em Ferraz de Vasconcelos." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+                Solicitar Orçamento
+            </a>
+            <a href="#projetos-disponiveis" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
+                Ver Portfólio
+            </a>
+        </div>
+
+    </section>
+
+    <!-- SEÇÃO DE CONTEÚDO SEO (KEYWORDS INJETADAS) -->
+    <section id="servicos-locais" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20">
+            <div class="text-left mb-10">
+                <h2 class="font-tech text-3xl md:text-4xl text-white mb-4 uppercase leading-tight">
+                    Por que contratar a <span class="text-brand-blue">EG Empório</span> em Ferraz?
+                </h2>
+                <p class="text-slate-300 text-lg leading-relaxed">
+                    Ferraz de Vasconcelos é uma cidade que não para de crescer, e seu negócio precisa acompanhar esse ritmo. De clínicas e escritórios na <strong>Vila Romanópolis</strong> ao comércio forte próximo à <strong>Estação da CPTM</strong>, somos a sua <strong>agência de sites</strong> pronta para acelerar suas vendas no digital.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Coluna 1 -->
+                <div>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">Criação de Sites de Alta Performance</h3>
+                    <p class="text-slate-400 mb-6">
+                        Nós <strong>fazemos sites</strong> com o objetivo principal de alavancar o seu lucro. Seja para a <strong>criação de sites profissionais</strong> para a indústria local ou prestadores de serviços, o nosso código é moderno e limpo. Aplicamos um <strong>design de site</strong> focado em credibilidade, fazendo com que o consumidor do Alto Tietê confie imediatamente na sua marca.
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> SEO Estratégico Local (Destaque-se em Ferraz e Região)</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Sites Mobile-First perfeitos para o celular</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Carregamento ultrarrápido para não perder clientes</li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 2 -->
+                <div>
+                    <h3 class="font-tech text-xl text-brand-blue mb-4 uppercase">E-commerces e Landing Pages</h3>
+                    <p class="text-slate-400 mb-6">
+                        Deseja modernizar a sua loja física na Avenida Brasil? Construímos a sua <strong>loja virtual</strong> com todas as integrações de frete e pagamento seguro. Se a sua empresa vende serviços de alto valor agregado, nossas <strong>Landing Pages</strong> são a armadilha perfeita para leads. O seu <strong>site de vendas online</strong> não vai apenas informar, vai fechar negócios 24h.
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Lojas virtuais seguras, blindadas e de fácil navegação</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Landing Pages projetadas para tráfego pago</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> O desenvolvimento web focado no seu ROI</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <a href="https://wa.me/5511916053292?text=Quero investir em um site de sucesso em Ferraz de Vasconcelos." class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
+                    Solicitar Orçamento <i class="ph ph-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO: PROJETOS DISPONÍVEIS -->
+    <section id="projetos-disponiveis" class="scroll-mt-32 py-20 px-6 max-w-7xl mx-auto border-t border-white/5 relative z-10">
+        
+        <div class="text-center mb-16">
+            <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase tracking-wide">
+                Exemplos de <span class="text-brand-blue">Projetos Reais</span>
+            </h2>
+            <p class="text-slate-500 text-sm max-w-2xl mx-auto">
+                Veja o nível de qualidade que entregamos para clientes em Ferraz de Vasconcelos e todo o Brasil.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- CARD 1: ESTÉTICA AUTOMOTIVA -->
+            <div onclick="openProjectModal('NKRiU16RUmk', 'https://vitrine-projetos-two.vercel.app/estetica-auto.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/estetica.png" alt="Estética Automotiva" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Automotivo</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Estética Automotiva</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Solução digital completa para estética e cuidado de veículos.</p>
+                </div>
+            </div>
+
+            <!-- CARD 2: DESPACHANTE -->
+            <div onclick="openProjectModal('ga1F1eZ5sNQ', 'https://vitrine-projetos-two.vercel.app/despachante.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/despachante.png" alt="Despachante" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Serviços</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Despachante</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Landing Page de alta conversão para serviços de documentação.</p>
+                </div>
+            </div>
+
+            <!-- 3. NOIR GASTROBAR -->
+            <div onclick="openProjectModal('3MXvILsR5DA', 'https://vitrine-projetos-two.vercel.app/saas-ia.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="https://i.ibb.co/kb2NGD7/Captura-de-tela-2026-02-05-003024.png" alt="Projeto Noir Gastrobar" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Cardápio Digital</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Noir Gastrobar</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Menu digital interativo com design de alto luxo e glassmorphism.</p>
+                </div>
+            </div>
+
+            <!-- 4. AUTOMOTIVO -->
+            <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/capa-automotivo.jpg" alt="Projeto Automotivo" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Conceito</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Automotivo Luxury</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos de alto padrão.</p>
+                </div>
+            </div>
+
+            <!-- 5. ARQUITETURA -->
+            <div onclick="openProjectModal('y8MOpAC93MU', 'https://vitrine-projetos-two.vercel.app/arquitetura.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/capa-arquitetura.jpg" alt="Projeto Arquitetura" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Imobiliária</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Arquitetura Minimal</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Design clean e sofisticado para escritórios de arquitetura.</p>
+                </div>
+            </div>
+
+            <!-- 6. FINANCEIRO -->
+            <div onclick="openProjectModal('IrjsnvJxBzM', 'https://vitrine-projetos-two.vercel.app/financeiro.html')" 
+                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/capa-financeiro.jpg" alt="Projeto Financeiro" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Fintech</span>
+                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Dashboard Financeira</h3>
+                    <p class="text-slate-400 text-sm line-clamp-2">Interface de dados complexos com visualização intuitiva.</p>
+                </div>
+            </div>
+
+             <!-- 7. E-COMMERCE -->
+             <div onclick="openProjectModal('WKpuUGV41iM', 'https://vitrine-projetos-two.vercel.app/loja.html')" 
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+               <img src="../assets/images/capa-loja.jpg" alt="Projeto Loja" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                       <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                   </div>
+               </div>
+               <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">E-commerce</span>
+                   <h3 class="text-2xl font-tech text-white mb-1 uppercase">Loja Moderna</h3>
+                   <p class="text-slate-400 text-sm line-clamp-2">Experiência de compra fluida com interações dinâmicas.</p>
+               </div>
+           </div>
+
+           <!-- 8. FITNESS -->
+           <div onclick="openProjectModal('4nwWammXuc4', 'https://vitrine-projetos-two.vercel.app/fitness.html')" 
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+               <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Projeto Fitness" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+               <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                       <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
+                   </div>
+               </div>
+               <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                   <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Institucional / Academia</span>
+                   <h3 class="text-2xl font-tech text-white mb-1 uppercase">Iron Force Fitness</h3>
+                   <p class="text-slate-400 text-sm line-clamp-2">Site de alta performance para academias e personal trainers.</p>
+               </div>
+           </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS - FERRAZ) -->
+    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
+        <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
+            
+            <!-- HEADER DO CARD (Clicável) -->
+            <div onclick="toggleSeoText()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
+                <div class="flex flex-col">
+                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                        <i class="ph-fill ph-article text-brand-blue mr-2"></i> Tese de Autoridade: Criação de Sites Profissionais em Ferraz
+                    </h2>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Clique para ler sobre nossa metodologia exclusiva no Alto Tietê</span>
+                </div>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
+                </div>
+            </div>
+
+            <!-- CONTEÚDO EXPANDÍVEL (Textão SEO - MARTELANDO KEYWORDS - 12 PILARES VERTICAIS) -->
+            <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
+                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
+                    
+                    <p class="mb-4">
+                        Com a economia do município em rápida expansão, apostar na <strong>criação de site</strong> em Ferraz de Vasconcelos é a estratégia definitiva para negócios que buscam liderança. Seja você um empreendedor atuando na <strong>Avenida Brasil, Centro ou Jardim Bela Vista</strong>, a EG Empório Digital entrega o nível mais alto de tecnologia para que sua empresa converta mais e seja autoridade online em todo o Alto Tietê.
+                    </p>
+
+                    <!-- PILAR 1 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Criação de Sites Profissionais e Institucionais em Ferraz de Vasconcelos</h3>
+                        <p>
+                            A imagem da sua empresa importa. Uma página mal formatada afugenta clientes locais. A <strong>criação de sites profissionais</strong> serve exatamente para apresentar seu negócio com impacto e respeito. Quando nossa equipe <strong>cria sites</strong> para prestadores de serviços, médicos ou imobiliárias no Centro de Ferraz, focamos em uma arquitetura de dados que valoriza o seu histórico, atraindo clientes que buscam segurança.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 2 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Criação de Sites para E-commerce e Lojas Virtuais</h3>
+                        <p>
+                            Vender só no bairro é limitar seus lucros. Estruturamos a sua <strong>loja online</strong> ou <strong>loja virtual</strong> completa para atender desde o Alto Tietê até clientes em outros estados. Um <strong>site de vendas online</strong> bem feito não cai, gerencia estoques automaticamente e conecta transportadoras sem esforço. Levamos o comércio da Avenida Brasil direto para a tela do comprador.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 3 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Criação de Sites Estilo Landing Page para Alta Conversão</h3>
+                        <p>
+                            Para os prestadores de serviços da <strong>Vila Romanópolis ou Cidade Kemel</strong>, o foco muitas vezes não é vender um produto, mas captar um orçamento rápido. É aí que entra a <strong>criação de site</strong> no formato Landing Page. Nós desenvolvemos páginas focadas em apenas um objetivo: convencer o usuário a clicar no botão do WhatsApp e fechar serviço com você imediatamente.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 4 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Criação de Sites com Design Moderno e UX (User Experience)</h3>
+                        <p>
+                            Estética e usabilidade andam juntas. Um <strong>design de site</strong> que confunde o visitante destrói as vendas. Em Ferraz de Vasconcelos, destacamos a sua marca através de interfaces modernas e uma User Experience (UX) cuidadosamente planejada. Cada seção, cor e botão é escolhido pela nossa <strong>agência de sites</strong> para guiar o cliente até a compra sem fricção.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 5 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Criação de Sites Mobile-First (Otimizados para Celular)</h3>
+                        <p>
+                            Sabemos que grande parte do seu público pesquisa serviços enquanto está no ônibus ou aguardando na Estação Ferraz da CPTM. Ao desenvolvermos seu projeto, utilizamos a técnica Mobile-First. Nós <strong>fazemos sites</strong> priorizando o carregamento e a usabilidade nos smartphones, garantindo que o seu cliente consiga navegar e entrar em contato com extrema facilidade pelo celular.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 6 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Criação de Sites com Performance e Velocidade Extrema</h3>
+                        <p>
+                            Ninguém espera um site carregar por mais de 3 segundos hoje em dia. Em nossos processos de <strong>desenvolvimento web</strong>, a velocidade é um mantra. Aplicamos servidores otimizados, bancos de dados leves e códigos limpos para garantir que a sua vitrine virtual em Ferraz carregue de forma ultrarrápida, retendo o usuário e ajudando no rankeamento orgânico.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 7 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Criação de Sites Otimizados para SEO Local (Google Meu Negócio)</h3>
+                        <p>
+                            A mágica para atrair clientes perto da sua empresa. Através de um SEO Local rigoroso, nós injetamos os termos e coordenadas de Ferraz de Vasconcelos no código da sua página. Quando alguém pesquisar seu segmento próximo ao Jardim Bela Vista ou Centro, o Google entenderá que sua empresa é a melhor resposta, gerando tráfego orgânico valioso e qualificado.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 8 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Criação de Sites Blindados e Seguros (Certificado SSL)</h3>
+                        <p>
+                            Proteção de dados é indispensável para passar confiança. Cada <strong>criação de site</strong> entregue pela EG acompanha o Certificado SSL (o cadeado ao lado da URL). Isso não apenas garante segurança para quem insere dados em sua <strong>loja online</strong>, como também evita que o Google classifique o seu site corporativo como "Não Seguro", protegendo a reputação do seu negócio.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 9 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
+                        <p>
+                            Total autonomia para o empresário ferrazense. Implantamos Sistemas de Gestão de Conteúdo (CMS) modernos e fáceis de usar. Isso permite que você atualize os banners da sua campanha de vendas, publique fotos dos seus trabalhos ou adicione novos serviços ao portfólio sem a necessidade de pagar horas técnicas ou entender de programação.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 10 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Criação de Sites Integrados com Automação de WhatsApp</h3>
+                        <p>
+                            O comércio em Ferraz é pautado pela agilidade nas respostas. Nossas plataformas contam com integrações nativas de WhatsApp. O cliente encontra o que deseja e, com apenas um clique, já inicia uma conversa diretamente com sua equipe de vendas, com uma mensagem pré-programada que ajuda a quebrar o gelo e agilizar a cotação do serviço.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 11 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Criação de Sites Estratégicos para Escalar Negócios Locais</h3>
+                        <p>
+                            Nossa visão quando <strong>fazemos sites</strong> vai além do momento presente. Projetamos um ativo digital que acompanhará o crescimento da sua empresa no Alto Tietê. Conforme sua demanda em Ferraz aumentar, o site permite integrações com sistemas ERP, ferramentas de CRM e automações de marketing, escalando de maneira eficiente junto com o seu faturamento.
+                        </p>
+                    </div>
+
+                    <!-- PILAR 12 -->
+                    <div>
+                        <h3 class="text-white font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Criação de Sites com Manutenção e Suporte Técnico Especializado</h3>
+                        <p>
+                            Sua operação online precisa de estabilidade máxima. Com nossos contratos de <strong>manutenção de sites</strong>, a sua empresa em Ferraz de Vasconcelos nunca ficará desamparada. Oferecemos suporte dedicado para garantir backups diários, atualizações de segurança e resolução rápida de problemas, deixando o sistema sempre blindado e disponível.
+                        </p>
+                    </div>
+
+                    <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
+                        Se você deseja dominar o mercado local, a <strong>criação de site em Ferraz de Vasconcelos</strong> executada pela EG Empório Digital fornecerá todo o poder tecnológico para colocar sua marca em primeiro lugar nas vendas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO FAQ (SEO BOOSTER) -->
+    <section class="py-20 px-6 max-w-4xl mx-auto relative z-10">
+        <div class="text-center mb-12">
+            <h2 class="font-tech text-2xl md:text-3xl text-white mb-4 uppercase">
+                Dúvidas <span class="text-brand-blue">Frequentes</span>
+            </h2>
+            <div class="w-24 h-1 bg-brand-blue mx-auto rounded-full opacity-50"></div>
+        </div>
+
+        <div class="space-y-4">
+            <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
+                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual o investimento para criação de um site em Ferraz?</span>
+                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                        Depende unicamente do formato do projeto. Landing Pages direcionadas para gerar contatos via WhatsApp possuem valores mais enxutos. Se a sua empresa em Ferraz de Vasconcelos necessita de um E-commerce ou plataforma corporativa complexa, fazemos um orçamento personalizado com foco em rápido Retorno sobre o Investimento.
+                    </div>
+                </div>
+            </div>
+
+            <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
+                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Vocês dão suporte para negócios na Vila Romanópolis e Avenida Brasil?</span>
+                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                        Sem dúvidas. Atendemos todos os pontos centrais de Ferraz de Vasconcelos, englobando a Avenida Brasil, Vila Romanópolis, Centro e também o Jardim Bela Vista. Criamos sites que conversam diretamente com o público e o comércio local da cidade.
+                    </div>
+                </div>
+            </div>
+
+            <div class="group border border-white/10 rounded-xl bg-white/5 overflow-hidden transition-all hover:border-brand-blue/30">
+                <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                    <span class="font-tech text-white text-sm md:text-base uppercase tracking-wider pr-4">Qual o tempo de desenvolvimento para entregar o site?</span>
+                    <i class="ph ph-caret-down text-brand-blue text-xl transition-transform duration-300"></i>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-black/20">
+                    <div class="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                        Páginas focadas em tráfego pago (Landing Pages) levam de 5 a 10 dias úteis para estarem no ar. Portais institucionais robustos ou Lojas Virtuais necessitam de mais configurações de segurança e levam em torno de 15 a 30 dias úteis.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE VÍDEO -->
+    <div id="project-modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeProjectModal()"></div>
+        <div class="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-fade-in flex flex-col">
+            <div class="flex justify-between items-center p-4 border-b border-white/10 bg-black/50">
+                <span class="text-sm font-tech text-white uppercase tracking-widest">Demonstração Interativa</span>
+                <button onclick="closeProjectModal()" class="text-slate-400 hover:text-white transition">
+                    <i class="ph ph-x text-2xl"></i>
+                </button>
+            </div>
+            <div class="relative aspect-video bg-black">
+                <iframe id="modal-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="p-6 text-center bg-black/50 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-slate-500 hidden md:block">Para melhor experiência, visualize no Desktop.</p>
+                <a id="modal-link-btn" href="#" target="_blank" class="w-full md:w-auto px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                    Acessar Site <i class="ph ph-arrow-up-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col items-center">
+                <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
+                <div class="logo-animate font-tech text-xl font-bold text-white uppercase" data-text="EG EMPÓRIO DIGITAL">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </div>
+            
+            <div class="flex gap-8">
+                <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+                <a href="https://egemporiodigital.com.br/blog" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-article text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+                <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center">
+                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
+                <p class="text-[10px] text-slate-700 mt-1 uppercase">FERRAZ DE VASCONCELOS - ALTO TIETÊ SP</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        }
+
+        const modal = document.getElementById('project-modal');
+        const iframe = document.getElementById('modal-iframe');
+        const linkBtn = document.getElementById('modal-link-btn');
+
+        function openProjectModal(videoId, projectUrl) {
+            linkBtn.href = projectUrl;
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0`;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProjectModal() {
+            modal.classList.add('hidden');
+            iframe.src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") closeProjectModal();
+        });
+
+        function toggleSeoText() {
+            const content = document.getElementById('seo-content');
+            const icon = document.getElementById('seo-icon');
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
+                icon.classList.remove('rotate-180');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            document.querySelectorAll('.max-h-0').forEach(el => {
+                if (el !== content && el.id !== 'seo-content') { 
+                    el.style.maxHeight = null;
+                    if(el.previousElementSibling && el.previousElementSibling.querySelector('i')) {
+                        el.previousElementSibling.querySelector('i').classList.remove('rotate-180');
+                    }
+                }
+            });
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.classList.remove('rotate-180');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.classList.add('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
