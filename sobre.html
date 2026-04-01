@@ -19,8 +19,8 @@
     <link rel="canonical" href="https://egemporiodigital.com.br/sobre.html">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png?v=2">
-    <link rel="shortcut icon" href="favicon.png?v=2" type="image/png">
+    <link rel="icon" type="image/png" href="assets/images/logo.png?v=3">
+    <link rel="shortcut icon" href="assets/images/logo.png?v=3" type="image/png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
     <!-- Tailwind CSS -->
@@ -121,6 +121,7 @@
                 <a href="/" class="hover:text-brand-blue transition-colors">Início</a>
                 <a href="/servicos" class="hover:text-brand-blue transition-colors">Serviços</a>
                 <a href="/sobre" class="text-brand-blue transition-colors">Sobre Nós</a>
+                <a href="/saas" class="hover:text-brand-blue transition-colors">Automações</a>
             </nav>
             <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
                 Fale com a gente
@@ -130,10 +131,11 @@
             </button>
         </div>
         <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
-            <a href="/" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Início</a>
-            <a href="/servicos" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Serviços</a>
-            <a href="/sobre" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition">Sobre Nós</a>
-            <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg">Fale com a gente</a>
+            <a href="/" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Início</a>
+            <a href="/servicos" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços</a>
+            <a href="/sobre" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Sobre Nós</a>
+            <a href="/saas" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Automações</a>
+            <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">Fale com a gente</a>
         </div>
     </header>
 

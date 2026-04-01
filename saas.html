@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Automações | EG Empório Digital</title>
+    <meta name="description" content="Ecossistemas Kairós e Horizon. Soluções SaaS de alta performance.">
+
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'eg-dark': '#020617',       
+                        'brand-blue': '#00e1ff',    
+                        'brand-gold': '#ffcc00', 
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'], 
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #020617;
+            background-image: radial-gradient(circle at 50% 10%, #0a2540 0%, #020617 70%);
+            background-attachment: fixed;
+        }
+        
+        .flyer-title {
+            background: linear-gradient(to bottom, #ffffff, #00e1ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 20px rgba(0, 225, 255, 0.3));
+        }
+
+        .glass-tech {
+            background: rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(0, 225, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .logo-animate {
+            position: relative;
+            color: rgba(255, 255, 255, 0.05);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+        }
+        
+        .logo-animate span {
+            color: transparent !important;
+            -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
+        }
+
+        .logo-animate::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0; left: 0;
+            width: 0; height: 100%;
+            background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0px;
+            border-right: 2px solid #00e1ff;
+            overflow: hidden;
+            animation: fillLogoLoop 20s linear infinite;
+        }
+
+        @keyframes fillLogoLoop {
+            0%, 2% { width: 0; border-right-color: #00e1ff; }
+            10% { width: 100%; border-right-color: #00e1ff; }
+            11%, 92% { width: 100%; border-right-color: transparent; }
+            98%, 100% { width: 0; border-right-color: transparent; }
+        }
+
+        .bg-fixed-mobile { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -50; overflow: hidden; }
+        
+        /* Ajuste do menu mobile para garantir o esquadro */
+        #mobile-menu {
+            background: rgba(2, 6, 23, 0.98);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
+
+    <div class="bg-fixed-mobile flex items-center justify-center">
+        <img src="assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow">
+    </div>
+
+    <!-- HEADER: IGUAL À HOME -->
+    <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            
+            <a href="/" class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                <img src="assets/images/logo.png" alt="Logo EG" class="h-8 md:h-10 w-auto object-contain">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </a>
+
+            <!-- NAV LINKS (Breakpoint md para bater com a home) -->
+            <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
+                <a href="/" class="hover:text-brand-blue transition-colors">Início</a>
+                <a href="/servicos" class="hover:text-brand-blue transition-colors">Serviços</a>
+                <a href="/sobre" class="hover:text-brand-blue transition-colors">Sobre Nós</a>
+                <a href="/saas" class="text-brand-blue">Automações</a>
+            </nav>
+
+            <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+                Fale com a gente
+            </a>
+
+            <button id="menu-btn" class="md:hidden text-brand-blue text-3xl focus:outline-none" onclick="toggleMenu()">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <!-- MOBILE MENU (CORRIGIDO: ESQUADRO IDENTICO À HOME) -->
+        <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
+            <a href="/" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Início</a>
+            <a href="/servicos" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços</a>
+            <a href="/sobre" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Sobre Nós</a>
+            <a href="/saas" class="text-brand-blue font-tech uppercase tracking-widest text-lg" onclick="toggleMenu()">Automações</a>
+            <div class="pt-4">
+                <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." class="px-10 py-4 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded text-xs shadow-lg" onclick="toggleMenu()">
+                    Fale com a gente
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-44 pb-16 px-4 text-center">
+        <h1 class="font-tech text-4xl md:text-6xl font-black uppercase mb-6 flyer-title tracking-wide leading-tight">
+            Automações Inteligentes
+        </h1>
+        <p class="font-sans max-w-3xl mx-auto text-base md:text-xl text-slate-300 font-light leading-relaxed">
+            Sistemas SaaS projetados para escalar seu negócio com tecnologia de elite.
+        </p>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-6 pb-32 space-y-20">
+
+        <!-- KAIRÓS -->
+        <section class="py-10">
+            <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-blue/10 blur-[80px] -z-10"></div>
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <div class="flex-1 text-left">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="px-3 py-1 bg-brand-blue/10 border border-brand-blue/30 rounded text-brand-blue text-[10px] font-tech uppercase tracking-widest">Tecnologia Exclusiva</span>
+                        </div>
+                        <h2 class="font-tech text-2xl md:text-4xl text-white mb-4 uppercase leading-tight">
+                            Ecossistema <span class="text-brand-blue">Kairós</span>
+                        </h2>
+                        <p class="text-slate-300 text-base md:text-lg mb-6 leading-relaxed font-sans">
+                            Um sistema de agendamento inteligente que trabalha pelo seu negócio. O <strong>Kairós</strong> elimina a necessidade de secretária, permitindo que seu cliente agende sozinho, a qualquer hora do dia.
+                        </p>
+                        <ul class="space-y-2 mb-8 text-slate-400 text-sm font-sans">
+                            <li class="flex items-center gap-2"><i class="ph ph-check-circle text-brand-blue"></i> Adapta-se a qualquer nicho</li>
+                            <li class="flex items-center gap-2"><i class="ph ph-check-circle text-brand-blue"></i> Personalizável com sua Marca e Logo</li>
+                            <li class="flex items-center gap-2"><i class="ph ph-check-circle text-brand-blue"></i> Agendamento em menos de 1 minuto (24h)</li>
+                        </ul>
+                        <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="inline-flex items-center gap-3 px-10 py-4 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20 text-sm">
+                            Acessar Kairós <i class="ph ph-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="flex-1 w-full flex justify-center">
+                        <img src="assets/images/kairos.jpg" alt="Kairós" class="w-full md:w-4/5 rounded-lg border border-brand-blue/20 shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HORIZON -->
+        <section class="py-10">
+            <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-gold/20 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-64 h-64 bg-brand-gold/5 blur-[80px] -z-10"></div>
+                <div class="flex flex-col md:flex-row-reverse items-center gap-10">
+                    <div class="flex-1 text-left">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="px-3 py-1 bg-brand-gold/10 border border-brand-gold/30 rounded text-brand-gold text-[10px] font-tech uppercase tracking-widest">Tecnologia Exclusiva</span>
+                        </div>
+                        <h2 class="font-tech text-2xl md:text-4xl text-white mb-4 uppercase leading-tight">
+                            Horizon <span class="text-brand-gold">Gold</span>
+                        </h2>
+                        <p class="text-slate-300 text-base md:text-lg mb-8 leading-relaxed font-sans">
+                            Transforme seu WhatsApp em uma <strong>máquina de vendas automática</strong>. Atendimento instantâneo, organização inteligente e escala infinita.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-3 mb-8">
+                            <div class="p-3 border border-white/5 bg-white/5 rounded-lg">
+                                <span class="text-brand-gold font-tech text-[9px] uppercase tracking-widest block mb-1">Status</span>
+                                <p class="text-white text-xs font-bold uppercase">Alerta de Novo Cliente</p>
+                            </div>
+                            <div class="p-3 border border-white/5 bg-white/5 rounded-lg">
+                                <span class="text-brand-gold font-tech text-[9px] uppercase tracking-widest block mb-1">Infra</span>
+                                <p class="text-white text-xs font-bold uppercase">Dashboard Cloud</p>
+                            </div>
+                            <div class="p-3 border border-white/5 bg-white/5 rounded-lg">
+                                <span class="text-brand-gold font-tech text-[9px] uppercase tracking-widest block mb-1">Equipe</span>
+                                <p class="text-white text-xs font-bold uppercase">Agente Multi-Nível</p>
+                            </div>
+                            <div class="p-3 border border-white/5 bg-white/5 rounded-lg">
+                                <span class="text-brand-gold font-tech text-[9px] uppercase tracking-widest block mb-1">Segurança</span>
+                                <p class="text-white text-xs font-bold uppercase">Anti-Ban</p>
+                            </div>
+                        </div>
+
+                        <a href="https://horizon.egemporiodigital.com.br" target="_blank" class="inline-flex items-center gap-3 px-10 py-4 bg-brand-gold text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg text-sm">
+                            Acessar Horizon <i class="ph ph-lightning-fill"></i>
+                        </a>
+                    </div>
+                    <div class="flex-1 w-full flex justify-center">
+                        <img src="assets/images/horizon.jpg" alt="Horizon" class="w-full md:w-4/5 rounded-lg border border-brand-gold/20 shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER IDENTICO HOME -->
+    <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
+        <div class="flex flex-col items-center gap-8">
+            <div class="flex flex-col items-center">
+                <img src="assets/images/logo.png" alt="Logo EG" class="h-8 opacity-50 mb-2">
+                <div class="logo-animate font-tech text-xl font-bold uppercase" data-text="EG EMPÓRIO DIGITAL">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
+            </div>
+
+            <div class="flex gap-8">
+                <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-white/5 group-hover:border-brand-blue transition-all">
+                        <i class="ph ph-instagram-logo text-2xl text-slate-300 group-hover:text-brand-blue"></i>
+                    </div>
+                </a>
+                <a href="https://egemporiodigital.com.br/blog" target="_blank" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-white/5 group-hover:border-brand-blue transition-all">
+                        <i class="ph ph-article text-2xl text-slate-300 group-hover:text-brand-blue"></i>
+                    </div>
+                </a>
+                <a href="/criacao-de-sites/" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-white/5 group-hover:border-brand-blue transition-all">
+                        <i class="ph ph-layout text-2xl text-slate-300 group-hover:text-brand-blue"></i>
+                    </div>
+                </a>
+                <a href="/gestao-de-trafego/cidade.html" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-white/5 group-hover:border-brand-blue transition-all">
+                        <i class="ph ph-trend-up text-2xl text-slate-300 group-hover:text-brand-blue"></i>
+                    </div>
+                </a>
+                <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
+                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-white/5 group-hover:border-brand-blue transition-all">
+                        <i class="ph ph-envelope-simple text-2xl text-slate-300 group-hover:text-brand-blue"></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center">
+                <p class="text-xs text-slate-600 uppercase tracking-widest">© 2025 EG Empório Digital.</p>
+                <p class="text-[10px] text-slate-700 mt-1">Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        }
+    </script>
+</body>
+</html>
