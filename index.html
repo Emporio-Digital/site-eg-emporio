@@ -1,6 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
 <head>
+<!-- SCHEMA UNIFICADO: AUTORIDADE, EMPRESA E GOOGLE PROFILE -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://egemporiodigital.com.br/#organization",
+      "name": "EG Empório Digital",
+      "url": "https://egemporiodigital.com.br",
+      "logo": "https://egemporiodigital.com.br/assets/images/logo.png",
+      "image": "https://egemporiodigital.com.br/assets/images/logo.png",
+      "description": "Desenvolvimento de softwares complexos, sites institucionais, sistemas SaaS e landing pages de alta conversão.",
+      "telephone": "+5511952835361",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://www.instagram.com/eg.emporio.digital/",
+        "https://horizon.egemporiodigital.com.br/",
+        "https://kairos.egemporiodigital.com.br",
+        "https://share.google/Y0tEcsVkUVy9TDu4e" 
+      ],
+      "knowsAbout": [
+        "SaaS", "Landing Pages", "Web Development", "Sistema Kairós", "SEO Avançado", "CRO"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://egemporiodigital.com.br/#website",
+      "url": "https://egemporiodigital.com.br/",
+      "name": "EG Empório Digital",
+      "publisher": { "@id": "https://egemporiodigital.com.br/#organization" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://egemporiodigital.com.br/#tese-autoridade",
+      "serviceType": "Criação de Sites e Sistemas SaaS de Elite",
+      "provider": { "@id": "https://egemporiodigital.com.br/#organization" },
+      "description": "Metodologia exclusiva fundamentada em 30 pilares de excelência para dominância de mercado e performance técnica.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Pilares de Especialidade",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Criação de Sites Profissionais de Elite"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Criação de Sites Institucionais de Alta Autoridade"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Engenharia de Conversão (CRO)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Otimização SEO Avançada"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Desenvolvimento Mobile-First"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX8XFH5XDP"></script>
 <script>
@@ -14,7 +100,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- SEO AVANÇADO -->
-    <title>EG Empório Digital | Tecnologia e Inovação</title>
+    <title>Criação de Sites e Sistemas SaaS | EG Empório Digital</title>
     <meta name="description" content="Especialistas em desenvolvimento de Sites Institucionais, Sistemas SaaS e Landing Pages de alta conversão. Soluções digitais para escalar seu negócio.">
     <link rel="canonical" href="https://egemporiodigital.com.br/">
     
@@ -507,36 +593,12 @@
                 </div>
             </div>
 
-            <!-- CARD 2: DESPACHANTE (ATUALIZADO LOCAL) -->
-            <div onclick="openProjectModal('ga1F1eZ5sNQ', 'https://vitrine-projetos-two.vercel.app/despachante.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                
-                <img src="assets/images/despachante.png" alt="Despachante" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                    </div>
-                </div>
-
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
-                        Serviços
-                    </span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Despachante</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Landing Page de alta conversão para serviços de documentação.</p>
-                </div>
-            </div>
-
             <!-- 1. NOIR GASTROBAR (Antigo SaaS IA) -->
             <div onclick="openProjectModal('3MXvILsR5DA', 'https://vitrine-projetos-two.vercel.app/saas-ia.html')" 
                  class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
                 
-                <!-- IMAGEM IBB -->
-                <img src="https://i.ibb.co/kb2NGD7/Captura-de-tela-2026-02-05-003024.png" alt="Projeto Noir Gastrobar" 
+                <!-- IMAGEM LOCAL -->
+                <img src="assets/images/noir.png" alt="Projeto Noir Gastrobar" 
                      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
@@ -577,30 +639,6 @@
                     </span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Automotivo Luxury</h3>
                     <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos de alto padrão.</p>
-                </div>
-            </div>
-
-            <!-- 3. ARQUITETURA (Mantido) -->
-            <div onclick="openProjectModal('y8MOpAC93MU', 'https://vitrine-projetos-two.vercel.app/arquitetura.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                
-                <img src="assets/images/capa-arquitetura.jpg" alt="Projeto Arquitetura" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
-                        <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
-                    </div>
-                </div>
-
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
-                        Imobiliária
-                    </span>
-                    <h3 class="text-2xl font-tech text-white mb-1 uppercase">Arquitetura Minimal</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Design clean e sofisticado para escritórios de arquitetura.</p>
                 </div>
             </div>
 
@@ -892,6 +930,285 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- SEÇÃO FAQ ANINHADA (ESTRATEGIA DE CONVERSÃO & SEO) -->
+    <section id="faq-premium" class="py-20 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
+        
+        <!-- JSON-LD FAQ SCHEMA (DOMINÂNCIA DE BUSCA) -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Qual o custo real para manter um site profissional em sua região?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O custo envolve o domínio e a hospedagem Cloud. Na EG Empório Digital, focamos em projetos com alto ROI, garantindo que o site em sua região se pague através dos novos clientes gerados. Um site profissional é um ativo, não uma despesa."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Posso usar IA ou ferramentas gratuitas como Wix para meu negócio?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ferramentas gratuitas limitam seu SEO e autoridade em sua região. Para ser líder de mercado, você precisa de um site proprietário, com código otimizado e sem anúncios de terceiros, o que plataformas gratuitas não oferecem."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "TI, Designer ou EG: Quem é o profissional certo para minha empresa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Diferente de profissionais isolados, a EG Empório Digital une Engenharia de Software com Design de Luxo. O resultado é uma plataforma que valida sua autoridade e foca em conversão comercial em sua região."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Preciso de CNPJ para ter um site ou posso iniciar com meu CPF?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Você tem total liberdade para registrar seu domínio em sua região tanto no CPF quanto no CNPJ. A EG auxilia na transição técnica de propriedade conforme seu faturamento escalar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Por que investir em um site se já tenho Instagram e WhatsApp?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Redes sociais são terrenos alugados. O site é sua sede própria em sua região, onde você controla os dados e aparece no Google quando o cliente já decidiu comprar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O que um site precisa ter para fazer sucesso e atrair clientes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Um site de sucesso em sua região precisa de Copywriting persuasivo, carregamento em menos de 2 segundos e uma jornada do usuário focada em levar o lead ao botão de contato sem distrações."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Meu site vai aparecer no Google? Qual a importância do SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim. Todo projeto EG nasce com SEO técnico pronto. Para dominar a primeira página em sua região, o SEO é vital para capturar o tráfego qualificado de quem busca seus serviços organicamente."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como transformar um site institucional em uma ferramenta de vendas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Integramos Landing Pages e funis de conversão que qualificam o lead em sua região antes mesmo dele chegar ao seu WhatsApp, otimizando o tempo da sua equipe comercial."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O que torna um site moderno e interessante em 2026?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Em sua região, a modernidade é definida por Design Minimalista, Micro-interações e performance extrema. Sites lentos perdem cliques; sites EG transmitem autoridade imediata."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como criar um site profissional passo a passo com a EG?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nosso processo em sua região envolve diagnóstico da marca, arquitetura de dados, design de luxo e implementação de SEO. Você recebe uma solução pronta para escalar seu faturamento."
+              }
+            }
+          ]
+        }
+        </script>
+
+        <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl">
+            
+            <!-- HEADER DO CARD MESTRE -->
+            <div onclick="toggleMasterFaq()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
+                <div class="flex flex-col">
+                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                        <i class="ph-fill ph-question text-brand-blue mr-2"></i> Perguntas Frequentes e Dossiê de Custos
+                    </h2>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Tire suas dúvidas sobre valores, tecnologia e posicionamento em sua região</span>
+                </div>
+                <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue transition-all">
+                    <i id="master-faq-icon" class="ph ph-caret-down text-xl transition-transform duration-500"></i>
+                </div>
+            </div>
+
+            <!-- CONTEÚDO DO CARD MESTRE (LISTA DE PERGUNTAS) -->
+            <div id="master-faq-content" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-black/40">
+                <div class="p-4 md:p-10 space-y-4 border-t border-white/10">
+
+    <!-- 1. Custo e Manutenção -->
+    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">1. Qual o custo real para manter um site profissional em sua região?</span>
+            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                Em 2026, um site não é despesa, é ativo. O custo envolve o domínio (.com.br) e a hospedagem Cloud de alta performance. Na EG, focamos em projetos com alto ROI, garantindo que o site se pague através dos novos clientes gerados em sua região.
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. IA e Amadorismo -->
+    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">2. Posso usar IA ou ferramentas gratuitas como Wix para meu negócio?</span>
+            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                Até pode, mas o custo de parecer amador é alto. Ferramentas gratuitas limitam seu SEO e autoridade. Para ser líder de mercado em sua região, você precisa de um site proprietário, sem anúncios de terceiros e com código otimizado para conversão.
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. TI vs Designer vs EG (Diferencial) -->
+    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">3. TI, Designer ou EG: Quem é o profissional certo para minha empresa?</span>
+            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                Profissionais de TI focam no código; Designers no visual. A EG Empório Digital une Engenharia de Software com Design de Luxo. O resultado é um site que não apenas funciona, mas valida sua autoridade e fecha vendas em sua região.
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. CPF vs CNPJ -->
+    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">4. Preciso de CNPJ para ter um site ou posso iniciar com meu CPF?</span>
+            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                Total liberdade: você pode começar com CPF para validar seu projeto e migrar para CNPJ conforme o faturamento escalar. Toda a propriedade técnica do domínio em sua região será sua desde o primeiro dia.
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Redes Sociais -->
+    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">5. Por que investir em um site se já tenho Instagram e WhatsApp?</span>
+            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                Redes sociais são "terrenos alugados". Se a plataforma cair, você perde o contato. O site é sua sede própria. Além disso, é no Google que o cliente em sua região pesquisa quando já decidiu comprar.
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Sucesso e Estratégia (NOVA) -->
+    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">6. O que um site precisa ter para fazer sucesso e atrair clientes?</span>
+            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                Não é apenas beleza. Um site de sucesso precisa de Copywriting persuasivo, carregamento em menos de 2 segundos e uma jornada do usuário (UX) que leve ao botão de contato sem fricção em sua região.
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. SEO Avançado (NOVA - Venda do seu Peixe) -->
+    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden border-brand-blue/30">
+        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider text-brand-blue">7. Meu site vai aparecer no Google? Qual a importância do SEO?</span>
+            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                Todo projeto EG já nasce com SEO técnico impecável. Porém, para dominar a primeira página e passar grandes concorrentes em sua região, oferecemos nossa **Consultoria de SEO Avançado**, focada em posicionamento orgânico e dominância de termos de busca.
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. Site de Vendas (NOVA) -->
+    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">8. Como transformar um site institucional em uma ferramenta de vendas?</span>
+            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                Integramos Landing Pages e funis de alta conversão. Em vez de apenas informar, o seu site passa a qualificar leads e conduzi-los diretamente para o fechamento comercial no seu CRM ou WhatsApp em sua região.
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. Modernidade 2026 (NOVA) -->
+    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">9. O que torna um site "moderno" e "interessante" em 2026?</span>
+            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                Design Minimalista, Micro-interações, Glassmorphism e, acima de tudo, Performance. Em sua região, sites que demoram a carregar perdem 50% dos cliques. Modernidade hoje é sinônimo de velocidade e autoridade visual.
+            </div>
+        </div>
+    </div>
+
+    <!-- 10. Processo EG (NOVA) -->
+    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">10. Como criar um site profissional passo a passo com a EG?</span>
+            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                Nosso processo é consultivo: realizamos o diagnóstico da sua marca em sua região, definimos a arquitetura de dados, criamos o design de luxo e implementamos as melhores práticas de SEO. Você recebe uma solução pronta para escalar seu negócio.
+            </div>
+        </div>
+    </div>
+
+</div>
+            </div>
+
+        <!-- SCRIPT DE LOGICA ANINHADA (MASTER + SUB) -->
+        <script>
+            function toggleMasterFaq() {
+                const content = document.getElementById('master-faq-content');
+                const icon = document.getElementById('master-faq-icon');
+                if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                    content.style.maxHeight = "0px";
+                    icon.classList.remove('rotate-180');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.classList.add('rotate-180');
+                }
+            }
+
+            function toggleSubFaq(btn) {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                const masterContent = document.getElementById('master-faq-content');
+
+                if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                    content.style.maxHeight = "0px";
+                    icon.classList.replace('ph-minus', 'ph-plus');
+                } else {
+                    // Abre a sub-faq
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.classList.replace('ph-plus', 'ph-minus');
+                    
+                    // Ajusta a altura do card mestre para comportar o novo conteúdo
+                    masterContent.style.maxHeight = (masterContent.scrollHeight + content.scrollHeight) + "px";
+                }
+            }
+        </script>
     </section>
 
     <!-- FOOTER (LIMPO) -->
