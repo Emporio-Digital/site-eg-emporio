@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
 <head>
-<!-- SCHEMA UNIFICADO: AUTORIDADE, EMPRESA E GOOGLE PROFILE -->
+
+    <!-- AUTORIDADE ABSOLUTA: SITE NAME + BUSINESS CARD + TESE DE AUTORIDADE + FAQ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://egemporiodigital.com.br/#website",
+      "url": "https://egemporiodigital.com.br/",
+      "name": "EG Empório Digital",
+      "alternateName": "EG Empório Digital",
+      "publisher": { "@id": "https://egemporiodigital.com.br/#organization" },
+      "inLanguage": "pt-BR"
+    },
+    {
       "@type": "ProfessionalService",
       "@id": "https://egemporiodigital.com.br/#organization",
       "name": "EG Empório Digital",
       "url": "https://egemporiodigital.com.br",
-      "logo": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "description": "Desenvolvimento de softwares complexos, sites institucionais, sistemas SaaS e landing pages de alta conversão.",
+      "logo": {
+        "@type": "ImageObject",
+        "inLanguage": "pt-BR",
+        "@id": "https://egemporiodigital.com.br/#logo",
+        "url": "https://egemporiodigital.com.br/assets/images/logo.png",
+        "contentUrl": "https://egemporiodigital.com.br/assets/images/logo.png",
+        "width": "512",
+        "height": "512",
+        "caption": "EG Empório Digital"
+      },
+      "image": { "@id": "https://egemporiodigital.com.br/#logo" },
+      "description": "Especialistas em desenvolvimento de Sites Institucionais, Sistemas SaaS e Landing Pages de alta conversão em 2026.",
       "telephone": "+5511952835361",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "BR"
       },
+      "hasMap": "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D",
       "sameAs": [
         "https://www.instagram.com/eg.emporio.digital/",
-        "https://horizon.egemporiodigital.com.br/",
         "https://kairos.egemporiodigital.com.br",
-        "https://share.google/Y0tEcsVkUVy9TDu4e" 
+        "https://horizon.egemporiodigital.com.br",
+        "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D"
       ],
-      "knowsAbout": [
-        "SaaS", "Landing Pages", "Web Development", "Sistema Kairós", "SEO Avançado", "CRO"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://egemporiodigital.com.br/#website",
-      "url": "https://egemporiodigital.com.br/",
-      "name": "EG Empório Digital",
-      "publisher": { "@id": "https://egemporiodigital.com.br/#organization" }
+      "knowsAbout": ["SaaS", "Landing Pages", "Web Development", "Sistema Kairós", "SEO Avançado", "CRO"]
     },
     {
       "@type": "Service",
@@ -44,49 +55,76 @@
       "description": "Metodologia exclusiva fundamentada em 30 pilares de excelência para dominância de mercado e performance técnica.",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Pilares de Especialidade",
+        "name": "Serviços Premium de Tecnologia",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Criação de Sites Profissionais de Elite"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Criação de Sites Institucionais de Alta Autoridade"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Engenharia de Conversão (CRO)"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Otimização SEO Avançada"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Desenvolvimento Mobile-First"
-            }
-          }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Sites Profissionais de Elite" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Sites Institucionais de Alta Autoridade" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Engenharia de Conversão (CRO)" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Otimização SEO Avançada" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desenvolvimento Mobile-First" } }
         ]
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://egemporiodigital.com.br/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual o custo real para manter um site profissional em sua região?",
+          "acceptedAnswer": { "@type": "Answer", "text": "O custo envolve o domínio e a hospedagem Cloud. Na EG Empório Digital, focamos em projetos com alto ROI, garantindo que o site se pague através dos novos clientes gerados." }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso usar IA ou ferramentas gratuitas como Wix para meu negócio?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ferramentas gratuitas limitam seu SEO e autoridade. Para ser líder de mercado, você precisa de um site proprietário, com código otimizado e sem anúncios de terceiros." }
+        },
+        {
+          "@type": "Question",
+          "name": "TI, Designer ou EG: Quem é o profissional certo para minha empresa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Diferente de profissionais isolados, a EG Empório Digital une Engenharia de Software com Design de Luxo, validando sua autoridade e conversão comercial." }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso de CNPJ para ter um site ou posso iniciar com meu CPF?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Você tem total liberdade para registrar seu domínio tanto no CPF quanto no CNPJ. A EG auxilia na transição técnica conforme seu faturamento escalar." }
+        },
+        {
+          "@type": "Question",
+          "name": "Por que investir em um site se já tenho Instagram e WhatsApp?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Redes sociais são terrenos alugados. O site é sua sede própria, onde você controla os dados e aparece no Google quando o cliente já decidiu comprar." }
+        },
+        {
+          "@type": "Question",
+          "name": "O que um site precisa ter para fazer sucesso e atrair clientes?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Precisa de Copywriting persuasivo, carregamento em menos de 2 segundos e uma jornada do usuário focada em levar o lead ao botão de contato sem distrações." }
+        },
+        {
+          "@type": "Question",
+          "name": "Meu site vai aparecer no Google? Qual a importância do SEO?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. Todo projeto EG nasce com SEO técnico pronto para capturar o tráfego qualificado de quem busca seus serviços organicamente." }
+        },
+        {
+          "@type": "Question",
+          "name": "Como transformar um site institucional em uma ferramenta de vendas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Integramos Landing Pages e funis de conversão que qualificam o lead antes mesmo dele chegar ao seu WhatsApp." }
+        },
+        {
+          "@type": "Question",
+          "name": "O que torna um site moderno e interessante em 2026?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Modernidade é definida por Design Minimalista, Micro-interações e performance extrema. Sites lentos perdem cliques; sites EG transmitem autoridade imediata." }
+        },
+        {
+          "@type": "Question",
+          "name": "Como criar um site profissional passo a passo com a EG?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Nosso processo envolve diagnóstico da marca, arquitetura de dados, design de luxo e implementação de SEO, entregando uma solução pronta para escalar seu negócio." }
+        }
+      ]
     }
   ]
 }
 </script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX8XFH5XDP"></script>
 <script>
@@ -103,33 +141,6 @@
     <title>Criação de Sites e Sistemas SaaS | EG Empório Digital</title>
     <meta name="description" content="Especialistas em desenvolvimento de Sites Institucionais, Sistemas SaaS e Landing Pages de alta conversão. Soluções digitais para escalar seu negócio.">
     <link rel="canonical" href="https://egemporiodigital.com.br/">
-    
-    <!-- SCHEMA MARKUP -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "EG Empório Digital",
-      "url": "https://egemporiodigital.com.br",
-      "logo": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "sameAs": [
-        "https://www.instagram.com/eg.emporio.digital/",
-        "https://kairos.egemporiodigital.com.br"
-      ],
-      "description": "Desenvolvimento de softwares complexos, sites institucionais e landing pages.",
-      "knowsAbout": ["SaaS", "Landing Pages", "Web Development", "Sistema Kairós"]
-    }
-    </script>
-
-    <!-- ADICIONAR ESTE BLOCO ABAIXO DO SCHEMA ATUAL -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "EG Empório Digital",
-      "url": "https://egemporiodigital.com.br/"
-    }
-    </script>
 
     <!-- Favicon e Ícones (TUDO APONTANDO PARA O LOGO.PNG) -->
     <link rel="icon" type="image/png" href="assets/images/logo.png">
@@ -934,96 +945,6 @@
 
     <!-- SEÇÃO FAQ ANINHADA (ESTRATEGIA DE CONVERSÃO & SEO) -->
     <section id="faq-premium" class="py-20 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
-        
-        <!-- JSON-LD FAQ SCHEMA (DOMINÂNCIA DE BUSCA) -->
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Qual o custo real para manter um site profissional em sua região?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "O custo envolve o domínio e a hospedagem Cloud. Na EG Empório Digital, focamos em projetos com alto ROI, garantindo que o site em sua região se pague através dos novos clientes gerados. Um site profissional é um ativo, não uma despesa."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Posso usar IA ou ferramentas gratuitas como Wix para meu negócio?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ferramentas gratuitas limitam seu SEO e autoridade em sua região. Para ser líder de mercado, você precisa de um site proprietário, com código otimizado e sem anúncios de terceiros, o que plataformas gratuitas não oferecem."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "TI, Designer ou EG: Quem é o profissional certo para minha empresa?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Diferente de profissionais isolados, a EG Empório Digital une Engenharia de Software com Design de Luxo. O resultado é uma plataforma que valida sua autoridade e foca em conversão comercial em sua região."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Preciso de CNPJ para ter um site ou posso iniciar com meu CPF?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Você tem total liberdade para registrar seu domínio em sua região tanto no CPF quanto no CNPJ. A EG auxilia na transição técnica de propriedade conforme seu faturamento escalar."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Por que investir em um site se já tenho Instagram e WhatsApp?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Redes sociais são terrenos alugados. O site é sua sede própria em sua região, onde você controla os dados e aparece no Google quando o cliente já decidiu comprar."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "O que um site precisa ter para fazer sucesso e atrair clientes?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Um site de sucesso em sua região precisa de Copywriting persuasivo, carregamento em menos de 2 segundos e uma jornada do usuário focada em levar o lead ao botão de contato sem distrações."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Meu site vai aparecer no Google? Qual a importância do SEO?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sim. Todo projeto EG nasce com SEO técnico pronto. Para dominar a primeira página em sua região, o SEO é vital para capturar o tráfego qualificado de quem busca seus serviços organicamente."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Como transformar um site institucional em uma ferramenta de vendas?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Integramos Landing Pages e funis de conversão que qualificam o lead em sua região antes mesmo dele chegar ao seu WhatsApp, otimizando o tempo da sua equipe comercial."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "O que torna um site moderno e interessante em 2026?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Em sua região, a modernidade é definida por Design Minimalista, Micro-interações e performance extrema. Sites lentos perdem cliques; sites EG transmitem autoridade imediata."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Como criar um site profissional passo a passo com a EG?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Nosso processo em sua região envolve diagnóstico da marca, arquitetura de dados, design de luxo e implementação de SEO. Você recebe uma solução pronta para escalar seu faturamento."
-              }
-            }
-          ]
-        }
-        </script>
 
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl">
             
