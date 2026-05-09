@@ -20,17 +20,98 @@
     <!-- CANONICAL (Aponta para ele mesmo, pois é a Pai) -->
     <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/">
     
-    <!-- SCHEMA MARKUP (Organization/Service) -->
+    <!-- AUTORIDADE MÁXIMA: HUB DE CRIAÇÃO DE SITES (BLINDADO) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "EG Empório Digital - Desenvolvimento Web",
-      "url": "https://egemporiodigital.com.br/criacao-de-sites/",
-      "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "areaServed": "BR",
-      "description": "Agência especializada em criação de sites profissionais, e-commerce e estratégias digitais.",
-      "priceRange": "$$"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://egemporiodigital.com.br/#website",
+          "url": "https://egemporiodigital.com.br/",
+          "name": "EG Empório Digital",
+          "publisher": { "@id": "https://egemporiodigital.com.br/#organization" },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://egemporiodigital.com.br/#organization",
+          "name": "EG Empório Digital",
+          "url": "https://egemporiodigital.com.br",
+          "logo": {
+            "@type": "ImageObject",
+            "inLanguage": "pt-BR",
+            "@id": "https://egemporiodigital.com.br/#logo",
+            "url": "https://egemporiodigital.com.br/assets/images/logo.png",
+            "width": "512",
+            "height": "512",
+            "caption": "EG Empório Digital"
+          },
+          "image": { "@id": "https://egemporiodigital.com.br/#logo" },
+          "description": "Especialistas em desenvolvimento de Sites Institucionais, Sistemas SaaS e Landing Pages de alta conversão em 2026.",
+          "telephone": "+5511952835361",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BR"
+          },
+          "hasMap": "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D",
+          "sameAs": [
+            "https://www.instagram.com/eg.emporio.digital/",
+            "https://kairos.egemporiodigital.com.br",
+            "https://horizon.egemporiodigital.com.br",
+            "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D"
+          ],
+          "knowsAbout": ["Criação de Sites", "SaaS", "Landing Pages", "SEO Avançado", "CRO"]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://egemporiodigital.com.br/criacao-de-sites/#webpage",
+          "url": "https://egemporiodigital.com.br/criacao-de-sites/",
+          "name": "Criação de Sites Profissionais e Lojas Virtuais | EG Empório Digital",
+          "isPartOf": { "@id": "https://egemporiodigital.com.br/#website" },
+          "description": "Hub central de serviços de desenvolvimento web, criação de sites profissionais e estratégias de alta conversão.",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://egemporiodigital.com.br/" },
+              { "@type": "ListItem", "position": 2, "name": "Criação de Sites" }
+            ]
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://egemporiodigital.com.br/criacao-de-sites/#tese-autoridade",
+          "serviceType": "Criação de Sites e Lojas Virtuais",
+          "provider": { "@id": "https://egemporiodigital.com.br/#organization" },
+          "description": "Engenharia de software aplicada para dominância de mercado através de sites de alta performance.",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Catálogo de Serviços de Elite",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Sites Institucionais B2B" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desenvolvimento de Lojas Virtuais e E-commerce" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Landing Pages de Alta Conversão" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Engenharia de Performance e SEO Técnico" } }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://egemporiodigital.com.br/criacao-de-sites/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "O que um site precisa ter para atrair clientes?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Precisa de Copywriting persuasivo, carregamento em menos de 2 segundos (Core Web Vitals) e uma jornada do usuário focada em levar o lead ao contato sem fricção." }
+            },
+            {
+              "@type": "Question",
+              "name": "Vocês criam sites personalizados ou usam templates?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Todos os nossos projetos são desenvolvidos sob medida, utilizando código limpo e design exclusivo para garantir autoridade e performance." }
+            }
+          ]
+        }
+      ]
     }
     </script>
 
@@ -152,76 +233,6 @@
             98%, 100% { width: 0; border-right-color: transparent; }
         }
     </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://egemporiodigital.com.br/criacao-de-sites/#webpage",
-      "url": "https://egemporiodigital.com.br/criacao-de-sites/",
-      "name": "Hub de Criação de Sites Profissionais e E-commerce | EG Empório Digital",
-      "isPartOf": { "@id": "https://egemporiodigital.com.br/#website" },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://egemporiodigital.com.br/" },
-          { "@type": "ListItem", "position": 2, "name": "Criação de Sites" }
-        ]
-      },
-      "description": "Especialistas em desenvolvimento de sites institucionais, lojas virtuais e landing pages de alta performance."
-    },
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://egemporiodigital.com.br/#organization",
-      "name": "EG Empório Digital",
-      "url": "https://egemporiodigital.com.br",
-      "logo": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "telephone": "+5511952835361",
-      "priceRange": "$$",
-      "sameAs": [
-        "https://www.instagram.com/eg.emporio.digital/",
-        "https://share.google/Y0tEcsVkUVy9TDu4e"
-      ]
-    },
-    {
-      "@type": "Service",
-      "@id": "https://egemporiodigital.com.br/#servico-web",
-      "serviceType": "Desenvolvimento Web e Criação de Sites",
-      "provider": { "@id": "https://egemporiodigital.com.br/#organization" },
-      "description": "Engenharia de software aplicada à criação de sites profissionais, e-commerce e páginas de vendas com foco em SEO e conversão.",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Soluções de Desenvolvimento",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Sites Institucionais de Alta Autoridade" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desenvolvimento de Lojas Virtuais (E-commerce)" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Landing Pages para Tráfego Pago" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design e Prototipagem" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manutenção e Hospedagem de Sites Profissionais" } }
-        ]
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://egemporiodigital.com.br/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "O que um site precisa ter para atrair clientes?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Precisa de Copywriting persuasivo, carregamento em menos de 2 segundos (Core Web Vitals) e uma jornada do usuário focada em levar o lead ao contato sem fricção." }
-        },
-        {
-          "@type": "Question",
-          "name": "Vocês criam sites personalizados ou usam templates?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Todos os nossos projetos são desenvolvidos sob medida, utilizando código limpo e design exclusivo para garantir autoridade e performance que templates prontos não oferecem." }
-        }
-      ]
-    }
-  ]
-}
-</script>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
 
@@ -266,7 +277,7 @@
     </header>
 
     <!-- HERO SECTION (HUB PRINCIPAL) -->
-    <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
+    <section id="webpage" class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
         
         <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
             CRIAÇÃO DE SITES <br> <span class="text-white">PROFISSIONAIS</span>
@@ -747,7 +758,7 @@
     </section>
 
     <!-- SEÇÃO SEO ACCORDION - 20 PILARES DE AUTORIDADE (HUB) -->
-    <section id="autoridade-hub-seo" class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
+    <section id="tese-autoridade" class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
             <!-- HEADER DO CARD -->

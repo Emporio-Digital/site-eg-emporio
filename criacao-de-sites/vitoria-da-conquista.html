@@ -20,32 +20,108 @@
     <!-- CANONICAL: VALIDAÇÃO DE ORIGINALIDADE (SELF-REFERENCING) -->
     <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/vitoria-da-conquista">
     
-    <!-- SCHEMA MARKUP (LOCAL BUSINESS / PROFESSIONAL SERVICE) -->
+    <!-- AUTORIDADE ABSOLUTA: SCHEMA UNIFICADO (MARCA MÃE + UNIDADE LOCAL VITÓRIA DA CONQUISTA + TESE + FAQ) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "EG Empório Digital - Criação de Sites em Vitória da Conquista",
-      "url": "https://egemporiodigital.com.br/criacao-de-sites/vitoria-da-conquista",
-      "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "priceRange": "$$",
-      "telephone": "+5511952835361",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Avenida Olívia Flores",
-        "addressLocality": "Vitória da Conquista",
-        "addressRegion": "BA",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "-14.8619",
-        "longitude": "-40.8444"
-      },
-      "areaServed": ["Vitória da Conquista", "Candeias", "Recreio", "Brasil", "Boa Vista", "Ibirapuera", "Bairro Alto Maron", "Centro", "Bahia", "Sudoeste Baiano"],
-      "description": "Agência especializada em criação de sites, landing pages de alta conversão e lojas virtuais em Vitória da Conquista, atendendo o polo de educação, saúde e café da Suíça Baiana."
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://egemporiodigital.com.br/#website",
+          "url": "https://egemporiodigital.com.br/",
+          "name": "EG Empório Digital",
+          "publisher": { "@id": "https://egemporiodigital.com.br/#organization" },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://egemporiodigital.com.br/#organization",
+          "name": "EG Empório Digital",
+          "url": "https://egemporiodigital.com.br",
+          "logo": {
+            "@type": "ImageObject",
+            "inLanguage": "pt-BR",
+            "@id": "https://egemporiodigital.com.br/#logo",
+            "url": "https://egemporiodigital.com.br/assets/images/logo.png",
+            "width": "512",
+            "height": "512",
+            "caption": "EG Empório Digital"
+          },
+          "image": { "@id": "https://egemporiodigital.com.br/#logo" }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://egemporiodigital.com.br/criacao-de-sites/vitoria-da-conquista#localbusiness",
+          "name": "EG Empório Digital - Criação de Sites em Vitória da Conquista",
+          "url": "https://egemporiodigital.com.br/criacao-de-sites/vitoria-da-conquista",
+          "parentOrganization": { "@id": "https://egemporiodigital.com.br/#organization" },
+          "image": { "@id": "https://egemporiodigital.com.br/#logo" },
+          "description": "Agência especializada em criação de sites, landing pages de alta conversão e lojas virtuais em Vitória da Conquista, atendendo o eixo das Avenidas Olívia Flores, Juracy Magalhães e os bairros Candeias e Recreio.",
+          "telephone": "+5511952835361",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Avenida Olívia Flores / Avenida Juracy Magalhães",
+            "addressLocality": "Vitória da Conquista",
+            "addressRegion": "BA",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-14.8619",
+            "longitude": "-40.8444"
+          },
+          "areaServed": ["Vitória da Conquista", "Candeias", "Recreio", "Brasil", "Boa Vista", "Ibirapuera", "Bairro Alto Maron", "Centro", "Bahia", "Sudoeste Baiano"],
+          "hasMap": "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D",
+          "sameAs": [
+            "https://www.instagram.com/eg.emporio.digital/",
+            "https://kairos.egemporiodigital.com.br",
+            "https://horizon.egemporiodigital.com.br",
+            "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D"
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://egemporiodigital.com.br/criacao-de-sites/vitoria-da-conquista#tese-autoridade",
+          "serviceType": "Criação de Sites e Lojas Virtuais em Vitória da Conquista",
+          "provider": { "@id": "https://egemporiodigital.com.br/criacao-de-sites/vitoria-da-conquista#localbusiness" },
+          "description": "Metodologia baseada em 12 pilares de excelência para dominância de mercado e performance técnica em Vitória da Conquista.",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Autoridade em VCA",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Sites Profissionais e Institucionais B2B" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lojas Virtuais e E-commerce Otimizado" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Pages para Alta Conversão" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desenvolvimento Mobile-First de Alta Performance" } }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://egemporiodigital.com.br/criacao-de-sites/vitoria-da-conquista#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Qual o valor para criar um site em Vitória da Conquista?",
+              "acceptedAnswer": { "@type": "Answer", "text": "O investimento varia conforme a complexidade. Uma Landing Page para captação de leads tem um valor menor que um E-commerce robusto. Criamos orçamentos sob medida focados no retorno para o empresário de Vitória da Conquista." }
+            },
+            {
+              "@type": "Question",
+              "name": "O site vai me ajudar a aparecer no Google de VCA?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Com certeza. Utilizamos técnicas de SEO Local geolocalizado para que seu site seja autoridade para buscas feitas em Vitória da Conquista e todo o Sudoeste Baiano, atraindo o cliente que está perto de você." }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto tempo leva para entregar o projeto?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Landing Pages profissionais são entregues em até 7 dias úteis. Sites institucionais ou Lojas Virtuais levam entre 15 e 30 dias, dependendo da complexidade das integrações e do volume de conteúdo." }
+            }
+          ]
+        }
+      ]
     }
     </script>
+    
 
     <!-- Open Graph (Identidade da Marca) -->
     <meta property="og:site_name" content="EG Empório Digital">
@@ -173,107 +249,6 @@
             98%, 100% { width: 0; border-right-color: transparent; }
         }
     </style>
-<!-- SCHEMA UNIFICADO: EMPRESA, GOOGLE PROFILE, TESE DE AUTORIDADE E FAQ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://egemporiodigital.com.br/#organization",
-      "name": "EG Empório Digital",
-      "url": "https://egemporiodigital.com.br",
-      "logo": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "telephone": "+5511952835361",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "BR"
-      },
-      "sameAs": [
-        "https://www.instagram.com/eg.emporio.digital/",
-        "https://kairos.egemporiodigital.com.br",
-        "https://share.google/Y0tEcsVkUVy9TDu4e"
-      ]
-    },
-    {
-      "@type": "Service",
-      "@id": "https://egemporiodigital.com.br/#tese-autoridade",
-      "serviceType": "Criação de Sites e Sistemas SaaS de Elite",
-      "provider": { "@id": "https://egemporiodigital.com.br/#organization" },
-      "description": "Metodologia baseada em 30 pilares de excelência para dominância de mercado e performance técnica.",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Serviços de Autoridade",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Sites Profissionais de Elite" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Sites Institucionais de Alta Autoridade" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Engenharia de Conversão (CRO)" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Otimização SEO Avançada" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desenvolvimento Mobile-First" } }
-        ]
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://egemporiodigital.com.br/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Qual o custo real para manter um site profissional?",
-          "acceptedAnswer": { "@type": "Answer", "text": "O custo envolve domínio e hospedagem Cloud. Na EG, focamos em projetos com alto ROI, garantindo que o site se pague através dos novos clientes gerados." }
-        },
-        {
-          "@type": "Question",
-          "name": "Posso usar IA ou ferramentas gratuitas como Wix?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Ferramentas gratuitas limitam seu SEO e autoridade. Para ser líder de mercado, você precisa de um site proprietário com código otimizado." }
-        },
-        {
-          "@type": "Question",
-          "name": "TI, Designer ou EG: Quem é o profissional certo?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A EG une Engenharia de Software com Design de Luxo. O resultado é uma plataforma que valida sua autoridade e foca em conversão comercial." }
-        },
-        {
-          "@type": "Question",
-          "name": "Preciso de CNPJ para ter um site?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Você pode registrar seu domínio tanto no CPF quanto no CNPJ. Auxiliamos na transição técnica conforme seu faturamento escalar." }
-        },
-        {
-          "@type": "Question",
-          "name": "Por que investir em um site se já tenho Instagram e WhatsApp?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Redes sociais são terrenos alugados. O site é sua sede própria onde você controla os dados e aparece no Google para quem quer comprar." }
-        },
-        {
-          "@type": "Question",
-          "name": "O que um site precisa ter para atrair clientes?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Precisa de Copywriting persuasivo, carregamento em menos de 2 segundos e uma jornada do usuário focada em levar o lead ao contato." }
-        },
-        {
-          "@type": "Question",
-          "name": "Meu site vai aparecer no Google?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sim. Todo projeto EG nasce com SEO técnico pronto para capturar tráfego qualificado de quem busca seus serviços organicamente." }
-        },
-        {
-          "@type": "Question",
-          "name": "Como transformar um site institucional em ferramenta de vendas?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Integramos Landing Pages e funis que qualificam o lead antes mesmo dele chegar ao seu WhatsApp, otimizando seu tempo comercial." }
-        },
-        {
-          "@type": "Question",
-          "name": "O que torna um site moderno em 2026?",
-          "acceptedAnswer": { "@type": "Answer", "text": "É definido por Design Minimalista, Micro-interações e performance extrema. Sites EG transmitem autoridade imediata." }
-        },
-        {
-          "@type": "Question",
-          "name": "Como criar um site profissional passo a passo com a EG?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Nosso processo envolve diagnóstico da marca, arquitetura de dados, design de luxo e SEO. Você recebe uma solução pronta para escalar." }
-        }
-      ]
-    }
-  ]
-}
-</script>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
 
@@ -555,7 +530,7 @@
     </section>
 
     <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS - VITÓRIA DA CONQUISTA) -->
-    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
+    <section id="tese-autoridade" class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
             <!-- HEADER DO CARD (Clicável) -->
@@ -684,7 +659,7 @@
     </section>
 
     <!-- SEÇÃO FAQ (SEO BOOSTER) -->
-    <section class="py-20 px-6 max-w-4xl mx-auto relative z-10">
+    <section id="faq" class="py-20 px-6 max-w-4xl mx-auto relative z-10">
         <div class="text-center mb-12">
             <h2 class="font-tech text-2xl md:text-3xl text-white mb-4 uppercase">
                 Dúvidas <span class="text-brand-blue">Frequentes</span>

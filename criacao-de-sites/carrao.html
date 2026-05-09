@@ -20,32 +20,103 @@
     <!-- CANONICAL: VALIDAÇÃO DE ORIGINALIDADE (SELF-REFERENCING) -->
     <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/carrao">
     
-    <!-- SCHEMA MARKUP (LOCAL BUSINESS / PROFESSIONAL SERVICE) -->
+    <!-- AUTORIDADE ABSOLUTA: SCHEMA UNIFICADO (MARCA MÃE + UNIDADE LOCAL CARRÃO + TESE + FAQ) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "EG Empório Digital - Criação de Sites no Carrão",
-      "url": "https://egemporiodigital.com.br/criacao-de-sites/carrao",
-      "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "priceRange": "$$",
-      "telephone": "+5511952835361",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Avenida Conselheiro Carrão",
-        "addressLocality": "Vila Carrão",
-        "addressRegion": "SP",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "-23.5485",
-        "longitude": "-46.5360"
-      },
-      "areaServed":["Vila Carrão", "Tatuapé", "Vila Formosa", "Aricanduva", "Penha", "Chácara Califórnia", "Vila Matilde", "Zona Leste SP"],
-      "description": "Agência especializada em criação de sites, landing pages de alta conversão e lojas virtuais no Carrão, impulsionando empresas na Zona Leste de São Paulo."
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://egemporiodigital.com.br/#website",
+          "url": "https://egemporiodigital.com.br/",
+          "name": "EG Empório Digital",
+          "publisher": { "@id": "https://egemporiodigital.com.br/#organization" },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://egemporiodigital.com.br/#organization",
+          "name": "EG Empório Digital",
+          "url": "https://egemporiodigital.com.br",
+          "logo": {
+            "@type": "ImageObject",
+            "inLanguage": "pt-BR",
+            "@id": "https://egemporiodigital.com.br/#logo",
+            "url": "https://egemporiodigital.com.br/assets/images/logo.png",
+            "width": "512",
+            "height": "512",
+            "caption": "EG Empório Digital"
+          },
+          "image": { "@id": "https://egemporiodigital.com.br/#logo" }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://egemporiodigital.com.br/criacao-de-sites/carrao#localbusiness",
+          "name": "EG Empório Digital - Criação de Sites no Carrão",
+          "url": "https://egemporiodigital.com.br/criacao-de-sites/carrao",
+          "parentOrganization": { "@id": "https://egemporiodigital.com.br/#organization" },
+          "image": { "@id": "https://egemporiodigital.com.br/#logo" },
+          "description": "Agência especializada em criação de sites, landing pages de alta conversão e lojas virtuais na Vila Carrão, atendendo a Av. Conselheiro Carrão e toda a Zona Leste.",
+          "telephone": "+5511952835361",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Avenida Conselheiro Carrão",
+            "addressLocality": "Vila Carrão",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-23.5485",
+            "longitude": "-46.5360"
+          },
+          "areaServed": ["Vila Carrão", "Tatuapé", "Vila Formosa", "Aricanduva", "Penha", "Chácara Califórnia", "Vila Matilde", "Zona Leste SP"],
+          "hasMap": "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D",
+          "sameAs": [
+            "https://www.instagram.com/eg.emporio.digital/",
+            "https://kairos.egemporiodigital.com.br",
+            "https://horizon.egemporiodigital.com.br",
+            "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D"
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://egemporiodigital.com.br/criacao-de-sites/carrao#tese-autoridade",
+          "serviceType": "Criação de Sites e Lojas Virtuais no Carrão",
+          "provider": { "@id": "https://egemporiodigital.com.br/criacao-de-sites/carrao#localbusiness" },
+          "description": "Metodologia baseada em 12 pilares de excelência para dominância de mercado e performance técnica na Vila Carrão.",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Autoridade no Carrão",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Sites Profissionais e Institucionais B2B" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lojas Virtuais e E-commerce Otimizado" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Pages para Alta Conversão" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desenvolvimento Mobile-First de Alta Performance" } }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://egemporiodigital.com.br/criacao-de-sites/carrao#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Quanto custa para criar um site no Carrão?",
+              "acceptedAnswer": { "@type": "Answer", "text": "O orçamento depende do objetivo da sua empresa. Uma Landing Page focada apenas na captação de clientes locais via tráfego pago possui um valor menor do que um e-commerce ou um site institucional robusto. Nossa equipe analisa a demanda do seu negócio na Zona Leste e monta uma proposta personalizada com foco no Retorno sobre Investimento." }
+            },
+            {
+              "@type": "Question",
+              "name": "Minha empresa será encontrada nas buscas da Zona Leste?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sim! Todos os nossos projetos de criação de sites profissionais são desenvolvidos com tecnologia de SEO Local. Nossa programação foca nas palavras-chave exatas da Vila Carrão, Tatuapé, Aricanduva e bairros vizinhos, alavancando seu negócio diretamente nos resultados regionais do Google." }
+            }
+          ]
+        }
+      ]
     }
     </script>
+    
 
     <!-- Open Graph (Identidade da Marca) -->
     <meta property="og:site_name" content="EG Empório Digital">
@@ -173,107 +244,6 @@
             98%, 100% { width: 0; border-right-color: transparent; }
         }
     </style>
-<!-- SCHEMA UNIFICADO: EMPRESA, GOOGLE PROFILE, TESE DE AUTORIDADE E FAQ -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://egemporiodigital.com.br/#organization",
-      "name": "EG Empório Digital",
-      "url": "https://egemporiodigital.com.br",
-      "logo": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "telephone": "+5511952835361",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "BR"
-      },
-      "sameAs": [
-        "https://www.instagram.com/eg.emporio.digital/",
-        "https://kairos.egemporiodigital.com.br",
-        "https://share.google/Y0tEcsVkUVy9TDu4e"
-      ]
-    },
-    {
-      "@type": "Service",
-      "@id": "https://egemporiodigital.com.br/#tese-autoridade",
-      "serviceType": "Criação de Sites e Sistemas SaaS de Elite",
-      "provider": { "@id": "https://egemporiodigital.com.br/#organization" },
-      "description": "Metodologia baseada em 30 pilares de excelência para dominância de mercado e performance técnica.",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Serviços de Autoridade",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Sites Profissionais de Elite" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Sites Institucionais de Alta Autoridade" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Engenharia de Conversão (CRO)" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Otimização SEO Avançada" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desenvolvimento Mobile-First" } }
-        ]
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://egemporiodigital.com.br/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Qual o custo real para manter um site profissional?",
-          "acceptedAnswer": { "@type": "Answer", "text": "O custo envolve domínio e hospedagem Cloud. Na EG, focamos em projetos com alto ROI, garantindo que o site se pague através dos novos clientes gerados." }
-        },
-        {
-          "@type": "Question",
-          "name": "Posso usar IA ou ferramentas gratuitas como Wix?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Ferramentas gratuitas limitam seu SEO e autoridade. Para ser líder de mercado, você precisa de um site proprietário com código otimizado." }
-        },
-        {
-          "@type": "Question",
-          "name": "TI, Designer ou EG: Quem é o profissional certo?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A EG une Engenharia de Software com Design de Luxo. O resultado é uma plataforma que valida sua autoridade e foca em conversão comercial." }
-        },
-        {
-          "@type": "Question",
-          "name": "Preciso de CNPJ para ter um site?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Você pode registrar seu domínio tanto no CPF quanto no CNPJ. Auxiliamos na transição técnica conforme seu faturamento escalar." }
-        },
-        {
-          "@type": "Question",
-          "name": "Por que investir em um site se já tenho Instagram e WhatsApp?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Redes sociais são terrenos alugados. O site é sua sede própria onde você controla os dados e aparece no Google para quem quer comprar." }
-        },
-        {
-          "@type": "Question",
-          "name": "O que um site precisa ter para atrair clientes?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Precisa de Copywriting persuasivo, carregamento em menos de 2 segundos e uma jornada do usuário focada em levar o lead ao contato." }
-        },
-        {
-          "@type": "Question",
-          "name": "Meu site vai aparecer no Google?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sim. Todo projeto EG nasce com SEO técnico pronto para capturar tráfego qualificado de quem busca seus serviços organicamente." }
-        },
-        {
-          "@type": "Question",
-          "name": "Como transformar um site institucional em ferramenta de vendas?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Integramos Landing Pages e funis que qualificam o lead antes mesmo dele chegar ao seu WhatsApp, otimizando seu tempo comercial." }
-        },
-        {
-          "@type": "Question",
-          "name": "O que torna um site moderno em 2026?",
-          "acceptedAnswer": { "@type": "Answer", "text": "É definido por Design Minimalista, Micro-interações e performance extrema. Sites EG transmitem autoridade imediata." }
-        },
-        {
-          "@type": "Question",
-          "name": "Como criar um site profissional passo a passo com a EG?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Nosso processo envolve diagnóstico da marca, arquitetura de dados, design de luxo e SEO. Você recebe uma solução pronta para escalar." }
-        }
-      ]
-    }
-  ]
-}
-</script>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
 
@@ -555,7 +525,7 @@
     </section>
 
     <!-- SEÇÃO SEO ACCORDION ("SANFONA DE CONTEÚDO" - ESTRATÉGIA DOMINANDO TERRITÓRIOS - CARRÃO) -->
-    <section class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
+    <section id="tese-autoridade" class="py-12 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
             <!-- HEADER DO CARD (Clicável) -->
@@ -684,7 +654,7 @@
     </section>
 
     <!-- SEÇÃO FAQ (SEO BOOSTER) -->
-    <section class="py-20 px-6 max-w-4xl mx-auto relative z-10">
+    <section id="faq" class="py-20 px-6 max-w-4xl mx-auto relative z-10">
         <div class="text-center mb-12">
             <h2 class="font-tech text-2xl md:text-3xl text-white mb-4 uppercase">
                 Dúvidas <span class="text-brand-blue">Frequentes</span>

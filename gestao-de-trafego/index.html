@@ -20,17 +20,97 @@
     <!-- CANONICAL: HUB PRINCIPAL DE TRÁFEGO -->
     <link rel="canonical" href="https://egemporiodigital.com.br/gestao-de-trafego/">
     
-    <!-- SCHEMA MARKUP (ADVERTISING AGENCY / SERVICE) -->
+    <!-- AUTORIDADE MÁXIMA: HUB DE GESTÃO DE TRÁFEGO (BLINDADO) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "AdvertisingAgency",
-      "name": "EG Empório Digital - Gestão de Tráfego e Performance",
-      "url": "https://egemporiodigital.com.br/gestao-de-trafego/",
-      "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "areaServed": "BR",
-      "description": "Agência especializada em tráfego pago, anúncios no Google, Facebook, Instagram e estratégias de escala de faturamento.",
-      "priceRange": "$$"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://egemporiodigital.com.br/#website",
+          "url": "https://egemporiodigital.com.br/",
+          "name": "EG Empório Digital",
+          "publisher": { "@id": "https://egemporiodigital.com.br/#organization" },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "AdvertisingAgency",
+          "@id": "https://egemporiodigital.com.br/#organization",
+          "name": "EG Empório Digital",
+          "url": "https://egemporiodigital.com.br",
+          "logo": {
+            "@type": "ImageObject",
+            "inLanguage": "pt-BR",
+            "@id": "https://egemporiodigital.com.br/#logo",
+            "url": "https://egemporiodigital.com.br/assets/images/logo.png",
+            "width": "512",
+            "height": "512",
+            "caption": "EG Empório Digital"
+          },
+          "image": { "@id": "https://egemporiodigital.com.br/#logo" },
+          "description": "Especialistas em Gestão de Tráfego Pago, Performance Digital e Escala de Faturamento através de anúncios online.",
+          "telephone": "+5511952835361",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BR"
+          },
+          "hasMap": "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D",
+          "sameAs": [
+            "https://www.instagram.com/eg.emporio.digital/",
+            "https://kairos.egemporiodigital.com.br",
+            "https://horizon.egemporiodigital.com.br",
+            "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D"
+          ],
+          "knowsAbout": ["Google Ads", "Meta Ads", "Tráfego Pago", "Escala de ROI", "Growth Hacking", "CRO"]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://egemporiodigital.com.br/gestao-de-trafego/#webpage",
+          "url": "https://egemporiodigital.com.br/gestao-de-trafego/",
+          "name": "Gestão de Tráfego Pago e Performance | EG Empório Digital",
+          "isPartOf": { "@id": "https://egemporiodigital.com.br/#website" },
+          "description": "Estratégias de anúncios online focadas em ROI e escala de vendas para empresas de alto crescimento.",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://egemporiodigital.com.br/" },
+              { "@type": "ListItem", "position": 2, "name": "Gestão de Tráfego" }
+            ]
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://egemporiodigital.com.br/gestao-de-trafego/#tese-autoridade",
+          "serviceType": "Gestão de Tráfego Pago e Performance",
+          "provider": { "@id": "https://egemporiodigital.com.br/#organization" },
+          "description": "Estratégias avançadas de anúncios no Google Ads e Meta Ads focadas em ROI e escala de vendas.",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Soluções de Performance",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gestão de Google Ads" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gestão de Meta Ads (Instagram/Facebook)" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultoria de Performance e Escala" } }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://egemporiodigital.com.br/gestao-de-trafego/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "O que é Gestão de Tráfego Pago?",
+              "acceptedAnswer": { "@type": "Answer", "text": "É o gerenciamento estratégico de anúncios em plataformas como Google e Meta para atrair clientes qualificados e gerar vendas imediatas." }
+            },
+            {
+              "@type": "Question",
+              "name": "Quanto devo investir em anúncios?",
+              "acceptedAnswer": { "@type": "Answer", "text": "O investimento depende do seu objetivo e nicho. Na EG, otimizamos seu orçamento para garantir o melhor ROI possível." }
+            }
+          ]
+        }
+      ]
     }
     </script>
 
@@ -153,68 +233,6 @@
             98%, 100% { width: 0; border-right-color: transparent; }
         }
     </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://egemporiodigital.com.br/gestao-de-trafego/#webpage",
-      "url": "https://egemporiodigital.com.br/gestao-de-trafego/",
-      "name": "Hub de Gestão de Tráfego Pago e Performance | EG Empório Digital",
-      "isPartOf": { "@id": "https://egemporiodigital.com.br/#website" },
-      "description": "Especialistas em Google Ads, Meta Ads e estratégias de escala para empresas."
-    },
-    {
-      "@type": "AdvertisingAgency",
-      "@id": "https://egemporiodigital.com.br/#organization",
-      "name": "EG Empório Digital",
-      "url": "https://egemporiodigital.com.br",
-      "logo": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "image": "https://egemporiodigital.com.br/assets/images/logo.png",
-      "telephone": "+5511952835361",
-      "priceRange": "$$",
-      "sameAs": [
-        "https://www.instagram.com/eg.emporio.digital/",
-        "https://share.google/Y0tEcsVkUVy9TDu4e"
-      ]
-    },
-    {
-      "@type": "Service",
-      "@id": "https://egemporiodigital.com.br/#servico-trafego",
-      "serviceType": "Gestão de Tráfego Pago e Performance",
-      "provider": { "@id": "https://egemporiodigital.com.br/#organization" },
-      "description": "Estratégias avançadas de anúncios no Google Ads e Meta Ads focadas em ROI e escala de vendas.",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Soluções de Performance",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gestão de Google Ads (Pesquisa e Youtube)" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gestão de Meta Ads (Instagram e Facebook)" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultoria de Escala e ROI" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Configuração de Tracking Avançado (GTM e GA4)" } }
-        ]
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://egemporiodigital.com.br/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "O que é Gestão de Tráfego Pago?",
-          "acceptedAnswer": { "@type": "Answer", "text": "É o gerenciamento estratégico de anúncios em plataformas como Google e Meta para atrair clientes qualificados e gerar vendas imediatas." }
-        },
-        {
-          "@type": "Question",
-          "name": "Quanto devo investir em anúncios?",
-          "acceptedAnswer": { "@type": "Answer", "text": "O investimento depende do seu objetivo e nicho. Na EG, otimizamos seu orçamento para garantir o melhor ROI possível, independente do valor inicial." }
-        }
-      ]
-    }
-  ]
-}
-</script>
 </head>
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
 
@@ -259,7 +277,7 @@
     </header>
 
     <!-- HERO SECTION (HUB GESTÃO DE TRÁFEGO) -->
-    <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
+    <section id="webpage" class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
         
         <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
             GESTÃO DE <br> <span class="text-white">TRÁFEGO PAGO</span>
@@ -544,7 +562,7 @@
     </section>
 
     <!-- SEÇÃO SEO ACCORDION (HUB GESTÃO DE TRÁFEGO) -->
-    <section class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
+    <section id="tese-autoridade" class="py-12 px-6 max-w-5xl mx-auto relative z-10 mb-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
             
             <!-- HEADER DO CARD -->
