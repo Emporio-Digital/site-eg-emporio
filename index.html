@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
+
 <head>
 
     <!-- AUTORIDADE ABSOLUTA: SITE NAME + BUSINESS CARD + TESE DE AUTORIDADE + FAQ -->
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -17,7 +18,7 @@
       "inLanguage": "pt-BR"
     },
     {
-      "@type": "ProfessionalService",
+      "@type": "WebDesignCompany",
       "@id": "https://egemporiodigital.com.br/#organization",
       "name": "EG Empório Digital",
       "url": "https://egemporiodigital.com.br",
@@ -35,15 +36,20 @@
       "description": "Especialistas em desenvolvimento de Sites Institucionais, Sistemas SaaS e Landing Pages de alta conversão em 2026.",
       "telephone": "+5511952835361",
       "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "BR"
-      },
-      "hasMap": "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D",
+  "@type": "PostalAddress",
+  "addressLocality": "São Paulo",
+  "addressRegion": "SP",
+  "addressCountry": "BR"
+},
+"areaServed": {
+  "@type": "Country",
+  "name": "Brasil"
+},
       "sameAs": [
         "https://www.instagram.com/eg.emporio.digital/",
         "https://kairos.egemporiodigital.com.br",
         "https://horizon.egemporiodigital.com.br",
-        "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D"
+        "https://share.google/ZEX1CMUlRAKlUPOPu"
       ],
       "knowsAbout": ["SaaS", "Landing Pages", "Web Development", "Sistema Kairós", "SEO Avançado", "CRO"]
     },
@@ -125,38 +131,41 @@
 }
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SX8XFH5XDP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX8XFH5XDP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-SX8XFH5XDP');
-</script>
+        gtag('config', 'G-SX8XFH5XDP');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
     <!-- SEO AVANÇADO -->
     <title>Criação de Sites e Sistemas SaaS | EG Empório Digital</title>
-    <meta name="description" content="Especialistas em desenvolvimento de Sites Institucionais, Sistemas SaaS e Landing Pages de alta conversão. Soluções digitais para escalar seu negócio.">
+    <meta name="description"
+        content="Especialistas em desenvolvimento de Sites Institucionais, Sistemas SaaS e Landing Pages de alta conversão. Soluções digitais para escalar seu negócio.">
     <link rel="canonical" href="https://egemporiodigital.com.br/">
 
     <!-- Favicon e Ícones (TUDO APONTANDO PARA O LOGO.PNG) -->
     <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
-    
+
     <!-- Open Graph -->
     <meta property="og:image" content="https://egemporiodigital.com.br/assets/images/logo.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="EG Empório Digital">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Fontes e Ícones -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <script>
@@ -164,13 +173,13 @@
             theme: {
                 extend: {
                     colors: {
-                        'eg-dark': '#020617',       
-                        'brand-blue': '#00e1ff',    
-                        'brand-dark-blue': '#004e92', 
+                        'eg-dark': '#020617',
+                        'brand-blue': '#00e1ff',
+                        'brand-dark-blue': '#004e92',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        tech: ['Orbitron', 'sans-serif'], 
+                        tech: ['Orbitron', 'sans-serif'],
                     },
                     animation: {
                         'scroll': 'scroll 25s linear infinite',
@@ -198,7 +207,7 @@
             background-image: radial-gradient(circle at 50% 10%, #0a2540 0%, #020617 70%);
             background-attachment: fixed;
         }
-        
+
         .flyer-title {
             background: linear-gradient(to bottom, #ffffff, #00e1ff);
             -webkit-background-clip: text;
@@ -206,13 +215,17 @@
             filter: drop-shadow(0 0 20px rgba(0, 225, 255, 0.3));
         }
 
-        .gpu-accelerated { transform: translateZ(0); will-change: transform; }
+        .gpu-accelerated {
+            transform: translateZ(0);
+            will-change: transform;
+        }
 
         .glass-tech {
             background: rgba(2, 6, 23, 0.6);
             border: 1px solid rgba(0, 225, 255, 0.1);
             backdrop-filter: blur(5px);
         }
+
         .glass-tech:hover {
             border-color: rgba(0, 225, 255, 0.4);
             box-shadow: 0 0 30px rgba(0, 225, 255, 0.1);
@@ -241,7 +254,7 @@
             -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
             white-space: nowrap;
         }
-        
+
         .logo-animate span {
             color: transparent !important;
             -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
@@ -250,8 +263,10 @@
         .logo-animate::before {
             content: attr(data-text);
             position: absolute;
-            top: 0; left: 0;
-            width: 0; height: 100%;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
             /* Transição seca: branco até o espaço, azul no DIGITAL */
             background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
             -webkit-background-clip: text;
@@ -263,60 +278,96 @@
         }
 
         @keyframes fillLogoLoop {
-            0%, 2% { width: 0; border-right-color: #00e1ff; }
-            10% { width: 100%; border-right-color: #00e1ff; }
-            11%, 92% { width: 100%; border-right-color: transparent; }
-            98%, 100% { width: 0; border-right-color: transparent; }
+
+            0%,
+            2% {
+                width: 0;
+                border-right-color: #00e1ff;
+            }
+
+            10% {
+                width: 100%;
+                border-right-color: #00e1ff;
+            }
+
+            11%,
+            92% {
+                width: 100%;
+                border-right-color: transparent;
+            }
+
+            98%,
+            100% {
+                width: 0;
+                border-right-color: transparent;
+            }
         }
 
         /* ANIMAÇÃO PULSE WHATSAPP */
-@keyframes pulse-wpp {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); transform: scale(1); }
-    70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); transform: scale(1); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); transform: scale(1); }
-}
+        @keyframes pulse-wpp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+                transform: scale(1);
+            }
 
-.wpp-pulsante {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    width: 65px;
-    height: 65px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 38px;
-    z-index: 9999; /* Para ficar na frente de tudo */
-    text-decoration: none;
-    animation: pulse-wpp 2s infinite;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
+            70% {
+                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+                transform: scale(1);
+            }
 
-.wpp-pulsante:hover {
-    transform: scale(1.1);
-    background-color: #20ba5a;
-}
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+                transform: scale(1);
+            }
+        }
+
+        .wpp-pulsante {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            width: 65px;
+            height: 65px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            z-index: 9999;
+            /* Para ficar na frente de tudo */
+            text-decoration: none;
+            animation: pulse-wpp 2s infinite;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .wpp-pulsante:hover {
+            transform: scale(1.1);
+            background-color: #20ba5a;
+        }
     </style>
 </head>
+
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
 
     <!-- BACKGROUND FIXO -->
     <div class="bg-fixed-mobile flex items-center justify-center">
-        <img src="assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40"></div>
+        <img src="assets/images/logo.png" alt=""
+            class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40">
+        </div>
     </div>
 
     <!-- HEADER -->
     <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
-            
+
             <a href="/" class="flex items-center gap-2 md:gap-3 cursor-pointer">
                 <img src="assets/images/logo.png" alt="Logo EG" class="h-16 md:h-20 w-auto object-contain">
-                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block" data-text="EG EMPÓRIO DIGITAL">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block"
+                    data-text="EG EMPÓRIO DIGITAL">
                     EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                 </div>
             </a>
@@ -329,7 +380,8 @@
                 <a href="/saas" class="hover:text-brand-blue transition-colors">Automações</a>
             </nav>
 
-            <a href="https://wa.me/5511952835361?text=Olá, vim pelo site e gostaria de tirar dúvidas." target="_blank" class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+            <a href="https://wa.me/5511952835361?text=Olá, vim pelo site e gostaria de tirar dúvidas." target="_blank"
+                class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
                 Fale com a gente
             </a>
 
@@ -338,12 +390,22 @@
             </button>
         </div>
 
-       <div id="mobile-menu" class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
-            <a href="/" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Início</a>
-            <a href="/servicos" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Serviços</a>
-            <a href="/sobre" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Sobre Nós</a>
-            <a href="/saas" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition" onclick="toggleMenu()">Automações</a>
-            <a href="https://wa.me/5511952835361?text=Olá, vim pelo site e gostaria de tirar dúvidas." class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg" onclick="toggleMenu()">
+        <div id="mobile-menu"
+            class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
+            <a href="/" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition"
+                onclick="toggleMenu()">Início</a>
+            <a href="/servicos"
+                class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition"
+                onclick="toggleMenu()">Serviços</a>
+            <a href="/sobre"
+                class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition"
+                onclick="toggleMenu()">Sobre Nós</a>
+            <a href="/saas"
+                class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition"
+                onclick="toggleMenu()">Automações</a>
+            <a href="https://wa.me/5511952835361?text=Olá, vim pelo site e gostaria de tirar dúvidas."
+                class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg"
+                onclick="toggleMenu()">
                 Fale com a gente
             </a>
         </div>
@@ -351,27 +413,35 @@
 
     <!-- HERO SECTION -->
     <section class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
-        
-        <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-6 flyer-title tracking-wide leading-tight z-10">
+
+        <h1
+            class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-6 flyer-title tracking-wide leading-tight z-10">
             SITES & AUTOMAÇÕES
         </h1>
 
-        <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-6 z-10"></div>
+        <div
+            class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-6 z-10">
+        </div>
 
-        <h2 class="font-tech text-brand-blue text-xs md:text-sm lg:text-base tracking-[0.1em] md:tracking-[0.2em] mb-8 uppercase text-shadow-glow z-10">
+        <h2
+            class="font-tech text-brand-blue text-xs md:text-sm lg:text-base tracking-[0.1em] md:tracking-[0.2em] mb-8 uppercase text-shadow-glow z-10">
             SITES • SISTEMAS • PÁGINAS DE VENDAS • LANDING PAGES • AUTOMAÇÕES
         </h2>
 
-        <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
-            Criamos <strong class="text-white">Sites</strong> para o seu negócio, páginas de vendas de alta conversão, <br class="hidden md:block">
+        <p
+            class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
+            Criamos <strong class="text-white">Sites</strong> para o seu negócio, páginas de vendas de alta conversão,
+            <br class="hidden md:block">
             e sistemas SaaS completos para escalar sua empresa.
         </p>
 
         <div class="flex flex-col md:flex-row gap-4 z-10">
-            <a href="https://wa.me/5511952835361?text=Olá, vim pelo site e gostaria de tirar dúvidas." target="_blank" class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+            <a href="https://wa.me/5511952835361?text=Olá, vim pelo site e gostaria de tirar dúvidas." target="_blank"
+                class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
                 Fale com a gente
             </a>
-            <a href="/servicos" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
+            <a href="/servicos"
+                class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
                 Nossos Serviços
             </a>
         </div>
@@ -383,41 +453,48 @@
         <div class="glass-tech p-8 md:p-12 rounded-2xl border-brand-blue/20 relative overflow-hidden">
             <!-- Efeito de luz sutil -->
             <div class="absolute top-0 right-0 w-64 h-64 bg-brand-blue/10 blur-[80px] -z-10"></div>
-            
+
             <div class="flex flex-col md:flex-row items-center gap-10">
                 <!-- Texto Comercial Kairós -->
                 <div class="flex-1 text-left">
                     <div class="flex items-center gap-2 mb-4">
-                        <span class="px-3 py-1 bg-brand-blue/10 border border-brand-blue/30 rounded text-brand-blue text-[10px] font-tech uppercase tracking-widest">Tecnologia & Inovação</span>
+                        <span
+                            class="px-3 py-1 bg-brand-blue/10 border border-brand-blue/30 rounded text-brand-blue text-[10px] font-tech uppercase tracking-widest">Tecnologia
+                            & Inovação</span>
                     </div>
                     <h2 class="font-tech text-2xl md:text-4xl text-white mb-4 uppercase leading-tight">
                         Sua Marca com <span class="text-brand-blue">Autoridade Máxima</span>
                     </h2>
                     <p class="text-slate-300 text-base md:text-lg mb-6 leading-relaxed">
-                        Sua presença digital precisa transmitir o mesmo nível da <strong>sua empresa.</strong> Criamos sistemas e sites de alta performance que unem sofisticação, velocidade e conversão.
+                        Sua presença digital precisa transmitir o mesmo nível da <strong>sua empresa.</strong> Criamos
+                        sistemas e sites de alta performance que unem sofisticação, velocidade e conversão.
                     </p>
                     <ul class="space-y-2 mb-8 text-slate-400 text-sm">
                         <li class="flex items-center gap-2">
-                            <i class="ph ph-check-circle text-brand-blue"></i> 
+                            <i class="ph ph-check-circle text-brand-blue"></i>
                             Experiência Visual Premium
                         </li>
                         <li class="flex items-center gap-2">
-                            <i class="ph ph-check-circle text-brand-blue"></i> 
+                            <i class="ph ph-check-circle text-brand-blue"></i>
                             Alta Velocidade e Conversão
                         </li>
                         <li class="flex items-center gap-2">
-                            <i class="ph ph-check-circle text-brand-blue"></i> 
+                            <i class="ph ph-check-circle text-brand-blue"></i>
                             Estrutura Escalável e Inteligente
                         </li>
                     </ul>
-                    <a href="https://wa.me/5511952835361?text=Ol%C3%A1%2C%20quero%20transformar%20minha%20presen%C3%A7a%20digital%20com%20um%20site%20de%20alta%20performance." target="_blank" class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
+                    <a href="https://wa.me/5511952835361?text=Ol%C3%A1%2C%20quero%20transformar%20minha%20presen%C3%A7a%20digital%20com%20um%20site%20de%20alta%20performance."
+                        target="_blank"
+                        class="inline-flex items-center gap-3 px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
                         COMEÇAR AGORA <i class="ph ph-arrow-right"></i>
                     </a>
                 </div>
-                
+
                 <!-- Imagem do Kairós -->
                 <div class="flex-1 w-full flex justify-center">
-                    <img src="assets/images/card1.jpg" alt="Dashboard do Sistema Kairós desenvolvido pela EG Empório Digital" class="w-full md:w-4/5 rounded-lg border border-brand-blue/20 shadow-2xl hover:scale-105 transition duration-500">
+                    <img src="assets/images/card1.jpg"
+                        alt="Dashboard do Sistema Kairós desenvolvido pela EG Empório Digital"
+                        class="w-full md:w-4/5 rounded-lg border border-brand-blue/20 shadow-2xl hover:scale-105 transition duration-500">
                 </div>
             </div>
         </div>
@@ -432,51 +509,63 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Card 1 -->
-            <div class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2">
-                <i class="ph ph-globe-hemisphere-west text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
-                <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Sites Institucionais</h3>
+            <div
+                class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2">
+                <i
+                    class="ph ph-globe-hemisphere-west text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
+                <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Sites
+                    Institucionais</h3>
                 <p class="text-slate-400 text-sm mb-4">
                     Sites profissionais para elevar a autoridade da sua marca no mercado digital.
                 </p>
                 <div class="flex flex-col gap-3">
-                    <a href="https://wa.me/5511952835361?text=Olá, quero orçar um Site Institucional." target="_blank" class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
+                    <a href="https://wa.me/5511952835361?text=Olá, quero orçar um Site Institucional." target="_blank"
+                        class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
                         Orçar no WhatsApp <i class="ph ph-whatsapp-logo"></i>
                     </a>
-                    <a href="/servicos" class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
+                    <a href="/servicos"
+                        class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
                         Ver detalhes técnicos +
                     </a>
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2">
+            <div
+                class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2">
                 <i class="ph ph-cpu text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
                 <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Sistemas SaaS</h3>
                 <p class="text-slate-400 text-sm mb-4">
                     Desenvolvimento de softwares complexos e plataformas de gestão sob medida.
                 </p>
                 <div class="flex flex-col gap-3">
-                    <a href="https://wa.me/5511952835361?text=Olá, quero orçar um Sistema." target="_blank" class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
+                    <a href="https://wa.me/5511952835361?text=Olá, quero orçar um Sistema." target="_blank"
+                        class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
                         Orçar no WhatsApp <i class="ph ph-whatsapp-logo"></i>
                     </a>
-                    <a href="/servicos" class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
+                    <a href="/servicos"
+                        class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
                         Ver detalhes técnicos +
                     </a>
                 </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block border-brand-blue/30 hover:-translate-y-2">
-                <i class="ph ph-lightning text-4xl text-white mb-6 group-hover:scale-110 transition-transform block"></i>
+            <div
+                class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block border-brand-blue/30 hover:-translate-y-2">
+                <i
+                    class="ph ph-lightning text-4xl text-white mb-6 group-hover:scale-110 transition-transform block"></i>
                 <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Landing Pages</h3>
                 <p class="text-slate-400 text-sm mb-4">
                     Páginas focadas em vendas e alta conversão para seus produtos ou serviços.
                 </p>
                 <div class="flex flex-col gap-3">
-                    <a href="https://wa.me/5511952835361?text=Olá, quero orçar uma Landing Page." target="_blank" class="text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
+                    <a href="https://wa.me/5511952835361?text=Olá, quero orçar uma Landing Page." target="_blank"
+                        class="text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
                         Orçar no WhatsApp <i class="ph ph-whatsapp-logo"></i>
                     </a>
-                    <a href="/servicos" class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
+                    <a href="/servicos"
+                        class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
                         Ver detalhes técnicos +
                     </a>
                 </div>
@@ -493,34 +582,43 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <!-- Card Trafego -->
-            <div class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2 border-white/5">
-                <i class="ph ph-trend-up text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
-                <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Gestão de Tráfego (Ads)</h3>
+            <div
+                class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2 border-white/5">
+                <i
+                    class="ph ph-trend-up text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
+                <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Gestão de Tráfego
+                    (Ads)</h3>
                 <p class="text-slate-400 text-sm mb-4">
                     Estratégias de anúncios pagos (Google e Meta) focadas em ROI e captação de leads qualificados.
                 </p>
                 <div class="flex flex-col gap-3">
-                    <a href="https://wa.me/5511952835361?text=Olá, quero falar sobre Gestão de Tráfego." target="_blank" class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
+                    <a href="https://wa.me/5511952835361?text=Olá, quero falar sobre Gestão de Tráfego." target="_blank"
+                        class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
                         Orçar no WhatsApp <i class="ph ph-whatsapp-logo"></i>
                     </a>
-                    <a href="/servicos" class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
+                    <a href="/servicos"
+                        class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
                         Ver detalhes técnicos +
                     </a>
                 </div>
             </div>
 
             <!-- Card SEO -->
-            <div class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2 border-white/5">
-                <i class="ph ph-magnifying-glass text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
+            <div
+                class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2 border-white/5">
+                <i
+                    class="ph ph-magnifying-glass text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
                 <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Otimização SEO</h3>
                 <p class="text-slate-400 text-sm mb-4">
                     Posicionamento orgânico para colocar sua marca no topo do Google sem pagar por clique.
                 </p>
                 <div class="flex flex-col gap-3">
-                    <a href="https://wa.me/5511952835361?text=Olá, quero orçar consultoria SEO." target="_blank" class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
+                    <a href="https://wa.me/5511952835361?text=Olá, quero orçar consultoria SEO." target="_blank"
+                        class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
                         Orçar no WhatsApp <i class="ph ph-whatsapp-logo"></i>
                     </a>
-                    <a href="/servicos" class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
+                    <a href="/servicos"
+                        class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
                         Ver detalhes técnicos +
                     </a>
                 </div>
@@ -531,60 +629,85 @@
     <!-- SEÇÃO 3: VITRINE INFINITA (Apenas Ebooks + Em Breve) -->
     <section id="vitrine" class="py-10 relative border-t border-white/5 bg-black/40 backdrop-blur-sm">
         <div class="text-center mb-10">
-            <h2 class="font-tech text-xl text-white uppercase tracking-widest opacity-80">Produtos Digitais & Ebooks</h2>
+            <h2 class="font-tech text-xl text-white uppercase tracking-widest opacity-80">Produtos Digitais & Ebooks
+            </h2>
         </div>
 
         <div class="w-full relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-eg-dark to-transparent z-10 pointer-events-none"></div>
-            <div class="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-eg-dark to-transparent z-10 pointer-events-none"></div>
+            <div
+                class="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-eg-dark to-transparent z-10 pointer-events-none">
+            </div>
+            <div
+                class="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-eg-dark to-transparent z-10 pointer-events-none">
+            </div>
 
             <div class="flex animate-scroll hover:[animation-play-state:paused] w-max items-center gpu-accelerated">
-                
+
                 <!-- LOOP 1 (5 ITENS: EBOOKS + EM BREVE) -->
-                <a href="https://go.hotmart.com/X102588332N" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook1.jpg" alt="Ebook Estratégias Digitais" class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-                
-                <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook2.jpg" alt="Ebook Marketing e Vendas" class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-                
-                <a href="https://go.hotmart.com/C103670666I" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook3.jpg" alt="Ebook Negócios Digitais" class="w-full h-full object-cover rounded border border-white/10">
+                <a href="https://go.hotmart.com/X102588332N" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook1.jpg" alt="Ebook Estratégias Digitais"
+                        class="w-full h-full object-cover rounded border border-white/10">
                 </a>
 
-                <a href="https://go.hotmart.com/K102552822J" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook4.jpg" alt="Ebook Crescimento Online" class="w-full h-full object-cover rounded border border-white/10">
+                <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook2.jpg" alt="Ebook Marketing e Vendas"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                <a href="https://go.hotmart.com/C103670666I" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook3.jpg" alt="Ebook Negócios Digitais"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                <a href="https://go.hotmart.com/K102552822J" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook4.jpg" alt="Ebook Crescimento Online"
+                        class="w-full h-full object-cover rounded border border-white/10">
                 </a>
 
                 <!-- Em Breve (ÚLTIMO DA LISTA) -->
-                <div class="mx-6 w-[450px] aspect-video glass-tech rounded-xl flex items-center justify-center relative overflow-hidden">
-                    <img src="assets/images/finance.jpg" alt="Sistema Financeiro em Breve" class="w-2/3 object-contain opacity-60">
+                <div
+                    class="mx-6 w-[450px] aspect-video glass-tech rounded-xl flex items-center justify-center relative overflow-hidden">
+                    <img src="assets/images/finance.jpg" alt="Sistema Financeiro em Breve"
+                        class="w-2/3 object-contain opacity-60">
                     <div class="absolute top-3 right-3 px-3 py-1 bg-white/5 rounded border border-white/10">
                         <span class="text-[10px] font-tech text-white uppercase tracking-widest">Em Breve</span>
                     </div>
                 </div>
 
                 <!-- LOOP 2 (EXATAMENTE A MESMA CÓPIA DO LOOP 1) -->
-                <a href="https://go.hotmart.com/X102588332N" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook1.jpg" alt="Ebook Estratégias Digitais" class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-                
-                <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook2.jpg" alt="Ebook Marketing e Vendas" class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-                
-                <a href="https://go.hotmart.com/C103670666I" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook3.jpg" alt="Ebook Negócios Digitais" class="w-full h-full object-cover rounded border border-white/10">
+                <a href="https://go.hotmart.com/X102588332N" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook1.jpg" alt="Ebook Estratégias Digitais"
+                        class="w-full h-full object-cover rounded border border-white/10">
                 </a>
 
-                <a href="https://go.hotmart.com/K102552822J" target="_blank" class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook4.jpg" alt="Ebook Crescimento Online" class="w-full h-full object-cover rounded border border-white/10">
+                <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook2.jpg" alt="Ebook Marketing e Vendas"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                <a href="https://go.hotmart.com/C103670666I" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook3.jpg" alt="Ebook Negócios Digitais"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                <a href="https://go.hotmart.com/K102552822J" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook4.jpg" alt="Ebook Crescimento Online"
+                        class="w-full h-full object-cover rounded border border-white/10">
                 </a>
 
                 <!-- Em Breve (ÚLTIMO DA LISTA) -->
-                <div class="mx-6 w-[450px] aspect-video glass-tech rounded-xl flex items-center justify-center relative overflow-hidden">
-                    <img src="assets/images/finance.jpg" alt="Sistema Financeiro em Breve" class="w-2/3 object-contain opacity-60">
+                <div
+                    class="mx-6 w-[450px] aspect-video glass-tech rounded-xl flex items-center justify-center relative overflow-hidden">
+                    <img src="assets/images/finance.jpg" alt="Sistema Financeiro em Breve"
+                        class="w-2/3 object-contain opacity-60">
                     <div class="absolute top-3 right-3 px-3 py-1 bg-white/5 rounded border border-white/10">
                         <span class="text-[10px] font-tech text-white uppercase tracking-widest">Em Breve</span>
                     </div>
@@ -596,163 +719,195 @@
     <!-- SEÇÃO: PROJETOS DISPONÍVEIS (VITRINE HÍBRIDA) -->
     <!-- Integrada respeitando o Design System existente -->
     <!-- SEÇÃO COM ID E SCROLL-MARGIN AJUSTADOS -->
-    <section id="projetos-disponiveis" class="scroll-mt-32 py-20 px-6 max-w-7xl mx-auto border-t border-white/5 relative z-10">
-        
+    <section id="projetos-disponiveis"
+        class="scroll-mt-32 py-20 px-6 max-w-7xl mx-auto border-t border-white/5 relative z-10">
+
         <!-- Cabeçalho da Seção -->
         <div class="text-center mb-16">
             <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase tracking-wide">
                 Vitrine de <span class="text-brand-blue">Projetos</span>
             </h2>
             <p class="text-slate-200 text-sm max-w-2xl mx-auto">
-                Projetos conceituais e experiências interativas. Todos os sites são customizáveis de acordo com a preferência do cliente. Clique nos cards para visualizar a demonstração em vídeo.
+                Projetos conceituais e experiências interativas. Todos os sites são customizáveis de acordo com a
+                preferência do cliente. Clique nos cards para visualizar a demonstração em vídeo.
             </p>
         </div>
 
         <!-- Grid de Cards (Atualizado para 8 Projetos com os 2 Novos no Topo) -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
+
             <!-- CARD 1: ESTÉTICA AUTOMOTIVA (ATUALIZADO LOCAL) -->
-            <div onclick="openProjectModal('NKRiU16RUmk', 'https://vitrine-projetos-two.vercel.app/estetica-auto.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                
-                <img src="assets/images/estetica.png" alt="Estética Automotiva" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                
+            <div onclick="openProjectModal('NKRiU16RUmk', 'https://vitrine-projetos-two.vercel.app/estetica-auto.html')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+
+                <img src="assets/images/estetica.png" alt="Estética Automotiva"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
 
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
                         Automotivo
                     </span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Estética Automotiva</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Solução digital completa para estética e cuidado de veículos.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Solução digital completa para estética e cuidado de
+                        veículos.</p>
                 </div>
             </div>
 
             <!-- 1. NOIR GASTROBAR (Antigo SaaS IA) -->
-            <div onclick="openProjectModal('3MXvILsR5DA', 'https://vitrine-projetos-two.vercel.app/saas-ia.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                
+            <div onclick="openProjectModal('3MXvILsR5DA', 'https://vitrine-projetos-two.vercel.app/saas-ia.html')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+
                 <!-- IMAGEM LOCAL -->
-                <img src="assets/images/noir.png" alt="Projeto Noir Gastrobar" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                
+                <img src="assets/images/noir.png" alt="Projeto Noir Gastrobar"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
 
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
                         Cardápio Digital
                     </span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Noir Gastrobar</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Menu digital interativo with design de alto luxo e glassmorphism.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Menu digital interativo with design de alto luxo e
+                        glassmorphism.</p>
                 </div>
             </div>
 
             <!-- 2. AUTOMOTIVO (Mantido) -->
-            <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                
-                <img src="assets/images/capa-automotivo.jpg" alt="Projeto Automotivo" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                
+            <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+
+                <img src="assets/images/capa-automotivo.jpg" alt="Projeto Automotivo"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
 
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
                         Conceito
                     </span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Automotivo Luxury</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos de alto padrão.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos de
+                        alto padrão.</p>
                 </div>
             </div>
 
             <!-- 4. LIBERTY REVISIONAL -->
-            <div onclick="openProjectModal('neNoBygqAG8', 'https://consorciolibertyrevisional.com.br')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                
-                <img src="assets/images/capa-revisional.png" alt="Liberty Revisional" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                
+            <div onclick="openProjectModal('neNoBygqAG8', 'https://consorciolibertyrevisional.com.br')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+
+                <img src="assets/images/capa-revisional.png" alt="Liberty Revisional"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
 
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
                         Assessoria Jurídica
                     </span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Liberty Revisional</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Landing Page de alta conversão para assessoria e revisional de contratos.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Landing Page de alta conversão para assessoria e
+                        revisional de contratos.</p>
                 </div>
             </div>
 
             <!-- 5. LOJA IMPORTADOS -->
-            <div onclick="openProjectModal('S8l72qN8vAE', 'https://vitrine-projetos-two.vercel.app/imports.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                
-                <img src="assets/images/capa-imports.png" alt="Loja Importados" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                
+            <div onclick="openProjectModal('S8l72qN8vAE', 'https://vitrine-projetos-two.vercel.app/imports.html')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+
+                <img src="assets/images/capa-imports.png" alt="Loja Importados"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
 
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
                         E-commerce
                     </span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Loja Importados</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Plataforma moderna de vendas com design luxuoso e foco em produtos premium.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Plataforma moderna de vendas com design luxuoso e
+                        foco em produtos premium.</p>
                 </div>
             </div>
 
             <!-- 6. ESTÉTICA FACIAL -->
-            <div onclick="openProjectModal('R70zN3Y7LjU', 'https://vitrine-projetos-two.vercel.app/estetica-facial.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                
-                <img src="assets/images/capa-facial.png" alt="Estética Facial" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
-                
+            <div onclick="openProjectModal('R70zN3Y7LjU', 'https://vitrine-projetos-two.vercel.app/estetica-facial.html')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+
+                <img src="assets/images/capa-facial.png" alt="Estética Facial"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
 
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">
                         Estética & Saúde
                     </span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Estética Facial</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Site sofisticado para clínicas de estética com agendamento e vitrine de procedimentos.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Site sofisticado para clínicas de estética com
+                        agendamento e vitrine de procedimentos.</p>
                 </div>
             </div>
 
@@ -763,9 +918,10 @@
     <div id="project-modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
         <!-- Backdrop -->
         <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeProjectModal()"></div>
-        
+
         <!-- Modal Content -->
-        <div class="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-fade-in flex flex-col">
+        <div
+            class="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-fade-in flex flex-col">
             <!-- Header do Modal -->
             <div class="flex justify-between items-center p-4 border-b border-white/10 bg-black/50">
                 <span class="text-sm font-tech text-white uppercase tracking-widest">Demonstração Interativa</span>
@@ -773,16 +929,19 @@
                     <i class="ph ph-x text-2xl"></i>
                 </button>
             </div>
-            
+
             <!-- Container do Vídeo (Aspect Ratio 16:9) -->
             <div class="relative aspect-video bg-black">
-                <iframe id="modal-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="modal-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
 
             <!-- Footer do Modal (Botão de Ação) -->
             <div class="p-6 text-center bg-black/50 flex flex-col md:flex-row items-center justify-between gap-4">
                 <p class="text-xs text-slate-500 hidden md:block">Para melhor experiência, visualize no Desktop.</p>
-                <a id="modal-link-btn" href="#" target="_blank" class="w-full md:w-auto px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                <a id="modal-link-btn" href="#" target="_blank"
+                    class="w-full md:w-auto px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
                     Acessar Site <i class="ph ph-arrow-up-right ml-2"></i>
                 </a>
             </div>
@@ -792,182 +951,391 @@
     <!-- SEÇÃO SEO ACCORDION - TESE DE AUTORIDADE (30 PILARES - FAT CONTENT UPGRADE) -->
     <section id="tese-autoridade" class="pt-12 pb-4 px-2 md:px-6 max-w-7xl mx-auto relative z-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
-            
+
             <!-- HEADER DO CARD -->
-            <div onclick="toggleHomeSeo()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
+            <div onclick="toggleHomeSeo()"
+                class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                    <h2
+                        class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
                         <i class="ph-fill ph-shield-check text-brand-blue mr-2"></i> Tese de Autoridade Digital
                     </h2>
-                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Metodologia exclusiva EG Empório Digital</span>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Metodologia
+                        exclusiva EG Empório Digital</span>
                 </div>
-                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
-                    <i id="home-seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
+                <div
+                    class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="home-seo-icon"
+                        class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
             <!-- CONTEÚDO EXPANDÍVEL (30 PILARES) -->
-            <div id="home-seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
-                    
+            <div id="home-seo-content"
+                class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
+                <div
+                    class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
+
                     <p class="mb-4">
-                        A EG Empório Digital não entrega apenas códigos; nós construímos ativos de software projetados para a dominância comercial. Nossa expertise em <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites</a> e sistemas SaaS é fundamentada em 30 pilares estratégicos que garantem que sua marca seja não apenas visível, mas uma autoridade incontestável no ecossistema digital nacional, unindo design de luxo à engenharia de dados.
+                        A EG Empório Digital não entrega apenas códigos; nós construímos ativos de software projetados
+                        para a dominância comercial. Nossa expertise em <a href="/criacao-de-sites/"
+                            class="text-brand-blue hover:underline">criação de sites</a> e sistemas SaaS é fundamentada
+                        em 30 pilares estratégicos que garantem que sua marca seja não apenas visível, mas uma
+                        autoridade incontestável no ecossistema digital nacional, unindo design de luxo à engenharia de
+                        dados.
                     </p>
 
                     <!-- 18 MARTELOS -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Criação de Sites Profissionais de Elite</h3>
-                        <p>Desenvolvemos projetos onde a estética de alto luxo encontra a funcionalidade absoluta. Nossa <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites profissionais</a> foca em validar sua marca para o mercado, transformando visitantes em clientes através de interfaces limpas, tipografia refinada e uma arquitetura de informação estratégica que guia o usuário até o fechamento. Entendemos que um site profissional é o pilar central da sua credibilidade online.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            1. Criação de Sites Profissionais de Elite</h3>
+                        <p>Desenvolvemos projetos onde a estética de alto luxo encontra a funcionalidade absoluta. Nossa
+                            <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites
+                                profissionais</a> foca em validar sua marca para o mercado, transformando visitantes em
+                            clientes através de interfaces limpas, tipografia refinada e uma arquitetura de informação
+                            estratégica que guia o usuário até o fechamento. Entendemos que um site profissional é o
+                            pilar central da sua credibilidade online.
+                        </p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Criação de Sites Institucionais de Alta Autoridade</h3>
-                        <p>O seu site institucional é a face digital da sua corporação e o primeiro filtro de confiança. Atuamos na <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites institucionais</a> que transmitem solidez e história, utilizando seções de prova social e cases de sucesso. Projetamos plataformas que comunicam a missão da sua empresa com clareza, elementos vitais para o fechamento de grandes contratos B2B e parcerias estratégicas de longo prazo.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            2. Criação de Sites Institucionais de Alta Autoridade</h3>
+                        <p>O seu site institucional é a face digital da sua corporação e o primeiro filtro de confiança.
+                            Atuamos na <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de
+                                sites institucionais</a> que transmitem solidez e história, utilizando seções de prova
+                            social e cases de sucesso. Projetamos plataformas que comunicam a missão da sua empresa com
+                            clareza, elementos vitais para o fechamento de grandes contratos B2B e parcerias
+                            estratégicas de longo prazo.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Criação de Sites para Empresas em Expansão</h3>
-                        <p>Empresas dinâmicas precisam de infraestruturas que suportem o crescimento sem gargalos técnicos. Nossa metodologia para <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites para empresas</a> permite que sua plataforma evolua junto com o seu faturamento, integrando novas funcionalidades e APIs complexas de forma modular. Criamos sites escaláveis que mantêm a performance mesmo com o aumento massivo de tráfego orgânico ou pago.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            3. Criação de Sites para Empresas em Expansão</h3>
+                        <p>Empresas dinâmicas precisam de infraestruturas que suportem o crescimento sem gargalos
+                            técnicos. Nossa metodologia para <a href="/criacao-de-sites/"
+                                class="text-brand-blue hover:underline">criação de sites para empresas</a> permite que
+                            sua plataforma evolua junto com o seu faturamento, integrando novas funcionalidades e APIs
+                            complexas de forma modular. Criamos sites escaláveis que mantêm a performance mesmo com o
+                            aumento massivo de tráfego orgânico ou pago.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Criação de Sites de Alta Conversão (Engenharia CRO)</h3>
-                        <p>Um site bonito que não gera leads é apenas um custo. Focamos na <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites de alta conversão</a>, aplicando princípios de psicologia de vendas e design de persuasão. Utilizamos ferramentas de análise de comportamento para otimizar botões e formulários, garantindo que cada pixel esteja trabalhando para maximizar o seu Retorno sobre Investimento (ROI) e reduzir o custo por aquisição (CPA).</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            4. Criação de Sites de Alta Conversão (Engenharia CRO)</h3>
+                        <p>Um site bonito que não gera leads é apenas um custo. Focamos na <a href="/criacao-de-sites/"
+                                class="text-brand-blue hover:underline">criação de sites de alta conversão</a>,
+                            aplicando princípios de psicologia de vendas e design de persuasão. Utilizamos ferramentas
+                            de análise de comportamento para otimizar botões e formulários, garantindo que cada pixel
+                            esteja trabalhando para maximizar o seu Retorno sobre Investimento (ROI) e reduzir o custo
+                            por aquisição (CPA).</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Criação de Sites Estilo Landing Page Agressiva</h3>
-                        <p>Para lançamentos imediatos e campanhas de tráfego pago no Google ou Meta, a <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites estilo Landing Page</a> é a solução mais eficaz. Estruturamos páginas de destino de foco único, com copy persuasivo e gatilhos mentais que eliminam distrações e conduzem o lead diretamente para a ação desejada, seja uma compra direta ou um contato comercial estratégico.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            5. Criação de Sites Estilo Landing Page Agressiva</h3>
+                        <p>Para lançamentos imediatos e campanhas de tráfego pago no Google ou Meta, a <a
+                                href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites
+                                estilo Landing Page</a> é a solução mais eficaz. Estruturamos páginas de destino de foco
+                            único, com copy persuasivo e gatilhos mentais que eliminam distrações e conduzem o lead
+                            diretamente para a ação desejada, seja uma compra direta ou um contato comercial
+                            estratégico.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Criação de Sites para Vendas Online Escaláveis</h3>
-                        <p>O mercado digital exige velocidade absoluta no ciclo de fechamento. Nossa <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites para vendas online</a> remove todas as fricções técnicas entre o interesse do cliente e o checkout. Integramos sistemas de pagamento fluidos e gatilhos de escassez, transformando o seu site em uma máquina de vendas operando 24 horas por dia, 7 dias por semana, sem interrupções operacionais.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            6. Criação de Sites para Vendas Online Escaláveis</h3>
+                        <p>O mercado digital exige velocidade absoluta no ciclo de fechamento. Nossa <a
+                                href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites para
+                                vendas online</a> remove todas as fricções técnicas entre o interesse do cliente e o
+                            checkout. Integramos sistemas de pagamento fluidos e gatilhos de escassez, transformando o
+                            seu site em uma máquina de vendas operando 24 horas por dia, 7 dias por semana, sem
+                            interrupções operacionais.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Criação de Sites E-commerce e Lojas Virtuais</h3>
-                        <p>Desenvolvemos ecossistemas de e-commerce robustos e preparados para a escala nacional. Na <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites e-commerce</a>, priorizamos a segurança de dados e a facilidade de navegação por categorias. Implementamos cálculos de frete inteligentes e gestão de estoque integrada, permitindo que sua loja virtual ofereça uma experiência de compra premium similar aos grandes players do varejo global.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            7. Criação de Sites E-commerce e Lojas Virtuais</h3>
+                        <p>Desenvolvemos ecossistemas de e-commerce robustos e preparados para a escala nacional. Na <a
+                                href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites
+                                e-commerce</a>, priorizamos a segurança de dados e a facilidade de navegação por
+                            categorias. Implementamos cálculos de frete inteligentes e gestão de estoque integrada,
+                            permitindo que sua loja virtual ofereça uma experiência de compra premium similar aos
+                            grandes players do varejo global.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Criação de Sites com Design Exclusivo e Inovador</h3>
-                        <p>Fuja dos templates genéricos que tornam sua marca invisível no mercado. Nossa <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites com design exclusivo</a> garante que sua empresa possua uma identidade digital proprietária. Utilizamos micro-interações e efeitos visuais modernos (glassmorphism) para criar uma experiência imersiva que fixa sua marca na mente do consumidor e eleva o status da sua empresa perante a concorrência.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            8. Criação de Sites com Design Exclusivo e Inovador</h3>
+                        <p>Fuja dos templates genéricos que tornam sua marca invisível no mercado. Nossa <a
+                                href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites com
+                                design exclusivo</a> garante que sua empresa possua uma identidade digital proprietária.
+                            Utilizamos micro-interações e efeitos visuais modernos (glassmorphism) para criar uma
+                            experiência imersiva que fixa sua marca na mente do consumidor e eleva o status da sua
+                            empresa perante a concorrência.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Criação de Sites Otimizados para SEO (Busca Orgânica)</h3>
-                        <p>Existir não é o suficiente; sua marca precisa ser a resposta para a dor do cliente. Na <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites otimizados para SEO</a>, estruturamos o código fonte seguindo as diretrizes semânticas do Google. Otimizamos meta-tags, hierarquia de títulos e densidade de palavras-chave, colocando sua marca no topo dos resultados de busca orgânica e gerando tráfego qualificado e gratuito a longo prazo.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            9. Criação de Sites Otimizados para SEO (Busca Orgânica)</h3>
+                        <p>Existir não é o suficiente; sua marca precisa ser a resposta para a dor do cliente. Na <a
+                                href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites
+                                otimizados para SEO</a>, estruturamos o código fonte seguindo as diretrizes semânticas
+                            do Google. Otimizamos meta-tags, hierarquia de títulos e densidade de palavras-chave,
+                            colocando sua marca no topo dos resultados de busca orgânica e gerando tráfego qualificado e
+                            gratuito a longo prazo.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Criação de Sites Mobile-First de Alta Performance</h3>
-                        <p>A web contemporânea é acessada prioritariamente via dispositivos móveis. Nossa <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites mobile-first</a> garante que a experiência em smartphones seja superior à do desktop. Otimizamos menus, tamanhos de toque e velocidade de renderização em redes móveis (4G/5G), assegurando que o cliente que busca seus serviços no celular tenha uma navegação fluida e sem erros de layout.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            10. Criação de Sites Mobile-First de Alta Performance</h3>
+                        <p>A web contemporânea é acessada prioritariamente via dispositivos móveis. Nossa <a
+                                href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites
+                                mobile-first</a> garante que a experiência em smartphones seja superior à do desktop.
+                            Otimizamos menus, tamanhos de toque e velocidade de renderização em redes móveis (4G/5G),
+                            assegurando que o cliente que busca seus serviços no celular tenha uma navegação fluida e
+                            sem erros de layout.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Criação de Sites Rápidos com Tecnologia de Cache Avançado</h3>
-                        <p>Velocidade é a métrica de ouro para conversão e SEO. Focamos na <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites rápidos</a> que carregam quase instantaneamente, utilizando compressão de imagens de última geração e entrega via CDN. Reduzimos o tempo de resposta do servidor para milissegundos, evitando a perda de visitantes e garantindo que sua página ofereça a agilidade que o mercado moderno exige.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            11. Criação de Sites Rápidos com Tecnologia de Cache Avançado</h3>
+                        <p>Velocidade é a métrica de ouro para conversão e SEO. Focamos na <a href="/criacao-de-sites/"
+                                class="text-brand-blue hover:underline">criação de sites rápidos</a> que carregam quase
+                            instantaneamente, utilizando compressão de imagens de última geração e entrega via CDN.
+                            Reduzimos o tempo de resposta do servidor para milissegundos, evitando a perda de visitantes
+                            e garantindo que sua página ofereça a agilidade que o mercado moderno exige.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Criação de Sites Blindados e Seguros (Padrão Bancário)</h3>
-                        <p>Segurança é a fundação da confiança digital. A <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites blindados</a> na EG inclui a implementação de certificados SSL de 256 bits e protocolos HSTS. Protegemos seu domínio contra injeções de código malicioso e ataques de força bruta, garantindo que as informações confidenciais de seus clientes e a integridade da sua marca estejam sempre sob proteção de nível corporativo.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            12. Criação de Sites Blindados e Seguros (Padrão Bancário)</h3>
+                        <p>Segurança é a fundação da confiança digital. A <a href="/criacao-de-sites/"
+                                class="text-brand-blue hover:underline">criação de sites blindados</a> na EG inclui a
+                            implementação de certificados SSL de 256 bits e protocolos HSTS. Protegemos seu domínio
+                            contra injeções de código malicioso e ataques de força bruta, garantindo que as informações
+                            confidenciais de seus clientes e a integridade da sua marca estejam sempre sob proteção de
+                            nível corporativo.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">13. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
-                        <p>Damos autonomia total para o crescimento da sua empresa. Nossa <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites com CMS independente</a> permite que sua equipe atualize blogs, portfólios e banners promocionais de forma simples e visual. Você ganha agilidade para acompanhar o mercado e publicar novos conteúdos sem depender de programadores externos, reduzindo custos operacionais de manutenção de site.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            13. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
+                        <p>Damos autonomia total para o crescimento da sua empresa. Nossa <a href="/criacao-de-sites/"
+                                class="text-brand-blue hover:underline">criação de sites com CMS independente</a>
+                            permite que sua equipe atualize blogs, portfólios e banners promocionais de forma simples e
+                            visual. Você ganha agilidade para acompanhar o mercado e publicar novos conteúdos sem
+                            depender de programadores externos, reduzindo custos operacionais de manutenção de site.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">14. Criação de Sites Integrados com Automação de WhatsApp</h3>
-                        <p>Otimize seu funil de atendimento comercial. Na <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites integrados ao WhatsApp</a>, inserimos botões estratégicos e fluxos de pré-qualificação de leads. Isso reduz drasticamente o tempo entre o interesse do visitante e o contato humano, aumentando as taxas de fechamento de negócios e garantindo que nenhum potencial cliente se perca por falta de resposta rápida.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            14. Criação de Sites Integrados com Automação de WhatsApp</h3>
+                        <p>Otimize seu funil de atendimento comercial. Na <a href="/criacao-de-sites/"
+                                class="text-brand-blue hover:underline">criação de sites integrados ao WhatsApp</a>,
+                            inserimos botões estratégicos e fluxos de pré-qualificação de leads. Isso reduz
+                            drasticamente o tempo entre o interesse do visitante e o contato humano, aumentando as taxas
+                            de fechamento de negócios e garantindo que nenhum potencial cliente se perca por falta de
+                            resposta rápida.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">15. Criação de Sites para Captação de Leads B2B e B2C</h3>
-                        <p>Transforme seu tráfego anônimo em uma base de dados valiosa para marketing. A <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites para captação de leads</a> foca em formulários inteligentes que filtram o interesse do usuário. Implementamos iscas digitais e integrações automáticas com CRMs, permitindo que sua equipe de vendas receba leads já qualificados e prontos para a abordagem comercial direta.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            15. Criação de Sites para Captação de Leads B2B e B2C</h3>
+                        <p>Transforme seu tráfego anônimo em uma base de dados valiosa para marketing. A <a
+                                href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites para
+                                captação de leads</a> foca em formulários inteligentes que filtram o interesse do
+                            usuário. Implementamos iscas digitais e integrações automáticas com CRMs, permitindo que sua
+                            equipe de vendas receba leads já qualificados e prontos para a abordagem comercial direta.
+                        </p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">16. Criação de Sites com Tecnologia SaaS e Painéis Dinâmicos</h3>
-                        <p>Para modelos de negócio escaláveis e complexos, aplicamos a <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites com tecnologia SaaS</a>. Desenvolvemos áreas de membros, painéis de controle personalizados e dashboards de visualização de dados. Isso permite que você entregue valor digital recorrente para seus clientes através de uma plataforma robusta, segura e totalmente adaptada às necessidades do seu software.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            16. Criação de Sites com Tecnologia SaaS e Painéis Dinâmicos</h3>
+                        <p>Para modelos de negócio escaláveis e complexos, aplicamos a <a href="/criacao-de-sites/"
+                                class="text-brand-blue hover:underline">criação de sites com tecnologia SaaS</a>.
+                            Desenvolvemos áreas de membros, painéis de controle personalizados e dashboards de
+                            visualização de dados. Isso permite que você entregue valor digital recorrente para seus
+                            clientes através de uma plataforma robusta, segura e totalmente adaptada às necessidades do
+                            seu software.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">17. Criação de Sites Modernos com Design Minimalista</h3>
-                        <p>A sofisticação está na clareza absoluta da informação. Nossa <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites modernos</a> segue os padrões estéticos das maiores agências do mundo. Utilizamos espaços em branco negativos, tipografia balanceada e elementos gráficos de alta qualidade para elevar o status da sua presença digital, transmitindo uma imagem de luxo, eficiência e modernidade imediata.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            17. Criação de Sites Modernos com Design Minimalista</h3>
+                        <p>A sofisticação está na clareza absoluta da informação. Nossa <a href="/criacao-de-sites/"
+                                class="text-brand-blue hover:underline">criação de sites modernos</a> segue os padrões
+                            estéticos das maiores agências do mundo. Utilizamos espaços em branco negativos, tipografia
+                            balanceada e elementos gráficos de alta qualidade para elevar o status da sua presença
+                            digital, transmitindo uma imagem de luxo, eficiência e modernidade imediata.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">18. Criação de Sites com Manutenção e Suporte Especializado</h3>
-                        <p>A entrega do projeto é apenas o início da nossa parceria estratégica. Ao finalizar a <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação do site</a>, oferecemos suporte técnico contínuo para garantir estabilidade e performance. Realizamos backups periódicos, atualizações de segurança e monitoramento de desempenho 24/7, assegurando que sua infraestrutura digital esteja sempre otimizada para os desafios do mercado.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            18. Criação de Sites com Manutenção e Suporte Especializado</h3>
+                        <p>A entrega do projeto é apenas o início da nossa parceria estratégica. Ao finalizar a <a
+                                href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação do site</a>,
+                            oferecemos suporte técnico contínuo para garantir estabilidade e performance. Realizamos
+                            backups periódicos, atualizações de segurança e monitoramento de desempenho 24/7,
+                            assegurando que sua infraestrutura digital esteja sempre otimizada para os desafios do
+                            mercado.</p>
                     </div>
 
                     <!-- 12 INTELIGENTES -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">19. Desenvolvimento Web de Alta Performance (Clean Code)</h3>
-                        <p>Utilizamos linguagens de programação de ponta (Tailwind CSS, Node.js, React) para o desenvolvimento web sob medida. Nosso foco é escrever código limpo e modular, facilitando futuras expansões do projeto. Isso resulta em sistemas mais leves, com menos erros técnicos e uma facilidade imensa de manutenção, garantindo que o seu software seja um ativo duradouro para sua empresa.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            19. Desenvolvimento Web de Alta Performance (Clean Code)</h3>
+                        <p>Utilizamos linguagens de programação de ponta (Tailwind CSS, Node.js, React) para o
+                            desenvolvimento web sob medida. Nosso foco é escrever código limpo e modular, facilitando
+                            futuras expansões do projeto. Isso resulta em sistemas mais leves, com menos erros técnicos
+                            e uma facilidade imensa de manutenção, garantindo que o seu software seja um ativo duradouro
+                            para sua empresa.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">20. Arquitetura de Software para Ecossistemas Digitais</h3>
-                        <p>Planejamos a infraestrutura do seu projeto pensando na escalabilidade global. Uma boa arquitetura de software evita gargalos técnicos e permite que seu site se conecte com CRMs, ERPs e ferramentas de automação de marketing via APIs. Esse planejamento estratégico é o que garante que seu investimento hoje suporte as demandas tecnológicas dos próximos anos sem necessidade de refação.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            20. Arquitetura de Software para Ecossistemas Digitais</h3>
+                        <p>Planejamos a infraestrutura do seu projeto pensando na escalabilidade global. Uma boa
+                            arquitetura de software evita gargalos técnicos e permite que seu site se conecte com CRMs,
+                            ERPs e ferramentas de automação de marketing via APIs. Esse planejamento estratégico é o que
+                            garante que seu investimento hoje suporte as demandas tecnológicas dos próximos anos sem
+                            necessidade de refação.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">21. UI/UX Design: Foco Absoluto na Experiência do Usuário</h3>
-                        <p>A interface do usuário (UI) e a experiência de uso (UX) são a alma do nosso design. Criamos fluxos de navegação intuitivos que reduzem a fadiga do visitante, facilitando o acesso à informação e conduzindo-o naturalmente até a conversão. Cada elemento visual é posicionado com base em estudos de comportamento digital, garantindo que o seu site seja não apenas bonito, mas funcional e lucrativo.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            21. UI/UX Design: Foco Absoluto na Experiência do Usuário</h3>
+                        <p>A interface do usuário (UI) e a experiência de uso (UX) são a alma do nosso design. Criamos
+                            fluxos de navegação intuitivos que reduzem a fadiga do visitante, facilitando o acesso à
+                            informação e conduzindo-o naturalmente até a conversão. Cada elemento visual é posicionado
+                            com base em estudos de comportamento digital, garantindo que o seu site seja não apenas
+                            bonito, mas funcional e lucrativo.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">22. Otimização de Core Web Vitals (Padrão de Ranking Google)</h3>
-                        <p>Sua pontuação técnica nos buscadores define sua visibilidade. Trabalhamos na otimização profunda dos Core Web Vitals para que seu site atinja notas máximas no Google PageSpeed Insights. Otimizamos o LCP, CLS e FID, métricas que o Google utiliza para premiar sites rápidos e estáveis, garantindo que você tenha vantagem competitiva no leilão de posicionamento orgânico e pago.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            22. Otimização de Core Web Vitals (Padrão de Ranking Google)</h3>
+                        <p>Sua pontuação técnica nos buscadores define sua visibilidade. Trabalhamos na otimização
+                            profunda dos Core Web Vitals para que seu site atinja notas máximas no Google PageSpeed
+                            Insights. Otimizamos o LCP, CLS e FID, métricas que o Google utiliza para premiar sites
+                            rápidos e estáveis, garantindo que você tenha vantagem competitiva no leilão de
+                            posicionamento orgânico e pago.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">23. Planejamento Estratégico de Branding e Presença Online</h3>
-                        <p>Um site sem estratégia é apenas um endereço perdido na rede. Prestamos consultoria de posicionamento digital para alinhar sua plataforma aos objetivos reais de faturamento da sua empresa. Focamos em branding de autoridade, garantindo que sua comunicação visual e textual transmita os valores da marca de forma coesa, atraindo o público certo e repelindo leads desqualificados.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            23. Planejamento Estratégico de Branding e Presença Online</h3>
+                        <p>Um site sem estratégia é apenas um endereço perdido na rede. Prestamos consultoria de
+                            posicionamento digital para alinhar sua plataforma aos objetivos reais de faturamento da sua
+                            empresa. Focamos em branding de autoridade, garantindo que sua comunicação visual e textual
+                            transmita os valores da marca de forma coesa, atraindo o público certo e repelindo leads
+                            desqualificados.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">24. Implementação de Segurança Criptografada SSL e HSTS</h3>
-                        <p>A proteção de dados é um requisito legal e moral (LGPD). Configuramos certificados de segurança avançados que garantem a criptografia de ponta a ponta em todas as interações do seu site. Isso protege formulários de contato, dados de cartões e informações de login, gerando o ícone do cadeado verde que é o principal sinal de segurança para o navegador e para o cliente final.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            24. Implementação de Segurança Criptografada SSL e HSTS</h3>
+                        <p>A proteção de dados é um requisito legal e moral (LGPD). Configuramos certificados de
+                            segurança avançados que garantem a criptografia de ponta a ponta em todas as interações do
+                            seu site. Isso protege formulários de contato, dados de cartões e informações de login,
+                            gerando o ícone do cadeado verde que é o principal sinal de segurança para o navegador e
+                            para o cliente final.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">25. Consultoria em Transformação Tecnológica e Inovação</h3>
-                        <p>Atuamos como o seu departamento de tecnologia externo. Nossa consultoria ajuda sua empresa a navegar no mar de inovações digitais, escolhendo as melhores ferramentas SaaS e caminhos de automação. O objetivo é tornar sua operação mais eficiente, utilizando o site como o hub central de todas as suas atividades de marketing, vendas e atendimento ao cliente.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            25. Consultoria em Transformação Tecnológica e Inovação</h3>
+                        <p>Atuamos como o seu departamento de tecnologia externo. Nossa consultoria ajuda sua empresa a
+                            navegar no mar de inovações digitais, escolhendo as melhores ferramentas SaaS e caminhos de
+                            automação. O objetivo é tornar sua operação mais eficiente, utilizando o site como o hub
+                            central de todas as suas atividades de marketing, vendas e atendimento ao cliente.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">26. Integração Avançada de APIs e Webhooks Dinâmicos</h3>
-                        <p>Conectamos sua plataforma com o mundo exterior de forma automatizada. Seja para integrar meios de pagamento, sistemas de CRM, ERPs corporativos ou ferramentas de e-mail marketing, desenvolvemos pontes de dados seguras. Isso permite que as informações fluam entre seus sistemas em tempo real, eliminando o trabalho manual e reduzindo as chances de erro humano na sua operação.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            26. Integração Avançada de APIs e Webhooks Dinâmicos</h3>
+                        <p>Conectamos sua plataforma com o mundo exterior de forma automatizada. Seja para integrar
+                            meios de pagamento, sistemas de CRM, ERPs corporativos ou ferramentas de e-mail marketing,
+                            desenvolvemos pontes de dados seguras. Isso permite que as informações fluam entre seus
+                            sistemas em tempo real, eliminando o trabalho manual e reduzindo as chances de erro humano
+                            na sua operação.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">27. Manutenção de Sites e Evolução Digital Contínua</h3>
-                        <p>O ecossistema digital está em constante evolução. Oferecemos serviços de manutenção preventiva e evolutiva para que seu site nunca se torne obsoleto. Aplicamos atualizações de segurança, corrigimos bugs e implementamos melhorias de performance mensalmente, garantindo que o seu investimento continue performando no mais alto nível técnico ano após ano.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            27. Manutenção de Sites e Evolução Digital Contínua</h3>
+                        <p>O ecossistema digital está em constante evolução. Oferecemos serviços de manutenção
+                            preventiva e evolutiva para que seu site nunca se torne obsoleto. Aplicamos atualizações de
+                            segurança, corrigimos bugs e implementamos melhorias de performance mensalmente, garantindo
+                            que o seu investimento continue performando no mais alto nível técnico ano após ano.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">28. Engenharia de Conversão (CRO) e Otimização de Funil</h3>
-                        <p>Analisamos cientificamente o comportamento dos seus visitantes para aumentar sua taxa de conversão (CRO). Através de mapas de calor e gravações de sessão, identificamos pontos de atrito e gargalos no funil de vendas. Ajustamos chamadas para ação (CTAs), layouts e copies para garantir que a maior porcentagem possível de visitantes realize a ação desejada no seu site.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            28. Engenharia de Conversão (CRO) e Otimização de Funil</h3>
+                        <p>Analisamos cientificamente o comportamento dos seus visitantes para aumentar sua taxa de
+                            conversão (CRO). Através de mapas de calor e gravações de sessão, identificamos pontos de
+                            atrito e gargalos no funil de vendas. Ajustamos chamadas para ação (CTAs), layouts e copies
+                            para garantir que a maior porcentagem possível de visitantes realize a ação desejada no seu
+                            site.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">29. Hospedagem Cloud de Alta Disponibilidade e Backup</h3>
-                        <p>Seu site é seu vendedor mais valioso e ele não pode dormir. Utilizamos estruturas de hospedagem em nuvem (AWS / Google Cloud) que garantem que sua página esteja online 99,9% do tempo. Implementamos sistemas de backup automático e recuperação de desastres, assegurando que, mesmo em situações extremas, sua presença digital seja restaurada em minutos, sem perda de dados.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            29. Hospedagem Cloud de Alta Disponibilidade e Backup</h3>
+                        <p>Seu site é seu vendedor mais valioso e ele não pode dormir. Utilizamos estruturas de
+                            hospedagem em nuvem (AWS / Google Cloud) que garantem que sua página esteja online 99,9% do
+                            tempo. Implementamos sistemas de backup automático e recuperação de desastres, assegurando
+                            que, mesmo em situações extremas, sua presença digital seja restaurada em minutos, sem perda
+                            de dados.</p>
                     </div>
 
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">30. Consultoria Master em Presença Digital e Dominância</h3>
-                        <p>A EG Empório Digital lidera o mercado brasileiro de transformação de marcas em autoridades digitais. Unimos a engenharia de sistemas SaaS, a excelência na <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de sites</a> e o poder do tráfego pago para criar um ecossistema de vendas inparável. Nossa meta é colocar sua empresa em uma posição de dominância total no seu setor de mercado.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            30. Consultoria Master em Presença Digital e Dominância</h3>
+                        <p>A EG Empório Digital lidera o mercado brasileiro de transformação de marcas em autoridades
+                            digitais. Unimos a engenharia de sistemas SaaS, a excelência na <a href="/criacao-de-sites/"
+                                class="text-brand-blue hover:underline">criação de sites</a> e o poder do tráfego pago
+                            para criar um ecossistema de vendas inparável. Nossa meta é colocar sua empresa em uma
+                            posição de dominância total no seu setor de mercado.</p>
                     </div>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        Se sua corporação exige tecnologia de ponta, design profissional e resultados orgânicos agressivos, a EG Empório Digital é sua parceira estratégica. Entre em contato para iniciar seu projeto de <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de site</a> com quem domina a engenharia da autoridade digital.
+                        Se sua corporação exige tecnologia de ponta, design profissional e resultados orgânicos
+                        agressivos, a EG Empório Digital é sua parceira estratégica. Entre em contato para iniciar seu
+                        projeto de <a href="/criacao-de-sites/" class="text-brand-blue hover:underline">criação de
+                            site</a> com quem domina a engenharia da autoridade digital.
                     </p>
                 </div>
             </div>
@@ -978,256 +1346,329 @@
     <section id="faq" class="py-4 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-20">
 
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl">
-            
+
             <!-- HEADER DO CARD MESTRE -->
-            <div onclick="toggleMasterFaq()" class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
+            <div onclick="toggleMasterFaq()"
+                class="cursor-pointer p-6 md:p-8 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                    <h2
+                        class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
                         <i class="ph-fill ph-question text-brand-blue mr-2"></i> Perguntas Frequentes
                     </h2>
-                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Tire suas dúvidas aqui</span>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Tire suas dúvidas
+                        aqui</span>
                 </div>
-                <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue transition-all">
+                <div
+                    class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue transition-all">
                     <i id="master-faq-icon" class="ph ph-caret-down text-xl transition-transform duration-500"></i>
                 </div>
             </div>
 
             <!-- CONTEÚDO DO CARD MESTRE (LISTA DE PERGUNTAS) -->
-            <div id="master-faq-content" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-black/40">
+            <div id="master-faq-content"
+                class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-black/40">
                 <div class="p-4 md:p-10 space-y-4 border-t border-white/10">
 
-    <!-- 1. Custo e Manutenção -->
-    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
-        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
-            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">1. Qual o custo real para manter um site profissional em sua região?</span>
-            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
-        </button>
-        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                Em 2026, um site não é despesa, é ativo. O custo envolve o domínio (.com.br) e a hospedagem Cloud de alta performance. Na EG, focamos em projetos com alto ROI, garantindo que o site se pague através dos novos clientes gerados em sua região.
-            </div>
-        </div>
-    </div>
+                    <!-- 1. Custo e Manutenção -->
+                    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+                        <button onclick="toggleSubFaq(this)"
+                            class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+                            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">1. Qual o
+                                custo real para manter um site profissional em sua região?</span>
+                            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                                Em 2026, um site não é despesa, é ativo. O custo envolve o domínio (.com.br) e a
+                                hospedagem Cloud de alta performance. Na EG, focamos em projetos com alto ROI,
+                                garantindo que o site se pague através dos novos clientes gerados em sua região.
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- 2. IA e Amadorismo -->
-    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
-        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
-            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">2. Posso usar IA ou ferramentas gratuitas como Wix para meu negócio?</span>
-            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
-        </button>
-        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                Até pode, mas o custo de parecer amador é alto. Ferramentas gratuitas limitam seu SEO e autoridade. Para ser líder de mercado em sua região, você precisa de um site proprietário, sem anúncios de terceiros e com código otimizado para conversão.
-            </div>
-        </div>
-    </div>
+                    <!-- 2. IA e Amadorismo -->
+                    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+                        <button onclick="toggleSubFaq(this)"
+                            class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+                            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">2. Posso usar
+                                IA ou ferramentas gratuitas como Wix para meu negócio?</span>
+                            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                                Até pode, mas o custo de parecer amador é alto. Ferramentas gratuitas limitam seu SEO e
+                                autoridade. Para ser líder de mercado em sua região, você precisa de um site
+                                proprietário, sem anúncios de terceiros e com código otimizado para conversão.
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- 3. TI vs Designer vs EG (Diferencial) -->
-    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
-        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
-            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">3. TI, Designer ou EG: Quem é o profissional certo para minha empresa?</span>
-            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
-        </button>
-        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                Profissionais de TI focam no código; Designers no visual. A EG Empório Digital une Engenharia de Software com Design de Luxo. O resultado é um site que não apenas funciona, mas valida sua autoridade e fecha vendas em sua região.
-            </div>
-        </div>
-    </div>
+                    <!-- 3. TI vs Designer vs EG (Diferencial) -->
+                    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+                        <button onclick="toggleSubFaq(this)"
+                            class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+                            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">3. TI,
+                                Designer ou EG: Quem é o profissional certo para minha empresa?</span>
+                            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                                Profissionais de TI focam no código; Designers no visual. A EG Empório Digital une
+                                Engenharia de Software com Design de Luxo. O resultado é um site que não apenas
+                                funciona, mas valida sua autoridade e fecha vendas em sua região.
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- 4. CPF vs CNPJ -->
-    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
-        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
-            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">4. Preciso de CNPJ para ter um site ou posso iniciar com meu CPF?</span>
-            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
-        </button>
-        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                Total liberdade: você pode começar com CPF para validar seu projeto e migrar para CNPJ conforme o faturamento escalar. Toda a propriedade técnica do domínio em sua região será sua desde o primeiro dia.
-            </div>
-        </div>
-    </div>
+                    <!-- 4. CPF vs CNPJ -->
+                    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+                        <button onclick="toggleSubFaq(this)"
+                            class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+                            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">4. Preciso de
+                                CNPJ para ter um site ou posso iniciar com meu CPF?</span>
+                            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                                Total liberdade: você pode começar com CPF para validar seu projeto e migrar para CNPJ
+                                conforme o faturamento escalar. Toda a propriedade técnica do domínio em sua região será
+                                sua desde o primeiro dia.
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- 5. Redes Sociais -->
-    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
-        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
-            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">5. Por que investir em um site se já tenho Instagram e WhatsApp?</span>
-            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
-        </button>
-        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                Redes sociais são "terrenos alugados". Se a plataforma cair, você perde o contato. O site é sua sede própria. Além disso, é no Google que o cliente em sua região pesquisa quando já decidiu comprar.
-            </div>
-        </div>
-    </div>
+                    <!-- 5. Redes Sociais -->
+                    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+                        <button onclick="toggleSubFaq(this)"
+                            class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+                            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">5. Por que
+                                investir em um site se já tenho Instagram e WhatsApp?</span>
+                            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                                Redes sociais são "terrenos alugados". Se a plataforma cair, você perde o contato. O
+                                site é sua sede própria. Além disso, é no Google que o cliente em sua região pesquisa
+                                quando já decidiu comprar.
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- 6. Sucesso e Estratégia (NOVA) -->
-    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
-        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
-            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">6. O que um site precisa ter para fazer sucesso e atrair clientes?</span>
-            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
-        </button>
-        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                Não é apenas beleza. Um site de sucesso precisa de Copywriting persuasivo, carregamento em menos de 2 segundos e uma jornada do usuário (UX) que leve ao botão de contato sem fricção em sua região.
-            </div>
-        </div>
-    </div>
+                    <!-- 6. Sucesso e Estratégia (NOVA) -->
+                    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+                        <button onclick="toggleSubFaq(this)"
+                            class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+                            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">6. O que um
+                                site precisa ter para fazer sucesso e atrair clientes?</span>
+                            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                                Não é apenas beleza. Um site de sucesso precisa de Copywriting persuasivo, carregamento
+                                em menos de 2 segundos e uma jornada do usuário (UX) que leve ao botão de contato sem
+                                fricção em sua região.
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- 7. SEO Avançado (NOVA - Venda do seu Peixe) -->
-    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden border-brand-blue/30">
-        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
-            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider text-brand-blue">7. Meu site vai aparecer no Google? Qual a importância do SEO?</span>
-            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
-        </button>
-        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                Todo projeto EG já nasce com SEO técnico impecável. Porém, para dominar a primeira página e passar grandes concorrentes em sua região, oferecemos nossa **Consultoria de SEO Avançado**, focada em posicionamento orgânico e dominância de termos de busca.
-            </div>
-        </div>
-    </div>
+                    <!-- 7. SEO Avançado (NOVA - Venda do seu Peixe) -->
+                    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden border-brand-blue/30">
+                        <button onclick="toggleSubFaq(this)"
+                            class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+                            <span
+                                class="font-tech text-white text-xs md:text-sm uppercase tracking-wider text-brand-blue">7.
+                                Meu site vai aparecer no Google? Qual a importância do SEO?</span>
+                            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                                Todo projeto EG já nasce com SEO técnico impecável. Porém, para dominar a primeira
+                                página e passar grandes concorrentes em sua região, oferecemos nossa **Consultoria de
+                                SEO Avançado**, focada em posicionamento orgânico e dominância de termos de busca.
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- 8. Site de Vendas (NOVA) -->
-    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
-        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
-            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">8. Como transformar um site institucional em uma ferramenta de vendas?</span>
-            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
-        </button>
-        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                Integramos Landing Pages e funis de alta conversão. Em vez de apenas informar, o seu site passa a qualificar leads e conduzi-los diretamente para o fechamento comercial no seu CRM ou WhatsApp em sua região.
-            </div>
-        </div>
-    </div>
+                    <!-- 8. Site de Vendas (NOVA) -->
+                    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+                        <button onclick="toggleSubFaq(this)"
+                            class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+                            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">8. Como
+                                transformar um site institucional em uma ferramenta de vendas?</span>
+                            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                                Integramos Landing Pages e funis de alta conversão. Em vez de apenas informar, o seu
+                                site passa a qualificar leads e conduzi-los diretamente para o fechamento comercial no
+                                seu CRM ou WhatsApp em sua região.
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- 9. Modernidade 2026 (NOVA) -->
-    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
-        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
-            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">9. O que torna um site "moderno" e "interessante" em 2026?</span>
-            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
-        </button>
-        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                Design Minimalista, Micro-interações, Glassmorphism e, acima de tudo, Performance. Em sua região, sites que demoram a carregar perdem 50% dos cliques. Modernidade hoje é sinônimo de velocidade e autoridade visual.
-            </div>
-        </div>
-    </div>
+                    <!-- 9. Modernidade 2026 (NOVA) -->
+                    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+                        <button onclick="toggleSubFaq(this)"
+                            class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+                            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">9. O que
+                                torna um site "moderno" e "interessante" em 2026?</span>
+                            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                                Design Minimalista, Micro-interações, Glassmorphism e, acima de tudo, Performance. Em
+                                sua região, sites que demoram a carregar perdem 50% dos cliques. Modernidade hoje é
+                                sinônimo de velocidade e autoridade visual.
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- 10. Processo EG (NOVA) -->
-    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
-        <button onclick="toggleSubFaq(this)" class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
-            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">10. Como criar um site profissional passo a passo com a EG?</span>
-            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
-        </button>
-        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                Nosso processo é consultivo: realizamos o diagnóstico da sua marca em sua região, definimos a arquitetura de dados, criamos o design de luxo e implementamos as melhores práticas de SEO. Você recebe uma solução pronta para escalar seu negócio.
-            </div>
-        </div>
-    </div>
+                    <!-- 10. Processo EG (NOVA) -->
+                    <div class="border border-white/10 rounded-xl bg-white/5 overflow-hidden">
+                        <button onclick="toggleSubFaq(this)"
+                            class="w-full flex justify-between items-center p-5 text-left focus:outline-none group">
+                            <span class="font-tech text-white text-xs md:text-sm uppercase tracking-wider">10. Como
+                                criar um site profissional passo a passo com a EG?</span>
+                            <i class="ph ph-plus text-brand-blue transition-transform duration-300"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="p-5 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
+                                Nosso processo é consultivo: realizamos o diagnóstico da sua marca em sua região,
+                                definimos a arquitetura de dados, criamos o design de luxo e implementamos as melhores
+                                práticas de SEO. Você recebe uma solução pronta para escalar seu negócio.
+                            </div>
+                        </div>
+                    </div>
 
-</div>
+                </div>
             </div>
 
-        <!-- SCRIPT DE LOGICA ANINHADA (MASTER + SUB) -->
-        <script>
-            function toggleMasterFaq() {
-                const content = document.getElementById('master-faq-content');
-                const icon = document.getElementById('master-faq-icon');
-                if (content.style.maxHeight && content.style.maxHeight !== "0px") {
-                    content.style.maxHeight = "0px";
-                    icon.classList.remove('rotate-180');
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    icon.classList.add('rotate-180');
+            <!-- SCRIPT DE LOGICA ANINHADA (MASTER + SUB) -->
+            <script>
+                function toggleMasterFaq() {
+                    const content = document.getElementById('master-faq-content');
+                    const icon = document.getElementById('master-faq-icon');
+                    if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                        content.style.maxHeight = "0px";
+                        icon.classList.remove('rotate-180');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.classList.add('rotate-180');
+                    }
                 }
-            }
 
-            function toggleSubFaq(btn) {
-                const content = btn.nextElementSibling;
-                const icon = btn.querySelector('i');
-                const masterContent = document.getElementById('master-faq-content');
+                function toggleSubFaq(btn) {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    const masterContent = document.getElementById('master-faq-content');
 
-                if (content.style.maxHeight && content.style.maxHeight !== "0px") {
-                    content.style.maxHeight = "0px";
-                    icon.classList.replace('ph-minus', 'ph-plus');
-                } else {
-                    // Abre a sub-faq
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    icon.classList.replace('ph-plus', 'ph-minus');
-                    
-                    // Ajusta a altura do card mestre para comportar o novo conteúdo
-                    masterContent.style.maxHeight = (masterContent.scrollHeight + content.scrollHeight) + "px";
+                    if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                        content.style.maxHeight = "0px";
+                        icon.classList.replace('ph-minus', 'ph-plus');
+                    } else {
+                        // Abre a sub-faq
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.classList.replace('ph-plus', 'ph-minus');
+
+                        // Ajusta a altura do card mestre para comportar o novo conteúdo
+                        masterContent.style.maxHeight = (masterContent.scrollHeight + content.scrollHeight) + "px";
+                    }
                 }
-            }
-        </script>
+            </script>
     </section>
 
     <!-- FOOTER REFINADO: COMPACTO E VISÍVEL -->
     <footer class="py-10 border-t border-white/5 bg-black/60 backdrop-blur-sm relative z-10">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-            
+
             <!-- Coluna 1: Marca (AGORA VAI) -->
             <div class="flex flex-col gap-3">
                 <div class="flex flex-col">
-                    <img src="assets/images/logo.png" alt="Logo EG" class="h-12 w-auto object-contain mb-2 self-start opacity-80">
-                    
+                    <img src="assets/images/logo.png" alt="Logo EG"
+                        class="h-12 w-auto object-contain mb-2 self-start opacity-80">
+
                     <!-- w-fit + self-start trava a animação no tamanho real do texto -->
-                    <div class="logo-animate font-tech text-xl font-bold uppercase tracking-widest w-fit self-start whitespace-nowrap" data-text="EG EMPÓRIO DIGITAL">
+                    <div class="logo-animate font-tech text-xl font-bold uppercase tracking-widest w-fit self-start whitespace-nowrap"
+                        data-text="EG EMPÓRIO DIGITAL">
                         EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
                     </div>
                 </div>
                 <p class="text-sm text-slate-400 leading-relaxed max-w-xs mt-3">
-                    Engenharia de Software e Design de Elite. Transformamos tecnologia em autoridade e faturamento comercial.
+                    Engenharia de Software e Design de Elite. Transformamos tecnologia em autoridade e faturamento
+                    comercial.
                 </p>
                 <div class="flex flex-col gap-1 mt-2">
-                    <p class="text-xs text-slate-500 font-tech tracking-widest uppercase font-bold">CNPJ: 67.096.896/0001-25</p>
+                    <p class="text-xs text-slate-500 font-tech tracking-widest uppercase font-bold">CNPJ:
+                        67.096.896/0001-25</p>
                 </div>
             </div>
 
             <!-- Coluna 2: Lista de Serviços (Links Coerentes) -->
             <div>
-                <h4 class="font-tech text-white text-base uppercase tracking-[0.2em] mb-5 border-l-4 border-brand-blue pl-3">Soluções</h4>
+                <h4
+                    class="font-tech text-white text-base uppercase tracking-[0.2em] mb-5 border-l-4 border-brand-blue pl-3">
+                    Soluções</h4>
                 <ul class="space-y-3">
-                    <li><a href="/criacao-de-sites/" class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i class="ph ph-caret-right text-brand-blue"></i> Criação de Sites Institucionais</a></li>
-                    <li><a href="/saas" class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i class="ph ph-caret-right text-brand-blue"></i> Desenvolvimento de Sistemas SaaS</a></li>
-                    <li><a href="/criacao-de-sites/" class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i class="ph ph-caret-right text-brand-blue"></i> Landing Pages de Alta Conversão</a></li>
-                    <li><a href="/gestao-de-trafego/" class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i class="ph ph-caret-right text-brand-blue"></i> Gestão de Tráfego Pago (Ads)</a></li>
-                    <li><a href="/servicos" class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i class="ph ph-caret-right text-brand-blue"></i> Consultoria de SEO Avançado</a></li>
+                    <li><a href="/criacao-de-sites/"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Criação de Sites Institucionais</a></li>
+                    <li><a href="/saas"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Desenvolvimento de Sistemas SaaS</a></li>
+                    <li><a href="/criacao-de-sites/"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Landing Pages de Alta Conversão</a></li>
+                    <li><a href="/gestao-de-trafego/"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Gestão de Tráfego Pago (Ads)</a></li>
+                    <li><a href="/servicos"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Consultoria de SEO Avançado</a></li>
                 </ul>
             </div>
 
             <!-- Coluna 3: Conecte-se (Maior Visibilidade) -->
             <div>
-                <h4 class="font-tech text-white text-base uppercase tracking-[0.2em] mb-5 border-l-4 border-brand-blue pl-3">Conecte-se</h4>
+                <h4
+                    class="font-tech text-white text-base uppercase tracking-[0.2em] mb-5 border-l-4 border-brand-blue pl-3">
+                    Conecte-se</h4>
                 <div class="flex flex-col gap-5">
-                    <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="flex items-center gap-4 group">
-                        <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue transition-all bg-white/5">
+                    <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank"
+                        class="flex items-center gap-4 group">
+                        <div
+                            class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue transition-all bg-white/5">
                             <i class="ph ph-instagram-logo text-xl text-slate-300 group-hover:text-brand-blue"></i>
                         </div>
                         <div class="flex flex-col">
                             <span class="text-xs text-slate-500 uppercase font-tech font-bold">Siga-nos</span>
-                            <span class="text-sm text-slate-200 group-hover:text-brand-blue transition font-semibold">Instagram</span>
+                            <span
+                                class="text-sm text-slate-200 group-hover:text-brand-blue transition font-semibold">Instagram</span>
                         </div>
                     </a>
 
-                    <a href="https://egemporiodigital.com.br/blog" target="_blank" class="flex items-center gap-4 group">
-                        <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue transition-all bg-white/5">
+                    <a href="https://egemporiodigital.com.br/blog" target="_blank"
+                        class="flex items-center gap-4 group">
+                        <div
+                            class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue transition-all bg-white/5">
                             <i class="ph ph-article text-xl text-slate-300 group-hover:text-brand-blue"></i>
                         </div>
                         <div class="flex flex-col">
                             <span class="text-xs text-slate-500 uppercase font-tech font-bold">Conteúdo</span>
-                            <span class="text-sm text-slate-200 group-hover:text-brand-blue transition font-semibold">Nosso Blog</span>
+                            <span
+                                class="text-sm text-slate-200 group-hover:text-brand-blue transition font-semibold">Nosso
+                                Blog</span>
                         </div>
                     </a>
 
                     <a href="mailto:eg.emporiodigital@outlook.com" class="flex items-center gap-4 group">
-                        <div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue transition-all bg-white/5">
+                        <div
+                            class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue transition-all bg-white/5">
                             <i class="ph ph-envelope-simple text-xl text-slate-300 group-hover:text-brand-blue"></i>
                         </div>
                         <div class="flex flex-col">
                             <span class="text-xs text-slate-500 uppercase font-tech font-bold">E-mail Comercial</span>
-                            <span class="text-sm text-slate-200 group-hover:text-brand-blue transition font-semibold underline underline-offset-4">eg.emporiodigital@outlook.com</span>
+                            <span
+                                class="text-sm text-slate-200 group-hover:text-brand-blue transition font-semibold underline underline-offset-4">eg.emporiodigital@outlook.com</span>
                         </div>
                     </a>
                 </div>
@@ -1235,7 +1676,8 @@
         </div>
 
         <!-- Copyright final (Compacto) -->
-        <div class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div
+            class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-xs text-slate-500 uppercase tracking-[0.2em] font-medium">
                 © EG Empório Digital
             </p>
@@ -1285,17 +1727,22 @@
             document.body.style.overflow = 'auto';
         }
 
-        document.addEventListener('keydown', function(event) {
+        document.addEventListener('keydown', function (event) {
             if (event.key === "Escape") {
                 closeProjectModal();
             }
         });
     </script>
     <!-- BOTÃO FLUTUANTE WHATSAPP -->
-<a href="https://wa.me/5511952835361?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20meu%20projeto." class="wpp-pulsante" target="_blank">
-    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: auto;">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.05 21.95l4.913-1.412A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 1.5c4.694 0 8.5 3.806 8.5 8.5s-3.806 8.5-8.5 8.5c-1.615 0-3.123-.45-4.415-1.233l-.317-.192-3.118.896.913-3.04-.21-.347A8.463 8.463 0 013.5 12c0-4.694 3.806-8.5 8.5-8.5zm4.72 10.932c-.258-.13-1.528-.754-1.764-.84-.237-.086-.41-.13-.582.13-.172.257-.667.84-.817 1.012-.15.172-.3.193-.558.064a7.043 7.043 0 01-2.074-1.28 7.76 7.76 0 01-1.435-1.787c-.15-.258-.016-.398.113-.527.117-.116.258-.3.387-.451.13-.15.172-.258.258-.43.086-.172.043-.322-.021-.452-.065-.129-.582-1.4-.797-1.914-.21-.505-.42-.435-.582-.443-.15-.008-.322-.01-.494-.01-.172 0-.452.065-.688.323-.237.258-.903.882-.903 2.15 0 1.27.925 2.502 1.054 2.674.129.172 1.82 2.78 4.41 3.896.616.265 1.096.422 1.471.542.618.196 1.18.169 1.625.102.496-.075 1.528-.624 1.743-1.226.215-.602.215-1.118.15-1.226-.064-.108-.236-.172-.494-.301z" fill="currentColor"/>
-</svg>
-</a>
+    <a href="https://wa.me/5511952835361?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20meu%20projeto."
+        class="wpp-pulsante" target="_blank">
+        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            style="margin: auto;">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.05 21.95l4.913-1.412A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 1.5c4.694 0 8.5 3.806 8.5 8.5s-3.806 8.5-8.5 8.5c-1.615 0-3.123-.45-4.415-1.233l-.317-.192-3.118.896.913-3.04-.21-.347A8.463 8.463 0 013.5 12c0-4.694 3.806-8.5 8.5-8.5zm4.72 10.932c-.258-.13-1.528-.754-1.764-.84-.237-.086-.41-.13-.582.13-.172.257-.667.84-.817 1.012-.15.172-.3.193-.558.064a7.043 7.043 0 01-2.074-1.28 7.76 7.76 0 01-1.435-1.787c-.15-.258-.016-.398.113-.527.117-.116.258-.3.387-.451.13-.15.172-.258.258-.43.086-.172.043-.322-.021-.452-.065-.129-.582-1.4-.797-1.914-.21-.505-.42-.435-.582-.443-.15-.008-.322-.01-.494-.01-.172 0-.452.065-.688.323-.237.258-.903.882-.903 2.15 0 1.27.925 2.502 1.054 2.674.129.172 1.82 2.78 4.41 3.896.616.265 1.096.422 1.471.542.618.196 1.18.169 1.625.102.496-.075 1.528-.624 1.743-1.226.215-.602.215-1.118.15-1.226-.064-.108-.236-.172-.494-.301z"
+                fill="currentColor" />
+        </svg>
+    </a>
 </body>
+
 </html>
