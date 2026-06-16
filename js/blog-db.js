@@ -25,7 +25,7 @@ const blogPosts = [
             <div class="cta-box">
                 <h3>Qual o seu momento atual?</h3>
                 <p>Não gaste dinheiro na ferramenta errada. Fale com a gente para definir sua estratégia.</p>
-                <a href="https://wa.me/5511952835361?text=Li o artigo sobre Site vs SaaS e quero uma consultoria." target="_blank" class="btn-cta">Falar com Consultor</a>
+                <a href="https://wa.me/5511916053292?text=Li o artigo sobre Site vs SaaS e quero uma consultoria." target="_blank" class="btn-cta">Falar com Consultor</a>
             </div>
         `
     },
@@ -53,7 +53,7 @@ const blogPosts = [
 
              <div class="cta-box">
                 <h3>Tire sua ideia do papel</h3>
-                <a href="https://wa.me/5511952835361?text=Li o artigo sobre SaaS e tenho uma ideia." target="_blank" class="btn-cta">Orçar meu Sistema</a>
+                <a href="https://wa.me/5511916053292?text=Li o artigo sobre SaaS e tenho uma ideia." target="_blank" class="btn-cta">Orçar meu Sistema</a>
             </div>
         `
     },
@@ -76,7 +76,7 @@ const blogPosts = [
             
             <div class="cta-box">
                 <h3>Pare de perder leads</h3>
-                <a href="https://wa.me/5511952835361?text=Preciso de uma Landing Page que venda." target="_blank" class="btn-cta">Criar Página de Vendas</a>
+                <a href="https://wa.me/5511916053292?text=Preciso de uma Landing Page que venda." target="_blank" class="btn-cta">Criar Página de Vendas</a>
             </div>
         `
     },
@@ -104,7 +104,7 @@ const blogPosts = [
             <div class="cta-box">
                 <h3>Seu site não aparece no Google?</h3>
                 <p>Podemos fazer uma auditoria técnica completa.</p>
-                <a href="https://wa.me/5511952835361?text=Quero melhorar o SEO do meu site." target="_blank" class="btn-cta">Auditoria de SEO</a>
+                <a href="https://wa.me/5511916053292?text=Quero melhorar o SEO do meu site." target="_blank" class="btn-cta">Auditoria de SEO</a>
             </div>
         `
     },
@@ -129,7 +129,7 @@ const blogPosts = [
             
             <div class="cta-box">
                 <h3>Quer vender mais com anúncios?</h3>
-                <a href="https://wa.me/5511952835361?text=Preciso de ajuda com Tráfego Pago." target="_blank" class="btn-cta">Consultoria de Tráfego</a>
+                <a href="https://wa.me/5511916053292?text=Preciso de ajuda com Tráfego Pago." target="_blank" class="btn-cta">Consultoria de Tráfego</a>
             </div>
         `
     },
@@ -154,7 +154,7 @@ const blogPosts = [
             
             <div class="cta-box">
                 <h3>Teste a velocidade do seu site</h3>
-                <a href="https://wa.me/5511952835361?text=Meu site está lento, preciso de ajuda." target="_blank" class="btn-cta">Otimizar Meu Site</a>
+                <a href="https://wa.me/5511916053292?text=Meu site está lento, preciso de ajuda." target="_blank" class="btn-cta">Otimizar Meu Site</a>
             </div>
         `
     },
@@ -179,7 +179,7 @@ const blogPosts = [
             
             <div class="cta-box">
                 <h3>Precisa de um texto que vende?</h3>
-                <a href="https://wa.me/5511952835361?text=Preciso de Copywriting para minha página." target="_blank" class="btn-cta">Melhorar minha Conversão</a>
+                <a href="https://wa.me/5511916053292?text=Preciso de Copywriting para minha página." target="_blank" class="btn-cta">Melhorar minha Conversão</a>
             </div>
         `
     },
@@ -204,7 +204,7 @@ const blogPosts = [
             
             <div class="cta-box">
                 <h3>Seu sistema está pronto para crescer?</h3>
-                <a href="https://wa.me/5511952835361?text=Tenho um projeto de SaaS e quero escalar." target="_blank" class="btn-cta">Falar com Arquiteto de Software</a>
+                <a href="https://wa.me/5511916053292?text=Tenho um projeto de SaaS e quero escalar." target="_blank" class="btn-cta">Falar com Arquiteto de Software</a>
             </div>
         `
     },
@@ -237,7 +237,7 @@ const blogPosts = [
             <div class="cta-box">
                 <h3>Sua marca merece um Site de Elite</h3>
                 <p>A <strong>Criação de Sites</strong> é o primeiro passo para a sua dominância digital. Vamos tirar seu projeto do papel com o nível de excelência que sua empresa exige.</p>
-                <a href="https://wa.me/5511952835361?text=Li o artigo sobre Criação de Sites de Elite e quero um projeto profissional." target="_blank" class="btn-cta">Iniciar minha Criação de Site</a>
+                <a href="https://wa.me/5511916053292?text=Li o artigo sobre Criação de Sites de Elite e quero um projeto profissional." target="_blank" class="btn-cta">Iniciar minha Criação de Site</a>
             </div>
         `
     },
@@ -268,7 +268,7 @@ const blogPosts = [
             <div class="cta-box">
                 <h3>Não perca mais clientes para a concorrência</h3>
                 <p>A <strong>Criação de Sites</strong> de alta performance é o divisor de águas para empresas que buscam o topo. Deixe a EG Empório Digital construir sua sede digital de elite.</p>
-                <a href="https://wa.me/5511952835361?text=Quero elevar o nível do meu negócio com a criação de um site profissional." target="_blank" class="btn-cta">Solicitar Projeto de Criação de Site</a>
+                <a href="https://wa.me/5511916053292?text=Quero elevar o nível do meu negócio com a criação de um site profissional." target="_blank" class="btn-cta">Solicitar Projeto de Criação de Site</a>
             </div>
         `
     },
