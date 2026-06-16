@@ -754,44 +754,110 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
-    <footer class="py-12 text-center border-t border-white/5 bg-black/60 backdrop-blur-sm">
-        <div class="flex flex-col items-center gap-8">
-            <div class="flex flex-col items-center">
-                <img src="../assets/images/logo.png" alt="Logo EG Empório Digital" class="h-8 opacity-50 mb-2">
-                <div class="logo-animate font-tech text-xl font-bold text-white uppercase" data-text="EG EMPÓRIO DIGITAL">
-                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+    <!-- FOOTER REFINADO: COMPACTO E VISÍVEL -->
+    <footer class="py-10 border-t border-white/5 bg-black/60 backdrop-blur-sm relative z-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+
+            <!-- Coluna 1: Marca (AGORA VAI) -->
+            <div class="flex flex-col gap-3">
+                <div class="flex flex-col">
+                    <img src="/assets/images/logo.png" alt="Logo EG"
+                        class="h-12 w-auto object-contain mb-2 self-start opacity-80">
+
+                    <!-- w-fit + self-start trava a animação no tamanho real do texto -->
+                    <div class="logo-animate font-tech text-xl font-bold uppercase tracking-widest w-fit self-start whitespace-nowrap"
+                        data-text="EG EMPÓRIO DIGITAL">
+                        EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-400 leading-relaxed max-w-xs mt-3">
+                    Engenharia de Software e Design de Elite. Transformamos tecnologia em autoridade e faturamento
+                    comercial.
+                </p>
+                <div class="flex flex-col gap-1 mt-2">
+                    <p class="text-xs text-slate-500 font-tech tracking-widest uppercase font-bold">CNPJ:
+                        67.096.896/0001-25</p>
                 </div>
             </div>
-            
-            <div class="flex gap-8">
-                <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-instagram-logo text-2xl text-slate-300"></i>
-                    </div>
-                </a>
-                <a href="https://egemporiodigital.com.br/blog" target="_blank" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-article text-2xl text-slate-300"></i>
-                    </div>
-                </a>
-                <!-- LINK DO HUB DE CRIAÇÃO DE SITES (SEO LOCAL) -->
-                <a href="/criacao-de-sites/" class="group relative" title="Criação de Sites">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue group-hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-layout text-2xl text-slate-300 transition-colors"></i>
-                    </div>
-                </a>
-                <a href="mailto:eg.emporiodigital@outlook.com" class="group relative">
-                    <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-blue hover:text-brand-blue transition-all bg-white/5">
-                        <i class="ph ph-envelope-simple text-2xl text-slate-300"></i>
-                    </div>
-                </a>
+
+            <!-- Coluna 2: Lista de Serviços (Links Coerentes) -->
+            <div>
+                <h4
+                    class="font-tech text-white text-base uppercase tracking-[0.2em] mb-5 border-l-4 border-brand-blue pl-3">
+                    Soluções</h4>
+                <ul class="space-y-3">
+                    <li><a href="/criacao-de-sites/"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Criação de Sites Institucionais</a></li>
+                    <li><a href="/saas"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Desenvolvimento de Sistemas SaaS</a></li>
+                    <li><a href="/criacao-de-sites/"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Landing Pages de Alta Conversão</a></li>
+                    <li><a href="/gestao-de-trafego/"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Gestão de Tráfego Pago (Ads)</a></li>
+                    <li><a href="/servicos"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Consultoria de SEO Avançado</a></li>
+                </ul>
             </div>
 
-            <div class="text-center">
-                <p class="text-xs text-slate-600 uppercase tracking-widest">© EG Empório Digital.</p>
-                <p class="text-[10px] text-slate-700 mt-1 uppercase">VILA CARRÃO - ZONA LESTE SÃO PAULO</p>
+            <!-- Coluna 3: Conecte-se (Maior Visibilidade) -->
+            <div>
+                <h4
+                    class="font-tech text-white text-base uppercase tracking-[0.2em] mb-5 border-l-4 border-brand-blue pl-3">
+                    Conecte-se</h4>
+                <div class="flex flex-col gap-5">
+                    <a href="https://www.instagram.com/eg.emporio.digital/" target="_blank"
+                        class="flex items-center gap-4 group">
+                        <div
+                            class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue transition-all bg-white/5">
+                            <i class="ph ph-instagram-logo text-xl text-slate-300 group-hover:text-brand-blue"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-500 uppercase font-tech font-bold">Siga-nos</span>
+                            <span
+                                class="text-sm text-slate-200 group-hover:text-brand-blue transition font-semibold">Instagram</span>
+                        </div>
+                    </a>
+
+                    <a href="https://egemporiodigital.com.br/blog" target="_blank"
+                        class="flex items-center gap-4 group">
+                        <div
+                            class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue transition-all bg-white/5">
+                            <i class="ph ph-article text-xl text-slate-300 group-hover:text-brand-blue"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-500 uppercase font-tech font-bold">Conteúdo</span>
+                            <span
+                                class="text-sm text-slate-200 group-hover:text-brand-blue transition font-semibold">Nosso
+                                Blog</span>
+                        </div>
+                    </a>
+
+                    <a href="mailto:eg.emporiodigital@outlook.com" class="flex items-center gap-4 group">
+                        <div
+                            class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-brand-blue transition-all bg-white/5">
+                            <i class="ph ph-envelope-simple text-xl text-slate-300 group-hover:text-brand-blue"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-500 uppercase font-tech font-bold">E-mail Comercial</span>
+                            <span
+                                class="text-sm text-slate-200 group-hover:text-brand-blue transition font-semibold underline underline-offset-4">eg.emporiodigital@outlook.com</span>
+                        </div>
+                    </a>
+                </div>
             </div>
+        </div>
+
+        <!-- Copyright final (Compacto) -->
+        <div
+            class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-xs text-slate-500 uppercase tracking-[0.2em] font-medium">
+                © EG Empório Digital
+            </p>
         </div>
     </footer>
 
