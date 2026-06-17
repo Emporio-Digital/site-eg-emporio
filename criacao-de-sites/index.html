@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SX8XFH5XDP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-SX8XFH5XDP');
-</script>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX8XFH5XDP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SX8XFH5XDP');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
     <!-- SEO HUB: GERAL -->
     <title>Criação de Sites Profissionais e Lojas Virtuais | EG Empório Digital</title>
-    <meta name="description" content="Especialistas em criação de sites, landing pages e lojas virtuais de alta conversão. Design moderno e tecnologia de ponta para empresas que querem vender mais.">
-    
+    <meta name="description"
+        content="Especialistas em criação de sites, landing pages e lojas virtuais de alta conversão. Design moderno e tecnologia de ponta para empresas que querem vender mais.">
+
     <!-- CANONICAL (Aponta para ele mesmo, pois é a Pai) -->
     <link rel="canonical" href="https://egemporiodigital.com.br/criacao-de-sites/">
-    
+
     <!-- AUTORIDADE MÁXIMA: HUB DE CRIAÇÃO DE SITES (BLINDADO) -->
     <script type="application/ld+json">
     {
@@ -122,12 +124,14 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Fontes e Ícones -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <script>
@@ -135,13 +139,13 @@
             theme: {
                 extend: {
                     colors: {
-                        'eg-dark': '#020617',       
-                        'brand-blue': '#00e1ff',    
-                        'brand-dark-blue': '#004e92', 
+                        'eg-dark': '#020617',
+                        'brand-blue': '#00e1ff',
+                        'brand-dark-blue': '#004e92',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        tech: ['Orbitron', 'sans-serif'], 
+                        tech: ['Orbitron', 'sans-serif'],
                     },
                     animation: {
                         'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -164,7 +168,7 @@
             background-image: radial-gradient(circle at 50% 10%, #0a2540 0%, #020617 70%);
             background-attachment: fixed;
         }
-        
+
         .flyer-title {
             background: linear-gradient(to bottom, #ffffff, #00e1ff);
             -webkit-background-clip: text;
@@ -178,6 +182,7 @@
             backdrop-filter: blur(5px);
             transition: all 0.3s ease;
         }
+
         .glass-tech:hover {
             border-color: rgba(0, 225, 255, 0.4);
             box-shadow: 0 0 30px rgba(0, 225, 255, 0.1);
@@ -206,7 +211,7 @@
             -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
             white-space: nowrap;
         }
-        
+
         .logo-animate span {
             color: transparent !important;
             -webkit-text-stroke: 1px rgba(0, 225, 255, 0.1);
@@ -215,8 +220,10 @@
         .logo-animate::before {
             content: attr(data-text);
             position: absolute;
-            top: 0; left: 0;
-            width: 0; height: 100%;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
             background: linear-gradient(to right, #ffffff 62%, #00e1ff 62%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -227,16 +234,47 @@
         }
 
         @keyframes fillLogoLoop {
-            0%, 2% { width: 0; border-right-color: #00e1ff; }
-            10% { width: 100%; border-right-color: #00e1ff; }
-            11%, 92% { width: 100%; border-right-color: transparent; }
-            98%, 100% { width: 0; border-right-color: transparent; }
+
+            0%,
+            2% {
+                width: 0;
+                border-right-color: #00e1ff;
+            }
+
+            10% {
+                width: 100%;
+                border-right-color: #00e1ff;
+            }
+
+            11%,
+            92% {
+                width: 100%;
+                border-right-color: transparent;
+            }
+
+            98%,
+            100% {
+                width: 0;
+                border-right-color: transparent;
+            }
         }
-    /* ANIMAÇÃO PULSE WHATSAPP */
+
+        /* ANIMAÇÃO PULSE WHATSAPP */
         @keyframes pulse-wpp {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); transform: scale(1); }
-            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); transform: scale(1); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); transform: scale(1); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+                transform: scale(1);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+                transform: scale(1);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+                transform: scale(1);
+            }
         }
 
         .wpp-pulsante {
@@ -256,7 +294,7 @@
             text-decoration: none;
             animation: pulse-wpp 2s infinite;
             transition: transform 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .wpp-pulsante:hover {
@@ -265,12 +303,16 @@
         }
     </style>
 </head>
+
 <body class="text-slate-300 antialiased overflow-x-hidden selection:bg-brand-blue selection:text-eg-dark relative">
 
     <!-- BACKGROUND FIXO -->
     <div class="bg-fixed-mobile flex items-center justify-center">
-        <img src="../assets/images/logo.png" alt="" class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40"></div>
+        <img src="../assets/images/logo.png" alt=""
+            class="w-[300%] max-w-none md:max-w-full md:w-[900px] opacity-20 animate-pulse-slow drop-shadow-[0_0_60px_rgba(0,225,255,0.2)]">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] -z-40">
+        </div>
     </div>
 
     <!-- HEADER -->
@@ -325,37 +367,47 @@
     </header>
 
     <!-- HERO SECTION (HUB PRINCIPAL) -->
-    <section id="webpage" class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
-        
-        <h1 class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
+    <section id="webpage"
+        class="relative min-h-screen flex flex-col justify-center items-center pt-28 px-4 text-center">
+
+        <h1
+            class="font-tech text-4xl md:text-6xl lg:text-7xl font-black uppercase mb-4 flyer-title tracking-wide leading-tight z-10">
             CRIAÇÃO DE SITES <br> <span class="text-white">PROFISSIONAIS</span>
         </h1>
 
-        <h2 class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
+        <h2
+            class="font-tech text-brand-blue text-lg md:text-2xl font-bold uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_15px_rgba(0,225,255,0.4)]">
             TECNOLOGIA, DESIGN E ALTA CONVERSÃO
         </h2>
 
-        <div class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-8 z-10"></div>
+        <div
+            class="w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent opacity-50 mb-8 z-10">
+        </div>
 
-        <p class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
-            Transformamos sua ideia em uma máquina de vendas. Especialistas em <strong>Lojas Virtuais</strong>, <strong>Landing Pages</strong> e Sistemas Web. 
+        <p
+            class="font-sans max-w-3xl text-base md:text-xl text-slate-300 mb-12 font-light leading-relaxed z-10 drop-shadow-md">
+            Transformamos sua ideia em uma máquina de vendas. Especialistas em <strong>Lojas Virtuais</strong>,
+            <strong>Landing Pages</strong> e Sistemas Web.
             Atendemos empresas visionárias em todo o Brasil com foco em performance e SEO.
         </p>
 
         <!-- CTA BUTTONS -->
         <div class="flex flex-col md:flex-row gap-4 z-10">
-            <a href="https://wa.me/5511916053292?text=Quero um site profissional." class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
+            <a href="https://wa.me/5511916053292?text=Quero um site profissional."
+                class="group relative px-10 py-4 bg-eg-dark/50 border border-brand-blue text-brand-blue font-tech font-bold uppercase tracking-widest hover:bg-brand-blue hover:text-eg-dark transition-all duration-300 shadow-[0_0_20px_rgba(0,225,255,0.2)] backdrop-blur-sm">
                 Solicitar Orçamento
             </a>
-            <a href="#locais-atendimento" class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
+            <a href="#locais-atendimento"
+                class="group relative px-10 py-4 border border-white/20 text-white font-tech font-bold uppercase tracking-widest hover:border-brand-blue hover:text-brand-blue transition-all duration-300 backdrop-blur-sm">
                 Ver Regiões Atendidas
             </a>
         </div>
     </section>
 
     <!-- SEÇÃO: PROJETOS DISPONÍVEIS (8 CARDS CLICÁVEIS) -->
-    <section id="projetos-disponiveis" class="scroll-mt-32 py-20 px-6 max-w-7xl mx-auto border-t border-white/5 relative z-10">
-        
+    <section id="projetos-disponiveis"
+        class="scroll-mt-32 py-20 px-6 max-w-7xl mx-auto border-t border-white/5 relative z-10">
+
         <div class="text-center mb-16">
             <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase tracking-wide">
                 Nosso <span class="text-brand-blue">Portfólio</span>
@@ -366,148 +418,185 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
+
             <!-- CARD 1: ESTÉTICA -->
-            <div onclick="openProjectModal('NKRiU16RUmk', 'https://vitrine-projetos-two.vercel.app/estetica-auto.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/estetica.png" alt="Estética Automotiva" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+            <div onclick="openProjectModal('NKRiU16RUmk', 'https://vitrine-projetos-two.vercel.app/estetica-auto.html')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/estetica.png" alt="Estética Automotiva"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Automotivo</span>
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Automotivo</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Estética Automotiva</h3>
                     <p class="text-slate-400 text-sm line-clamp-2">Ideal para centros automotivos de alto padrão.</p>
                 </div>
             </div>
 
             <!-- CARD 2: DESPACHANTE -->
-            <div onclick="openProjectModal('ga1F1eZ5sNQ', 'https://vitrine-projetos-two.vercel.app/despachante.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/despachante.png" alt="Despachante" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+            <div onclick="openProjectModal('ga1F1eZ5sNQ', 'https://vitrine-projetos-two.vercel.app/despachante.html')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/despachante.png" alt="Despachante"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Serviços</span>
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Serviços</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Despachante VIP</h3>
                     <p class="text-slate-400 text-sm line-clamp-2">Landing Page de alta conversão para serviços.</p>
                 </div>
             </div>
 
             <!-- CARD 3: NOIR GASTROBAR -->
-            <div onclick="openProjectModal('3MXvILsR5DA', 'https://vitrine-projetos-two.vercel.app/saas-ia.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="https://i.ibb.co/kb2NGD7/Captura-de-tela-2026-02-05-003024.png" alt="Projeto Noir Gastrobar" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+            <div onclick="openProjectModal('3MXvILsR5DA', 'https://vitrine-projetos-two.vercel.app/saas-ia.html')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="https://i.ibb.co/kb2NGD7/Captura-de-tela-2026-02-05-003024.png" alt="Projeto Noir Gastrobar"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Gastronomia</span>
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Gastronomia</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Noir Gastrobar</h3>
                     <p class="text-slate-400 text-sm line-clamp-2">Ideal para restaurantes e bares.</p>
                 </div>
             </div>
 
             <!-- CARD 4: AUTOMOTIVO LUXURY -->
-            <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/capa-automotivo.jpg" alt="Projeto Automotivo" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+            <div onclick="openProjectModal('68clxrwLx8A', 'https://vitrine-projetos-two.vercel.app/automotivo.html')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/capa-automotivo.jpg" alt="Projeto Automotivo"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Conceito</span>
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Conceito</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Automotivo Luxury</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Experiência imersiva para apresentação de veículos.
+                    </p>
                 </div>
             </div>
 
             <!-- CARD 5: ARQUITETURA -->
-            <div onclick="openProjectModal('y8MOpAC93MU', 'https://vitrine-projetos-two.vercel.app/arquitetura.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/capa-arquitetura.jpg" alt="Projeto Arquitetura" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+            <div onclick="openProjectModal('y8MOpAC93MU', 'https://vitrine-projetos-two.vercel.app/arquitetura.html')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/capa-arquitetura.jpg" alt="Projeto Arquitetura"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Imobiliária</span>
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Imobiliária</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Arquitetura Minimal</h3>
                     <p class="text-slate-400 text-sm line-clamp-2">Design clean e sofisticado para escritórios.</p>
                 </div>
             </div>
 
             <!-- CARD 6: FINANCEIRO -->
-            <div onclick="openProjectModal('neNoBygqAG8', 'https://consorciolibertyrevisional.com.br')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/capa-revisional.png" alt="Liberty Revisional" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+            <div onclick="openProjectModal('neNoBygqAG8', 'https://consorciolibertyrevisional.com.br')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/capa-revisional.png" alt="Liberty Revisional"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Assessoria Jurídica</span>
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Assessoria
+                        Jurídica</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Liberty Revisional</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Landing Page de alta conversão para assessoria e revisional de contratos.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Landing Page de alta conversão para assessoria e
+                        revisional de contratos.</p>
                 </div>
             </div>
 
             <!-- CARD 5: LOJA IMPORTADOS -->
-            <div onclick="openProjectModal('S8l72qN8vAE', 'https://vitrine-projetos-two.vercel.app/imports.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/capa-imports.png" alt="Loja Importados" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+            <div onclick="openProjectModal('S8l72qN8vAE', 'https://vitrine-projetos-two.vercel.app/imports.html')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/capa-imports.png" alt="Loja Importados"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">E-commerce</span>
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">E-commerce</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Loja Importados</h3>
                     <p class="text-slate-400 text-sm line-clamp-2">Plataforma moderna de vendas com design luxuoso.</p>
                 </div>
             </div>
 
             <!-- CARD 8: ESTÉTICA FACIAL -->
-            <div onclick="openProjectModal('R70zN3Y7LjU', 'https://vitrine-projetos-two.vercel.app/estetica-facial.html')" 
-                 class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
-                <img src="../assets/images/capa-facial.png" alt="Estética Facial" 
-                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+            <div onclick="openProjectModal('R70zN3Y7LjU', 'https://vitrine-projetos-two.vercel.app/estetica-facial.html')"
+                class="group relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden cursor-pointer glass-tech border-brand-blue/10 hover:border-brand-blue/50 transition-all duration-500 shadow-2xl">
+                <img src="../assets/images/capa-facial.png" alt="Estética Facial"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
+                <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center border border-brand-blue">
                         <i class="ph-fill ph-play text-2xl text-white ml-1"></i>
                     </div>
                 </div>
-                <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Estética & Saúde</span>
+                <div
+                    class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span
+                        class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-2 rounded">Estética
+                        & Saúde</span>
                     <h3 class="text-2xl font-tech text-white mb-1 uppercase">Estética Facial</h3>
-                    <p class="text-slate-400 text-sm line-clamp-2">Site sofisticado para clínicas de estética com vitrine de procedimentos.</p>
+                    <p class="text-slate-400 text-sm line-clamp-2">Site sofisticado para clínicas de estética com
+                        vitrine de procedimentos.</p>
                 </div>
             </div>
 
@@ -517,274 +606,431 @@
     <!-- SEÇÃO: LOCAIS DE ATENDIMENTO (CARD CLICÁVEL - ATUALIZADO) -->
     <section id="locais-atendimento" class="pt-20 pb-4 px-6 max-w-7xl mx-auto">
         <div class="glass-tech rounded-2xl overflow-hidden border-brand-blue/20 shadow-2xl">
-            
+
             <!-- HEADER CLICÁVEL -->
-            <div onclick="toggleLocais()" class="cursor-pointer p-4 md:p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
+            <div onclick="toggleLocais()"
+                class="cursor-pointer p-4 md:p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="text-left">
-                    <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase leading-tight group-hover:text-brand-blue transition-colors">
+                    <h2
+                        class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase leading-tight group-hover:text-brand-blue transition-colors">
                         Onde <span class="text-brand-blue">Atendemos</span>
                     </h2>
                     <p class="text-slate-400 text-sm md:text-base max-w-2xl">
                         Clique para visualizar as regiões atendidas com estratégias exclusivas de SEO Local.
                     </p>
                 </div>
-                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                <div
+                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
                     <i id="locais-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
             <!-- CONTEÚDO EXPANDÍVEL (TODOS OS LOCAIS ATUALIZADOS) -->
-            <div id="locais-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
+            <div id="locais-content"
+                class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
                 <div class="p-8 md:p-12 border-t border-white/10">
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        
-                        <a href="aruja.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Arujá</span>
+
+                        <a href="aruja.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Arujá</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="bahia.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Bahia</span>
+                        <a href="bahia.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Bahia</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="belo-horizonte.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Belo Horizonte</span>
+                        <a href="belo-horizonte.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Belo
+                                Horizonte</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="camacari.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Camaçari</span>
+                        <a href="camacari.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Camaçari</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="campinas.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Campinas</span>
+                        <a href="campinas.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Campinas</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="carrao.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Carrão</span>
+                        <a href="carrao.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Carrão</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="contagem.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Contagem</span>
+                        <a href="contagem.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Contagem</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="cuiaba.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Cuiabá</span>
+                        <a href="cuiaba.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Cuiabá</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="curitiba.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Curitiba</span>
+                        <a href="curitiba.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Curitiba</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="duque-de-caxias.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Duque de Caxias</span>
+                        <a href="duque-de-caxias.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Duque de
+                                Caxias</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="feira-de-santana.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Feira de Santana</span>
+                        <a href="feira-de-santana.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Feira de
+                                Santana</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="ferraz-de-vasconcelos.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Ferraz de Vasconcelos</span>
+                        <a href="ferraz-de-vasconcelos.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Ferraz de
+                                Vasconcelos</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="guarulhos.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Guarulhos</span>
+                        <a href="guarulhos.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Guarulhos</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="ilha-bela.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Ilha Bela</span>
+                        <a href="ilha-bela.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Ilha
+                                Bela</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="itaquaquecetuba.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Itaquaquecetuba</span>
+                        <a href="itaquaquecetuba.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Itaquaquecetuba</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="itaquera.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Itaquera</span>
+                        <a href="itaquera.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Itaquera</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="jabaquara.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Jabaquara</span>
+                        <a href="jabaquara.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Jabaquara</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="jacarei.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Jacareí</span>
+                        <a href="jacarei.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Jacareí</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="juazeiro.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Juazeiro</span>
+                        <a href="juazeiro.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Juazeiro</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="juiz-de-fora.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Juiz de Fora</span>
+                        <a href="juiz-de-fora.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Juiz de
+                                Fora</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="lapa.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                        <a href="lapa.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
                             <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Lapa</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="londrina.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Londrina</span>
+                        <a href="londrina.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Londrina</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="maringa.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Maringá</span>
+                        <a href="maringa.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Maringá</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="minas-gerais.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Minas Gerais</span>
+                        <a href="minas-gerais.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Minas
+                                Gerais</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="mogi-das-cruzes.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Mogi das Cruzes</span>
+                        <a href="mogi-das-cruzes.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Mogi das
+                                Cruzes</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="montes-claros.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Montes Claros</span>
+                        <a href="montes-claros.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Montes
+                                Claros</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="niteroi.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Niterói</span>
+                        <a href="niteroi.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Niterói</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="nova-iguacu.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Nova Iguaçu</span>
+                        <a href="nova-iguacu.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Nova
+                                Iguaçu</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="parana.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Paraná</span>
+                        <a href="parana.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Paraná</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="penha.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Penha</span>
+                        <a href="penha.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Penha</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="poa.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                        <a href="poa.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
                             <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Poá</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="ponta-grossa.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Ponta Grossa</span>
+                        <a href="ponta-grossa.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Ponta
+                                Grossa</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="rio-de-janeiro.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Rio de Janeiro</span>
+                        <a href="rio-de-janeiro.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Rio de
+                                Janeiro</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="salvador.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Salvador</span>
+                        <a href="salvador.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Salvador</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="santa-isabel.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santa Isabel</span>
+                        <a href="santa-isabel.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santa
+                                Isabel</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="santana.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santana</span>
+                        <a href="santana.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santana</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="santo-amaro.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santo Amaro</span>
+                        <a href="santo-amaro.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santo
+                                Amaro</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="santo-andre.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santo André</span>
+                        <a href="santo-andre.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santo
+                                André</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="santos.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santos</span>
+                        <a href="santos.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santos</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="sao-bernardo.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São Bernardo</span>
+                        <a href="sao-bernardo.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São
+                                Bernardo</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="sao-caetano.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São Caetano</span>
+                        <a href="sao-caetano.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São
+                                Caetano</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="sao-goncalo.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São Gonçalo</span>
+                        <a href="sao-goncalo.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São
+                                Gonçalo</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="sao-jose-do-rio-preto.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">S. J. Rio Preto</span>
+                        <a href="sao-jose-do-rio-preto.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">S. J. Rio
+                                Preto</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="sao-jose-dos-campos.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">S. J. Campos</span>
+                        <a href="sao-jose-dos-campos.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">S. J.
+                                Campos</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="sao-miguel-paulista.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São Miguel</span>
+                        <a href="sao-miguel-paulista.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São
+                                Miguel</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="sao-paulo.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São Paulo</span>
+                        <a href="sao-paulo.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">São
+                                Paulo</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="sorocaba.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Sorocaba</span>
+                        <a href="sorocaba.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Sorocaba</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="suzano.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Suzano</span>
+                        <a href="suzano.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Suzano</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="tatuape.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Tatuapé</span>
+                        <a href="tatuape.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Tatuapé</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="uberlandia.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Uberlândia</span>
+                        <a href="uberlandia.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Uberlândia</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="varzea-grande.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Várzea Grande</span>
+                        <a href="varzea-grande.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Várzea
+                                Grande</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="vila-prudente.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Vila Prudente</span>
+                        <a href="vila-prudente.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Vila
+                                Prudente</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="vitoria-da-conquista.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Vitória da Conquista</span>
+                        <a href="vitoria-da-conquista.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Vitória da
+                                Conquista</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
                         <!-- Novos Locais SEM ORDEM ALFABÉTICA -->
-                        <a href="porto-alegre.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Porto Alegre</span>
+                        <a href="porto-alegre.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Porto
+                                Alegre</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="caxias-do-sul.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Caxias do Sul</span>
+                        <a href="caxias-do-sul.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Caxias do
+                                Sul</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="canoas.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Canoas</span>
+                        <a href="canoas.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Canoas</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="pelotas.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Pelotas</span>
+                        <a href="pelotas.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Pelotas</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="santa-maria.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santa Maria</span>
+                        <a href="santa-maria.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Santa
+                                Maria</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="recife.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Recife</span>
+                        <a href="recife.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Recife</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="jaboatao-dos-guararapes.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Jaboatão dos Guararapes</span>
+                        <a href="jaboatao-dos-guararapes.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Jaboatão
+                                dos Guararapes</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="petrolina.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Petrolina</span>
+                        <a href="petrolina.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Petrolina</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
-                        <a href="caruaru.html" class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
-                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Caruaru</span>
+                        <a href="caruaru.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Caruaru</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <!-- NOVOS LOCAIS: BAIRROS ESTRATÉGICOS SP -->
+                        <a href="faria-lima.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Faria
+                                Lima</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="itaim-bibi.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Itaim
+                                Bibi</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="morumbi.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Morumbi</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="pinheiros.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span
+                                class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Pinheiros</span>
+                            <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
+                        </a>
+                        <a href="vila-nova-conceicao.html"
+                            class="p-4 border border-white/5 rounded-lg flex items-center justify-between group hover:bg-brand-blue/10 transition-all">
+                            <span class="text-white group-hover:text-brand-blue font-tech text-sm uppercase">Vila Nova
+                                Conceição</span>
                             <i class="ph ph-arrow-right text-white/30 group-hover:text-brand-blue"></i>
                         </a>
                     </div>
@@ -796,45 +1042,69 @@
     <!-- SEÇÃO SEO EXPANDÍVEL (HUB MASTER) -->
     <section class="py-4 px-6 max-w-7xl mx-auto relative z-10">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
-            
+
             <!-- HEADER DO CARD (Clicável) -->
-            <div onclick="toggleSeoText()" class="cursor-pointer p-4 md:p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
+            <div onclick="toggleSeoText()"
+                class="cursor-pointer p-4 md:p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                    <h2
+                        class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
                         <i class="ph-fill ph-rocket text-brand-blue mr-2"></i> Glossário Técnico: Nossos Serviços
                     </h2>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Saiba mais sobre nossa metodologia</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Saiba mais sobre nossa
+                        metodologia</span>
                 </div>
-                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                <div
+                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
                     <i id="seo-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
             <!-- CONTEÚDO EXPANDÍVEL -->
             <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-6 font-light">
-                    
+                <div
+                    class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-6 font-light">
+
                     <p>
-                        A EG Empório Digital é referência quando o assunto é <strong>criação de sites profissionais</strong>. Entendemos que cada negócio é único e precisa de uma presença digital que realmente converta visitantes em clientes. Abaixo, explicamos como nossa tecnologia atende às principais buscas do mercado.
+                        A EG Empório Digital é referência quando o assunto é <strong>criação de sites
+                            profissionais</strong>. Entendemos que cada negócio é único e precisa de uma presença
+                        digital que realmente converta visitantes em clientes. Abaixo, explicamos como nossa tecnologia
+                        atende às principais buscas do mercado.
                     </p>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Especialistas em Criação de Site e Plataformas Web</h3>
+                    <h3 class="text-white font-bold uppercase text-lg">Especialistas em Criação de Site e Plataformas
+                        Web</h3>
                     <p>
-                        Se você busca uma agência séria para <strong>criacao de site</strong> ou <strong>criação de um site</strong> institucional, nós temos a solução. Nossa equipe de desenvolvedores utiliza códigos limpos e modernos. Quando um cliente nos procura para <strong>fazer site</strong>, nós não entregamos apenas um layout, entregamos uma ferramenta de negócios. Nós <strong>fazemos sites</strong> que carregam rápido e posicionam bem no Google.
+                        Se você busca uma agência séria para <strong>criacao de site</strong> ou <strong>criação de um
+                            site</strong> institucional, nós temos a solução. Nossa equipe de desenvolvedores utiliza
+                        códigos limpos e modernos. Quando um cliente nos procura para <strong>fazer site</strong>, nós
+                        não entregamos apenas um layout, entregamos uma ferramenta de negócios. Nós <strong>fazemos
+                            sites</strong> que carregam rápido e posicionam bem no Google.
                     </p>
 
                     <h3 class="text-white font-bold uppercase text-lg">Soluções Completas de E-commerce</h3>
                     <p>
-                        O mercado digital não para de crescer. Desenvolvemos sua <strong>loja online</strong> com painel administrativo intuitivo e checkout seguro. Ter um <strong>site de vendas online</strong> (E-commerce) permite escalar seu negócio 24 horas por dia. Seja uma <strong>loja virtual</strong> robusta ou um catálogo simples, nossa estrutura de <strong>site de vendas</strong> é preparada para alta demanda de tráfego.
+                        O mercado digital não para de crescer. Desenvolvemos sua <strong>loja online</strong> com painel
+                        administrativo intuitivo e checkout seguro. Ter um <strong>site de vendas online</strong>
+                        (E-commerce) permite escalar seu negócio 24 horas por dia. Seja uma <strong>loja
+                            virtual</strong> robusta ou um catálogo simples, nossa estrutura de <strong>site de
+                            vendas</strong> é preparada para alta demanda de tráfego.
                     </p>
 
-                    <h3 class="text-white font-bold uppercase text-lg">Design de Site e Landing Pages de Alta Conversão</h3>
+                    <h3 class="text-white font-bold uppercase text-lg">Design de Site e Landing Pages de Alta Conversão
+                    </h3>
                     <p>
-                        O <strong>design de site</strong> é o que define a credibilidade da sua marca nos primeiros segundos. Criamos layouts exclusivos focados na experiência do usuário (UX). Além disso, somos experts em <strong>landing pages</strong> (páginas de aterrissagem) focadas em captura de leads. Quem <strong>cria sites</strong> conosco recebe um projeto visualmente impactante e tecnicamente perfeito.
+                        O <strong>design de site</strong> é o que define a credibilidade da sua marca nos primeiros
+                        segundos. Criamos layouts exclusivos focados na experiência do usuário (UX). Além disso, somos
+                        experts em <strong>landing pages</strong> (páginas de aterrissagem) focadas em captura de leads.
+                        Quem <strong>cria sites</strong> conosco recebe um projeto visualmente impactante e tecnicamente
+                        perfeito.
                     </p>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        Resumo: A EG Empório Digital é a parceira ideal para <strong>criação de sites profissionais</strong>, desenvolvimento de <strong>loja virtual</strong> e estratégias de crescimento online.
+                        Resumo: A EG Empório Digital é a parceira ideal para <strong>criação de sites
+                            profissionais</strong>, desenvolvimento de <strong>loja virtual</strong> e estratégias de
+                        crescimento online.
                     </p>
                 </div>
             </div>
@@ -844,150 +1114,277 @@
     <!-- SEÇÃO SEO ACCORDION - 20 PILARES DE AUTORIDADE (HUB) -->
     <section id="tese-autoridade" class="py-4 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-20">
         <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
-            
+
             <!-- HEADER DO CARD -->
-            <div onclick="toggleHubSeo()" class="cursor-pointer p-4 md:p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
+            <div onclick="toggleHubSeo()"
+                class="cursor-pointer p-4 md:p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
                 <div class="flex flex-col">
-                    <h2 class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
-                        <i class="ph-fill ph-gear text-brand-blue mr-2"></i> Pilares Técnicos: Criação de Sites Profissionais
+                    <h2
+                        class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
+                        <i class="ph-fill ph-gear text-brand-blue mr-2"></i> Pilares Técnicos: Criação de Sites
+                        Profissionais
                     </h2>
-                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Engenharia de software aplicada para alta performance e resultados reais</span>
+                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Engenharia de
+                        software aplicada para alta performance e resultados reais</span>
                 </div>
-                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
-                    <i id="hub-seo-icon" class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
+                <div
+                    class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
+                    <i id="hub-seo-icon"
+                        class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
                 </div>
             </div>
 
             <!-- CONTEÚDO EXPANDÍVEL (20 PILARES) -->
-            <div id="hub-seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
-                    
+            <div id="hub-seo-content"
+                class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
+                <div
+                    class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
+
                     <p class="mb-4">
-                        Nossa metodologia de <strong>criação de sites</strong> é baseada em performance e escalabilidade. Atendemos empresas de todos os portes com soluções customizadas que unem o melhor do design moderno à robustez técnica. Cada projeto é uma peça estratégica projetada para dominar as buscas orgânicas e converter tráfego em faturamento recorrente.
+                        Nossa metodologia de <strong>criação de sites</strong> é baseada em performance e
+                        escalabilidade. Atendemos empresas de todos os portes com soluções customizadas que unem o
+                        melhor do design moderno à robustez técnica. Cada projeto é uma peça estratégica projetada para
+                        dominar as buscas orgânicas e converter tráfego em faturamento recorrente.
                     </p>
 
                     <!-- PILAR 1 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">1. Criação de Sites Profissionais e Modernos</h3>
-                        <p>A <strong>criação de sites profissionais</strong> exige um equilíbrio perfeito entre estética e funcionalidade. Utilizamos linguagens de programação modernas para garantir que sua interface transmita credibilidade imediata. Nossos projetos são limpos, rápidos e focados em validar a autoridade da sua marca perante um mercado digital cada vez mais exigente e competitivo.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            1. Criação de Sites Profissionais e Modernos</h3>
+                        <p>A <strong>criação de sites profissionais</strong> exige um equilíbrio perfeito entre estética
+                            e funcionalidade. Utilizamos linguagens de programação modernas para garantir que sua
+                            interface transmita credibilidade imediata. Nossos projetos são limpos, rápidos e focados em
+                            validar a autoridade da sua marca perante um mercado digital cada vez mais exigente e
+                            competitivo.</p>
                     </div>
 
                     <!-- PILAR 2 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">2. Criação de Sites Otimizados para SEO Local</h3>
-                        <p>Dominar as buscas regionais é fundamental para negócios físicos. Na <strong>criação de sites otimizados para SEO Local</strong>, aplicamos marcações de dados estruturados que ajudam o Google a entender sua área de atuação. Isso garante que sua empresa apareça no topo para quem busca seus serviços em bairros e cidades específicas, transformando proximidade em lucro real.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            2. Criação de Sites Otimizados para SEO Local</h3>
+                        <p>Dominar as buscas regionais é fundamental para negócios físicos. Na <strong>criação de sites
+                                otimizados para SEO Local</strong>, aplicamos marcações de dados estruturados que ajudam
+                            o Google a entender sua área de atuação. Isso garante que sua empresa apareça no topo para
+                            quem busca seus serviços em bairros e cidades específicas, transformando proximidade em
+                            lucro real.</p>
                     </div>
 
                     <!-- PILAR 3 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">3. Criação de Sites para E-commerce e Lojas Virtuais</h3>
-                        <p>O varejo digital não perdoa falhas operacionais. Nossa <strong>criação de sites para e-commerce</strong> foca em checkouts fluidos e integração logística inteligente. Desenvolvemos lojas virtuais robustas que suportam altos volumes de acesso simultâneo, garantindo segurança total nas transações e uma experiência de compra sem atritos para o consumidor final.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            3. Criação de Sites para E-commerce e Lojas Virtuais</h3>
+                        <p>O varejo digital não perdoa falhas operacionais. Nossa <strong>criação de sites para
+                                e-commerce</strong> foca em checkouts fluidos e integração logística inteligente.
+                            Desenvolvemos lojas virtuais robustas que suportam altos volumes de acesso simultâneo,
+                            garantindo segurança total nas transações e uma experiência de compra sem atritos para o
+                            consumidor final.</p>
                     </div>
 
                     <!-- PILAR 4 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">4. Criação de Sites Estilo Landing Page para Alta Conversão</h3>
-                        <p>Para campanhas de tráfego pago, a <strong>criação de sites estilo Landing Page</strong> é a estratégia mais agressiva de captação. Criamos páginas de destino com foco único, eliminando distrações e utilizando gatilhos mentais persuasivos. O objetivo é claro: transformar o clique do anúncio em um lead qualificado ou uma venda direta no menor tempo possível.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            4. Criação de Sites Estilo Landing Page para Alta Conversão</h3>
+                        <p>Para campanhas de tráfego pago, a <strong>criação de sites estilo Landing Page</strong> é a
+                            estratégia mais agressiva de captação. Criamos páginas de destino com foco único, eliminando
+                            distrações e utilizando gatilhos mentais persuasivos. O objetivo é claro: transformar o
+                            clique do anúncio em um lead qualificado ou uma venda direta no menor tempo possível.</p>
                     </div>
 
                     <!-- PILAR 5 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">5. Criação de Sites com Design Responsivo (Mobile-First)</h3>
-                        <p>Com mais de 70% das buscas vindo de celulares, a <strong>criação de sites com design responsivo</strong> não é opcional. Aplicamos a filosofia Mobile-First, onde o layout é projetado primeiro para telas pequenas. Isso garante que seu site carregue perfeitamente em qualquer dispositivo, mantendo a navegabilidade e o visual impecável tanto em smartphones quanto em desktops.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            5. Criação de Sites com Design Responsivo (Mobile-First)</h3>
+                        <p>Com mais de 70% das buscas vindo de celulares, a <strong>criação de sites com design
+                                responsivo</strong> não é opcional. Aplicamos a filosofia Mobile-First, onde o layout é
+                            projetado primeiro para telas pequenas. Isso garante que seu site carregue perfeitamente em
+                            qualquer dispositivo, mantendo a navegabilidade e o visual impecável tanto em smartphones
+                            quanto em desktops.</p>
                     </div>
 
                     <!-- PILAR 6 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">6. Criação de Sites com Performance e Velocidade Extrema</h3>
-                        <p>Segundos de atraso significam perda de faturamento. Nossa <strong>criação de sites com performance extrema</strong> utiliza técnicas avançadas de compressão e carregamento assíncrono. Páginas velozes não apenas retêm o usuário, mas são premiadas pelo Google com melhores posições no ranking orgânico, reduzindo sua taxa de rejeição e aumentando o engajamento.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            6. Criação de Sites com Performance e Velocidade Extrema</h3>
+                        <p>Segundos de atraso significam perda de faturamento. Nossa <strong>criação de sites com
+                                performance extrema</strong> utiliza técnicas avançadas de compressão e carregamento
+                            assíncrono. Páginas velozes não apenas retêm o usuário, mas são premiadas pelo Google com
+                            melhores posições no ranking orgânico, reduzindo sua taxa de rejeição e aumentando o
+                            engajamento.</p>
                     </div>
 
                     <!-- PILAR 7 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">7. Criação de Sites com Arquitetura de Informação Estratégica</h3>
-                        <p>A organização do conteúdo define o sucesso da navegação. Na <strong>criação de sites com arquitetura estratégica</strong>, planejamos a jornada do usuário para que ele encontre o que precisa em poucos cliques. Uma estrutura lógica e intuitiva facilita a conversão e ajuda os robôs de busca a indexarem suas páginas de forma mais eficiente e profunda.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            7. Criação de Sites com Arquitetura de Informação Estratégica</h3>
+                        <p>A organização do conteúdo define o sucesso da navegação. Na <strong>criação de sites com
+                                arquitetura estratégica</strong>, planejamos a jornada do usuário para que ele encontre
+                            o que precisa em poucos cliques. Uma estrutura lógica e intuitiva facilita a conversão e
+                            ajuda os robôs de busca a indexarem suas páginas de forma mais eficiente e profunda.</p>
                     </div>
 
                     <!-- PILAR 8 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">8. Criação de Sites Blindados com Certificado SSL</h3>
-                        <p>A confiança do cliente começa pela segurança da conexão. Todo projeto de <strong>criação de sites blindados</strong> inclui a implementação de certificados SSL (HTTPS). Além de proteger os dados sensíveis dos seus usuários contra interceptações, a segurança SSL é um fator obrigatório para o rankeamento e para evitar avisos de "site inseguro" nos navegadores.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            8. Criação de Sites Blindados com Certificado SSL</h3>
+                        <p>A confiança do cliente começa pela segurança da conexão. Todo projeto de <strong>criação de
+                                sites blindados</strong> inclui a implementação de certificados SSL (HTTPS). Além de
+                            proteger os dados sensíveis dos seus usuários contra interceptações, a segurança SSL é um
+                            fator obrigatório para o rankeamento e para evitar avisos de "site inseguro" nos
+                            navegadores.</p>
                     </div>
 
                     <!-- PILAR 9 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">9. Criação de Sites para Empresas e Negócios Locais</h3>
-                        <p>Entendemos as dores do empresário brasileiro. A <strong>criação de sites para empresas</strong> deve focar em resultados tangíveis. Seja para um escritório de advocacia, clínica médica ou comércio de bairro, desenvolvemos soluções que elevam o status profissional do negócio e facilitam a captação de clientes através de canais digitais diretos.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            9. Criação de Sites para Empresas e Negócios Locais</h3>
+                        <p>Entendemos as dores do empresário brasileiro. A <strong>criação de sites para
+                                empresas</strong> deve focar em resultados tangíveis. Seja para um escritório de
+                            advocacia, clínica médica ou comércio de bairro, desenvolvemos soluções que elevam o status
+                            profissional do negócio e facilitam a captação de clientes através de canais digitais
+                            diretos.</p>
                     </div>
 
                     <!-- PILAR 10 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">10. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
-                        <p>Damos liberdade total para você atualizar seu negócio. Nossa <strong>criação de sites com CMS independente</strong> permite que você gerencie blogs, fotos e serviços sem precisar saber de código. Essa autonomia é vital para empresas que precisam de agilidade para postar promoções ou novos cases de sucesso, mantendo o site sempre atualizado e vivo.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            10. Criação de Sites com Gestão de Conteúdo Independente (CMS)</h3>
+                        <p>Damos liberdade total para você atualizar seu negócio. Nossa <strong>criação de sites com CMS
+                                independente</strong> permite que você gerencie blogs, fotos e serviços sem precisar
+                            saber de código. Essa autonomia é vital para empresas que precisam de agilidade para postar
+                            promoções ou novos cases de sucesso, mantendo o site sempre atualizado e vivo.</p>
                     </div>
 
                     <!-- PILAR 11 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">11. Criação de Sites Integrados com Automação de WhatsApp</h3>
-                        <p>O WhatsApp é a ferramenta de fechamento número um do Brasil. Na <strong>criação de sites integrados</strong>, instalamos botões flutuantes e fluxos de automação que conectam o lead ao seu comercial em segundos. Reduzir a fricção no atendimento é a maneira mais rápida de aumentar sua conversão e não deixar o cliente esfriar na concorrência.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            11. Criação de Sites Integrados com Automação de WhatsApp</h3>
+                        <p>O WhatsApp é a ferramenta de fechamento número um do Brasil. Na <strong>criação de sites
+                                integrados</strong>, instalamos botões flutuantes e fluxos de automação que conectam o
+                            lead ao seu comercial em segundos. Reduzir a fricção no atendimento é a maneira mais rápida
+                            de aumentar sua conversão e não deixar o cliente esfriar na concorrência.</p>
                     </div>
 
                     <!-- PILAR 12 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">12. Criação de Sites Institucionais para Autoridade Digital</h3>
-                        <p>Seu site institucional é sua recepção de luxo na internet. Atuamos na <strong>criação de sites institucionais</strong> que transmitem solidez e profissionalismo. Focamos em seções de prova social, histórico da empresa e diferenciais técnicos, garantindo que qualquer potencial parceiro ou cliente sinta confiança imediata ao acessar seu domínio oficial.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            12. Criação de Sites Institucionais para Autoridade Digital</h3>
+                        <p>Seu site institucional é sua recepção de luxo na internet. Atuamos na <strong>criação de
+                                sites institucionais</strong> que transmitem solidez e profissionalismo. Focamos em
+                            seções de prova social, histórico da empresa e diferenciais técnicos, garantindo que
+                            qualquer potencial parceiro ou cliente sinta confiança imediata ao acessar seu domínio
+                            oficial.</p>
                     </div>
 
                     <!-- PILAR 13 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">13. Criação de Sites Focados em Core Web Vitals</h3>
-                        <p>O Google utiliza métricas rigorosas de experiênica para posicionar sites. Nossa <strong>criação de sites focada em Core Web Vitals</strong> garante que sua página atinja notas verdes no PageSpeed. Otimizamos o tempo de resposta do servidor, a estabilidade visual e a interatividade, assegurando uma vantagem competitiva técnica imensa sobre seus concorrentes locais.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            13. Criação de Sites Focados em Core Web Vitals</h3>
+                        <p>O Google utiliza métricas rigorosas de experiênica para posicionar sites. Nossa
+                            <strong>criação de sites focada em Core Web Vitals</strong> garante que sua página atinja
+                            notas verdes no PageSpeed. Otimizamos o tempo de resposta do servidor, a estabilidade visual
+                            e a interatividade, assegurando uma vantagem competitiva técnica imensa sobre seus
+                            concorrentes locais.</p>
                     </div>
 
                     <!-- PILAR 14 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">14. Criação de Sites com UI/UX Design Personalizado</h3>
-                        <p>O visual importa, mas a experiência define a venda. Na <strong>criação de sites com design UI/UX</strong>, cada elemento gráfico é pensado para facilitar a vida do usuário. Criamos caminhos visuais que conduzem o olhar do visitante para os seus diferenciais e para as chamadas de ação, transformando o design em uma ferramenta de persuasão silenciosa.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            14. Criação de Sites com UI/UX Design Personalizado</h3>
+                        <p>O visual importa, mas a experiência define a venda. Na <strong>criação de sites com design
+                                UI/UX</strong>, cada elemento gráfico é pensado para facilitar a vida do usuário.
+                            Criamos caminhos visuais que conduzem o olhar do visitante para os seus diferenciais e para
+                            as chamadas de ação, transformando o design em uma ferramenta de persuasão silenciosa.</p>
                     </div>
 
                     <!-- PILAR 15 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">15. Criação de Sites para Captar Leads Qualificados</h3>
-                        <p>Um site deve ser um gerador de oportunidades. A <strong>criação de sites para captação de leads</strong> foca em formulários inteligentes e iscas digitais. Implementamos sistemas que filtram o interesse do usuário, entregando para o seu time de vendas informações valiosas que facilitam a abordagem e aumentam consideravelmente as taxas de fechamento de novos negócios.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            15. Criação de Sites para Captar Leads Qualificados</h3>
+                        <p>Um site deve ser um gerador de oportunidades. A <strong>criação de sites para captação de
+                                leads</strong> foca em formulários inteligentes e iscas digitais. Implementamos sistemas
+                            que filtram o interesse do usuário, entregando para o seu time de vendas informações
+                            valiosas que facilitam a abordagem e aumentam consideravelmente as taxas de fechamento de
+                            novos negócios.</p>
                     </div>
 
                     <!-- PILAR 16 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">16. Criação de Sites SaaS e Plataformas sob Medida</h3>
-                        <p>Para modelos de negócio complexos, oferecemos a <strong>criação de sites SaaS</strong>. Desenvolvemos áreas de membros, painéis administrativos e sistemas de gestão integrados. Se sua empresa precisa de uma plataforma que vai além de um site comum, nossa engenharia de software entrega ferramentas escaláveis que automatizam processos e geram valor recorrente para seus clientes.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            16. Criação de Sites SaaS e Plataformas sob Medida</h3>
+                        <p>Para modelos de negócio complexos, oferecemos a <strong>criação de sites SaaS</strong>.
+                            Desenvolvemos áreas de membros, painéis administrativos e sistemas de gestão integrados. Se
+                            sua empresa precisa de uma plataforma que vai além de um site comum, nossa engenharia de
+                            software entrega ferramentas escaláveis que automatizam processos e geram valor recorrente
+                            para seus clientes.</p>
                     </div>
 
                     <!-- PILAR 17 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">17. Criação de Sites com Manutenção e Suporte Técnico</h3>
-                        <p>O digital é vivo e exige monitoramento. Ao contratar nossa <strong>criação de sites</strong>, você conta com suporte técnico especializado para garantir que tudo funcione 24/7. Cuidamos de backups, atualizações de segurança e otimizações de servidores, dando a você a tranquilidade de focar na gestão do seu negócio enquanto cuidamos da sua vitrine tecnológica.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            17. Criação de Sites com Manutenção e Suporte Técnico</h3>
+                        <p>O digital é vivo e exige monitoramento. Ao contratar nossa <strong>criação de sites</strong>,
+                            você conta com suporte técnico especializado para garantir que tudo funcione 24/7. Cuidamos
+                            de backups, atualizações de segurança e otimizações de servidores, dando a você a
+                            tranquilidade de focar na gestão do seu negócio enquanto cuidamos da sua vitrine
+                            tecnológica.</p>
                     </div>
 
                     <!-- PILAR 18 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">18. Criação de Sites com Integração de APIs e Pixel</h3>
-                        <p>Conectamos seu site às melhores ferramentas de marketing do mundo. Na <strong>criação de sites modernos</strong>, instalamos Pixels de rastreio, Google Analytics e APIs de CRM. Isso permite que você meça cada centavo investido em anúncios e entenda exatamente o comportamento do seu público, permitindo ajustes estratégicos baseados em dados reais.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            18. Criação de Sites com Integração de APIs e Pixel</h3>
+                        <p>Conectamos seu site às melhores ferramentas de marketing do mundo. Na <strong>criação de
+                                sites modernos</strong>, instalamos Pixels de rastreio, Google Analytics e APIs de CRM.
+                            Isso permite que você meça cada centavo investido em anúncios e entenda exatamente o
+                            comportamento do seu público, permitindo ajustes estratégicos baseados em dados reais.</p>
                     </div>
 
                     <!-- PILAR 19 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">19. Criação de Sites com Copywriting Persuasivo</h3>
-                        <p>Palavras certas vendem produtos. Na nossa metodologia de <strong>criação de sites</strong>, o texto não é apenas informativo; ele é persuasivo. Aplicamos técnicas de copywriting para destacar seus benefícios e quebrar objeções do cliente logo no primeiro contato, garantindo que o seu site fale a língua do seu público e venda sua solução com eficiência.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            19. Criação de Sites com Copywriting Persuasivo</h3>
+                        <p>Palavras certas vendem produtos. Na nossa metodologia de <strong>criação de sites</strong>, o
+                            texto não é apenas informativo; ele é persuasivo. Aplicamos técnicas de copywriting para
+                            destacar seus benefícios e quebrar objeções do cliente logo no primeiro contato, garantindo
+                            que o seu site fale a língua do seu público e venda sua solução com eficiência.</p>
                     </div>
 
                     <!-- PILAR 20 -->
                     <div>
-                        <h3 class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">20. Criação de Sites Estratégicos para Escalar Resultados</h3>
-                        <p>Não entregamos apenas códigos; entregamos ativos financeiros digitais. A <strong>criação de sites estratégicos</strong> na EG Empório Digital visa o crescimento de longo prazo do seu negócio. Projetamos sua estrutura para suportar expansões futuras, garantindo que seu site seja o motor principal da sua transformação digital e da sua dominância no mercado nacional.</p>
+                        <h3
+                            class="text-white font-tech font-bold uppercase text-base md:text-lg mb-4 border-l-4 border-brand-blue pl-4">
+                            20. Criação de Sites Estratégicos para Escalar Resultados</h3>
+                        <p>Não entregamos apenas códigos; entregamos ativos financeiros digitais. A <strong>criação de
+                                sites estratégicos</strong> na EG Empório Digital visa o crescimento de longo prazo do
+                            seu negócio. Projetamos sua estrutura para suportar expansões futuras, garantindo que seu
+                            site seja o motor principal da sua transformação digital e da sua dominância no mercado
+                            nacional.</p>
                     </div>
 
                     <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
-                        A EG Empório Digital lidera o mercado de <strong>criação de sites profissionais</strong> com foco em resultados reais. Se você busca excelência técnica, design de impacto e autoridade orgânica, nossa agência é a parceira estratégica ideal para elevar o patamar do seu negócio no digital.
+                        A EG Empório Digital lidera o mercado de <strong>criação de sites profissionais</strong> com
+                        foco em resultados reais. Se você busca excelência técnica, design de impacto e autoridade
+                        orgânica, nossa agência é a parceira estratégica ideal para elevar o patamar do seu negócio no
+                        digital.
                     </p>
                 </div>
             </div>
@@ -997,7 +1394,8 @@
     <!-- MODAL DE VÍDEO -->
     <div id="project-modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="closeProjectModal()"></div>
-        <div class="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-fade-in flex flex-col">
+        <div
+            class="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl animate-fade-in flex flex-col">
             <div class="flex justify-between items-center p-4 border-b border-white/10 bg-black/50">
                 <span class="text-sm font-tech text-white uppercase tracking-widest">Demonstração Interativa</span>
                 <button onclick="closeProjectModal()" class="text-slate-400 hover:text-white transition">
@@ -1005,11 +1403,14 @@
                 </button>
             </div>
             <div class="relative aspect-video bg-black">
-                <iframe id="modal-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="modal-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
             <div class="p-6 text-center bg-black/50 flex flex-col md:flex-row items-center justify-between gap-4">
                 <p class="text-xs text-slate-500 hidden md:block">Para melhor experiência, visualize no Desktop.</p>
-                <a id="modal-link-btn" href="#" target="_blank" class="w-full md:w-auto px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                <a id="modal-link-btn" href="#" target="_blank"
+                    class="w-full md:w-auto px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
                     Acessar Site <i class="ph ph-arrow-up-right ml-2"></i>
                 </a>
             </div>
@@ -1155,7 +1556,7 @@
             document.body.style.overflow = 'auto';
         }
 
-        document.addEventListener('keydown', function(event) {
+        document.addEventListener('keydown', function (event) {
             if (event.key === "Escape") {
                 closeProjectModal();
             }
@@ -1165,7 +1566,7 @@
         function toggleSeoText() {
             const content = document.getElementById('seo-content');
             const icon = document.getElementById('seo-icon');
-            
+
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
                 icon.classList.remove('rotate-180');
@@ -1192,7 +1593,7 @@
         function toggleLocais() {
             const content = document.getElementById('locais-content');
             const icon = document.getElementById('locais-icon');
-            
+
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
                 icon.classList.remove('rotate-180');
@@ -1202,11 +1603,16 @@
             }
         }
     </script>
-<!-- BOTÃO FLUTUANTE WHATSAPP -->
-    <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." class="wpp-pulsante" target="_blank">
-        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: auto;">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.05 21.95l4.913-1.412A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 1.5c4.694 0 8.5 3.806 8.5 8.5s-3.806 8.5-8.5 8.5c-1.615 0-3.123-.45-4.415-1.233l-.317-.192-3.118.896.913-3.04-.21-.347A8.463 8.463 0 013.5 12c0-4.694 3.806-8.5 8.5-8.5zm4.72 10.932c-.258-.13-1.528-.754-1.764-.84-.237-.086-.41-.13-.582.13-.172.257-.667.84-.817 1.012-.15.172-.3.193-.558.064a7.043 7.043 0 01-2.074-1.28 7.76 7.76 0 01-1.435-1.787c-.15-.258-.016-.398.113-.527.117-.116.258-.3.387-.451.13-.15.172-.258.258-.43.086-.172.043-.322-.021-.452-.065-.129-.582-1.4-.797-1.914-.21-.505-.42-.435-.582-.443-.15-.008-.322-.01-.494-.01-.172 0-.452.065-.688.323-.237.258-.903.882-.903 2.15 0 1.27.925 2.502 1.054 2.674.129.172 1.82 2.78 4.41 3.896.616.265 1.096.422 1.471.542.618.196 1.18.169 1.625.102.496-.075 1.528-.624 1.743-1.226.215-.602.215-1.118.15-1.226-.064-.108-.236-.172-.494-.301z" fill="currentColor"/>
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." class="wpp-pulsante"
+        target="_blank">
+        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            style="margin: auto;">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.05 21.95l4.913-1.412A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 1.5c4.694 0 8.5 3.806 8.5 8.5s-3.806 8.5-8.5 8.5c-1.615 0-3.123-.45-4.415-1.233l-.317-.192-3.118.896.913-3.04-.21-.347A8.463 8.463 0 013.5 12c0-4.694 3.806-8.5 8.5-8.5zm4.72 10.932c-.258-.13-1.528-.754-1.764-.84-.237-.086-.41-.13-.582.13-.172.257-.667.84-.817 1.012-.15.172-.3.193-.558.064a7.043 7.043 0 01-2.074-1.28 7.76 7.76 0 01-1.435-1.787c-.15-.258-.016-.398.113-.527.117-.116.258-.3.387-.451.13-.15.172-.258.258-.43.086-.172.043-.322-.021-.452-.065-.129-.582-1.4-.797-1.914-.21-.505-.42-.435-.582-.443-.15-.008-.322-.01-.494-.01-.172 0-.452.065-.688.323-.237.258-.903.882-.903 2.15 0 1.27.925 2.502 1.054 2.674.129.172 1.82 2.78 4.41 3.896.616.265 1.096.422 1.471.542.618.196 1.18.169 1.625.102.496-.075 1.528-.624 1.743-1.226.215-.602.215-1.118.15-1.226-.064-.108-.236-.172-.494-.301z"
+                fill="currentColor" />
         </svg>
     </a>
 </body>
+
 </html>
