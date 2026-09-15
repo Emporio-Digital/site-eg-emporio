@@ -519,78 +519,182 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- SOLUÇÕES (CONSTRUÇÃO) -->
-    <section id="solucoes" class="pt-12 pb-6 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
+    <!-- SOLUÇÕES (CENTRAL INTERATIVA 3 EM 1 - ZERO EMPILHAMENTO NO MOBILE) -->
+    <section id="solucoes" class="pt-12 pb-8 px-4 md:px-6 max-w-5xl mx-auto relative z-10">
+        <div class="text-center mb-10">
+            <span class="text-[10px] md:text-xs text-brand-blue font-tech uppercase tracking-widest block mb-2 font-semibold">
+                Engenharia Digital Sob Medida
+            </span>
             <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase">Nossas Soluções</h2>
-            <p class="text-slate-200 text-sm">Do site institucional ao sistema complexo</p>
+            <p class="text-slate-200 text-sm font-light">Do site institucional ao sistema complexo</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Card 1 -->
-            <div
-                class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2">
-                <i
-                    class="ph ph-globe-hemisphere-west text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
-                <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Sites
-                    Institucionais</h3>
-                <p class="text-slate-400 text-sm mb-4">
-                    Sites profissionais para elevar a autoridade da sua marca no mercado digital.
+        <!-- SELETOR DE ABAS (SOLTO NA TELA - SEM CARD) -->
+        <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-10 max-w-2xl mx-auto">
+            <button id="tab-btn-sites" onclick="switchSolucao('sites')" 
+                    class="tab-btn px-5 py-2.5 rounded-xl md:rounded-full text-xs font-tech font-bold uppercase tracking-wider transition-all flex items-center gap-2 bg-brand-blue text-eg-dark shadow-[0_0_15px_rgba(0,225,255,0.3)]">
+                <i class="ph ph-globe-hemisphere-west text-base"></i> Sites Institucionais
+            </button>
+            <button id="tab-btn-saas" onclick="switchSolucao('saas')" 
+                    class="tab-btn px-5 py-2.5 rounded-xl md:rounded-full text-xs font-tech font-bold uppercase tracking-wider transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-white/5">
+                <i class="ph ph-cpu text-base"></i> Sistemas SaaS
+            </button>
+            <button id="tab-btn-lp" onclick="switchSolucao('lp')" 
+                    class="tab-btn px-5 py-2.5 rounded-xl md:rounded-full text-xs font-tech font-bold uppercase tracking-wider transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-white/5">
+                <i class="ph ph-lightning text-base"></i> Landing Pages
+            </button>
+        </div>
+
+        <!-- PAINEL CENTRAL (SOLTO NA TELA - SEM CARD) -->
+        <div class="relative text-left">
+            <div class="absolute top-0 right-0 w-72 h-72 bg-brand-blue/10 blur-[90px] -z-10 pointer-events-none"></div>
+
+            <!-- CONTEÚDO 1: SITES INSTITUCIONAIS (ATIVO INICIAL) -->
+            <div id="tab-content-sites" class="animate-fade-in space-y-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-white/10">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-blue/10 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-2xl">
+                            <i class="ph-fill ph-globe-hemisphere-west"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-tech text-2xl md:text-3xl text-white uppercase">Sites Institucionais</h3>
+                            <span class="text-xs text-brand-blue font-tech uppercase tracking-widest">Autoridade Máxima de Marca</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-400 font-tech uppercase tracking-wider hidden md:block">01 / Presença Corporativa</span>
+                </div>
+
+                <p class="text-slate-200 text-base md:text-lg leading-relaxed font-light">
+                    Sua sede própria na internet. Projetamos portais corporativos que validam sua reputação comercial, transmitem solidez imediata e colocam sua empresa no topo das buscas do Google quando clientes decidem comprar.
                 </p>
-                <div class="flex flex-col gap-3">
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200 flex items-center gap-2.5">
+                        <i class="ph-fill ph-check-circle text-brand-blue text-base"></i> Design Exclusivo de Alto Padrão
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200 flex items-center gap-2.5">
+                        <i class="ph-fill ph-check-circle text-brand-blue text-base"></i> SEO Técnico para Busca Orgânica
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200 flex items-center gap-2.5">
+                        <i class="ph-fill ph-check-circle text-brand-blue text-base"></i> Integração com WhatsApp & CRM
+                    </div>
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
                     <a href="https://wa.me/5511916053292?text=Olá, quero orçar um Site Institucional." target="_blank"
-                        class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
-                        Orçar no WhatsApp <i class="ph ph-whatsapp-logo"></i>
+                       class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest text-xs rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                        Orçar no WhatsApp <i class="ph ph-whatsapp-logo text-base"></i>
                     </a>
-                    <a href="/servicos"
-                        class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
+                    <a href="/servicos" class="text-slate-400 hover:text-brand-blue text-xs font-tech font-bold uppercase tracking-wider transition">
                         Ver detalhes técnicos +
                     </a>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div
-                class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2">
-                <i class="ph ph-cpu text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
-                <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Sistemas SaaS</h3>
-                <p class="text-slate-400 text-sm mb-4">
-                    Desenvolvimento de softwares complexos e plataformas de gestão sob medida.
+            <!-- CONTEÚDO 2: SISTEMAS SAAS (INICIALMENTE OCULTO) -->
+            <div id="tab-content-saas" class="hidden animate-fade-in space-y-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-white/10">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-blue/10 border border-brand-blue/30 flex items-center justify-center text-brand-blue text-2xl">
+                            <i class="ph-fill ph-cpu"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-tech text-2xl md:text-3xl text-white uppercase">Sistemas SaaS</h3>
+                            <span class="text-xs text-brand-blue font-tech uppercase tracking-widest">Engenharia Sob Medida</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-400 font-tech uppercase tracking-wider hidden md:block">02 / Softwares & Automações</span>
+                </div>
+
+                <p class="text-slate-200 text-base md:text-lg leading-relaxed font-light">
+                    Desenvolvimento de plataformas completas, dashboards inteligentes e softwares escaláveis. Criamos desde áreas de membros e automações comerciais até ecossistemas proprietários complexos como o <strong class="text-white">Sistema Kairós</strong>.
                 </p>
-                <div class="flex flex-col gap-3">
-                    <a href="https://wa.me/5511916053292?text=Olá, quero orçar um Sistema." target="_blank"
-                        class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
-                        Orçar no WhatsApp <i class="ph ph-whatsapp-logo"></i>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200 flex items-center gap-2.5">
+                        <i class="ph-fill ph-check-circle text-brand-blue text-base"></i> Painéis Administrativos Dinâmicos
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200 flex items-center gap-2.5">
+                        <i class="ph-fill ph-check-circle text-brand-blue text-base"></i> Automações de Cobrança & WhatsApp
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200 flex items-center gap-2.5">
+                        <i class="ph-fill ph-check-circle text-brand-blue text-base"></i> Nuvem Criptografada e Segura
+                    </div>
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
+                    <a href="https://wa.me/5511916053292?text=Olá, quero orçar um Sistema SaaS." target="_blank"
+                       class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest text-xs rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                        Orçar Sistema <i class="ph ph-whatsapp-logo text-base"></i>
                     </a>
-                    <a href="/servicos"
-                        class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
+                    <a href="/servicos" class="text-slate-400 hover:text-brand-blue text-xs font-tech font-bold uppercase tracking-wider transition">
                         Ver detalhes técnicos +
                     </a>
                 </div>
             </div>
 
-            <!-- Card 3 -->
-            <div
-                class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block border-brand-blue/30 hover:-translate-y-2">
-                <i
-                    class="ph ph-lightning text-4xl text-white mb-6 group-hover:scale-110 transition-transform block"></i>
-                <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Landing Pages</h3>
-                <p class="text-slate-400 text-sm mb-4">
-                    Páginas focadas em vendas e alta conversão para seus produtos ou serviços.
+            <!-- CONTEÚDO 3: LANDING PAGES (INICIALMENTE OCULTO) -->
+            <div id="tab-content-lp" class="hidden animate-fade-in space-y-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-white/10">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/20 flex items-center justify-center text-white text-2xl">
+                            <i class="ph-fill ph-lightning"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-tech text-2xl md:text-3xl text-white uppercase">Landing Pages</h3>
+                            <span class="text-xs text-brand-blue font-tech uppercase tracking-widest">Conversão & Vendas Rápidas</span>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-400 font-tech uppercase tracking-wider hidden md:block">03 / Alta Performance</span>
+                </div>
+
+                <p class="text-slate-200 text-base md:text-lg leading-relaxed font-light">
+                    Páginas de captura de leads e vendas agressivas. Desenhadas para campanhas no Google Ads e Meta Ads, eliminando distrações e conduzindo o cliente diretamente para a tomada de decisão com carregamento em menos de 2 segundos.
                 </p>
-                <div class="flex flex-col gap-3">
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200 flex items-center gap-2.5">
+                        <i class="ph-fill ph-check-circle text-brand-blue text-base"></i> Copywriting Persuasivo de Elite
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200 flex items-center gap-2.5">
+                        <i class="ph-fill ph-check-circle text-brand-blue text-base"></i> Pixels e Tag Manager Configurados
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-200 flex items-center gap-2.5">
+                        <i class="ph-fill ph-check-circle text-brand-blue text-base"></i> Velocidade Máxima Mobile-First
+                    </div>
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
                     <a href="https://wa.me/5511916053292?text=Olá, quero orçar uma Landing Page." target="_blank"
-                        class="text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
-                        Orçar no WhatsApp <i class="ph ph-whatsapp-logo"></i>
+                       class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest text-xs rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                        Orçar Landing Page <i class="ph ph-whatsapp-logo text-base"></i>
                     </a>
-                    <a href="/servicos"
-                        class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
+                    <a href="/servicos" class="text-slate-400 hover:text-brand-blue text-xs font-tech font-bold uppercase tracking-wider transition">
                         Ver detalhes técnicos +
                     </a>
                 </div>
             </div>
+
         </div>
     </section>
+
+    <!-- SCRIPT LEVE DAS ABAS DE SOLUÇÕES (ZERO LENTIDÃO / NATIVO) -->
+    <script>
+        function switchSolucao(tab) {
+            const tabs = ['sites', 'saas', 'lp'];
+            tabs.forEach(t => {
+                const content = document.getElementById(`tab-content-${t}`);
+                const btn = document.getElementById(`tab-btn-${t}`);
+                if (t === tab) {
+                    content.classList.remove('hidden');
+                    btn.className = 'tab-btn px-5 py-2.5 rounded-xl md:rounded-full text-xs font-tech font-bold uppercase tracking-wider transition-all flex items-center gap-2 bg-brand-blue text-eg-dark shadow-[0_0_15px_rgba(0,225,255,0.3)]';
+                } else {
+                    content.classList.add('hidden');
+                    btn.className = 'tab-btn px-5 py-2.5 rounded-xl md:rounded-full text-xs font-tech font-bold uppercase tracking-wider transition-all flex items-center gap-2 text-slate-300 hover:text-white hover:bg-white/5';
+                }
+            });
+        }
+    </script>
 
     <!-- NOVA SEÇÃO: HUMANIZAÇÃO (FUNDADORES) -->
     <section class="py-12 px-6 max-w-7xl mx-auto relative z-10">
@@ -630,56 +734,69 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
     </section>
     <!-- FIM DA NOVA SEÇÃO -->
 
-    <!-- NOVA SEÇÃO: ACELERAÇÃO & PERFORMANCE (TRÁFEGO E SEO) -->
-    <section id="aceleracao" class="pt-6 pb-12 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-10">
+    <!-- NOVA SEÇÃO: ACELERAÇÃO & PERFORMANCE (SOLTO NA TELA - SEM CARDS) -->
+    <section id="aceleracao" class="pt-8 pb-16 px-4 md:px-6 max-w-5xl mx-auto relative z-10">
+        <div class="text-center mb-12">
+            <span class="text-[10px] md:text-xs text-brand-blue font-tech uppercase tracking-widest block mb-2 font-semibold">
+                Crescimento & Escala
+            </span>
             <h2 class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase">Aceleração & Performance</h2>
-            <p class="text-slate-200 text-sm">Estratégias para escalar suas vendas</p>
+            <p class="text-slate-200 text-sm font-light">Estratégias avançadas para escalar suas vendas</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <!-- Card Trafego -->
-            <div
-                class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2 border-white/5">
-                <i
-                    class="ph ph-trend-up text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
-                <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Gestão de Tráfego
-                    (Google Ads + Meta)</h3>
-                <p class="text-slate-400 text-sm mb-4">
-                    Estratégias de anúncios pagos (Google e Meta) focadas em ROI e captação de leads qualificados.
-                </p>
-                <div class="flex flex-col gap-3">
+        <!-- ESTRUTURA SPLIT SEM CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 text-left">
+            
+            <!-- COLUNA 1: TRÁFEGO PAGO -->
+            <div class="flex flex-col justify-between pb-8 md:pb-0 border-b md:border-b-0 md:border-r border-white/10 md:pr-12">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-2xl mb-6">
+                        <i class="ph-fill ph-trend-up"></i>
+                    </div>
+                    <h3 class="font-tech text-xl md:text-2xl text-white mb-3 uppercase leading-snug">
+                        Gestão de Tráfego <br><span class="text-brand-blue">(Google Ads + Meta)</span>
+                    </h3>
+                    <p class="text-slate-100 text-sm md:text-base leading-relaxed font-light mb-6">
+                        Estratégias de anúncios online focadas em retorno financeiro rápido (ROI), atração de clientes com intenção de compra e geração contínua de leads qualificados.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-3 pt-2">
                     <a href="https://wa.me/5511916053292?text=Olá, quero falar sobre Gestão de Tráfego." target="_blank"
-                        class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
-                        Orçar no WhatsApp <i class="ph ph-whatsapp-logo"></i>
+                        class="text-brand-blue text-xs font-tech font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
+                        Orçar no WhatsApp <i class="ph ph-whatsapp-logo text-base"></i>
                     </a>
-                    <a href="/servicos"
-                        class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
+                    <a href="/gestao-de-trafego/"
+                        class="text-slate-400 hover:text-white text-[10px] font-tech font-bold uppercase tracking-widest transition">
                         Ver detalhes técnicos +
                     </a>
                 </div>
             </div>
 
-            <!-- Card SEO -->
-            <div
-                class="glass-tech p-8 rounded-2xl transition-all duration-300 group text-left block hover:-translate-y-2 border-white/5">
-                <i
-                    class="ph ph-magnifying-glass text-4xl text-brand-blue mb-6 group-hover:scale-110 transition-transform block"></i>
-                <h3 class="font-tech text-xl text-white mb-3 group-hover:text-brand-blue transition">Otimização SEO</h3>
-                <p class="text-slate-400 text-sm mb-4">
-                    Posicionamento orgânico para colocar sua marca no topo do Google sem pagar por clique.
-                </p>
-                <div class="flex flex-col gap-3">
+            <!-- COLUNA 2: SEO -->
+            <div class="flex flex-col justify-between md:pl-2">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="ph-fill ph-magnifying-glass"></i>
+                    </div>
+                    <h3 class="font-tech text-xl md:text-2xl text-white mb-3 uppercase leading-snug">
+                        Otimização SEO <br><span class="text-brand-blue">Busca Orgânica</span>
+                    </h3>
+                    <p class="text-slate-100 text-sm md:text-base leading-relaxed font-light mb-6">
+                        Posicionamento orgânico para colocar sua marca no topo do Google sem pagar por clique. Autoridade duradoura e tráfego qualificado trabalhando 24 horas por dia.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-3 pt-2">
                     <a href="https://wa.me/5511916053292?text=Olá, quero orçar consultoria SEO." target="_blank"
-                        class="text-brand-blue text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
-                        Orçar no WhatsApp <i class="ph ph-whatsapp-logo"></i>
+                        class="text-brand-blue text-xs font-tech font-bold uppercase tracking-widest flex items-center gap-2 hover:underline">
+                        Orçar no WhatsApp <i class="ph ph-whatsapp-logo text-base"></i>
                     </a>
                     <a href="/servicos"
-                        class="text-white/60 text-[10px] font-bold uppercase tracking-widest hover:text-white transition">
+                        class="text-slate-400 hover:text-white text-[10px] font-tech font-bold uppercase tracking-widest transition">
                         Ver detalhes técnicos +
                     </a>
                 </div>
             </div>
+
         </div>
     </section>
 
