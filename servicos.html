@@ -306,213 +306,261 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
         </div>
     </header>
 
-    <!-- HEADER DA PÁGINA -->
-    <section id="webpage" class="pt-40 pb-12 text-center px-4">
-        <h1 class="font-tech text-3xl md:text-5xl text-white uppercase tracking-widest mb-4">
-            Especialidades <span class="text-brand-blue">Técnicas</span>
+    <!-- HEADER DA PÁGINA (PRESERVANDO ID WEBPAGE PARA SEO E SCHEMA) -->
+    <section id="webpage" class="pt-36 md:pt-44 pb-12 text-center px-4 relative z-10">
+        <div class="inline-block px-3 py-1 bg-brand-blue/10 border border-brand-blue/30 rounded text-brand-blue text-[10px] font-tech uppercase tracking-widest font-bold mb-4">
+            Catálogo Técnico & Soluções
+        </div>
+
+        <h1 class="font-tech text-3xl md:text-5xl lg:text-6xl text-white uppercase tracking-wider mb-6 flyer-title leading-tight">
+            Especialidades <br>
+            <span class="text-brand-blue">Técnicas de Elite</span>
         </h1>
-        <p class="text-slate-400 max-w-2xl mx-auto">
-            Não usamos apenas templates prontos. Desenvolvemos soluções focadas em performance, SEO e escala para o seu negócio.
+
+        <div class="w-28 h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent mx-auto opacity-70 mb-6"></div>
+
+        <p class="font-sans max-w-2xl mx-auto text-slate-200 text-base md:text-lg font-light leading-relaxed">
+            Não utilizamos templates genéricos. Desenvolvemos ecossistemas sob medida focados em velocidade extrema, autoridade inabalável e conversão comercial.
         </p>
     </section>
 
-    <!-- LISTA DE SERVIÇOS -->
-    <section id="tese-autoridade" class="pb-24 px-6 max-w-5xl mx-auto space-y-8">
+    <!-- LISTA DE SERVIÇOS (SOLTOS NA TELA - PADRÃO DE ELITE) -->
+    <section id="tese-autoridade" class="pb-16 px-4 md:px-6 max-w-5xl mx-auto relative z-10">
+        <div class="divide-y divide-white/10">
 
-        <!-- SERVIÇO 1: SAAS -->
-        <article class="glass-tech p-1 rounded-2xl border border-brand-blue/20">
-            <details class="group">
-                <summary class="flex flex-col md:flex-row items-start md:items-center justify-between p-8 cursor-pointer bg-white/5 hover:bg-white/10 rounded-xl transition-all">
-                    <div class="flex items-center gap-6">
-                        <i class="ph ph-cpu text-4xl text-brand-blue"></i>
-                        <div>
-                            <h2 class="font-tech text-xl text-white uppercase tracking-wide">Desenvolvimento de SaaS</h2>
-                            <p class="text-xs text-brand-blue uppercase tracking-widest mt-1">Sistemas como o Kairós</p>
+            <!-- SERVIÇO 1: SAAS -->
+            <article class="py-6">
+                <details class="group">
+                    <summary class="flex flex-col md:flex-row items-start md:items-center justify-between py-4 cursor-pointer select-none transition-all">
+                        <div class="flex items-center gap-5">
+                            <div class="w-12 h-12 rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-2xl group-hover:scale-110 transition-transform">
+                                <i class="ph-fill ph-cpu"></i>
+                            </div>
+                            <div>
+                                <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-wide">Desenvolvimento de SaaS</h2>
+                                <span class="text-xs text-brand-blue font-tech uppercase tracking-widest block mt-0.5">Sistemas Complexos • Ex: Sistema Kairós</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 flex items-center gap-2 text-xs font-tech text-slate-400 uppercase tracking-wider group-hover:text-white transition">
+                            <span>Ver especificações</span>
+                            <i class="ph ph-caret-down text-base text-brand-blue group-open:rotate-180 transition-transform"></i>
+                        </div>
+                    </summary>
+                    <div class="pt-6 pb-4 text-slate-200 text-sm md:text-base leading-relaxed space-y-6 font-light">
+                        <p>
+                            Transformamos fluxos corporativos complexos em softwares intuitivos, modernos e escaláveis. Cuidamos desde a modelagem de banco de dados e arquitetura em nuvem até a interface do usuário (UI/UX) de alto luxo.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                            <ul class="space-y-2.5 text-sm">
+                                <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Dashboards e Painéis Dinâmicos</li>
+                                <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Gestão de Assinaturas e Usuários</li>
+                                <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Integração com Gateways de Pagamento</li>
+                            </ul>
+                            <ul class="space-y-2.5 text-sm">
+                                <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Automação de WhatsApp e Webhooks</li>
+                                <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Hospedagem Cloud de Alta Disponibilidade</li>
+                                <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Escalabilidade e Segurança Criptografada</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4">
+                            <a href="https://wa.me/5511916053292?text=Quero orçar um projeto SaaS." target="_blank" 
+                               class="inline-flex items-center gap-2 px-6 py-2.5 bg-brand-blue text-eg-dark text-xs font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                                Orçar Projeto SaaS <i class="ph ph-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="mt-4 md:mt-0 flex items-center gap-2 text-sm text-slate-400 group-hover:text-white transition">
-                        Ver detalhes técnicos <i class="ph ph-caret-down group-open:rotate-180 transition-transform"></i>
+                </details>
+            </article>
+
+            <!-- SERVIÇO 2: LANDING PAGES -->
+            <article class="py-6">
+                <details class="group">
+                    <summary class="flex flex-col md:flex-row items-start md:items-center justify-between py-4 cursor-pointer select-none transition-all">
+                        <div class="flex items-center gap-5">
+                            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform">
+                                <i class="ph-fill ph-lightning"></i>
+                            </div>
+                            <div>
+                                <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-wide">Landing Pages de Alta Conversão</h2>
+                                <span class="text-xs text-slate-400 font-tech uppercase tracking-widest block mt-0.5">Engenharia de Vendas & Captação Direta</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 flex items-center gap-2 text-xs font-tech text-slate-400 uppercase tracking-wider group-hover:text-white transition">
+                            <span>Ver especificações</span>
+                            <i class="ph ph-caret-down text-base text-brand-blue group-open:rotate-180 transition-transform"></i>
+                        </div>
+                    </summary>
+                    <div class="pt-6 pb-4 text-slate-200 text-sm md:text-base leading-relaxed space-y-6 font-light">
+                        <p>
+                            Páginas focadas em um objetivo único e irredutível: <strong class="text-white">transformar o clique do visitante em lead ou venda direta</strong>. Utilizamos técnicas avançadas de copywriting, psicologia de consumo e carregamento em milissegundos para zerar a taxa de rejeição.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-white/5 rounded text-[10px] font-tech text-white uppercase border border-white/10">Meta Pixel & API de Conversões</span>
+                            <span class="px-3 py-1 bg-white/5 rounded text-[10px] font-tech text-white uppercase border border-white/10">Google Analytics 4 (GA4)</span>
+                            <span class="px-3 py-1 bg-white/5 rounded text-[10px] font-tech text-white uppercase border border-white/10">Arquitetura Mobile-First</span>
+                            <span class="px-3 py-1 bg-white/5 rounded text-[10px] font-tech text-white uppercase border border-white/10">Otimização PageSpeed</span>
+                        </div>
+                        <div class="pt-4">
+                            <a href="https://wa.me/5511916053292?text=Quero orçar uma Landing Page." target="_blank" 
+                               class="inline-flex items-center gap-2 px-6 py-2.5 bg-brand-blue text-eg-dark text-xs font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                                Orçar Landing Page <i class="ph ph-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
-                </summary>
-                <div class="p-8 text-slate-300 space-y-4 border-t border-white/5">
-                    <p>
-                        Transformamos processos complexos em softwares simples e intuitivos. Nossa metodologia envolve desde a arquitetura do banco de dados até a interface final do usuário (UI/UX).
-                    </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Painéis Administrativos (Dashboards)</li>
-                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Gestão de Usuários e Permissões</li>
-                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Integração com APIs de Pagamento</li>
+                </details>
+            </article>
+
+            <!-- SERVIÇO 3: SITES INSTITUCIONAIS -->
+            <article class="py-6">
+                <details class="group">
+                    <summary class="flex flex-col md:flex-row items-start md:items-center justify-between py-4 cursor-pointer select-none transition-all">
+                        <div class="flex items-center gap-5">
+                            <div class="w-12 h-12 rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-2xl group-hover:scale-110 transition-transform">
+                                <i class="ph-fill ph-globe-hemisphere-west"></i>
+                            </div>
+                            <div>
+                                <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-wide">Sites Institucionais</h2>
+                                <span class="text-xs text-brand-blue font-tech uppercase tracking-widest block mt-0.5">Autoridade de Marca & Presença Corporativa</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 flex items-center gap-2 text-xs font-tech text-slate-400 uppercase tracking-wider group-hover:text-white transition">
+                            <span>Ver especificações</span>
+                            <i class="ph ph-caret-down text-base text-brand-blue group-open:rotate-180 transition-transform"></i>
+                        </div>
+                    </summary>
+                    <div class="pt-6 pb-4 text-slate-200 text-sm md:text-base leading-relaxed space-y-6 font-light">
+                        <p>
+                            A sede digital da sua empresa. Projetamos portais que transmitem a solidez, a história e o profissionalismo necessários para fechar grandes contratos B2B e encantar clientes de alto padrão.
+                        </p>
+                        <ul class="space-y-2.5 text-sm pt-2">
+                            <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Arquitetura com seções de Prova Social e Portfólio</li>
+                            <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Botão Inteligente integrado ao WhatsApp Comercial</li>
+                            <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> SEO Técnico Estruturado (Meta Tags, Schema.org e OpenGraph)</li>
                         </ul>
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Automação de WhatsApp</li>
-                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Hospedagem em Nuvem Segura</li>
-                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Escalonamento Horizontal</li>
+                        <div class="pt-4">
+                            <a href="https://wa.me/5511916053292?text=Quero orçar um Site Institucional." target="_blank" 
+                               class="inline-flex items-center gap-2 px-6 py-2.5 bg-brand-blue text-eg-dark text-xs font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                                Orçar Site Institucional <i class="ph ph-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </details>
+            </article>
+
+            <!-- SERVIÇO 4: GESTÃO DE TRÁFEGO -->
+            <article class="py-6">
+                <details class="group">
+                    <summary class="flex flex-col md:flex-row items-start md:items-center justify-between py-4 cursor-pointer select-none transition-all">
+                        <div class="flex items-center gap-5">
+                            <div class="w-12 h-12 rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-2xl group-hover:scale-110 transition-transform">
+                                <i class="ph-fill ph-trend-up"></i>
+                            </div>
+                            <div>
+                                <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-wide">Gestão de Tráfego Pago (Ads)</h2>
+                                <span class="text-xs text-brand-blue font-tech uppercase tracking-widest block mt-0.5">Google Ads & Meta Ads para Escala Comercial</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 flex items-center gap-2 text-xs font-tech text-slate-400 uppercase tracking-wider group-hover:text-white transition">
+                            <span>Ver especificações</span>
+                            <i class="ph ph-caret-down text-base text-brand-blue group-open:rotate-180 transition-transform"></i>
+                        </div>
+                    </summary>
+                    <div class="pt-6 pb-4 text-slate-200 text-sm md:text-base leading-relaxed space-y-6 font-light">
+                        <p>
+                            Não adianta ter uma plataforma incrível se ninguém a encontra. Gerenciamos orçamentos de anúncios com rigor científico, colocando sua oferta exatamente na frente de clientes prontos para comprar.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                            <ul class="space-y-2.5 text-sm">
+                                <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Google Ads (Rede de Pesquisa & Youtube)</li>
+                                <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Anúncios Segmentados no Instagram e Facebook</li>
+                                <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Campanhas de Remarketing Agressivo</li>
+                            </ul>
+                            <ul class="space-y-2.5 text-sm">
+                                <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Rastreamento via Google Tag Manager & Pixels</li>
+                                <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Relatórios Transparentes de Retorno sobre Investimento (ROI)</li>
+                                <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Otimização Contínua do Custo por Lead (CPL)</li>
+                            </ul>
+                        </div>
+                        <div class="pt-4">
+                            <a href="https://wa.me/5511916053292?text=Quero orçar Gestão de Tráfego." target="_blank" 
+                               class="inline-flex items-center gap-2 px-6 py-2.5 bg-brand-blue text-eg-dark text-xs font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                                Orçar Tráfego Pago <i class="ph ph-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </details>
+            </article>
+
+            <!-- SERVIÇO 5: CONSULTORIA SEO -->
+            <article class="py-6">
+                <details class="group">
+                    <summary class="flex flex-col md:flex-row items-start md:items-center justify-between py-4 cursor-pointer select-none transition-all">
+                        <div class="flex items-center gap-5">
+                            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white text-2xl group-hover:scale-110 transition-transform">
+                                <i class="ph-fill ph-magnifying-glass"></i>
+                            </div>
+                            <div>
+                                <h2 class="font-tech text-xl md:text-2xl text-white uppercase tracking-wide">Consultoria SEO Avançado</h2>
+                                <span class="text-xs text-slate-400 font-tech uppercase tracking-widest block mt-0.5">Posicionamento Orgânico no Google</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 md:mt-0 flex items-center gap-2 text-xs font-tech text-slate-400 uppercase tracking-wider group-hover:text-white transition">
+                            <span>Ver especificações</span>
+                            <i class="ph ph-caret-down text-base text-brand-blue group-open:rotate-180 transition-transform"></i>
+                        </div>
+                    </summary>
+                    <div class="pt-6 pb-4 text-slate-200 text-sm md:text-base leading-relaxed space-y-6 font-light">
+                        <p>
+                            Conquiste a primeira página do Google sem pagar por clique. Otimizamos a arquitetura técnica, os Core Web Vitals e a semântica textual do seu site para construir autoridade orgânica duradoura.
+                        </p>
+                        <ul class="space-y-2.5 text-sm pt-2">
+                            <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Pesquisa Estratégica de Palavras-Chave de Alta Intenção</li>
+                            <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Otimização On-Page (Meta Tags, Hierarquia H1-H6, URLs)</li>
+                            <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Otimização Técnica profunda de Core Web Vitals</li>
+                            <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-blue text-lg"></i> Configuração de Google Search Console e Perfil de Empresa</li>
                         </ul>
-                    </div>
-                    <div class="pt-4">
-                        <a href="https://wa.me/5511916053292?text=Quero orçar um projeto SaaS." target="_blank" class="inline-block px-6 py-2 bg-brand-blue/10 border border-brand-blue text-brand-blue text-xs font-bold uppercase tracking-widest rounded hover:bg-brand-blue hover:text-eg-dark transition">
-                            Orçar Projeto SaaS
-                        </a>
-                    </div>
-                </div>
-            </details>
-        </article>
-
-        <!-- SERVIÇO 2: LANDING PAGES -->
-        <article class="glass-tech p-1 rounded-2xl border border-brand-blue/20">
-            <details class="group">
-                <summary class="flex flex-col md:flex-row items-start md:items-center justify-between p-8 cursor-pointer bg-white/5 hover:bg-white/10 rounded-xl transition-all">
-                    <div class="flex items-center gap-6">
-                        <i class="ph ph-lightning text-4xl text-white"></i>
-                        <div>
-                            <h2 class="font-tech text-xl text-white uppercase tracking-wide">Landing Pages de Alta Conversão</h2>
-                            <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Foco em Vendas e Leads</p>
+                        <div class="pt-4">
+                            <a href="https://wa.me/5511916053292?text=Quero orçar Consultoria SEO." target="_blank" 
+                               class="inline-flex items-center gap-2 px-6 py-2.5 bg-brand-blue text-eg-dark text-xs font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_15px_rgba(0,225,255,0.2)]">
+                                Orçar Consultoria SEO <i class="ph ph-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="mt-4 md:mt-0 flex items-center gap-2 text-sm text-slate-400 group-hover:text-white transition">
-                        Ver detalhes técnicos <i class="ph ph-caret-down group-open:rotate-180 transition-transform"></i>
-                    </div>
-                </summary>
-                <div class="p-8 text-slate-300 space-y-4 border-t border-white/5">
-                    <p>
-                        Páginas projetadas com um único objetivo: <strong>converter visitantes em clientes</strong>. Utilizamos técnicas de copywriting e design persuasivo alinhadas à velocidade extrema de carregamento.
-                    </p>
-                    <p class="text-sm text-slate-400">Ideal para lançamentos de infoprodutos, venda de serviços e captura de leads.</p>
-                    <div class="flex flex-wrap gap-2 mt-2">
-                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] uppercase border border-white/10">Pixel Facebook Configurado</span>
-                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] uppercase border border-white/10">Google Analytics 4</span>
-                        <span class="px-2 py-1 bg-white/5 rounded text-[10px] uppercase border border-white/10">Mobile First</span>
-                    </div>
-                    <div class="pt-4">
-                        <a href="https://wa.me/5511916053292?text=Quero orçar uma Landing Page." target="_blank" class="inline-block px-6 py-2 bg-white/10 border border-white/30 text-white text-xs font-bold uppercase tracking-widest rounded hover:bg-white hover:text-eg-dark transition">
-                            Orçar Landing Page
-                        </a>
-                    </div>
-                </div>
-            </details>
-        </article>
+                </details>
+            </article>
 
-        <!-- SERVIÇO 3: SITES INSTITUCIONAIS -->
-        <article class="glass-tech p-1 rounded-2xl border border-brand-blue/20">
-            <details class="group">
-                <summary class="flex flex-col md:flex-row items-start md:items-center justify-between p-8 cursor-pointer bg-white/5 hover:bg-white/10 rounded-xl transition-all">
-                    <div class="flex items-center gap-6">
-                        <i class="ph ph-globe-hemisphere-west text-4xl text-brand-blue"></i>
-                        <div>
-                            <h2 class="font-tech text-xl text-white uppercase tracking-wide">Sites Institucionais</h2>
-                            <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Autoridade e Presença Digital</p>
-                        </div>
-                    </div>
-                    <div class="mt-4 md:mt-0 flex items-center gap-2 text-sm text-slate-400 group-hover:text-white transition">
-                        Ver detalhes técnicos <i class="ph ph-caret-down group-open:rotate-180 transition-transform"></i>
-                    </div>
-                </summary>
-                <div class="p-8 text-slate-300 space-y-4 border-t border-white/5">
-                    <p>
-                        Seu cartão de visita digital. Um site institucional passa credibilidade e centraliza as informações do seu negócio. Otimizado para aparecer nas buscas locais do Google.
-                    </p>
-                    <ul class="space-y-2 text-sm mt-4">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Página "Sobre Nós", "Serviços" e "Contato"</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Botão flutuante de WhatsApp</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> SEO Básico incluso (Títulos e Descrições)</li>
-                    </ul>
-                    <div class="pt-4">
-                        <a href="https://wa.me/5511916053292?text=Quero orçar um Site Institucional." target="_blank" class="inline-block px-6 py-2 bg-brand-blue/10 border border-brand-blue text-brand-blue text-xs font-bold uppercase tracking-widest rounded hover:bg-brand-blue hover:text-eg-dark transition">
-                            Orçar Site
-                        </a>
-                    </div>
-                </div>
-            </details>
-        </article>
-
-        <!-- NOVO SERVIÇO 4: GESTÃO DE TRÁFEGO -->
-        <article class="glass-tech p-1 rounded-2xl border border-brand-blue/20">
-            <details class="group">
-                <summary class="flex flex-col md:flex-row items-start md:items-center justify-between p-8 cursor-pointer bg-white/5 hover:bg-white/10 rounded-xl transition-all">
-                    <div class="flex items-center gap-6">
-                        <i class="ph ph-trend-up text-4xl text-brand-blue"></i>
-                        <div>
-                            <h2 class="font-tech text-xl text-white uppercase tracking-wide">Gestão de Tráfego (Google Ads + Meta)</h2>
-                            <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Google Ads & Meta Ads</p>
-                        </div>
-                    </div>
-                    <div class="mt-4 md:mt-0 flex items-center gap-2 text-sm text-slate-400 group-hover:text-white transition">
-                        Ver detalhes técnicos <i class="ph ph-caret-down group-open:rotate-180 transition-transform"></i>
-                    </div>
-                </summary>
-                <div class="p-8 text-slate-300 space-y-4 border-t border-white/5">
-                    <p>
-                        Não basta ter um site lindo, as pessoas precisam encontrá-lo. Gerenciamos suas campanhas de anúncios pagos para trazer o público certo no momento certo.
-                    </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Campanhas no Google (Pesquisa & Youtube)</li>
-                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Anúncios no Instagram & Facebook</li>
-                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Remarketing Estratégico</li>
-                        </ul>
-                        <ul class="space-y-2 text-sm">
-                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Instalação de Pixel e Tag Manager</li>
-                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Relatórios de Performance (ROI)</li>
-                            <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Otimização contínua de custos</li>
-                        </ul>
-                    </div>
-                    <div class="pt-4">
-                        <a href="https://wa.me/5511916053292?text=Quero orçar Gestão de Tráfego." target="_blank" class="inline-block px-6 py-2 bg-brand-blue/10 border border-brand-blue text-brand-blue text-xs font-bold uppercase tracking-widest rounded hover:bg-brand-blue hover:text-eg-dark transition">
-                            Orçar Tráfego
-                        </a>
-                    </div>
-                </div>
-            </details>
-        </article>
-
-        <!-- NOVO SERVIÇO 5: OTIMIZAÇÃO SEO -->
-        <article class="glass-tech p-1 rounded-2xl border border-brand-blue/20">
-            <details class="group">
-                <summary class="flex flex-col md:flex-row items-start md:items-center justify-between p-8 cursor-pointer bg-white/5 hover:bg-white/10 rounded-xl transition-all">
-                    <div class="flex items-center gap-6">
-                        <i class="ph ph-magnifying-glass text-4xl text-white"></i>
-                        <div>
-                            <h2 class="font-tech text-xl text-white uppercase tracking-wide">Consultoria SEO</h2>
-                            <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Posicionamento Orgânico no Google</p>
-                        </div>
-                    </div>
-                    <div class="mt-4 md:mt-0 flex items-center gap-2 text-sm text-slate-400 group-hover:text-white transition">
-                        Ver detalhes técnicos <i class="ph ph-caret-down group-open:rotate-180 transition-transform"></i>
-                    </div>
-                </summary>
-                <div class="p-8 text-slate-300 space-y-4 border-t border-white/5">
-                    <p>
-                        Apareça nas primeiras páginas do Google sem pagar por clique. Trabalhamos a otimização técnica e de conteúdo do seu site para aumentar sua autoridade e visitas orgânicas.
-                    </p>
-                    <ul class="space-y-2 text-sm mt-4">
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Pesquisa de Palavras-chave (Keyword Research)</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Otimização On-Page (Títulos, Meta Tags, H1-H6)</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Otimização Técnica (Velocidade e Core Web Vitals)</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check text-brand-blue"></i> Configuração Google Search Console e Meu Negócio</li>
-                    </ul>
-                    <div class="pt-4">
-                        <a href="https://wa.me/5511916053292?text=Quero orçar Consultoria SEO." target="_blank" class="inline-block px-6 py-2 bg-white/10 border border-white/30 text-white text-xs font-bold uppercase tracking-widest rounded hover:bg-white hover:text-eg-dark transition">
-                            Orçar SEO
-                        </a>
-                    </div>
-                </div>
-            </details>
-        </article>
-
+        </div>
     </section>
 
-    <!-- FAQ RÁPIDO -->
-    <section id="faq" class="py-12 px-6 max-w-3xl mx-auto text-center">
-        <h3 class="font-tech text-xl text-white uppercase mb-8">Dúvidas Frequentes</h3>
-        <div class="space-y-4 text-left">
-            <div class="glass-tech p-6 rounded-xl">
-                <h4 class="font-bold text-white mb-2">Quanto tempo demora para ficar pronto?</h4>
-                <p class="text-sm text-slate-400">Landing Pages levam em média 3 a 5 dias úteis. Sistemas SaaS dependem da complexidade do projeto, variando de 30 a 90 dias.</p>
+    <!-- FAQ RÁPIDO (SOLTO NA TELA - PADRÃO HOME) -->
+    <section id="faq" class="pt-6 pb-20 px-4 md:px-6 max-w-4xl mx-auto relative z-10">
+        <div class="text-left mb-8">
+            <span class="text-[10px] md:text-xs text-brand-blue font-tech uppercase tracking-widest block mb-2">
+                Dúvidas Técnicas • Suporte & Prazos
+            </span>
+            <h3 class="font-tech text-2xl md:text-4xl text-white uppercase leading-tight">
+                Perguntas <br>
+                <span class="text-brand-blue">Frequentes</span>
+            </h3>
+        </div>
+
+        <div class="divide-y divide-white/10">
+            <div class="py-5">
+                <h4 class="font-tech text-white text-sm md:text-base uppercase tracking-wider mb-2">
+                    1. Quanto tempo demora para um projeto ficar pronto?
+                </h4>
+                <p class="text-sm text-slate-200 leading-relaxed font-light">
+                    Landing Pages e Sites Institucionais levam em média de 3 a 7 dias úteis. Sistemas SaaS e plataformas sob medida variam entre 30 a 90 dias, dependendo da complexidade das regras de negócio e integrações.
+                </p>
             </div>
-            <div class="glass-tech p-6 rounded-xl">
-                <h4 class="font-bold text-white mb-2">Vocês dão suporte após a entrega?</h4>
-                <p class="text-sm text-slate-400">Sim! Todos os nossos projetos incluem um período de garantia e suporte técnico para eventuais correções.</p>
+
+            <div class="py-5">
+                <h4 class="font-tech text-white text-sm md:text-base uppercase tracking-wider mb-2">
+                    2. Vocês oferecem suporte e manutenção após a entrega?
+                </h4>
+                <p class="text-sm text-slate-200 leading-relaxed font-light">
+                    Sim! Todos os nossos projetos contam com garantia técnica e suporte contínuo para garantir estabilidade, segurança e atualizações necessárias para sua operação não parar.
+                </p>
             </div>
         </div>
     </section>
@@ -555,6 +603,9 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
                     <li><a href="/saas"
                             class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
                                 class="ph ph-caret-right text-brand-blue"></i> Desenvolvimento de Sistemas SaaS</a></li>
+                    <li><a href="https://egkairos.com.br" target="_blank"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Sistema Kairós</a></li>
                     <li><a href="/criacao-de-sites/"
                             class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
                                 class="ph ph-caret-right text-brand-blue"></i> Landing Pages de Alta Conversão</a></li>

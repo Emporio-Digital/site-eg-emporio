@@ -663,32 +663,30 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- SEÇÃO: LOCAIS DE ATENDIMENTO (CARD CLICÁVEL - ATUALIZADO) -->
-    <section id="locais-atendimento" class="pt-20 pb-4 px-6 max-w-7xl mx-auto">
-        <div class="glass-tech rounded-2xl overflow-hidden border-brand-blue/20 shadow-2xl">
+    <!-- SEÇÃO: LOCAIS DE ATENDIMENTO (SOLTO NA TELA) -->
+    <section id="locais-atendimento" class="pt-8 pb-2 px-4 md:px-6 max-w-7xl mx-auto relative z-10">
+        <div>
 
-            <!-- HEADER CLICÁVEL -->
+            <!-- HEADER SEM CARD (PADRÃO EXATO DO SITE) -->
             <div onclick="toggleLocais()"
-                class="cursor-pointer p-4 md:p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
-                <div class="text-left">
-                    <h2
-                        class="font-tech text-3xl md:text-4xl text-white mb-2 uppercase leading-tight group-hover:text-brand-blue transition-colors">
-                        Onde <span class="text-brand-blue">Atendemos</span>
-                    </h2>
-                    <p class="text-slate-400 text-sm md:text-base max-w-2xl">
-                        Clique para visualizar as regiões atendidas com estratégias exclusivas de SEO Local.
-                    </p>
-                </div>
-                <div
-                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
-                    <i id="locais-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
-                </div>
+                class="cursor-pointer py-4 select-none group inline-block text-left">
+                <!-- Tag invisível técnica para o script não dar erro -->
+                <span id="locais-icon" class="hidden"></span>
+
+                <span class="text-[10px] md:text-xs text-brand-blue font-tech uppercase tracking-widest block mb-2">
+                    Presença Nacional • Estratégia de SEO Local
+                </span>
+                
+                <h2 class="font-tech text-2xl md:text-4xl text-white uppercase leading-tight">
+                    Onde <br>
+                    <span class="text-brand-blue">Atendemos</span>
+                </h2>
             </div>
 
             <!-- CONTEÚDO EXPANDÍVEL (TODOS OS LOCAIS ATUALIZADOS) -->
             <div id="locais-content"
-                class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div class="p-8 md:p-12 border-t border-white/10">
+                class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out">
+                <div class="py-8">
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
                         <a href="aruja.html"
@@ -1125,31 +1123,30 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- SEÇÃO SEO EXPANDÍVEL (HUB MASTER) -->
-    <section class="py-4 px-6 max-w-7xl mx-auto relative z-10">
-        <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
+    <!-- SEÇÃO SEO EXPANDÍVEL (GLOSSÁRIO - SOLTO NA TELA) -->
+    <section class="pt-6 pb-2 px-4 md:px-6 max-w-7xl mx-auto relative z-10">
+        <div>
 
-            <!-- HEADER DO CARD (Clicável) -->
+            <!-- HEADER SEM CARD (PADRÃO EXATO DO SITE) -->
             <div onclick="toggleSeoText()"
-                class="cursor-pointer p-4 md:p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
-                <div class="flex flex-col">
-                    <h2
-                        class="font-tech text-xl md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
-                        <i class="ph-fill ph-rocket text-brand-blue mr-2"></i> Glossário Técnico: Nossos Serviços
-                    </h2>
-                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-2">Saiba mais sobre nossa
-                        metodologia</span>
-                </div>
-                <div
-                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
-                    <i id="seo-icon" class="ph ph-caret-down text-2xl transition-transform duration-500"></i>
-                </div>
+                class="cursor-pointer py-4 select-none group inline-block text-left">
+                <!-- Tag invisível técnica para o script não dar erro -->
+                <span id="seo-icon" class="hidden"></span>
+
+                <span class="text-[10px] md:text-xs text-brand-blue font-tech uppercase tracking-widest block mb-2">
+                    Metodologia & Soluções • EG Empório Digital
+                </span>
+                
+                <h2 class="font-tech text-2xl md:text-4xl text-white uppercase leading-tight">
+                    Glossário Técnico <br>
+                    <span class="text-brand-blue">Nossos Serviços</span>
+                </h2>
             </div>
 
             <!-- CONTEÚDO EXPANDÍVEL -->
-            <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
+            <div id="seo-content" class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out">
                 <div
-                    class="p-8 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 space-y-6 font-light">
+                    class="py-8 text-slate-200 text-sm md:text-base leading-relaxed text-justify space-y-6 font-light">
 
                     <p>
                         A EG Empório Digital é referência quando o assunto é <strong>criação de sites
@@ -1187,7 +1184,7 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
                         perfeito.
                     </p>
 
-                    <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
+                    <p class="border-l-4 border-brand-blue pl-4 italic text-slate-200">
                         Resumo: A EG Empório Digital é a parceira ideal para <strong>criação de sites
                             profissionais</strong>, desenvolvimento de <strong>loja virtual</strong> e estratégias de
                         crescimento online.
@@ -1197,41 +1194,40 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- SEÇÃO SEO ACCORDION - 20 PILARES DE AUTORIDADE (HUB) -->
-    <section id="tese-autoridade" class="py-4 px-2 md:px-6 max-w-7xl mx-auto relative z-10 mb-20">
-        <div class="glass-tech rounded-2xl overflow-hidden border border-brand-blue/20 shadow-2xl shadow-brand-blue/5">
+    <!-- SEÇÃO SEO ACCORDION - 20 PILARES DE AUTORIDADE (HUB - SOLTO NA TELA) -->
+    <section id="tese-autoridade" class="pt-6 pb-16 px-4 md:px-6 max-w-7xl mx-auto relative z-10">
+        <div>
 
-            <!-- HEADER DO CARD -->
+            <!-- HEADER SEM CARD (PADRÃO EXATO DO SITE) -->
             <div onclick="toggleHubSeo()"
-                class="cursor-pointer p-4 md:p-5 flex justify-between items-center bg-white/5 hover:bg-white/10 transition-colors group">
-                <div class="flex flex-col">
-                    <h2
-                        class="font-tech text-lg md:text-2xl text-white uppercase tracking-widest group-hover:text-brand-blue transition-colors">
-                        <i class="ph-fill ph-gear text-brand-blue mr-2"></i> Pilares Técnicos: Criação de Sites
-                        Profissionais
-                    </h2>
-                    <span class="text-[10px] md:text-xs text-slate-500 uppercase tracking-wider mt-2">Engenharia de
-                        software aplicada para alta performance e resultados reais</span>
-                </div>
-                <div
-                    class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/40 group-hover:border-brand-blue group-hover:text-brand-blue transition-all">
-                    <i id="hub-seo-icon"
-                        class="ph ph-caret-down text-xl md:text-2xl transition-transform duration-500"></i>
-                </div>
+                class="cursor-pointer py-4 select-none group inline-block text-left">
+                <!-- Tag invisível técnica para o script não dar erro -->
+                <span id="hub-seo-icon" class="hidden"></span>
+
+                <span class="text-[10px] md:text-xs text-brand-blue font-tech uppercase tracking-widest block mb-2">
+                    Engenharia de Software • Alta Performance & Resultados
+                </span>
+                
+                <h2 class="font-tech text-2xl md:text-4xl text-white uppercase leading-tight">
+                    Pilares Técnicos <br>
+                    <span class="text-brand-blue">Criação de Sites Profissionais</span>
+                </h2>
             </div>
 
             <!-- CONTEÚDO EXPANDÍVEL (20 PILARES) -->
             <div id="hub-seo-content"
-                class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out bg-black/40">
-                <div
-                    class="p-5 md:p-12 text-slate-400 text-sm md:text-base leading-relaxed text-justify border-t border-white/10 flex flex-col gap-y-12 font-light">
+                class="max-h-0 overflow-hidden transition-all duration-700 ease-in-out">
+                <div class="py-8 text-slate-200 text-sm md:text-base leading-relaxed text-justify font-light">
 
-                    <p class="mb-4">
+                    <p class="mb-8">
                         Nossa metodologia de <strong>criação de sites</strong> é baseada em performance e
                         escalabilidade. Atendemos empresas de todos os portes com soluções customizadas que unem o
                         melhor do design moderno à robustez técnica. Cada projeto é uma peça estratégica projetada para
                         dominar as buscas orgânicas e converter tráfego em faturamento recorrente.
                     </p>
+
+                    <!-- GRID RESPONSIVO: 1 COLUNA NO MOBILE / 2 COLUNAS NO DESKTOP -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10">
 
                     <!-- PILAR 1 -->
                     <div>
@@ -1466,7 +1462,9 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
                             nacional.</p>
                     </div>
 
-                    <p class="border-l-4 border-brand-blue pl-4 italic text-slate-300">
+                    </div> <!-- fecha o grid de 2 colunas -->
+
+                    <p class="mt-8 border-l-4 border-brand-blue pl-4 italic text-slate-200">
                         A EG Empório Digital lidera o mercado de <strong>criação de sites profissionais</strong> com
                         foco em resultados reais. Se você busca excelência técnica, design de impacto e autoridade
                         orgânica, nossa agência é a parceira estratégica ideal para elevar o patamar do seu negócio no
@@ -1541,6 +1539,9 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
                     <li><a href="/saas"
                             class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
                                 class="ph ph-caret-right text-brand-blue"></i> Desenvolvimento de Sistemas SaaS</a></li>
+                    <li><a href="https://egkairos.com.br" target="_blank"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Sistema Kairós</a></li>
                     <li><a href="/criacao-de-sites/"
                             class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
                                 class="ph ph-caret-right text-brand-blue"></i> Landing Pages de Alta Conversão</a></li>

@@ -269,52 +269,147 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
         </div>
     </header>
 
-    <!-- HEADER DA PÁGINA -->
-    <section id="webpage" class="pt-40 pb-12 text-center px-4">
-        <h1 class="font-tech text-3xl md:text-5xl text-white uppercase tracking-widest mb-4">
-            Quem é a <span class="text-brand-blue">EG?</span>
+    <!-- HERO HEADER (PRESERVANDO ID WEBPAGE PARA SEO E SCHEMA) -->
+    <section id="webpage" class="pt-36 md:pt-44 pb-12 text-center px-4 relative z-10">
+        <div class="inline-block px-3 py-1 bg-brand-blue/10 border border-brand-blue/30 rounded text-brand-blue text-[10px] font-tech uppercase tracking-widest font-bold mb-4">
+            Tecnologia & Inovação
+        </div>
+
+        <h1 class="font-tech text-3xl md:text-5xl lg:text-6xl text-white uppercase tracking-wider mb-6 flyer-title leading-tight">
+            EG Empório <span class="text-brand-blue">Digital</span>
         </h1>
-        <div class="w-24 h-[1px] bg-brand-blue mx-auto opacity-50"></div>
+
+        <div class="w-28 h-[1px] bg-gradient-to-r from-transparent via-brand-blue to-transparent mx-auto opacity-70 mb-6"></div>
+
+        <p class="font-sans max-w-2xl mx-auto text-slate-200 text-base md:text-lg font-light leading-relaxed">
+            Construímos ecossistemas digitais que unem design de alto luxo, engenharia de software avançada e estratégias de conversão para empresas que buscam dominância de mercado.
+        </p>
     </section>
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <section class="pb-24 px-6 max-w-4xl mx-auto space-y-12">
+    <!-- CONTEÚDO PRINCIPAL (ESTRUTURA DE ALTA AUTORIDADE) -->
+    <section class="pb-20 px-6 max-w-7xl mx-auto space-y-16 relative z-10">
 
-        <!-- BLOCO 1: A ORIGEM -->
-        <div class="glass-tech p-8 md:p-12 rounded-2xl border border-brand-blue/20">
-            <h2 class="font-tech text-2xl text-white mb-6 uppercase">Tecnologia & Inovação</h2>
-            <p class="text-lg text-slate-300 leading-relaxed mb-6">
-                A <strong>EG Empório Digital</strong> nasceu com um propósito claro: democratizar o acesso a sistemas de alta performance para empreendedores e empresas que desejam escalar.
-            </p>
-            <p class="text-lg text-slate-300 leading-relaxed">
-                Não somos apenas uma agência de sites. Somos parceiros de tecnologia. Do desenvolvimento de Landing Pages focadas em conversão até a criação de ecossistemas completos como o <strong>Sistema Kairós</strong>, nossa meta é colocar sua empresa à frente da concorrência.
-            </p>
+        <!-- BLOCO 1: HUMANIZAÇÃO & FUNDADORES -->
+        <div class="glass-tech p-8 md:p-14 rounded-2xl border-brand-blue/20 flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16 shadow-[0_0_40px_rgba(0,225,255,0.06)] relative overflow-hidden">
+            
+            <!-- Glow sutil -->
+            <div class="absolute top-0 right-0 w-80 h-80 bg-brand-blue/10 blur-[100px] -z-10 pointer-events-none"></div>
+
+            <!-- Coluna de Texto -->
+            <div class="w-full md:w-1/2 text-left">
+                <span class="inline-block px-3 py-1 bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-tech font-bold uppercase tracking-widest mb-4 rounded">
+                    Liderança Estratégica
+                </span>
+
+                <h2 class="font-tech text-2xl md:text-4xl text-white mb-6 uppercase leading-tight">
+                    Mentes por trás da <br><span class="text-brand-blue">EG Empório Digital</span>
+                </h2>
+
+                <p class="text-slate-200 text-base md:text-lg leading-relaxed mb-6 font-light">
+                    A <strong>EG Empório Digital</strong> foi fundada com um propósito inegociável: eliminar o abismo entre o design visual e a tecnologia funcional. Entendemos que um site bonito que não gera leads é inútil, e um sistema complexo sem uma boa experiência visual é ignorado.
+                </p>
+
+                <p class="text-slate-200 text-base leading-relaxed mb-8 font-light">
+                    Nossa atuação vai além de entregar códigos. Desenvolvemos soluções de alta escala, como o <strong class="text-white">Sistema Kairós</strong>, além de Landing Pages agressivas e estruturas institucionais desenhadas para fechar negócios corporativos de alto ticket.
+                </p>
+
+                <!-- Micro-Diferenciais -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-white/10">
+                    <div class="flex items-center gap-3">
+                        <i class="ph-fill ph-check-circle text-brand-blue text-xl"></i>
+                        <span class="text-xs font-tech text-white uppercase tracking-wider">Código Próprio & Limpo</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="ph-fill ph-check-circle text-brand-blue text-xl"></i>
+                        <span class="text-xs font-tech text-white uppercase tracking-wider">Design de Alto Padrão</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="ph-fill ph-check-circle text-brand-blue text-xl"></i>
+                        <span class="text-xs font-tech text-white uppercase tracking-wider">Engenharia de Conversão</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="ph-fill ph-check-circle text-brand-blue text-xl"></i>
+                        <span class="text-xs font-tech text-white uppercase tracking-wider">Arquitetura Escalável</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coluna da Foto dos Fundadores -->
+            <div class="w-full md:w-1/2 relative group">
+                <div class="absolute -inset-2 bg-brand-blue opacity-25 blur-2xl group-hover:opacity-40 transition duration-700 rounded-2xl"></div>
+                
+                <img src="assets/images/fundadores-eg.png" 
+                     alt="Fundadores da EG Empório Digital" 
+                     class="relative rounded-2xl border border-white/10 shadow-2xl object-cover w-full h-auto transform group-hover:-translate-y-2 transition-transform duration-500">
+            </div>
+
         </div>
 
-        <!-- BLOCO 2: PILARES -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass-tech p-6 rounded-xl text-center hover:-translate-y-1 transition-transform">
-                <i class="ph ph-rocket-launch text-4xl text-brand-blue mb-4"></i>
-                <h3 class="font-tech text-lg text-white mb-2">Missão</h3>
-                <p class="text-sm text-slate-400">Entregar soluções digitais que geram lucro real e otimização de tempo para nossos clientes.</p>
+        <!-- BLOCO 2: PILARES DE EXCELÊNCIA (EVOLUÇÃO DOS VALORES) -->
+        <div>
+            <div class="text-center mb-10">
+                <span class="text-[10px] text-brand-blue font-tech uppercase tracking-widest block mb-1">Nosso DNA</span>
+                <h2 class="font-tech text-2xl md:text-3xl text-white uppercase">Os 3 Pilares da Nossa Engenharia</h2>
             </div>
-            <div class="glass-tech p-6 rounded-xl text-center hover:-translate-y-1 transition-transform">
-                <i class="ph ph-eye text-4xl text-brand-blue mb-4"></i>
-                <h3 class="font-tech text-lg text-white mb-2">Visão</h3>
-                <p class="text-sm text-slate-400">Ser referência nacional em desenvolvimento de sistemas SaaS e automação digital.</p>
-            </div>
-            <div class="glass-tech p-6 rounded-xl text-center hover:-translate-y-1 transition-transform">
-                <i class="ph ph-diamond text-4xl text-brand-blue mb-4"></i>
-                <h3 class="font-tech text-lg text-white mb-2">Valores</h3>
-                <p class="text-sm text-slate-400">Transparência no código, agilidade na entrega e foco obsessivo no resultado.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Pilar 1 -->
+                <div class="glass-tech p-8 rounded-2xl border border-white/5 hover:border-brand-blue/30 transition-all duration-300 group text-left">
+                    <div class="w-12 h-12 rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="ph-fill ph-lightning"></i>
+                    </div>
+                    <h3 class="font-tech text-lg text-white mb-3 uppercase tracking-wider">Performance Extrema</h3>
+                    <p class="text-sm text-slate-200 leading-relaxed font-light">
+                        Não usamos templates pesados. Desenvolvemos com código enxuto, CDN global e tecnologias modernas para carregamento instantâneo em menos de 2 segundos.
+                    </p>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="glass-tech p-8 rounded-2xl border border-white/5 hover:border-brand-blue/30 transition-all duration-300 group text-left">
+                    <div class="w-12 h-12 rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="ph-fill ph-cpu"></i>
+                    </div>
+                    <h3 class="font-tech text-lg text-white mb-3 uppercase tracking-wider">Sistemas Proprietários</h3>
+                    <p class="text-sm text-slate-200 leading-relaxed font-light">
+                        Criamos softwares e SaaS sob medida. Nossa capacidade de desenvolvimento permite criar ecossistemas completos e automações comerciais que colocam sua empresa à frente.
+                    </p>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="glass-tech p-8 rounded-2xl border border-white/5 hover:border-brand-blue/30 transition-all duration-300 group text-left">
+                    <div class="w-12 h-12 rounded-xl bg-brand-blue/10 border border-brand-blue/20 flex items-center justify-center text-brand-blue text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="ph-fill ph-chart-polar"></i>
+                    </div>
+                    <h3 class="font-tech text-lg text-white mb-3 uppercase tracking-wider">Foco em Lucro Real</h3>
+                    <p class="text-sm text-slate-200 leading-relaxed font-light">
+                        Beleza sem conversão é desperdício. Cada layout, gatilho visual e botão é posicionado estrategicamente com base em psicologia de consumo e retenção de tráfego.
+                    </p>
+                </div>
             </div>
         </div>
 
-        <!-- CTA FINAL -->
-        <div class="text-center pt-10">
-            <h2 class="font-tech text-2xl text-white mb-6 uppercase">Vamos construir algo juntos?</h2>
-            <a href="https://wa.me/5511916053292?text=Olá, li sobre a EG e gostaria de agendar uma conversa." target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded hover:bg-white transition-all shadow-lg shadow-brand-blue/20">
-                Falar com Especialista <i class="ph ph-whatsapp-logo text-xl"></i>
+        <!-- BLOCO 3: MANIFESTO DE AUTORIDADE -->
+        <div class="glass-tech p-8 md:p-12 rounded-2xl border border-brand-blue/20 text-center relative overflow-hidden">
+            <div class="max-w-3xl mx-auto">
+                <blockquote class="font-sans text-lg md:text-2xl text-slate-100 font-light italic mb-4 leading-relaxed">
+                    “O mercado digital não tolera amadorismo. Sua presença online precisa refletir exatamente a grandeza da sua empresa.”
+                </blockquote>
+                <p class="text-brand-blue font-tech text-xs uppercase tracking-widest font-semibold">
+                    — Diretoria EG Empório Digital
+                </p>
+            </div>
+        </div>
+
+        <!-- CTA FINAL COMERCIAL -->
+        <div class="text-center pt-6">
+            <h2 class="font-tech text-2xl md:text-3xl text-white mb-4 uppercase">Pronto para elevar seu padrão digital?</h2>
+            <p class="text-white-600 text-sm max-w-xl mx-auto mb-8 font-light">
+                Agende uma conversa direta com nossos especialistas para planejar seu próximo site, landing page ou sistema sob medida.
+            </p>
+            <a href="https://wa.me/5511916053292?text=Olá, li sobre a história e tecnologia da EG e gostaria de agendar uma conversa." 
+               target="_blank" 
+               class="inline-flex items-center gap-3 px-10 py-4 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest text-xs rounded hover:bg-white transition-all shadow-[0_0_25px_rgba(0,225,255,0.25)]">
+                Falar com a Equipe <i class="ph ph-whatsapp-logo text-lg"></i>
             </a>
         </div>
 
@@ -358,6 +453,9 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
                     <li><a href="/saas"
                             class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
                                 class="ph ph-caret-right text-brand-blue"></i> Desenvolvimento de Sistemas SaaS</a></li>
+                    <li><a href="https://egkairos.com.br" target="_blank"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Sistema Kairós</a></li>
                     <li><a href="/criacao-de-sites/"
                             class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
                                 class="ph ph-caret-right text-brand-blue"></i> Landing Pages de Alta Conversão</a></li>
