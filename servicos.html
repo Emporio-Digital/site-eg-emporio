@@ -74,7 +74,7 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
           "hasMap": "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D",
           "sameAs": [
             "https://www.instagram.com/eg.emporio.digital/",
-            "https://kairos.egemporiodigital.com.br",
+            "https://egkairos.com.br",
             "https://horizon.egemporiodigital.com.br",
             "https://www.google.com/maps/place/EG+Emp%C3%B3rio+Digital/@-13.3685689,-73.1791875,4z/data=!3m1!4b1!4m6!3m5!1s0x45f5bf76cf980ba3:0x766b41d2a2e33a54!8m2!3d-14.4095262!4d-51.31668!16s%2Fg%2F11z518kqrq?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D"
           ],
@@ -161,6 +161,18 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
             background-color: #020617;
             background-image: radial-gradient(circle at 50% 10%, #0a2540 0%, #020617 70%);
             background-attachment: fixed;
+        }
+
+        /* ===================================================
+           AJUSTE EXCLUSIVO IPHONE / iOS
+           (Android e Windows ignoram 100% este bloco)
+        =================================================== */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                /* Diminui a força do azul inicial e puxa o preto (#020617) mais pra cima,
+                   matando o aspecto lavado/claro na tela curta de Serviços */
+                background-image: radial-gradient(circle at 50% 5%, #041220 0%, #020617 40%) !important;
+            }
         }
         .gpu-accelerated { transform: translateZ(0); will-change: transform; }
         .glass-tech {

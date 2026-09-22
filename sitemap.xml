@@ -457,6 +457,33 @@
       <priority>0.80</priority>
    </url>
 
+   <!-- PROJETO CRIAÇÃO DE SISTEMAS (NOVO HUB & POLOS) -->
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sistemas/</loc>
+      <lastmod>2026-07-06</lastmod>
+      <priority>0.95</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sistemas/sao-paulo</loc>
+      <lastmod>2026-07-06</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sistemas/vila-prudente</loc>
+      <lastmod>2026-07-06</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sistemas/tatuape</loc>
+      <lastmod>2026-07-06</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sistemas/morumbi</loc>
+      <lastmod>2026-07-06</lastmod>
+      <priority>0.80</priority>
+   </url>
+
    <!-- ARTIGOS DO BLOG (ANTIGOS MANTIDOS) -->
    <url>
       <loc>https://egemporiodigital.com.br/artigo?id=site-vs-saas</loc>

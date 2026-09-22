@@ -301,7 +301,7 @@ const blogPosts = [
             <div class="cta-box">
                 <h3>Sua agenda cheia. Sua vida tranquila.</h3>
                 <p>Experimente o <strong>Kairós</strong> e descubra por que ele é o <strong>Sistema de Gestão</strong> nº 1 do mercado para barbearias de alto padrão.</p>
-                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="btn-cta">Testar Kairós Grátis</a>
+                <a href="https://egkairos.com.br" target="_blank" class="btn-cta">Testar Kairós Grátis</a>
             </div>
         `
     },
@@ -334,7 +334,7 @@ const blogPosts = [
             <div class="cta-box">
                 <h3>Transforme a gestão do seu salão hoje</h3>
                 <p>Experimente o <strong>Kairós</strong> e descubra o poder de um <strong>Sistema de Gestão</strong> desenhado para profissionais de elite.</p>
-                <a href="https://kairos.egemporiodigital.com.br" target="_blank" class="btn-cta">Testar Kairós no meu Salão</a>
+                <a href="https://egkairos.com.br" target="_blank" class="btn-cta">Testar Kairós no meu Salão</a>
             </div>
         `
     },
