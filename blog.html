@@ -90,6 +90,15 @@
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'], tech: ['Orbitron', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.3s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
                     }
                 }
             }
@@ -99,6 +108,10 @@
         body { background-color: #020617; background-image: radial-gradient(circle at 50% 10%, #0a2540 0%, #020617 70%); background-attachment: fixed; }
         .glass-tech { background: rgba(2, 6, 23, 0.6); border: 1px solid rgba(0, 225, 255, 0.1); backdrop-filter: blur(5px); }
         .glass-tech:hover { border-color: rgba(0, 225, 255, 0.4); box-shadow: 0 0 30px rgba(0, 225, 255, 0.1); }
+        #mobile-menu {
+            background: rgba(2, 6, 23, 0.98);
+            backdrop-filter: blur(20px);
+        }
     /* ANIMAÇÃO PULSE WHATSAPP */
         @keyframes pulse-wpp {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); transform: scale(1); }
@@ -137,15 +150,51 @@
     <!-- HEADER -->
     <header class="fixed w-full top-0 z-50 bg-eg-dark/90 backdrop-blur-md border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
-            <a href="/" class="flex items-center gap-2 cursor-pointer">
-                <img src="assets/images/logo.png" alt="Logo EG" class="h-8 w-auto">
-                <div class="font-tech text-sm font-bold tracking-widest text-white uppercase">EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span></div>
+
+            <a href="/" class="flex items-center gap-2 md:gap-3 cursor-pointer">
+                <img src="assets/images/logo.png" alt="Logo EG" class="h-16 md:h-20 w-auto object-contain">
+                <div class="logo-animate font-tech text-sm md:text-xl font-bold tracking-widest uppercase block"
+                    data-text="EG EMPÓRIO DIGITAL">
+                    EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
+                </div>
             </a>
+
+            <!-- NAV LINKS -->
             <nav class="hidden md:flex space-x-8 text-xs font-bold tracking-widest uppercase">
-                <a href="/" class="hover:text-brand-blue transition-colors">Início</a>
-                <a href="/blog.html" class="text-brand-blue transition-colors">Blog</a>
+                <a href="/" class="text-brand-blue transition-colors">Início</a>
+                <a href="/servicos" class="hover:text-brand-blue transition-colors">Serviços</a>
+                <a href="/sobre" class="hover:text-brand-blue transition-colors">Sobre Nós</a>
+                <a href="/saas" class="hover:text-brand-blue transition-colors">Automações</a>
             </nav>
-            <a href="https://wa.me/5511916053292" class="hidden md:flex px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest">Fale Conosco</a>
+
+            <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas." target="_blank"
+                class="hidden md:flex items-center gap-2 px-6 py-3 border border-brand-blue/30 text-brand-blue rounded hover:bg-brand-blue hover:text-eg-dark transition-all font-tech font-bold text-xs uppercase tracking-widest shadow-[0_0_15px_rgba(0,225,255,0.1)]">
+                Fale com a gente
+            </a>
+
+            <button id="menu-btn" class="md:hidden text-brand-blue text-3xl focus:outline-none" onclick="toggleMenu()">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden absolute top-24 left-0 w-full border-b border-brand-blue/20 flex flex-col items-center py-10 space-y-8 animate-fade-in shadow-2xl z-40">
+            <a href="/" class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition"
+                onclick="toggleMenu()">Início</a>
+            <a href="/servicos"
+                class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition"
+                onclick="toggleMenu()">Serviços</a>
+            <a href="/sobre"
+                class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition"
+                onclick="toggleMenu()">Sobre Nós</a>
+            <a href="/saas"
+                class="text-white font-tech uppercase tracking-widest text-lg hover:text-brand-blue transition"
+                onclick="toggleMenu()">Automações</a>
+            <a href="https://wa.me/5511916053292?text=Olá, vim pelo site e gostaria de tirar dúvidas."
+                class="px-8 py-3 bg-brand-blue text-eg-dark font-tech font-bold uppercase tracking-widest rounded shadow-lg"
+                onclick="toggleMenu()">
+                Fale com a gente
+            </a>
         </div>
     </header>
 
@@ -173,7 +222,7 @@
             <!-- Coluna 1: Marca (AGORA VAI) -->
             <div class="flex flex-col gap-3">
                 <div class="flex flex-col">
-                    <img src="/assets/images/logo.png" alt="Logo EG"
+                    <img src="assets/images/logo.png" alt="Logo EG"
                         class="h-12 w-auto object-contain mb-2 self-start opacity-80">
 
                     <!-- w-fit + self-start trava a animação no tamanho real do texto -->
@@ -216,9 +265,15 @@
                     <li><a href="/servicos"
                             class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
                                 class="ph ph-caret-right text-brand-blue"></i> Consultoria de SEO Avançado</a></li>
-                    <li><a href="/portfolio.html"
+                    <li><a href="/portfolio"
                             class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
                                 class="ph ph-caret-right text-brand-blue"></i> Portfólio de Projetos</a></li>
+                    <li><a href="/criacao-de-sistemas"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Sistemas Sob Medida</a></li>
+                    <li><a href="/criativos"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Criativos</a></li>
                 </ul>
             </div>
 
@@ -282,6 +337,17 @@
     <!-- SCRIPT DE CARREGAMENTO -->
     <script src="js/blog-db.js"></script>
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        }
+
         const grid = document.getElementById('blog-grid');
         
         // Renderiza os cards
