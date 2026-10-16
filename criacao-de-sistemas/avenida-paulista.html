@@ -1177,16 +1177,17 @@
         </div>
     </section>
 
-    <!-- FOOTER REFINADO (PADRÃO OFICIAL) -->
+    <!-- FOOTER REFINADO: COMPACTO E VISÍVEL -->
     <footer class="py-10 border-t border-white/5 bg-black/60 backdrop-blur-sm relative z-10">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
 
-            <!-- Coluna 1: Marca -->
+            <!-- Coluna 1: Marca (AGORA VAI) -->
             <div class="flex flex-col gap-3">
                 <div class="flex flex-col">
                     <img src="/assets/images/logo.png" alt="Logo EG"
                         class="h-12 w-auto object-contain mb-2 self-start opacity-80">
 
+                    <!-- w-fit + self-start trava a animação no tamanho real do texto -->
                     <div class="logo-animate font-tech text-xl font-bold uppercase tracking-widest w-fit self-start whitespace-nowrap"
                         data-text="EG EMPÓRIO DIGITAL">
                         EG EMPÓRIO <span class="text-brand-blue">DIGITAL</span>
@@ -1202,7 +1203,7 @@
                 </div>
             </div>
 
-            <!-- Coluna 2: Soluções -->
+            <!-- Coluna 2: Lista de Serviços (Links Coerentes) -->
             <div>
                 <h4
                     class="font-tech text-white text-base uppercase tracking-[0.2em] mb-5 border-l-4 border-brand-blue pl-3">
@@ -1226,13 +1227,19 @@
                     <li><a href="/servicos"
                             class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
                                 class="ph ph-caret-right text-brand-blue"></i> Consultoria de SEO Avançado</a></li>
-                    <li><a href="/portfolio.html"
+                    <li><a href="/portfolio"
                             class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
                                 class="ph ph-caret-right text-brand-blue"></i> Portfólio de Projetos</a></li>
+                    <li><a href="/criacao-de-sistemas"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Sistemas Sob Medida</a></li>
+                    <li><a href="/criativos"
+                            class="text-sm text-slate-300 hover:text-brand-blue transition flex items-center gap-2"><i
+                                class="ph ph-caret-right text-brand-blue"></i> Criativos</a></li>
                 </ul>
             </div>
 
-            <!-- Coluna 3: Conecte-se -->
+            <!-- Coluna 3: Conecte-se (Maior Visibilidade) -->
             <div>
                 <h4
                     class="font-tech text-white text-base uppercase tracking-[0.2em] mb-5 border-l-4 border-brand-blue pl-3">
@@ -1259,7 +1266,8 @@
                         </div>
                         <div class="flex flex-col">
                             <span class="text-xs text-slate-500 uppercase font-tech font-bold">Conteúdo</span>
-                            <span class="text-sm text-slate-200 group-hover:text-brand-blue transition font-semibold">Nosso
+                            <span
+                                class="text-sm text-slate-200 group-hover:text-brand-blue transition font-semibold">Nosso
                                 Blog</span>
                         </div>
                     </a>
@@ -1279,7 +1287,7 @@
             </div>
         </div>
 
-        <!-- Copyright final -->
+        <!-- Copyright final (Compacto) -->
         <div
             class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
             <p class="text-xs text-slate-500 uppercase tracking-[0.2em] font-medium">
