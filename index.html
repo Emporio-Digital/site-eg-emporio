@@ -545,9 +545,15 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
             </button>
         </div>
 
-        <!-- PAINEL CENTRAL (SOLTO NA TELA - SEM CARD) -->
-        <div class="relative text-left">
-            <div class="absolute top-0 right-0 w-72 h-72 bg-brand-blue/10 blur-[90px] -z-10 pointer-events-none"></div>
+        <!-- PAINEL CENTRAL (AURA GLASS SUAVE - SEM BORDAS DE CARD) -->
+        <div class="relative text-left p-4 sm:p-6 md:p-8 rounded-3xl">
+            <!-- Camada de Vidro com dissolução suave nas pontas (tira a poluição do logo no fundo) -->
+            <div class="absolute inset-0 rounded-3xl pointer-events-none -z-10"
+                 style="background: radial-gradient(ellipse at center, rgba(2, 6, 23, 0.82) 0%, rgba(2, 6, 23, 0.55) 70%, rgba(2, 6, 23, 0) 100%); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+            </div>
+            
+            <!-- Brilho azul de estúdio muito suave para dar profundidade -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-brand-blue/[0.04] blur-[100px] -z-10 pointer-events-none"></div>
 
             <!-- CONTEÚDO 1: SITES INSTITUCIONAIS (ATIVO INICIAL) -->
             <div id="tab-content-sites" class="animate-fade-in space-y-6">
@@ -744,8 +750,15 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
             <p class="text-slate-200 text-sm font-light">Estratégias avançadas para escalar suas vendas</p>
         </div>
 
-        <!-- ESTRUTURA SPLIT SEM CARDS -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 text-left">
+        <!-- ESTRUTURA SPLIT (AURA GLASS SUAVE - SEM BORDAS DE CARD) -->
+        <div class="relative grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 text-left p-4 sm:p-6 md:p-8 rounded-3xl">
+            <!-- Camada de Vidro com dissolução suave nas pontas (tira a poluição do logo no fundo) -->
+            <div class="absolute inset-0 rounded-3xl pointer-events-none -z-10"
+                 style="background: radial-gradient(ellipse at center, rgba(2, 6, 23, 0.82) 0%, rgba(2, 6, 23, 0.55) 70%, rgba(2, 6, 23, 0) 100%); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+            </div>
+            
+            <!-- Brilho azul de estúdio muito suave para dar profundidade -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-brand-blue/[0.04] blur-[100px] -z-10 pointer-events-none"></div>
             
             <!-- COLUNA 1: TRÁFEGO PAGO -->
             <div class="flex flex-col justify-between pb-8 md:pb-0 border-b md:border-b-0 md:border-r border-white/10 md:pr-12">
@@ -797,104 +810,6 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <!-- SEÇÃO 3: VITRINE INFINITA (Apenas Ebooks + Em Breve) -->
-    <section id="vitrine" class="py-10 relative border-t border-white/5 bg-black/40 backdrop-blur-sm">
-        <div class="text-center mb-10">
-            <h2 class="font-tech text-xl text-white uppercase tracking-widest opacity-80">Produtos Digitais
-            </h2>
-        </div>
-
-        <div class="w-full relative overflow-hidden">
-            <div
-                class="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-eg-dark to-transparent z-10 pointer-events-none">
-            </div>
-            <div
-                class="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-eg-dark to-transparent z-10 pointer-events-none">
-            </div>
-
-            <div class="flex animate-scroll hover:[animation-play-state:paused] w-max items-center gpu-accelerated">
-
-                <!-- LOOP 1 (5 ITENS: EBOOKS + EM BREVE) -->
-                <a href="https://go.hotmart.com/X102588332N" target="_blank"
-                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook1.jpg" alt="Ebook Estratégias Digitais"
-                        class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-
-                <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank"
-                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook2.jpg" alt="Ebook Marketing e Vendas"
-                        class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-
-                <a href="https://go.hotmart.com/C103670666I" target="_blank"
-                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook3.jpg" alt="Ebook Negócios Digitais"
-                        class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-
-                <a href="https://go.hotmart.com/K102552822J" target="_blank"
-                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook4.jpg" alt="Ebook Crescimento Online"
-                        class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-
-                
-
-                <!-- LOOP 2 (EXATAMENTE A MESMA CÓPIA DO LOOP 1) -->
-                <a href="https://go.hotmart.com/X102588332N" target="_blank"
-                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook1.jpg" alt="Ebook Estratégias Digitais"
-                        class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-
-                <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank"
-                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook2.jpg" alt="Ebook Marketing e Vendas"
-                        class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-
-                <a href="https://go.hotmart.com/C103670666I" target="_blank"
-                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook3.jpg" alt="Ebook Negócios Digitais"
-                        class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-
-                <a href="https://go.hotmart.com/K102552822J" target="_blank"
-                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook4.jpg" alt="Ebook Crescimento Online"
-                        class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-
-                
-                <!-- LOOP 3 (EXATAMENTE A MESMA CÓPIA DO LOOP 1) -->
-                <a href="https://go.hotmart.com/X102588332N" target="_blank"
-                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook1.jpg" alt="Ebook Estratégias Digitais"
-                        class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-
-                <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank"
-                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook2.jpg" alt="Ebook Marketing e Vendas"
-                        class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-
-                <a href="https://go.hotmart.com/C103670666I" target="_blank"
-                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook3.jpg" alt="Ebook Negócios Digitais"
-                        class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-
-                <a href="https://go.hotmart.com/K102552822J" target="_blank"
-                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
-                    <img src="assets/images/ebook4.jpg" alt="Ebook Crescimento Online"
-                        class="w-full h-full object-cover rounded border border-white/10">
-                </a>
-            </div>
         </div>
     </section>
 
@@ -1080,6 +995,104 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
             </div>
         </div>
     </div>
+
+    <!-- SEÇÃO 3: VITRINE INFINITA (Apenas Ebooks + Em Breve) -->
+    <section id="vitrine" class="py-10 relative border-t border-white/5 bg-black/40 backdrop-blur-sm">
+        <div class="text-center mb-10">
+            <h2 class="font-tech text-xl text-white uppercase tracking-widest opacity-80">Produtos Digitais
+            </h2>
+        </div>
+
+        <div class="w-full relative overflow-hidden">
+            <div
+                class="absolute top-0 left-0 w-20 h-full bg-gradient-to-r from-eg-dark to-transparent z-10 pointer-events-none">
+            </div>
+            <div
+                class="absolute top-0 right-0 w-20 h-full bg-gradient-to-l from-eg-dark to-transparent z-10 pointer-events-none">
+            </div>
+
+            <div class="flex animate-scroll hover:[animation-play-state:paused] w-max items-center gpu-accelerated">
+
+                <!-- LOOP 1 (5 ITENS: EBOOKS + EM BREVE) -->
+                <a href="https://go.hotmart.com/X102588332N" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook1.jpg" alt="Ebook Estratégias Digitais"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook2.jpg" alt="Ebook Marketing e Vendas"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                <a href="https://go.hotmart.com/C103670666I" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook3.jpg" alt="Ebook Negócios Digitais"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                <a href="https://go.hotmart.com/K102552822J" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook4.jpg" alt="Ebook Crescimento Online"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                
+
+                <!-- LOOP 2 (EXATAMENTE A MESMA CÓPIA DO LOOP 1) -->
+                <a href="https://go.hotmart.com/X102588332N" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook1.jpg" alt="Ebook Estratégias Digitais"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook2.jpg" alt="Ebook Marketing e Vendas"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                <a href="https://go.hotmart.com/C103670666I" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook3.jpg" alt="Ebook Negócios Digitais"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                <a href="https://go.hotmart.com/K102552822J" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook4.jpg" alt="Ebook Crescimento Online"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                
+                <!-- LOOP 3 (EXATAMENTE A MESMA CÓPIA DO LOOP 1) -->
+                <a href="https://go.hotmart.com/X102588332N" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook1.jpg" alt="Ebook Estratégias Digitais"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                <a href="https://go.hotmart.com/C102556965T?dp=1" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook2.jpg" alt="Ebook Marketing e Vendas"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                <a href="https://go.hotmart.com/C103670666I" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook3.jpg" alt="Ebook Negócios Digitais"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+
+                <a href="https://go.hotmart.com/K102552822J" target="_blank"
+                    class="mx-6 w-[200px] aspect-[3/4] hover:-translate-y-2 transition duration-300">
+                    <img src="assets/images/ebook4.jpg" alt="Ebook Crescimento Online"
+                        class="w-full h-full object-cover rounded border border-white/10">
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- SEÇÃO SEO ACCORDION - TESE DE AUTORIDADE (30 PILARES - FAT CONTENT UPGRADE) -->
     <section id="tese-autoridade" class="pt-8 pb-2 px-4 md:px-6 max-w-7xl mx-auto relative z-10">

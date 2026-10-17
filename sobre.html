@@ -388,14 +388,22 @@ src="https://www.facebook.com/tr?id=2420947868418602&ev=PageView&noscript=1"
             </div>
         </div>
 
-        <!-- BLOCO 3: MANIFESTO DE AUTORIDADE -->
-        <div class="glass-tech p-8 md:p-12 rounded-2xl border border-brand-blue/20 text-center relative overflow-hidden">
-            <div class="max-w-3xl mx-auto">
+        <!-- BLOCO 3: MANIFESTO DE AUTORIDADE (AURA GLASS SUAVE - SEM BORDAS DE CARD) -->
+        <div class="relative p-8 md:p-14 text-center rounded-3xl">
+            <!-- Camada de Vidro com dissolução suave nas pontas (tira a poluição do logo no fundo) -->
+            <div class="absolute inset-0 rounded-3xl pointer-events-none -z-10"
+                 style="background: radial-gradient(ellipse at center, rgba(2, 6, 23, 0.85) 0%, rgba(2, 6, 23, 0.55) 70%, rgba(2, 6, 23, 0) 100%); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+            </div>
+            
+            <!-- Brilho azul de estúdio muito suave para dar profundidade -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-brand-blue/[0.04] blur-[100px] -z-10 pointer-events-none"></div>
+
+            <div class="max-w-3xl mx-auto relative z-10">
                 <blockquote class="font-sans text-lg md:text-2xl text-slate-100 font-light italic mb-4 leading-relaxed">
                     “O mercado digital não tolera amadorismo. Sua presença online precisa refletir exatamente a grandeza da sua empresa.”
                 </blockquote>
                 <p class="text-brand-blue font-tech text-xs uppercase tracking-widest font-semibold">
-                    — Diretoria EG Empório Digital
+                    — EG Empório Digital
                 </p>
             </div>
         </div>
