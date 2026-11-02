@@ -562,7 +562,14 @@
         </div>
 
         <!-- Layout Responsivo: No Mobile os botões ficam compactos em cima do visor (Sem rolagem cansativa) -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+        <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start p-4 sm:p-6 md:p-8 rounded-3xl">
+            <!-- Camada de Vidro com dissolução suave nas pontas (tira a poluição do logo no fundo) -->
+            <div class="absolute inset-0 rounded-3xl pointer-events-none -z-10"
+                 style="background: radial-gradient(ellipse at center, rgba(2, 6, 23, 0.82) 0%, rgba(2, 6, 23, 0.55) 70%, rgba(2, 6, 23, 0) 100%); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+            </div>
+            
+            <!-- Brilho azul de estúdio muito suave para dar profundidade -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-brand-blue/[0.04] blur-[100px] -z-10 pointer-events-none"></div>
             
             <!-- SELETORES (TABS): Compacto no Mobile (2x2) e Expandido no Desktop -->
             <div class="lg:col-span-4 grid grid-cols-2 lg:grid-cols-1 gap-2.5 sm:gap-3">

@@ -512,6 +512,22 @@
       <lastmod>2026-10-09</lastmod>
       <priority>0.80</priority>
    </url>
+   <!-- NOVOS LOCAIS CRIAÇÃO DE SITES (ADICIONADOS EM 02/11/2026) -->
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/alphaville</loc>
+      <lastmod>2026-11-02</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/balneario-camboriu</loc>
+      <lastmod>2026-11-02</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/florianopolis</loc>
+      <lastmod>2026-11-02</lastmod>
+      <priority>0.80</priority>
+   </url>
 
    <!-- PROJETO GESTÃO DE TRÁFEGO (NOVO HUB) -->
    <url>
@@ -593,6 +609,27 @@
    <url>
       <loc>https://egemporiodigital.com.br/gestao-de-trafego/avenida-sapopemba</loc>
       <lastmod>2026-10-23</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <!-- NOVOS POLOS GESTÃO DE TRÁFEGO (ADICIONADOS EM 02/11/2026) -->
+   <url>
+      <loc>https://egemporiodigital.com.br/gestao-de-trafego/alphaville</loc>
+      <lastmod>2026-11-02</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/gestao-de-trafego/balneario-camboriu</loc>
+      <lastmod>2026-11-02</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/gestao-de-trafego/campinas</loc>
+      <lastmod>2026-11-02</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/gestao-de-trafego/florianopolis</loc>
+      <lastmod>2026-11-02</lastmod>
       <priority>0.80</priority>
    </url>
 
