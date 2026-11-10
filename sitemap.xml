@@ -528,6 +528,11 @@
       <lastmod>2026-11-02</lastmod>
       <priority>0.80</priority>
    </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sites/santa-catarina</loc>
+      <lastmod>2026-11-09</lastmod>
+      <priority>0.80</priority>
+   </url>
 
    <!-- PROJETO GESTÃO DE TRÁFEGO (NOVO HUB) -->
    <url>
@@ -632,6 +637,52 @@
       <lastmod>2026-11-02</lastmod>
       <priority>0.80</priority>
    </url>
+   <!-- NOVOS POLOS GESTÃO DE TRÁFEGO (ADICIONADOS EM 09/11/2026) -->
+   <url>
+      <loc>https://egemporiodigital.com.br/gestao-de-trafego/belo-horizonte</loc>
+      <lastmod>2026-11-09</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/gestao-de-trafego/curitiba</loc>
+      <lastmod>2026-11-09</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/gestao-de-trafego/osasco</loc>
+      <lastmod>2026-11-09</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/gestao-de-trafego/recife</loc>
+      <lastmod>2026-11-09</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/gestao-de-trafego/rio-de-janeiro</loc>
+      <lastmod>2026-11-09</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/gestao-de-trafego/salvador</loc>
+      <lastmod>2026-11-09</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/gestao-de-trafego/santa-catarina</loc>
+      <lastmod>2026-11-09</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/gestao-de-trafego/santos</loc>
+      <lastmod>2026-11-09</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/gestao-de-trafego/sao-jose-dos-campos</loc>
+      <lastmod>2026-11-09</lastmod>
+      <priority>0.80</priority>
+   </url>
 
    <!-- PROJETO CRIAÇÃO DE SISTEMAS (NOVO HUB & POLOS) -->
    <url>
@@ -727,6 +778,11 @@
    <url>
       <loc>https://egemporiodigital.com.br/criacao-de-sistemas/florianopolis</loc>
       <lastmod>2026-09-30</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/criacao-de-sistemas/santa-catarina</loc>
+      <lastmod>2026-11-09</lastmod>
       <priority>0.80</priority>
    </url>
 
