@@ -4,7 +4,7 @@
    <!-- PÁGINAS ESTÁTICAS PRINCIPAIS -->
    <url>
       <loc>https://egemporiodigital.com.br/</loc>
-      <lastmod>2026-02-26</lastmod>
+      <lastmod>2026-11-14</lastmod>
       <priority>1.00</priority>
    </url>
    <url>
@@ -783,6 +783,58 @@
    <url>
       <loc>https://egemporiodigital.com.br/criacao-de-sistemas/santa-catarina</loc>
       <lastmod>2026-11-09</lastmod>
+      <priority>0.80</priority>
+   </url>
+
+   <!-- PROJETO MARKETING DIGITAL (NOVO HUB & POLOS) -->
+   <url>
+      <loc>https://egemporiodigital.com.br/marketing-digital/</loc>
+      <lastmod>2026-11-14</lastmod>
+      <priority>0.95</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/marketing-digital/sao-paulo</loc>
+      <lastmod>2026-11-14</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/marketing-digital/itaim-bibi</loc>
+      <lastmod>2026-11-14</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/marketing-digital/vila-olimpia</loc>
+      <lastmod>2026-11-14</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/marketing-digital/tatuape</loc>
+      <lastmod>2026-11-14</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/marketing-digital/vila-prudente</loc>
+      <lastmod>2026-11-14</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/marketing-digital/teotonio-vilela</loc>
+      <lastmod>2026-11-14</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/marketing-digital/santo-andre</loc>
+      <lastmod>2026-11-14</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/marketing-digital/sao-bernardo</loc>
+      <lastmod>2026-11-14</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://egemporiodigital.com.br/marketing-digital/sao-caetano</loc>
+      <lastmod>2026-11-14</lastmod>
       <priority>0.80</priority>
    </url>
 
