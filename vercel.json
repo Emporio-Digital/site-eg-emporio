@@ -10,6 +10,22 @@
       "destination": "/criacao-de-sites/:slug.html"
     },
     {
+      "source": "/criacao-de-sistemas",
+      "destination": "/criacao-de-sistemas/index.html"
+    },
+    {
+      "source": "/criacao-de-sistemas/:slug",
+      "destination": "/criacao-de-sistemas/:slug.html"
+    },
+    {
+      "source": "/marketing-digital",
+      "destination": "/marketing-digital/index.html"
+    },
+    {
+      "source": "/marketing-digital/:slug",
+      "destination": "/marketing-digital/:slug.html"
+    },
+    {
       "source": "/lp",
       "destination": "https://emporio-digital.github.io/lp/"
     },
